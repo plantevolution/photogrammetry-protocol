@@ -1,13 +1,9 @@
-Welcome! 
+# Flower photogrammetry and 3D modeling protocol
 
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
+http://www.plantevolution.org/photogrammetry-protocol/
 
-This template provides a skeleton file structure that you can edit to create your book. 
+This protocol describes how to obtain three-dimensional (3D) reconstructions of flowers using photogrammetry. It describes in details the set-up, settings and steps that has worked for us for building accurate flower models, but other approaches are certainly possible. Hence, we hope this protocol serves as a starting point rather than a final protocol. We welcome any comments.
 
-The contents inside the .Rmd files provide some pointers to help you get started, but feel free to also delete the content in each file and start fresh.
+## Disclaimer
 
-Additional resources:
-
-The **bookdown** book: https://bookdown.org/yihui/bookdown/
-
-The **bookdown** package reference site: https://pkgs.rstudio.com/bookdown
+We provide this protocol without any guaranty. We cannot be accounted responsible if the protocol does not work.

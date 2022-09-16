@@ -11,7 +11,7 @@ site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 url: http://www.plantevolution.org/photogrammetry-protocol/
-# cover-image: path to the social sharing image like images/cover.jpg
+cover-image: Figures/cover.jpg
 description: |
   This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)
 link-citations: yes

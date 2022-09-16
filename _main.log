@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.5.23)  16 SEP 2022 14:54
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.5.23)  16 SEP 2022 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1194,55 +1194,75 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
 Chapter 1.
 [5
 
-] [6]
+] [6
+
+]
 Chapter 2.
 File: Figures/Syrp_app.png Graphic file (type QTm)
 <use  "Figures/Syrp_app.png" >
 Underfull \vbox (badness 1215) has occurred while \output is active []
 
-[7
-
-]
+[7]
 
 Package natbib Warning: Citation `Adobe2012DNG' on page 8 undefined on input li
-ne 264.
+ne 233.
 
 
 LaTeX Warning: File `Figures/Color chart sRGB values.pdf' not found on input li
-ne 276.
+ne 245.
 
 File: Figures/Color chart sRGB values.pdf Graphic file (type QTm)
 <use  "Figures/Color chart sRGB values.pdf" >
 
 LaTeX Warning: File `Figures/logo Adobe DNG Converter.png' not found on input l
-ine 298.
+ine 267.
 
 File: Figures/logo Adobe DNG Converter.png Graphic file (type QTm)
 <use  "Figures/logo Adobe DNG Converter.png" >
 
 LaTeX Warning: File `Figures/logo ColorChecker Camera Calibration.png' not foun
-d on input line 305.
+d on input line 274.
 
 File: Figures/logo ColorChecker Camera Calibration.png Graphic file (type QTm)
 <use  "Figures/logo ColorChecker Camera Calibration.png" >
 
-LaTeX Warning: File `Figures/logo Lrc.png' not found on input line 312.
+LaTeX Warning: File `Figures/logo Lrc.png' not found on input line 281.
 
 File: Figures/logo Lrc.png Graphic file (type QTm)
 <use  "Figures/logo Lrc.png" >
 Underfull \vbox (badness 3260) has occurred while \output is active []
 
 [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--349
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 321--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--340
+
+ []
+
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 352--354
 
  []
@@ -1253,62 +1273,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 357--359
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
+Underfull \hbox (badness 10000) in paragraph at lines 362--374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--371
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 383--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--390
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--405
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--420
+Underfull \hbox (badness 10000) in paragraph at lines 385--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--425
+Underfull \hbox (badness 10000) in paragraph at lines 392--394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--430
+Underfull \hbox (badness 10000) in paragraph at lines 397--399
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--436
+Underfull \hbox (badness 10000) in paragraph at lines 402--405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--442
+Underfull \hbox (badness 10000) in paragraph at lines 408--411
 
  []
 
@@ -1316,56 +1316,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 439--442
 
 ]
 Chapter 3.
-
-Overfull \hbox (17.937pt too wide) in paragraph at lines 466--467
-[]\TU/lmr/m/n/10 To label an un-numbered heading, use: \TU/lmtt/m/n/10 # Hello 
-world {-#nice-label}
- []
-
-
-Underfull \hbox (badness 2512) in paragraph at lines 469--470
-[]\TU/lmr/m/n/10 Next, reference the labeled heading anywhere in the text using
-
- []
-
-
-Overfull \vbox (0.83679pt too high) detected at line 490
- []
-
-[15]
-File: _main_files/figure-latex/nice-fig-1.pdf Graphic file (type QTm)
-<use  "_main_files/figure-latex/nice-fig-1.pdf" > [16] [17] [18
-
-]
-Chapter 4.
 File: Figures/camera_arrows.png Graphic file (type QTm)
 <use  "Figures/camera_arrows.png" >
 File: Figures/tripod.png Graphic file (type QTm)
 <use  "Figures/tripod.png" >
 Underfull \vbox (badness 4899) has occurred while \output is active []
 
-[19] [20]
+[15] [16]
 File: Figures/camera_settings.JPG Graphic file (type QTm)
-<use  "Figures/camera_settings.JPG" > [21]
+<use  "Figures/camera_settings.JPG" > [17]
 
-LaTeX Warning: File `Figures/Custom WB setting.png' not found on input line 646
+LaTeX Warning: File `Figures/Custom WB setting.png' not found on input line 525
 .
 
 File: Figures/Custom WB setting.png Graphic file (type QTm)
 <use  "Figures/Custom WB setting.png" >
 
-LaTeX Warning: File `Figures/Custom WB selection.png' not found on input line 6
-54.
+LaTeX Warning: File `Figures/Custom WB selection.png' not found on input line 5
+33.
 
 File: Figures/Custom WB selection.png Graphic file (type QTm)
-<use  "Figures/Custom WB selection.png" > [22]
+<use  "Figures/Custom WB selection.png" > [18]
 File: Figures/shutter.jpg Graphic file (type QTm)
 <use  "Figures/shutter.jpg" >
 File: Figures/genie_root.PNG Graphic file (type QTm)
 <use  "Figures/genie_root.PNG" >
 File: Figures/genie_create.PNG Graphic file (type QTm)
 <use  "Figures/genie_create.PNG" >
-Underfull \hbox (badness 10000) in paragraph at lines 718--719
+Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
  []
 
@@ -1373,108 +1351,98 @@ File: Figures/genie_settings.PNG Graphic file (type QTm)
 <use  "Figures/genie_settings.PNG" >
 File: Figures/genie_turntable_20_1.PNG Graphic file (type QTm)
 <use  "Figures/genie_turntable_20_1.PNG" >
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--747
+Underfull \hbox (badness 10000) in paragraph at lines 624--626
 
  []
 
-[23] [24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 750--751
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 754--760
+[19] [20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 763--764
+Underfull \hbox (badness 10000) in paragraph at lines 633--639
 
  []
 
-[26]
-Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 642--643
+
+ []
+
+[22]
+Chapter 4.
 File: Figures/chart_example.png Graphic file (type QTm)
 <use  "Figures/chart_example.png" >
 Underfull \vbox (badness 1990) has occurred while \output is active []
 
-[27
+[23
 
-] [28]
+] [24]
 File: Figures/camera_position_1.JPG Graphic file (type QTm)
 <use  "Figures/camera_position_1.JPG" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[29]
+[25]
 File: Figures/camera_position_2.JPG Graphic file (type QTm)
 <use  "Figures/camera_position_2.JPG" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[30]
+[26]
 File: Figures/camera_position_3.JPG Graphic file (type QTm)
 <use  "Figures/camera_position_3.JPG" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[31]
+[27]
 File: Figures/position_2.jpg Graphic file (type QTm)
 <use  "Figures/position_2.jpg" >
 File: Figures/position_5.jpg Graphic file (type QTm)
 <use  "Figures/position_5.jpg" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[32]
+[28]
 File: Figures/flowerplacement_1.png Graphic file (type QTm)
 <use  "Figures/flowerplacement_1.png" >
 File: Figures/flowerplacement_2.jpg Graphic file (type QTm)
 <use  "Figures/flowerplacement_2.jpg" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[33]
+[29]
 File: Figures/flowerplacement_3.jpg Graphic file (type QTm)
-<use  "Figures/flowerplacement_3.jpg" > [34]
-Chapter 6.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 915.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.00008pt on input line 915.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 4.99992pt on input line 915.
-[35
+<use  "Figures/flowerplacement_3.jpg" > [30]
+Chapter 5.
 
-] [36
-
-]
-Chapter 7.
-
-Underfull \hbox (badness 10000) in paragraph at lines 958--971
+Underfull \hbox (badness 10000) in paragraph at lines 819--832
 
  []
 
-[37]
+[31
 
-Package natbib Warning: Citation `troscianko2015image' on page 38 undefined on 
-input line 984.
+]
+
+Package natbib Warning: Citation `troscianko2015image' on page 32 undefined on 
+input line 845.
 
 File: Figures/AdobeDNGConverter.png Graphic file (type QTm)
 <use  "Figures/AdobeDNGConverter.png" >
 
 LaTeX Warning: File `Figures/ColorChecker camera cailbration.png' not found on 
-input line 1033.
+input line 894.
 
 File: Figures/ColorChecker camera cailbration.png Graphic file (type QTm)
 <use  "Figures/ColorChecker camera cailbration.png" >
 
-LaTeX Warning: File `Figures/create profile.png' not found on input line 1042.
+LaTeX Warning: File `Figures/create profile.png' not found on input line 903.
 
 File: Figures/create profile.png Graphic file (type QTm)
 <use  "Figures/create profile.png" >
 File: Figures/manual_method.png Graphic file (type QTm)
-<use  "Figures/manual_method.png" > [38] [39] [40] [41]
+<use  "Figures/manual_method.png" > [32] [33] [34] [35]
 File: Figures/color_checker_plug_in_win.png Graphic file (type QTm)
 <use  "Figures/color_checker_plug_in_win.png" >
 File: Figures/x_rite_preselection.png Graphic file (type QTm)
@@ -1482,45 +1450,41 @@ File: Figures/x_rite_preselection.png Graphic file (type QTm)
 File: Figures/profil_capture_1.png Graphic file (type QTm)
 <use  "Figures/profil_capture_1.png" >
 File: Figures/profil_capture_2.png Graphic file (type QTm)
-<use  "Figures/profil_capture_2.png" > [42] [43]
+<use  "Figures/profil_capture_2.png" > [36] [37]
 File: Figures/synchronize_capture.png Graphic file (type QTm)
-<use  "Figures/synchronize_capture.png" > [44]
+<use  "Figures/synchronize_capture.png" > [38]
 File: Figures/export_capture_1.png Graphic file (type QTm)
-<use  "Figures/export_capture_1.png" > [45] [46]
-Chapter 8.
-[47
-
-] [48
+<use  "Figures/export_capture_1.png" > [39] [40]
+Chapter 6.
+File: Figures/logo_metashape.jpeg Graphic file (type QTm)
+<use  "Figures/logo_metashape.jpeg" > [41
 
 ]
-Chapter 9.
-File: Figures/logo_metashape.jpeg Graphic file (type QTm)
-<use  "Figures/logo_metashape.jpeg" > [49]
 File: Figures/Metashape_tweaks_1.png Graphic file (type QTm)
 <use  "Figures/Metashape_tweaks_1.png" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (11.38454pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 CHAPTER 9.  3D MODEL RECONSTRUCTION IN AGISOF
+\TU/lmr/m/n/10 42 \TU/lmr/m/sl/10 CHAPTER 6.  3D MODEL RECONSTRUCTION IN AGISOF
 T METASHAPE
  []
 
-[50]
+[42]
 File: Figures/Metashape_tweaks_2.png Graphic file (type QTm)
 <use  "Figures/Metashape_tweaks_2.png" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[51]
+[43]
 Underfull \vbox (badness 7722) has occurred while \output is active []
 
 
 Overfull \hbox (11.38454pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 52 \TU/lmr/m/sl/10 CHAPTER 9.  3D MODEL RECONSTRUCTION IN AGISOF
+\TU/lmr/m/n/10 44 \TU/lmr/m/sl/10 CHAPTER 6.  3D MODEL RECONSTRUCTION IN AGISOF
 T METASHAPE
  []
 
-[52] [53]
+[44] [45]
 File: Figures/Metashape_mask_right_click.png Graphic file (type QTm)
 <use  "Figures/Metashape_mask_right_click.png" >
 File: Figures/Metashape_masks_tolerance.png Graphic file (type QTm)
@@ -1534,97 +1498,133 @@ File: Figures/mask_3.png Graphic file (type QTm)
 File: Figures/mask_4.png Graphic file (type QTm)
 <use  "Figures/mask_4.png" >
 Overfull \hbox (11.38454pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 54 \TU/lmr/m/sl/10 CHAPTER 9.  3D MODEL RECONSTRUCTION IN AGISOF
+\TU/lmr/m/n/10 46 \TU/lmr/m/sl/10 CHAPTER 6.  3D MODEL RECONSTRUCTION IN AGISOF
 T METASHAPE
  []
 
-[54] [55]
+[46] [47]
 Overfull \hbox (11.38454pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 56 \TU/lmr/m/sl/10 CHAPTER 9.  3D MODEL RECONSTRUCTION IN AGISOF
+\TU/lmr/m/n/10 48 \TU/lmr/m/sl/10 CHAPTER 6.  3D MODEL RECONSTRUCTION IN AGISOF
 T METASHAPE
  []
 
-[56] [57]
+[48] [49]
 File: Figures/tools_masks.png Graphic file (type QTm)
 <use  "Figures/tools_masks.png" >
 Overfull \hbox (11.38454pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 58 \TU/lmr/m/sl/10 CHAPTER 9.  3D MODEL RECONSTRUCTION IN AGISOF
+\TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 CHAPTER 6.  3D MODEL RECONSTRUCTION IN AGISOF
 T METASHAPE
  []
 
-[58]
+[50]
 File: Figures/metashape_batch_align.png Graphic file (type QTm)
-<use  "Figures/metashape_batch_align.png" > [59]
+<use  "Figures/metashape_batch_align.png" > [51]
 File: Figures/metashape_delete_selectedpoints.png Graphic file (type QTm)
 <use  "Figures/metashape_delete_selectedpoints.png" >
 File: Figures/metashape_gradual_selection.png Graphic file (type QTm)
 <use  "Figures/metashape_gradual_selection.png" >
 Overfull \hbox (11.38454pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 60 \TU/lmr/m/sl/10 CHAPTER 9.  3D MODEL RECONSTRUCTION IN AGISOF
+\TU/lmr/m/n/10 52 \TU/lmr/m/sl/10 CHAPTER 6.  3D MODEL RECONSTRUCTION IN AGISOF
 T METASHAPE
  []
 
-[60] [61]
+[52] [53]
 File: Figures/metashape_align_chunks.png Graphic file (type QTm)
 <use  "Figures/metashape_align_chunks.png" >
 Overfull \hbox (11.38454pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 62 \TU/lmr/m/sl/10 CHAPTER 9.  3D MODEL RECONSTRUCTION IN AGISOF
+\TU/lmr/m/n/10 54 \TU/lmr/m/sl/10 CHAPTER 6.  3D MODEL RECONSTRUCTION IN AGISOF
 T METASHAPE
  []
 
-[62]
+[54]
 File: Figures/metashape_show_aligned_chunks.png Graphic file (type QTm)
-<use  "Figures/metashape_show_aligned_chunks.png" > [63]
+<use  "Figures/metashape_show_aligned_chunks.png" > [55]
 File: Figures/metashape_build_mesh.png Graphic file (type QTm)
 <use  "Figures/metashape_build_mesh.png" >
 Underfull \vbox (badness 7238) has occurred while \output is active []
 
 
 Overfull \hbox (11.38454pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 64 \TU/lmr/m/sl/10 CHAPTER 9.  3D MODEL RECONSTRUCTION IN AGISOF
+\TU/lmr/m/n/10 56 \TU/lmr/m/sl/10 CHAPTER 6.  3D MODEL RECONSTRUCTION IN AGISOF
 T METASHAPE
  []
 
-[64] [65]
+[56] [57]
 File: Figures/metashape_add_scale_2.png Graphic file (type QTm)
 <use  "Figures/metashape_add_scale_2.png" >
 Overfull \hbox (11.38454pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 66 \TU/lmr/m/sl/10 CHAPTER 9.  3D MODEL RECONSTRUCTION IN AGISOF
+\TU/lmr/m/n/10 58 \TU/lmr/m/sl/10 CHAPTER 6.  3D MODEL RECONSTRUCTION IN AGISOF
 T METASHAPE
  []
 
-[66]
+[58]
 File: Figures/metashape_orientation.png Graphic file (type QTm)
 <use  "Figures/metashape_orientation.png" >
 File: Figures/metashape_orientation_2.png Graphic file (type QTm)
-<use  "Figures/metashape_orientation_2.png" > [67]
+<use  "Figures/metashape_orientation_2.png" > [59]
 Overfull \hbox (11.38454pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 68 \TU/lmr/m/sl/10 CHAPTER 9.  3D MODEL RECONSTRUCTION IN AGISOF
+\TU/lmr/m/n/10 60 \TU/lmr/m/sl/10 CHAPTER 6.  3D MODEL RECONSTRUCTION IN AGISOF
 T METASHAPE
  []
 
-[68]
-Chapter 10.
-[69
+[60]
+Chapter 7.
+[61
 
-] (./_main.bbl [70])
+] [62]
+Chapter 8.
+
+Overfull \hbox (17.937pt too wide) in paragraph at lines 1792--1793
+[]\TU/lmr/m/n/10 To label an un-numbered heading, use: \TU/lmtt/m/n/10 # Hello 
+world {-#nice-label}
+ []
+
+
+Underfull \hbox (badness 2512) in paragraph at lines 1795--1796
+[]\TU/lmr/m/n/10 Next, reference the labeled heading anywhere in the text using
+
+ []
+
+
+Overfull \vbox (0.83679pt too high) detected at line 1816
+ []
+
+[63
+
+]
+File: _main_files/figure-latex/nice-fig-1.pdf Graphic file (type QTm)
+<use  "_main_files/figure-latex/nice-fig-1.pdf" > [64] [65] [66
+
+]
+Chapter 9.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 1867.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.00008pt on input line 1867.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 4.99992pt on input line 1867.
+[67] [68
+
+]
+Chapter 10.
+(./_main.bbl [69] [70
+
+])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1946.
-[71
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1946.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1914.
+[71]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1914.
 (./_main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1946.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1946.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1914.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1914.
  ) 
 Here is how much of TeX's memory you used:
- 25557 strings out of 493005
- 454448 string characters out of 6134596
- 653083 words of memory out of 5000000
- 29187 multiletter control sequences out of 15000+600000
+ 25555 strings out of 493005
+ 454432 string characters out of 6134596
+ 653052 words of memory out of 5000000
+ 29185 multiletter control sequences out of 15000+600000
  10968 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  58i,8n,120p,10400b,598s stack positions out of 5000i,500n,10000p,200000b,80000s

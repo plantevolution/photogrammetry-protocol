@@ -1,0 +1,240 @@
+
+# Image post processing
+
+## File names and storage
+
+We found that it is critical to have a very organized structure for
+saving files, especially when several persons are working on the same
+project. We propose here what has been working so far for us.
+
+In a species folder named with the name of the species
+(*Genus_species*), there should be a distinct folder for each individual
+photographed, usually with a different collection number. If the same
+individual has been photographed several times, the date of photos
+acquisition should be appended to the folder name to discriminate them.
+We also indicate with the folder name if the individual has been
+photographed with or without sepals.
+
+For each flower, we have one folder for uncalibrated photos, one for
+calibrated photos, and one for the model. The picture of the color chart
+should be placed in the uncalibrated photos.
+
+To distinguish which photo goes in which chunk, a photo of the label is
+taken at the beginning of each chunk (each set of photo per side of
+flower). We suggest to place the photos from different chunks in
+different folders, once the photos are calibrated. The date of when the
+photos are taken is important because it helps matching the calibration
+to the right DNG file. If more than one set of photos with different
+lighting or camera settings are taken, make sure to distinguish the
+color charts that correspond to each set of photos.
+
+::: tcolorbox
+Genus_species\
+GEN_species_CollectionNumber\
+sepal_DD.MM.YYYY or no_sepals_DD.MM.YYYY\
+Model\
+*MetashapeProject*\
+*MetashapeProjectFolder.files*\
+*model.obj*\
+*model.ply*\
+*texture.jpg*\
+Photos calibrated\
+*Place here all the calibrated photos, that you can organize per chunk*\
+Photos to calibrate\
+*Place here all the RAW photos and color chart*\
+:::
+
+## Image color calibration
+
+### Creating color profiles
+
+We present here three ways to create camera profiles. The first one
+allows to manually check the automatic detection of the color chart, the
+second and third ones are fully automatic (on MacOS and windows
+respectively).
+
+This does not linearize the photos. For further details on color
+calibration read [@troscianko2015image].
+
+**Method 1 : Manual creation of color profiles**
+
+1.  Get the [Xrite ColorChecker Camera Calibration
+    software](https://xritephoto.com/ph_product_overview.aspx?ID=938&Action=Support&SoftwareID=2030)
+    and [Adobe DNG converter
+    software](https://helpx.adobe.com/photoshop/using/adobe-dng-converter.html).
+
+2.  Create a new empty folder called DNG.
+
+3.  Copy the RAW file representing your color chart in your DNG folder,
+    and rename it accordingly (e.g. Color_chart_DD.MM.YYYY).
+
+4.  Open DNG converter and select the DNG folder we created for the
+    first box. You need to select a folder, and can't select a specific
+    file, the software will convert all the files within this folder.
+    Default parameters are ok for step 2-4. It will export the RAW file
+    in the DNG folder to a DNG file with the same file name (Figure
+    [15](#adobe_dng){reference-type="ref" reference="adobe_dng"}).
+
+5.  Open the Color Checker Camera Calibration software and drag and drop
+    the newly created DNG file in the software. The software will
+    automatically draw a grid around it. Make sure that the green grid
+    fits the chart, avoiding edge effects on each square of color
+    (Figure [16](#color_checker_camera_calibration){reference-type="ref"
+    reference="color_checker_camera_calibration"}).
+
+6.  Click on *create profile* and save it under Color_Chart_DD.MM.YYYY
+    (Figure [17](#color_checker_profile){reference-type="ref"
+    reference="color_checker_profile"}).
+
+![Convert RAW chart to DNG in Adobe DNG
+Converter](Figures/AdobeDNGConverter.png){#adobe_dng width="100%"}
+
+![Align grid on chart in ColorChecker Camera
+Calibration](Figures/ColorChecker camera cailbration.png){#color_checker_camera_calibration
+width="100%"}
+
+![Export the color
+profile](Figures/create profile.png){#color_checker_profile
+width="100%"}
+
+![Image color calibration
+workflow](Figures/manual_method.png){#fig:workflow width="80%"}
+
+**Method 2 : X-Rite Color Checker plug-in installation and automatic
+creation of color profiles on MacOS**
+
+1.  Directly in Adobe Lightroom, you can add ColorChecker Camera
+    Calibration as a module to a means of exporting files directly into
+    a color profile.
+
+    1.  Click on File \> Export \> *Plug-in Manager* (or *gestionnaire
+        des modules externes* in the left bottom corner)
+
+    2.  Click on *Add*
+
+    3.  Navigate to *Library* \> *Application Support* \> *Adobe* \>
+        *Lightroom* \> *Modules*
+
+    4.  Select *XRiteColorCheckerPassport.lrplugin* and then click on
+        *Add Plug-in* and *done*.
+
+2.  Click on the color chart then *File* \> *Export* \> Choose *Xrite
+    presets* from the drop down menu.
+
+3.  Name your profile then \> *Export*
+
+4.  It will go through ColorCheckerCamera calibration to automatically
+    create the profile.
+
+5.  Restart Lightroom as indicated.
+
+**Method 3 : X-Rite Color Checker plug-in installation and automatic
+creation of color profiles on Windows**
+
+1.  Get the [Xrite ColorChecker Camera Calibration
+    software](https://xritephoto.com/ph_product_overview.aspx?ID=938&Action=Support&SoftwareID=2030)
+    and download the *PC Version*. Save the *CameraCalibrationSetup.exe*
+    in your downloads, for example, and run the program.
+
+2.  If Adobe Lightroom Classic is already installed on your computer,
+    the installation program should proposed you to install the Adobe
+    Photoshop Lightroom plug-in (Figure
+    [19](#color_checker_plug_in_win){reference-type="ref"
+    reference="color_checker_plug_in_win"}). Install it.
+
+3.  Once the plug-in is installed, run Adobe Lightroom Classic and
+    import your color chart (*File* \> *Import*).
+
+4.  Click on *File* \> *Export* and in the drop-down menu, select
+    *X-Rite Preselection* (Figure
+    [20](#x_rite_preselection){reference-type="ref"
+    reference="x_rite_preselection"}). Name your profile, and click on
+    *Export*.
+
+5.  Restart Lightroom as indicated.
+
+6.  Run the setps 4 and 5 each time you want to create a new color
+    profile witht the color chart.
+
+![Color Checker plug-in for Lightroom
+installation](Figures/color_checker_plug_in_win.png){#color_checker_plug_in_win
+height="7cm"}
+
+![Color chart profile
+exportation](Figures/x_rite_preselection.png){#x_rite_preselection
+height="7cm"}
+
+### Color and illuminance calibration from profiles
+
+1.  Import your photos in Lightroom Classic. *File* \> *Import* then
+    select your folder of RAW photos.
+
+2.  Select the tab *development*.
+
+3.  Select the photo of the chart
+
+4.  Select the color profile corresponding to the color chart you have
+    selected (see Figure
+    [\[color profile\]](#color profile){reference-type="ref"
+    reference="color profile"} to manually add a color profile) to
+    calibrate the photo of the chart with its own calibration profile.
+
+    ![Add a new color
+    profile](Figures/profil_capture_1.png){#add_profile height="7cm"}
+
+    ![After adding a profile with the + sign, select it in the list
+    below.](Figures/profil_capture_2.png){#settings_synchronize
+    height="7cm"}
+
+5.  Use the eyedropper over the 75% gray scale (the last one before the
+    black chip on the color chart, see Figure
+    [2](#fig:xrite_description){reference-type="ref"
+    reference="fig:xrite_description"}). Do not click on the photo with
+    the eye dropper, only hover over the photo.
+
+6.  Select the exposition setting, and adjust the values the eyedropper
+    indicates of the gray scale using the exposition setting to obtain
+    the RGB values of the closest values to 0.33 0.33 0.33
+    (corresponding to 85/255 for each of the red, blue, and green
+    class). The illuminance is now adjusted in addition to the color
+    calibration, but only on the chart.
+
+7.  To apply the modifications we just did to all the photos, select all
+    the photos (Cmd+A or Ctrl+A), and make sure that the one for which
+    you made changes is highlighted (in white compared to light gray for
+    the other ones selected) (see Figure
+    [23](#fig:synchronize){reference-type="ref"
+    reference="fig:synchronize"}). Check the profiles and exposure boxes
+    before synchronizing to all the other photos.
+
+8.  Click on the button *synchronize*.
+
+![Synchronize your settings made to the photo of the chart to all the
+other photos and check the two categories you modified (color profile
+and exposure).](Figures/synchronize_capture.png){#fig:synchronize
+width="1\\linewidth"}
+
+### Export calibrated files to jpg format
+
+1.  Select all the photos you need to export or all of them (cmd+A or
+    windows+A)
+
+2.  Click on *File* \> *Export*
+
+3.  You can create presets that you will only need to create once to
+    always export the same way in Adobe Lightroom (example Figure
+    [24](#export_parameters){reference-type="ref"
+    reference="export_parameters"}), and add personalized file names
+    such as \_color_calibrated at the end of each .jpg file (see also
+    for that Figure [24](#export_parameters){reference-type="ref"
+    reference="export_parameters"}).
+
+4.  In their own folder, you can then sort the calibrated photos for
+    color and exposure per chunks (easily distinguishable by the
+    separation created by a photo of the label).
+
+![You can export using your own personalized parameters and then export
+in batch your selection in a specific folder within your folder of
+uncalibrated photos for easy access. This method can thus work for any
+folder of uncalibrated
+photos.](Figures/export_capture_1.png){#export_parameters width="90%"}

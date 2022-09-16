@@ -1,0 +1,219 @@
+# Materials
+
+## Lighting
+
+It is important to have good lighting conditions to take the
+photographs. To optimize the lighting conditions, we use a [Neewer
+portable lighting box](https://neewer.com/collections/shooting-tent) to
+recreate lighting studio conditions and reduce shading on the object to
+a maximum. This lightbox needs to be powered from an outlet or from an
+external battery. The color of the background used should contrast with
+the color of the flowers to be photographed.
+
+## Turn table
+
+We use an automated turntable and shutter release device ([Syrp Genie
+mini II and
+turntable](https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare))
+to rotate each flower on itself (360) and trigger a predetermined number
+of pictures from the camera to get pictures from all around the flower.
+The genie mini II has several hours of autonomy according to its use,
+but it can be plugged in a source of energy during the process (external
+battery, plug, or usb). This device is easily controlled and set
+remotely via its application \"Syrp\" (Figure
+[1](#fig:syrp_app){reference-type="ref" reference="fig:syrp_app"}) on
+any kind of smartphone by Bluetooth
+([Appstore](https://apps.apple.com/us/app/syrp/id1387335063) or
+[Playstore](https://play.google.com/store/apps/details?id=nz.co.syrp.genie2&hl=fr_CA&gl=US))
+after the device has been paired with your phone and after any updates
+suggested by the device has been done.
+
+We also use a 1cm scale placed adjacently to the flower, and include a
+label describing the species name, collection number, date of
+collection, location, and coordinates.
+
+![Syrp application](Figures/Syrp_app.png){#fig:syrp_app width="2cm"}
+
+## Camera
+
+It is important to have very sharp pictures for optimal model
+construction. However, a professional camera is not necessary. We
+obtained good results with a Canon T2i/550D camera that shoots 18.0 MP
+RAW photos (5184 x 3456 pixels). We recommend a fixed macro lens (we use
+a 60mm fixed Canon lens). Avoid using a lens that isn't fixed : zooming
+in and out can create artifacts during the model reconstruction. Ideally
+the flower should take a large portion of the photographs for best
+results. We also use a flexible short tripod to support the camera and
+easily modify the angle at which we take each series of photos.
+
+## Color chart
+
+To calibrate the photos for color, we use a [Xrite ColorChecker Passport
+Photo
+2](https://www.xrite.com/categories/calibration-profiling/colorchecker-classic-family/colorchecker-passport-photo-2).
+The main target that we use is the classic target with a 24-patch color
+reference target to create Digital Negative (DNG) (@Adobe2012DNG) camera
+profiles from a raw photo (called DNG conversion), and the 75% neutral
+gray patch to calibrate for light exposure.
+
+![Xrite color chart details for standard Red Green and Blue (sRGB)
+values. The 75% neutral gray has values of 0.33 (85/255) for Red Green
+Blue channels in the LightRoom
+software.](Figures/Color chart sRGB values.pdf){#fig:xrite_description
+width="7cm"}
+
+
+## Software
+
+To convert RAW photos (CR2 for Canon Raw Version 2 image files) to DNG
+files, we either use directly [Adobe Lightroom
+Classic](https://www.adobe.com/ca_fr/products/photoshop-lightroom-classic.html)
+to export in DNG format the CR2 photos or [Adobe DNG
+converter](https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html).
+To calibrate the photos according to the color chart, we use the [Xrite
+Color
+Checker](https://xritephoto.com/ph_product_overview.aspx?ID=938&Action=Support&SoftwareID=2030)
+software to create DCP camera profiles from DNG files, and Adobe
+Lightroom to use these profiles and apply them on an entire set of
+photos that need the same calibration. To reconstruct the 3D models from
+photos, we use [Agisoft
+Metashape](https://www.agisoft.com/downloads/installer/).
+
+![Adobe DNG
+Converter](Figures/logo Adobe DNG Converter.png){width="40%"}
+
+![ColorChecker Camera
+Calibration](Figures/logo ColorChecker Camera Calibration.png){width="60%"}
+
+![Adobe Lightroom Classic](Figures/logo Lrc.png){width="30%"}
+
+## Flowers
+
+Collect fresh flowers from the plant, label them and store them in a
+cool place or with the tip of the peduncle in some water to prevent
+accelerated wilting. Different flowers will wilt at different paces.
+Flowers are pinned through the floral receptacle or peduncle using
+entomological pins in dense foam at the center of the turntable.
+Alternatively, flowers can be secured in a truncated pipette tip, itself
+fixed on the turntable, or with alligator clips to rapidly fix the
+flowers.
+
+::: tcolorbox
+Store flowers in 50mL Eppendorf tubes or in foam box no more than an
+hour before taking photos of them.\
+\
+In some cases, it is necessary to remove sepals from the flower before
+building the model to accurately study the corolla shape. To do this,
+use a razor blade and mark the sepal intersections with a waterproof
+pen. The marks will help for the model construction and more importantly
+landmarks positioning.
+:::
+
+## Summary of materials and software
+
+::: tabular
+L5cm\|L9cm\|C1.7cm
+
+------------------------------------------------------------------------
+
+& &\
+
+------------------------------------------------------------------------
+
+\
+
+------------------------------------------------------------------------
+
+Camera & Digital Single-Lens Reflex (DSLR) (e.g. Canon t2i) & from
+\$500\
+
+------------------------------------------------------------------------
+
+Macro lens & A preferably fixed lens (e.g. Canon 60mm f/2.8 Macro lens)
+& from \$400\
+
+------------------------------------------------------------------------
+
+Tripod & Preferably flexible, such as a gorillapod & e.g. \$80\
+
+------------------------------------------------------------------------
+
+Stepping motor and turntable kit & [Genie mini
+II](https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare),
+Shoot smooth rotating video and interactive 360${^\circ}$ images of
+objects. Full iOS and Android App control via Bluetooth. Battery life:
+6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs & \$328.00\
+
+------------------------------------------------------------------------
+
+Lightbox & A portable photo studio, e.g.
+[Neewer](https://neewer.com/products/lighting-studio-10094456?_pos=2&_sid=bde9f6ddb&_ss=r)
+20\"/50cm foldable portable photography lighting kit (Neewer Technology
+Co. LTD, Shenzhen, China), adjustable brightness with 120 LED lights,
+CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature,
+needs to be powered by a portable battery in the field, white, grey, and
+black backdrops. In the bracket of light intensities possible for this
+lightbox, we used an intermediate light intensity. \[maximum;usually
+used; minimum\] lux light intensities correspond to \[3140;2680;1330\]
+lux for a white backdrop and \[330;305;238\] Lux with a black backdrop.
+& \$79.99\
+
+------------------------------------------------------------------------
+
+External battery & Powering source for in-field photo capture,
+essentially for the lightbox or to recharge batteries & optional\
+
+------------------------------------------------------------------------
+
+\
+Flower & Freshly cut flower with peduncle and floral receptacle & /\
+Labels and container & Identification and storage of fresh flowers to
+avoid damage and avoid wilting & /\
+Turntable labels & Identification to species, collector, collection
+number, date, locality, and coordinates, and the chunk number. To use as
+a separate photo before each run of photos. & /\
+Razor blade & To remove sepals & /\
+Small block of dense foam & To fix flowers in place with a pin at the
+center of the turntable. & /\
+Entomological pins & To pin through the peduncle or floral receptacle
+and fix the flower on the turntable. & /\
+
+------------------------------------------------------------------------
+
+Scale & A 1 cm scale as reference & /\
+
+------------------------------------------------------------------------
+
+\
+
+------------------------------------------------------------------------
+
+Color chart & A color reference to calibrate RAW photos (e.g. [X-rite
+ColorChecker
+Passport](https://www.xrite.com/categories/calibration-profiling/colorchecker-targets/colorchecker-passport-photo-2))
+& e.g. \$99.00\
+
+------------------------------------------------------------------------
+
+Color calibration software & ColorChecker Camera Calibration, Xrite
+software for automatic color profile creation & Free\
+
+------------------------------------------------------------------------
+
+Photo editing software & Adobe Photoshop Lightroom, editing software for
+image color calibration in batch & Payment plans vary\
+
+------------------------------------------------------------------------
+
+DNG conversion software & Adobe DNG converter, to convert Camera Raw
+files from supported cameras to the more widely used DNG raw files &
+Free\
+
+------------------------------------------------------------------------
+
+\
+3D reconstruction from photogrammetry software & Agisoft Metashape Pro
+Software & \$549 Academic price\
+
+------------------------------------------------------------------------
+:::

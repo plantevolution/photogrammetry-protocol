@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 3D model reconstruction in Agisoft Metashape | Flower photogrammetry and 3D modeling protocol</title>
+  <meta name="description" content="This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 3D model reconstruction in Agisoft Metashape | Flower photogrammetry and 3D modeling protocol" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 3D model reconstruction in Agisoft Metashape | Flower photogrammetry and 3D modeling protocol" />
+  
+  <meta name="twitter:description" content="This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)" />
+  
+
+<meta name="author" content="Marion Leménager" />
+<meta name="author" content="Jérôme Burkiewicz" />
+<meta name="author" content="Daniel Schoen" />
+<meta name="author" content="Diana Constanza Diaz Cardona" />
+<meta name="author" content="Simon Joly" />
+
+
+<meta name="date" content="2022-09-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="blocks.html"/>
+<link rel="next" href="sharing-your-book.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A photogrammetry protocol</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#disclaimer"><i class="fa fa-check"></i><b>1.1</b> Disclaimer</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.2</b> Usage</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.3</b> Render book</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.4</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="materials.html"><a href="materials.html"><i class="fa fa-check"></i><b>2</b> Materials</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="materials.html"><a href="materials.html#lighting"><i class="fa fa-check"></i><b>2.1</b> Lighting</a></li>
+<li class="chapter" data-level="2.2" data-path="materials.html"><a href="materials.html#turn-table"><i class="fa fa-check"></i><b>2.2</b> Turn table</a></li>
+<li class="chapter" data-level="2.3" data-path="materials.html"><a href="materials.html#camera"><i class="fa fa-check"></i><b>2.3</b> Camera</a></li>
+<li class="chapter" data-level="2.4" data-path="materials.html"><a href="materials.html#color-chart"><i class="fa fa-check"></i><b>2.4</b> Color chart</a></li>
+<li class="chapter" data-level="2.5" data-path="materials.html"><a href="materials.html#software"><i class="fa fa-check"></i><b>2.5</b> Software</a></li>
+<li class="chapter" data-level="2.6" data-path="materials.html"><a href="materials.html#flowers"><i class="fa fa-check"></i><b>2.6</b> Flowers</a></li>
+<li class="chapter" data-level="2.7" data-path="materials.html"><a href="materials.html#summary-of-materials-and-software"><i class="fa fa-check"></i><b>2.7</b> Summary of materials and software</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html"><i class="fa fa-check"></i><b>4</b> Settings and preparation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#camera-and-tripod-settings-and-preparation"><i class="fa fa-check"></i><b>4.1</b> Camera and tripod settings and preparation</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#camera-settings"><i class="fa fa-check"></i><b>4.1.1</b> Camera settings</a></li>
+<li class="chapter" data-level="4.1.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#optional-custom-camera-white-balance"><i class="fa fa-check"></i><b>4.1.2</b> Optional : custom camera white balance</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#turn-table-settings-and-preparation"><i class="fa fa-check"></i><b>4.2</b> Turn table settings and preparation</a></li>
+<li class="chapter" data-level="4.3" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#summary-of-settings"><i class="fa fa-check"></i><b>4.3</b> Summary of settings</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html"><i class="fa fa-check"></i><b>5</b> Image capture step-by-step</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#take-a-picture-of-the-color-chart"><i class="fa fa-check"></i><b>5.1</b> Take a picture of the color chart</a></li>
+<li class="chapter" data-level="5.2" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#flower-placement-image-capture"><i class="fa fa-check"></i><b>5.2</b> Flower placement &amp; Image capture</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>6</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>6.1</b> Footnotes</a></li>
+<li class="chapter" data-level="6.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>6.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="image-post-processing.html"><a href="image-post-processing.html"><i class="fa fa-check"></i><b>7</b> Image post processing</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="image-post-processing.html"><a href="image-post-processing.html#file-names-and-storage"><i class="fa fa-check"></i><b>7.1</b> File names and storage</a></li>
+<li class="chapter" data-level="7.2" data-path="image-post-processing.html"><a href="image-post-processing.html#image-color-calibration"><i class="fa fa-check"></i><b>7.2</b> Image color calibration</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="image-post-processing.html"><a href="image-post-processing.html#creating-color-profiles"><i class="fa fa-check"></i><b>7.2.1</b> Creating color profiles</a></li>
+<li class="chapter" data-level="7.2.2" data-path="image-post-processing.html"><a href="image-post-processing.html#color-and-illuminance-calibration-from-profiles"><i class="fa fa-check"></i><b>7.2.2</b> Color and illuminance calibration from profiles</a></li>
+<li class="chapter" data-level="7.2.3" data-path="image-post-processing.html"><a href="image-post-processing.html#export-calibrated-files-to-jpg-format"><i class="fa fa-check"></i><b>7.2.3</b> Export calibrated files to jpg format</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>8</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>8.1</b> Equations</a></li>
+<li class="chapter" data-level="8.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>8.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="8.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>8.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html"><i class="fa fa-check"></i><b>9</b> 3D model reconstruction in Agisoft Metashape</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#download-agisoft-metashape"><i class="fa fa-check"></i><b>9.1</b> Download Agisoft Metashape</a></li>
+<li class="chapter" data-level="9.2" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#initial-tweaks"><i class="fa fa-check"></i><b>9.2</b> Initial tweaks</a></li>
+<li class="chapter" data-level="9.3" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#overview-of-the-model-building-pipeline"><i class="fa fa-check"></i><b>9.3</b> Overview of the model building pipeline</a></li>
+<li class="chapter" data-level="9.4" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#photo-importation"><i class="fa fa-check"></i><b>9.4</b> Photo importation</a></li>
+<li class="chapter" data-level="9.5" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#mask-application"><i class="fa fa-check"></i><b>9.5</b> Mask application</a></li>
+<li class="chapter" data-level="9.6" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#masks-touch-ups"><i class="fa fa-check"></i><b>9.6</b> Masks touch ups</a></li>
+<li class="chapter" data-level="9.7" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#camera-alignment"><i class="fa fa-check"></i><b>9.7</b> Camera alignment</a></li>
+<li class="chapter" data-level="9.8" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#align-chunks-together"><i class="fa fa-check"></i><b>9.8</b> Align chunks together</a></li>
+<li class="chapter" data-level="9.9" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#merge-chunks"><i class="fa fa-check"></i><b>9.9</b> Merge chunks</a></li>
+<li class="chapter" data-level="9.10" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#build-3d-mesh"><i class="fa fa-check"></i><b>9.10</b> Build 3D mesh</a></li>
+<li class="chapter" data-level="9.11" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#d-mesh-touch-ups"><i class="fa fa-check"></i><b>9.11</b> 3D mesh touch ups</a></li>
+<li class="chapter" data-level="9.12" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#build-texture"><i class="fa fa-check"></i><b>9.12</b> Build texture</a></li>
+<li class="chapter" data-level="9.13" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#scaling"><i class="fa fa-check"></i><b>9.13</b> Scaling</a></li>
+<li class="chapter" data-level="9.14" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#model-orientation"><i class="fa fa-check"></i><b>9.14</b> Model orientation</a></li>
+<li class="chapter" data-level="9.15" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#export-model-and-texture"><i class="fa fa-check"></i><b>9.15</b> Export model and texture</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>10</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>10.1</b> Publishing</a></li>
+<li class="chapter" data-level="10.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>10.2</b> 404 pages</a></li>
+<li class="chapter" data-level="10.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>10.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Flower photogrammetry and 3D modeling protocol</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="d-model-reconstruction-in-agisoft-metashape" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> 3D model reconstruction in Agisoft Metashape<a href="d-model-reconstruction-in-agisoft-metashape.html#d-model-reconstruction-in-agisoft-metashape" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="download-agisoft-metashape" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Download Agisoft Metashape<a href="d-model-reconstruction-in-agisoft-metashape.html#download-agisoft-metashape" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Download the Agisoft Metashape professional edition software
+<a href="https://www.agisoft.com/downloads/installer/">here</a>. Make sure that
+your computer fills the <a href="https://www.agisoft.com/downloads/system-requirements/">minimum system
+requirements</a>.
+The standard edition doesn’t allow the use of the scale option that we
+will need to add a scale on our models.</p>
+<div class="figure">
+<img src="Figures/logo_metashape.jpeg" style="width:20.0%" alt="" />
+<p class="caption">Agisoft Metashape</p>
+</div>
+</div>
+<div id="initial-tweaks" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Initial tweaks<a href="d-model-reconstruction-in-agisoft-metashape.html#initial-tweaks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Agisoft Metashape can use graphic cards at certain steps of the model
+construction such as image matching and depth maps calculation. To
+enable the use of the graphic hardware (GPU):</p>
+<ul>
+<li><p>Select Preferences command from the Tools menu.</p></li>
+<li><p>In Preferences dialog select GPU tab.</p></li>
+<li><p>Select available GPU devices in GPU tab of the Preferences window</p></li>
+</ul>
+<p>This step has to be done only once.</p>
+<p>This protocol has been elaborated using the version 1.7.1 of Agisoft
+Metashape. The latest version of Metashape is now version 1.8.2, but we
+still made the following changes. In order to obtain accurate thin
+structures, such as petal margin, and avoid holes in your mesh in
+Agisoft Metashape 1.5.x or later (up to our knowlege) you will need to
+activate ONCE the <em>Visibility consistent mesh</em> function in <em>Tools &gt;
+Preferences &gt; Advanced &gt;Tweaks</em>, then <em>Add</em> and fill in <em>Parameters</em>
+with <em>BuildModel/tvl1_mesh</em> and select the value as <em>False</em> (figure
+<a href="#metashape_tweaks" reference-type="ref" reference="metashape_tweaks"><span class="math display">\[metashape_tweaks\]</span></a>). Additionally, to use the anterior
+version of the depth maps generation process, add ONCE the tweak :
+<em>BuildDepthMaps/pm_enable</em> and set the value to <em>False</em> (figure
+<a href="#metashape_tweaks" reference-type="ref" reference="metashape_tweaks"><span class="math display">\[metashape_tweaks\]</span></a>).</p>
+<p><img src="Figures/Metashape_tweaks_1.png" style="width:100.0%" /></p>
+<p><img src="Figures/Metashape_tweaks_2.png" style="width:100.0%" /></p>
+</div>
+<div id="overview-of-the-model-building-pipeline" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Overview of the model building pipeline<a href="d-model-reconstruction-in-agisoft-metashape.html#overview-of-the-model-building-pipeline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To build a model, we need to do the following steps: 1) Import the
+calibrated photos, 2) apply masks to remove background on the photos, 3)
+align the cameras, 4) calculate depth maps, 5) build the 3D model
+(mesh), and 6) reconstruct the final texture (model color). There could
+be different approaches for each of the steps and options will be given
+below.</p>
+<p>One important note is whether all the pictures (cameras) are aligned
+simultaneously of if it is necessary to proceed by groups of pictures
+that correspond to each flower positions. The first approach is quicker
+and normally results in more accurate models. However, it does not work
+all the times. We recommend to try it first and if it fails to use the
+alternative approach, which is to divide the pictures in different
+"chunks" that will create partial 3D models.</p>
+</div>
+<div id="photo-importation" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Photo importation<a href="d-model-reconstruction-in-agisoft-metashape.html#photo-importation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Go to <em>Workflow</em>, click on <em>Add Photos</em>, and click <em>Open</em>. Once the
+photos are imported, they are in a single "chunk", which is a group of
+photos.</p>
+<p>To try to align all the photos simultaneously (ideal approach), you need
+to arrange them in "camera groups", where each camera group contains
+all pictures taken with the same flower orientation. Once this is done,
+you can add the first photo of each set of photos representing the
+label, and right click on this photo and select <em>disable cameras</em>. This
+allows you to not take it into account while reconstructing the model,
+but to keep all the information about the flower in your Metashape
+project.</p>
+</div>
+<div id="mask-application" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Mask application<a href="d-model-reconstruction-in-agisoft-metashape.html#mask-application" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Masks represent selected areas that are excluded from the feature
+detection procedure when applied to key points detection. When several
+keypoints are detected as the same point (matched as projections of the
+same 3D point on different photos), then it is considered as a tie
+point. If masks are applied to tie points, then if a key point is masked
+in at least one image, it will not be considered. You can thus use a
+single or just a few masks with the second method (apply masks to tie
+points). It is however possible to automatically apply masks on each
+photo to better constrain key point detection (apply masks to
+keypoints). Using masks helps in removing points to be detected in the
+background during image alignment procedure. You can see examples
+<a href="https://agisoft.freshdesk.com/support/solutions/articles/31000158967-aligning-turntable-photos-with-background-suppression-from-single-mask-in-agisoft-metashape">here</a>
+on the Agisoft helpdesk portal.</p>
+<p><strong>Step-by-step mask application workflow</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Duplicate one of your photos, and fill it in black in any image
+manipulation software, and rename it as <em>background.jpg</em>. You can
+also take a picture of the lightbox without your flower just before
+starting to shoot and use this image as background. This sometimes
+work better.</p></li>
+<li><p>Right click on a photo in one of your chunk in your Metashape
+project.</p></li>
+<li><p>Click on <em>Masks</em>, <em>Import Masks</em> and in the box that appears select
+method "From Background", operation <em>Replacement</em>.</p></li>
+<li><p>Enter the same name as the name of your background you just saved.</p></li>
+<li><p>Depending on the flower, the value for <em>Tolerance</em> can vary between
+approximately 40 and 60. For some pale flowers you may need a lower
+tolerance value (e.g. 30).</p></li>
+<li><p>Test different values of tolerance on a single photo first, but when
+you have a value that is satisfactory (that create a masks with the
+border of the flower well defined) you can select <em>Apply to entire
+workspace</em></p></li>
+<li><p>Click OK</p></li>
+<li><p>This will automatically produce masks around the flowers for all the
+photos in all your chunks. This is why we need a contrasting white
+background behind the flower.</p></li>
+<li><p>Check for masks that need touch ups (next section).</p></li>
+</ol>
+<div class="figure">
+<img src="Figures/Metashape_mask_right_click.png" style="width:100.0%" alt="" />
+<p class="caption">Right click on an image to select a mask to
+import.</p>
+</div>
+<div class="figure">
+<img src="Figures/Metashape_masks_tolerance.png" style="width:100.0%" alt="" />
+<p class="caption">Import mask from a black image <em>background.jpg</em>, and select a
+tolerance value, to test on the selected camera (the image you
+right-clicked on). If the automatic mask is automatically well adjusted
+around the flower shape (darker gray around the flower), then apply to
+entire workspace (all the
+images).</p>
+</div>
+<p><strong>Alternative masking method using Adobe Photoshop</strong> It is also possible
+to use Adobe Photoshop to apply masks. We did not find particular
+improvements compared to the Agisoft Metashape approach.</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to the file containing the pictures of chunk 1. Copy and paste
+this file, naming it accordingly (e.g. <em>Chunk1-Background</em>).</p></li>
+<li><p>Go to Adobe Photoshop version 19.1 and up.</p></li>
+<li><p>Make a copy of all of the photos you’ll be using and place them in a
+new folder labeled <em>Chunk1-masks</em>.</p></li>
+<li><p>Then, you will need to create ONCE a Photoshop action, that will be
+subsequently reused (see figures below) :</p>
+<div class="figure">
+<img src="Figures/mask_1.png" alt="" />
+<p class="caption">Record a new action called <em>Automatic Mask - 3D
+reconstruction</em></p>
+</div>
+<div class="figure">
+<img src="Figures/mask_2.png" alt="" />
+<p class="caption">When you reopen your photo, don’t forget to remove this extra task
+in your action.</p>
+</div>
+<div class="figure">
+<img src="Figures/mask_3.png" alt="" />
+<p class="caption">The action should include <em>Select Subject, Fill, Inverse, Fill,
+Save, Close</em>, and you can batch process this action to a specific
+folder of copied photos to create
+masks.</p>
+</div>
+<div class="figure">
+<img src="Figures/mask_4.png" alt="" />
+<p class="caption">Apply the action to the folder of copied photos called
+<em>Chunk1-masks</em>.</p>
+</div></li>
+<li><p>Now you should have tranformed all your copied photos into masks,
+with the foreground object in white, and the background in black.</p></li>
+<li><p>Go to Agisoft Metashape and right click on the first camera (photo)
+of chunk 1. Click on <em>Masks &gt; Import Masks</em> and in the box that
+appears select method <em>From file</em>, operation <em>Replacement</em>. In
+<em>Filename Template</em> use <em>filename.jpg</em>. Select <em>Apply to all
+cameras</em> and then click <em>OK</em>.</p></li>
+<li><p>Check the masks for touch ups.</p></li>
+</ol>
+</div>
+<div id="masks-touch-ups" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Masks touch ups<a href="d-model-reconstruction-in-agisoft-metashape.html#masks-touch-ups" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The automatic application of masks at the previous steps is sometimes
+not entirely satisfactory for all photos. It is possible to add or
+remove parts of masks using the selection tool and the add/remove/invert
+buttons (Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#tools_masks" reference-type="ref" reference="tools_masks">25</a>). You can then use the selection tools to
+select areas that are not the flower and add the selection to the mask
+(Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#tools_masks" reference-type="ref" reference="tools_masks">25</a>). You also remove the scale and the
+entomological pin at this step. Additionally, you can invert the
+selection, or remove the selected areas from the mask with the icons on
+the right hand side of the add to mask icon.</p>
+<div class="figure">
+<img src="Figures/tools_masks.png" id="tools_masks" style="width:50.0%" alt="" />
+<p class="caption">Selection tools and add selection to mask
+tool</p>
+</div>
+</div>
+<div id="camera-alignment" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> Camera alignment<a href="d-model-reconstruction-in-agisoft-metashape.html#camera-alignment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Click on the chunk you want to align, which could comprise several
+camera groups.</p></li>
+<li><p>Make sure to disable photos you don’t want (the label photo, and
+blurry photos) and that the masks are clean.</p></li>
+<li><p>Go to <em>Workflow</em>, <em>Align Photos</em> and put the accuracy on <em>High</em> or
+<em>Very high</em>. In the section <em>Advanced</em>, check <em>Generic
+pre-selection</em>, and select <em>Apply masks</em> to <em>key points</em>, and click
+<em>OK</em>. Note that if you have applied the masks to only some photos,
+select <em>Apply masks</em> to <em>tie points</em>.</p></li>
+<li><p>If you are aligning several chunks of photos, it is possible to run
+this job in batch for each chunk in <em>workflow</em> &gt; <em>batch process</em> &gt;
+<em>Add</em> button &gt; select the <em>job type</em> as <em>Align photos</em> to apply to
+<em>all chunks</em> or select specific ones &gt; add parameters listed above
+(Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#batch_alignment" reference-type="ref" reference="batch_alignment">26</a>).</p>
+<div class="figure">
+<img src="Figures/metashape_batch_align.png" id="batch_alignment" style="width:50.0%" alt="" />
+<p class="caption">Align photos in multiple
+chunks</p>
+</div></li>
+<li><p><strong>Optional: align using markers</strong> If the different camera cannot
+align properly, it is possible to place homologous markers on the
+flower, defined as remarkable points on the flower (distinguishable
+pattern such as color dots on the corolla, for example), or by
+little pen marks at the surface of the flower when homologous
+markers lacks. These points need to be clearly identifiable on all
+camera groups. You will need at least 5 markers per flower, ideally
+positioned in different regions of the flower (e.g., near the
+peduncle, sepals tips, petals). Do not use points from the
+background to align chunks as it is independent from the flower (the
+flower changes position relative to the background).</p>
+<ol style="list-style-type: decimal">
+<li><p>Right click on the picture</p></li>
+<li><p>Then click on <em>Place Marker</em> &gt; <em>New Marker</em>.</p></li>
+<li><p>In the left panel, rename them accordingly. Make sure to use the
+same nomenclature on each chunk to be able to merge them
+according to their names.</p></li>
+</ol></li>
+<li><p>To help the software recognize the markers, spread the manual
+markers on photos throughout the chunk (It is normally sufficient to
+place it on 2-3 photos and the software normally places them
+properly on the others, but make sure the markers are all properly
+placed).</p></li>
+<li><p>Repeat the step for each marker and each chunk.</p></li>
+<li><p>Select one chunk. Go to <em>Workflow &gt; Align Chunks</em>, select the
+chunks you want to align, set the method as <em>Markers based</em> and then
+click <em>OK</em>. Repeat for all chunks to align.</p></li>
+<li><p><strong>Optional</strong> If the camera alignment is not satisfactory, it is
+possible to clean the tie point obtained and try to realign the
+cameras. For instance, on the tie point generated by the alignment,
+you can delete outlier and imprecise points (Figure
+<a href="#removing_points" reference-type="ref" reference="removing_points"><span class="math display">\[removing_points\]</span></a>):</p>
+<ol style="list-style-type: decimal">
+<li><p>In the top menu, click on <em>Model</em> and then <em>Gradual Selection</em>.
+Select <em>Reconstruction uncertainty</em> on <em>Criterion</em> and play with
+the <em>Level</em> value to remove the uncertain points. The higher the
+value, the worst is the point placed. Values between 30 and 10
+generally give good results. Then <em>OK</em>. Press <em>Delete</em> on your
+keyboard to delete the selected points in red. You don’t need
+much more than 10,000 points for good photo alignments.</p></li>
+<li><p>After removing uncertain points, go to the <em>Reference</em> panel and
+click on <em>Optimize Camera</em> to optimize camera position. Select
+all of the cameras.</p></li>
+<li><p>In <em>Model &gt; Gradual Selection</em>, ensure that <em>Reprojection
+error</em> parameter is below 1. If it is not, check if the
+alignment runs well (camera needs to form a full circle above
+the object). If the alignment fails, try to re-align photos by
+following step 3 (don’t forget to check the box "reset current
+alignment"). If the alignment didn’t fail, go to <em>Model &gt;
+Gradual Selection &gt; Reproduction error</em>, and set the level to 1
+and click OK. Then press <em>Delete</em>.</p></li>
+<li><p>Manually remove remaining outliers using the selection tool.</p></li>
+</ol></li>
+<li><p>Repeat these steps for each chunk.</p></li>
+</ol>
+<div class="figure">
+<img src="Figures/metashape_delete_selectedpoints.png" id="model_orientation1" style="width:100.0%" alt="" />
+<p class="caption">Use the selection tool to remove background
+points</p>
+</div>
+<div class="figure">
+<img src="Figures/metashape_gradual_selection.png" id="model_orientation2" style="width:100.0%" alt="" />
+<p class="caption">Use the gradual selection tool to remove additional mis-calculated
+points</p>
+</div>
+<p><strong>Note: If the alignment fails using only one chunk and two or more
+camera groups, then it will be necessary to divide your job in several
+chunks. Each chunk should then contain photos from one flower position.
+Once the chunks are ready, you can proceed with the alignment following
+the previous steps.</strong></p>
+</div>
+<div id="align-chunks-together" class="section level2 hasAnchor" number="9.8">
+<h2><span class="header-section-number">9.8</span> Align chunks together<a href="d-model-reconstruction-in-agisoft-metashape.html#align-chunks-together" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Note: This step is only necessary if your project is divided in
+several chunks.</strong></p>
+<p>At this step, it is important to align the different chunks with each
+other before they can be combined in a complete model. There are two
+ways to do this. The approach using tie points is quick but does not
+work all the time. If it fails, you will have to use the approach using
+markers.</p>
+<p>To align using tie points :</p>
+<ol style="list-style-type: decimal">
+<li><p>Select the chunks to align together.</p></li>
+<li><p>Go to <em>Workflow</em> &gt; <em>Align Chunks</em>, select the chunks you want to
+align together, set the method as <em>Point based</em> (Figure
+<a href="d-model-reconstruction-in-agisoft-metashape.html#Align_chunk" reference-type="ref" reference="Align_chunk">29</a>).</p></li>
+<li><p>Restrict the key points with masks.</p></li>
+<li><p>Click on <em>OK</em>.</p></li>
+</ol>
+<p>To align using markers :</p>
+<ol style="list-style-type: decimal">
+<li><p>Place homologous markers on the flower, defined as remarkable points
+on the flower (distinguishable pattern such as color dots on the
+corolla, for example), or by little pen marks at the surface of the
+flower when homologous markers lacks. These points need to be
+clearly identifiable on all chunks. You will need at least 5 markers
+per flower, ideally positioned in different regions of the flower
+(e.g., near the peduncle, sepals tips, petals). Do not use points
+from the background to align chunks as it is independent from the
+flower (the flower changes position relative to the background).</p>
+<ol style="list-style-type: decimal">
+<li><p>Right click on the picture</p></li>
+<li><p>Then click on <em>Place Marker</em> &gt; <em>New Marker</em>.</p></li>
+<li><p>In the left panel, rename them accordingly. Make sure to use the
+same nomenclature on each chunk to be able to merge them
+according to their names.</p></li>
+</ol></li>
+<li><p>To help the software recognize the markers, spread the manual
+markers on photos throughout the chunk (It is normally sufficient to
+place it on 2-3 photos and the software normally places them
+properly on the others, but make sure the markers are all properly
+placed).</p></li>
+<li><p>Repeat the step for each marker and each chunk.</p></li>
+<li><p>Select one chunk. Go to <em>Workflow &gt; Align Chunks</em>, select the
+chunks you want to align, set the method as <em>Markers based</em> and then
+click <em>OK</em>. Repeat for all chunks to align.</p></li>
+</ol>
+<p>When the chunks are aligned, a <span class="math display">\[T\]</span> is put at the end of your chunk
+name to notify that it is transformed. You can check the alignment using
+the icon to show aligned chunks (icon of layers on top of each others,
+Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#show_aligned_chunk" reference-type="ref" reference="show_aligned_chunk">30</a>). The different chunks should be well
+aligned over the whole flower. If the alignment of your chunks is
+unsatisfactory, try to place more markers on recognizable features and
+spread across the whole flower. Additionally, you can manually align
+chunks using the tools to move the models in the space, but this is
+highly not recommended.</p>
+<div class="figure">
+<img src="Figures/metashape_align_chunks.png" id="Align_chunk" style="width:100.0%" alt="" />
+<p class="caption">Align chunks</p>
+</div>
+<div class="figure">
+<img src="Figures/metashape_show_aligned_chunks.png" id="show_aligned_chunk" style="width:90.0%" alt="" />
+<p class="caption">Show aligned chunks to verify their
+positions</p>
+</div>
+</div>
+<div id="merge-chunks" class="section level2 hasAnchor" number="9.9">
+<h2><span class="header-section-number">9.9</span> Merge chunks<a href="d-model-reconstruction-in-agisoft-metashape.html#merge-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Note: This step is only necessary if your project is divided in
+several chunks.</strong></p>
+<p>The next step is to merge chunks together when they are well aligned.
+Click on <em>Workflow &gt; Merge chunks</em>, and merge using either the tie
+point method or the markers method depending on the option selected
+above.</p>
+</div>
+<div id="build-3d-mesh" class="section level2 hasAnchor" number="9.10">
+<h2><span class="header-section-number">9.10</span> Build 3D mesh<a href="d-model-reconstruction-in-agisoft-metashape.html#build-3d-mesh" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Select the chunk or the merged chunks for which you want to build a
+3D mesh (model).</p></li>
+<li><p>Go to <em>Workflow &gt; Build Mesh</em>.</p></li>
+<li><p>In the dialog box, make sure that <em>Source Data</em> is on <em>Depth maps</em>,
+<em>Quality</em> and <em>Face Count</em> on <em>High</em> (Figure
+<a href="d-model-reconstruction-in-agisoft-metashape.html#fig:3d_mesh" reference-type="ref" reference="fig:3d_mesh">31</a>).
+Note that although it is also possible to generate a mesh from a
+dense point cloud (which has to be built separately), the depth maps
+provide better results for objects with a high number of minor
+details.</p></li>
+<li><p>Then go to <em>Advanced</em>, check <em>Calculate vertex colors</em>. Click OK.</p></li>
+<li><p>Once the mesh is produced, you should remove the pin and extra
+floating background parts using the selection tool. This will
+highlight the selection in red.</p></li>
+<li><p>Verify your selection and press delete to remove them.</p></li>
+</ol>
+<div class="figure">
+<img src="Figures/metashape_build_mesh.png" id="fig:3d_mesh" style="width:50.0%" alt="" />
+<p class="caption">Build 3D mesh</p>
+</div>
+<div class="tcolorbox">
+<p>Our protocol merges the chunks to build a tie point model of all chunks
+before constructing a model for the merge chunk. We found that this is
+the best approach, although it is also possible to build models for each
+chunk separately and then merge these models to obtain a full model.</p>
+</div>
+</div>
+<div id="d-mesh-touch-ups" class="section level2 hasAnchor" number="9.11">
+<h2><span class="header-section-number">9.11</span> 3D mesh touch ups<a href="d-model-reconstruction-in-agisoft-metashape.html#d-mesh-touch-ups" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>You can smooth the mesh by clicking on <em>Tools</em>, <em>Mesh</em>, <em>Smooth
+Mesh</em>. You can also duplicate a 3D model to save one intact, and
+right click on it, and un-check <em>Use as default</em> to keep it as an
+archived model. If you smooth a mesh, you can’t undo it.</p></li>
+<li><p>You can fill holes in your mesh by clicking on <em>Tools &gt; Mesh &gt;
+Close Holes</em>. Note that if your holes are too big, the closing
+function can create unwanted structures. Similarly as the smoothing,
+you can’t undo closing holes in the mesh. <strong>HOWEVER</strong>, this will
+remove the vertex colors in version 1.7.2, which we will need to
+place landmarks when doing the morphometrics.</p></li>
+</ol>
+</div>
+<div id="build-texture" class="section level2 hasAnchor" number="9.12">
+<h2><span class="header-section-number">9.12</span> Build texture<a href="d-model-reconstruction-in-agisoft-metashape.html#build-texture" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To build the texture : <em>Workflow &gt; Build Texture</em>, use the preset
+values and click OK.</p>
+</div>
+<div id="scaling" class="section level2 hasAnchor" number="9.13">
+<h2><span class="header-section-number">9.13</span> Scaling<a href="d-model-reconstruction-in-agisoft-metashape.html#scaling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To scale the model, go to the pictures of your merged chunk and follow
+these steps :</p>
+<ol style="list-style-type: decimal">
+<li><p>On a picture displaying the scale bar, add new markers at each end
+of the scale bar and on a couple of additional photos.</p></li>
+<li><p>In the left panel, select both markers and click on the icon <em>Add
+scale</em> (Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#metashape_scale" reference-type="ref" reference="metashape_scale">32</a>).</p></li>
+<li><p>Go to the <em>Reference</em> panel, select the scale and add 0.01 as
+reference.</p></li>
+<li><p>Click on the <em>Update transform</em> button (rotating arrows). This is an
+important step, because otherwise the scale will not be incorporated
+to your model.</p></li>
+<li><p>To verify if the scale is taken into account, you can use the
+measuring tape tool.</p></li>
+</ol>
+<div class="figure">
+<img src="Figures/metashape_add_scale_2.png" id="metashape_scale" style="width:90.0%" alt="" />
+<p class="caption">Add a scale using
+landmarks</p>
+</div>
+</div>
+<div id="model-orientation" class="section level2 hasAnchor" number="9.14">
+<h2><span class="header-section-number">9.14</span> Model orientation<a href="d-model-reconstruction-in-agisoft-metashape.html#model-orientation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>In Metashape, be sure that <em>Show info</em> in <em>Model &gt; Show/Hide Items</em>
+is checked. You should see at the bottom right of the model panel
+the 3D axes.</p></li>
+<li><p>Show grid</p></li>
+<li><p>Make sure that the scale is the right one, changing it will affect
+the coordinates of the 3D model. You can verify the scale using the
+measuring tool.</p></li>
+<li><p>Use the navigation tool to orient these 3D axes.</p></li>
+<li><p>Once you orient the 3D axes in the wanted direction, you can then
+use the tool <em>Rotate Object</em> to put the object in the wanted
+direction, and at the center of the grid, facing the right side of
+the grid.</p></li>
+<li><p>Orient the binding box as well with the cross on the ventral side,
+and the two dash facing the opening of the flower. Note that
+depending on the software you use to open the model, the first view
+orientation may change when you open the final object file.</p></li>
+</ol>
+<p><img src="Figures/metashape_orientation.png" style="width:100.0%" /></p>
+<p><img src="Figures/metashape_orientation_2.png" style="width:100.0%" /></p>
+</div>
+<div id="export-model-and-texture" class="section level2 hasAnchor" number="9.15">
+<h2><span class="header-section-number">9.15</span> Export model and texture<a href="d-model-reconstruction-in-agisoft-metashape.html#export-model-and-texture" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>You can export your 3D model by clicking on <em>File</em> &gt; <em>Export</em> &gt;
+<em>Export Model</em>.</p></li>
+<li><p>Name your model</p></li>
+<li><p>Choose .ply as the extension.</p></li>
+<li><p>In the dialog box, tick the <em>Vertex colors</em>. This option will allow
+you to get color on the actual 3D model.</p></li>
+<li><p>Select <em>Export texture</em> as PNG.</p></li>
+<li><p>Make sure to export the texture with transparency, by ticking the
+<em>Write alpha channel</em> option. The texture is a separate file, with
+detail color information that is wrapped on the model.</p></li>
+<li><p>Click on <em>OK</em>.</p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="blocks.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sharing-your-book.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-model-reconstruction.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

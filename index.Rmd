@@ -30,7 +30,7 @@ Leménager, M., J. Burkiewicz, D. J. Schoen, S. Joly. Studying flowers in 3D usi
 
 ## Contributing
 
-This protocol was produced with bookdown and is [hosted on github]( https://github.com/plantevolution/photogrammetry-protocol). Please do not hesitate to fork the protocol, modify it and make pull request to improve it!
+This protocol was produced with bookdown and is [hosted on github]( https://github.com/plantevolution/photogrammetry-protocol). Please do not hesitate to fork the protocol, modify it and make pull requests to improve it!
 
 ## Disclaimer
 

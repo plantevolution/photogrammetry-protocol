@@ -90,11 +90,11 @@ calibration read [@troscianko2015image].
 Converter](Figures/AdobeDNGConverter.png){#adobe_dng width="100%"}
 
 ![Align grid on chart in ColorChecker Camera
-Calibration](Figures/ColorChecker camera cailbration.png){#color_checker_camera_calibration
+Calibration](Figures/ColorChecker_camera_calibration.png){#color_checker_camera_calibration
 width="100%"}
 
 ![Export the color
-profile](Figures/create profile.png){#color_checker_profile
+profile](Figures/create_profile.png){#color_checker_profile
 width="100%"}
 
 ![Image color calibration

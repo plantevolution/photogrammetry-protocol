@@ -63,7 +63,7 @@ attention to these while taking the pictures.
 
 ![Camera settings interface of the Canon
 t2i/550D](Figures/camera_settings.JPG){#fig:my_label
-width="0.5\\linewidth"}
+width="50%"}
 
 ### Optional : custom camera white balance
 
@@ -85,10 +85,10 @@ post-processing the color calibration of each photo. This optional
 section only helps to have a better preview of the photos.
 
 ![Custom WB parameter](Figures/Custom WB setting.png){#WB_sub1
-width="7cm" height="4.5cm"}
+width="50%"}
 
 ![Select your custom WB](Figures/Custom WB selection.png){#WB_sub2
-width="7cm" height="4.5cm"}
+width="50%"}
 
 ## Turn table settings and preparation
 
@@ -126,23 +126,23 @@ triggered, and the flower to stabilize after each rotation.
     when applying masks later.
 
 ![Camera shutter release port](Figures/shutter.jpg){#fig:shutter
-width="30%"}
+width="50%"}
 
 ![Genie app interface root](Figures/genie_root.PNG){#genie_root
-width="\\textwidth"}
+width="50%"}
 
 ![Create turntable content](Figures/genie_create.PNG){#genie_content
-width="\\textwidth"}
+width="50%"}
 
 \
 
 ![Genie detailed
 settings](Figures/genie_settings.PNG){#fig:genie_settings
-width="\\textwidth"}
+width="50%"}
 
 ![Start recording with the
 turntable](Figures/genie_turntable_20_1.PNG){#record
-width="\\textwidth"}
+width="50%"}
 
 ## Summary of settings
 

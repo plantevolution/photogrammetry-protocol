@@ -59,7 +59,7 @@ gray patch to calibrate for light exposure.
 ![Xrite color chart details for standard Red Green and Blue (sRGB)
 values. The 75% neutral gray has values of 0.33 (85/255) for Red Green
 Blue channels in the LightRoom
-software.](Figures/Color chart sRGB values.pdf){#fig:xrite_description
+software.](Figures/Color_chart_sRGB_values.pdf){#fig:xrite_description
 width="7cm"}
 
 
@@ -80,12 +80,12 @@ photos, we use [Agisoft
 Metashape](https://www.agisoft.com/downloads/installer/).
 
 ![Adobe DNG
-Converter](Figures/logo Adobe DNG Converter.png){width="40%"}
+Converter](Figures/logo Adobe DNG Converter.png){width="20%"}
 
 ![ColorChecker Camera
-Calibration](Figures/logo ColorChecker Camera Calibration.png){width="60%"}
+Calibration](Figures/logo ColorChecker Camera Calibration.png){width="20%"}
 
-![Adobe Lightroom Classic](Figures/logo Lrc.png){width="30%"}
+![Adobe Lightroom Classic](Figures/logo Lrc.png){width="20%"}
 
 ## Flowers
 

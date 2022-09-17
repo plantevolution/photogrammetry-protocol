@@ -1,6 +1,3 @@
-fig:nice-fig
-tab:nice-tab
-eq:binom
 about
 citation
 contributing
@@ -44,17 +41,3 @@ build-texture
 scaling
 model-orientation
 export-model-and-texture
-sharing-your-book
-publishing
-pages
-metadata-for-sharing
-cross
-chapters-and-sub-chapters
-captioned-figures-and-tables
-footnotes-and-citations
-footnotes
-citations
-blocks
-equations
-theorems-and-proofs
-callout-blocks

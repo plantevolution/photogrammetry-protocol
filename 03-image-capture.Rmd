@@ -48,21 +48,21 @@ more photos than less because if we can drop some pictures during the
 model reconstruction, it is impossible to come back and take more
 pictures if we realize that we should have taken more.
 
-::: tcolorbox
-For Gesneriaceae, we first suggest a standard orientation and an
-upside-down position of the flower as this generally gives satisfactory
-results (Figure
-[\[flowerplacement_2\]](#flowerplacement_2){reference-type="ref"
-reference="flowerplacement_2"}). For more complex flowers, three
+>For Gesneriaceae, we first suggest a standard orientation [14](#flowerplacement_1){reference-type="ref"
+reference="flowerplacement_1"}) and an
+upside-down position (Figure
+[15](#flowerplacement_2){reference-type="ref"
+reference="flowerplacement_2"}) of the flower as this generally gives satisfactory
+results . For more complex flowers, three
 positions may be required: horizontal, vertical, and upside down (Figure
-[\[flowerplacement_3\]](#flowerplacement_3){reference-type="ref"
+[16](#flowerplacement_3){reference-type="ref"
 reference="flowerplacement_3"}).
-:::
+
 
 1.  Clip the camera on the flexible tripod (gorillapod) and place the
     camera at one of the three position required per flower position :
     high mid, and low position (see Figure
-    [\[flowerplacement_2\]](#flowerplacement_2){reference-type="ref"
+    [14](#flowerplacement_2){reference-type="ref"
     reference="flowerplacement_2"}). Make sure to not use different
     camera orientations (landscape vs. portrait).
 
@@ -103,30 +103,28 @@ reference="flowerplacement_3"}).
     by pressing the square button (stop) and manually adjust the focus
     if needed, then press rec to resume your spin.
 
-![](Figures/camera_position_1.JPG){width="90%"}
+![Camera position 1](Figures/camera_position_1.JPG){width="90%"}
 
-![](Figures/camera_position_2.JPG){width="90%"}
+![Camera position 2](Figures/camera_position_2.JPG){width="90%"}
 
-![](Figures/camera_position_3.JPG){width="90%"}
+![Camera position 3](Figures/camera_position_3.JPG){width="90%"}
 
 ![](Figures/position_2.jpg){width="90%"}
 
 ![](Figures/position_5.jpg){width="90%"}
 
-![](Figures/flowerplacement_1.png){width="90%"}
+![](Figures/flowerplacement_1.png){#flowerplacement_2 width="90%"}
 
-![](Figures/flowerplacement_2.jpg){width="90%"}
+![](Figures/flowerplacement_2.jpg){#flowerplacement_2 width="90%"}
 
-![](Figures/flowerplacement_3.jpg){#3placement width="90%"}
+![](Figures/flowerplacement_3.jpg){#flowerplacement_3 width="90%"}
 
-::: tcolorbox
-Adjust the number of flower positions and number of photos according to
+>Adjust the number of flower positions and number of photos according to
 each flower. For intricate flowers, or flowers that can't be captured
 entirely with only two positions (ventral and dorsal), you can place the
 flower on an another position (Figure
-[14](#3placement){reference-type="ref" reference="3placement"}). On the
+[15](#flowerplacement_3){reference-type="ref" reference="#flowerplacement_3"}). On the
 contrary, if the flower can't be placed on several positions, you may
 need to increase the number of photos per camera height in order to have
 sufficient information for the software to reconstruct accurate 3D
 models.
-:::

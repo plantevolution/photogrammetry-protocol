@@ -7,7 +7,7 @@ lighting
 turn-table
 camera
 color-chart
-software
+softwares
 flowers
 summary-of-materials-and-software
 settings-and-preparation

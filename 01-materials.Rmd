@@ -63,7 +63,7 @@ software.](Figures/Color_chart_sRGB_values.pdf){#fig:xrite_description
 width="7cm"}
 
 
-## Software
+## Softwares
 
 To convert RAW photos (CR2 for Canon Raw Version 2 image files) to DNG
 files, we either use directly [Adobe Lightroom
@@ -85,7 +85,7 @@ Converter](Figures/logo Adobe DNG Converter.png){width="20%"}
 ![ColorChecker Camera
 Calibration](Figures/logo ColorChecker Camera Calibration.png){width="20%"}
 
-![Adobe Lightroom Classic](Figures/logo Lrc.png){width="20%"}
+![Adobe Lightroom Classic](Figures/logo Lrc.png){width="15%"}
 
 ## Flowers
 

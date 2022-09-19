@@ -20,9 +20,11 @@ github-repo: rstudio/bookdown-demo
 
 # About
 
-This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)
+This protocol is an evolving protocol used in the [Joly lab](www.plantevolution.org) at the Université de Montréal (Canada)
 
 This protocol describes how to obtain three-dimensional (3D) reconstructions of flowers using photogrammetry. It describes in details the set-up, settings and steps that has worked for us for building accurate flower models, but other approaches are certainly possible. Hence, we hope this protocol serves as a starting point rather than a final protocol. We welcome any comments.
+
+![](Figures/cover.jpg){width="100%"}
 
 ## Citation
 
@@ -34,4 +36,4 @@ This protocol was produced with bookdown and is [hosted on github]( https://gith
 
 ## Disclaimer
 
-We provide this protocol as guidelines, without any guaranty. It has worked well for us for many types of flowers, but there is no guaranty that it will work on all flowers. 
+We provide this protocol as guidelines, without any guaranty. It has worked well for us for many types of flowers, but there is no guaranty that it will work on all flowers.

@@ -10,6 +10,7 @@ fig:genie-root
 fig:genie-content
 fig:genie-settings
 fig:genie-record
+fig:chart
 fig:flower-two-positions
 fig:flower-three-positions
 fig:camera-positions

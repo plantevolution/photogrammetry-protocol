@@ -29,11 +29,12 @@
 
 7.  Take a picture of the color chart (RAW). Make sure to Incorporate
     each color squares, and the corners of the chart as follows (Figure
-    [13](#colorchart){reference-type="ref" reference="colorchart"}).
+    \@ref(fig:chart)).
 
-![Colour chart photo taken at the beginning of the process to calibrate
-the photos in post process.](Figures/chart_example.png){#colorchart
-width="30%"}
+```{r chart, echo=FALSE, message=FALSE, fig.cap="Colour chart photo taken at the beginning of the process to calibrate the photos in post process.", out.width = '33%', fig.align='center'}
+knitr::include_graphics("Figures/chart_example.png")
+```
+
 
 ## Flower placement & Image capture
 

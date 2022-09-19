@@ -27,7 +27,7 @@
 <meta name="author" content="Simon Joly" />
 
 
-<meta name="date" content="2022-09-17" />
+<meta name="date" content="2022-09-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -159,43 +159,20 @@
 <h1><span class="header-section-number">3</span> Settings and preparation<a href="settings-and-preparation.html#settings-and-preparation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="camera-and-tripod-settings-and-preparation" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Camera and tripod settings and preparation<a href="settings-and-preparation.html#camera-and-tripod-settings-and-preparation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To obtain the best picture quality for model reconstruction, we need an
-optimal combination of the light sensibility of the sensor (ISO), the
-duration of exposure and the focal of the objective (F). As mentioned,
-it is preferable to use a fixed lens (one that doesn’t allow zooming) to
-facilitate the model reconstruction in the processing step because the
-software can’t take zooming into account in the reconstruction process.
-Maximizing the light source allows us to use the lowest ISO to get
-crisper images. Adapted time exposure to allow the right amount of light
-to go to the sensor, avoids low key nor high key photo (under/over
-exposed photo). This may be adapted according to the subject (light or
-dark colored subject or background) or if different lighting conditions
-are used.</p>
-<p>To maximize the depth of field without lowering the image quality, using
-the manual option on the camera dial, the focal F should be set to F16.
-Use the manual focus setting on the side of the lens (Figure
-<a href="settings-and-preparation.html#camera_arrows" reference-type="ref" reference="camera_arrows">3</a>) to
-avoid camera trigger malfunction when the flowers doesn’t land on the
-detector. If the flower is off centered during rotation, and the
-automatic focus can’t focus (on the background) the camera trigger is
-prevented with the automatic focus. On manual, the camera will always be
-triggered by the turn table, even if the focus isn’t optimal. Because
-the subject is moving and may be off centered on the turntable, the
-focus may need to be adapted while the turn table runs. For this you can
-pause the turntable, manually adjust the focus, and resume the spin.</p>
-<p>A flexible tripod (Figure <a href="settings-and-preparation.html#tripod" reference-type="ref" reference="tripod">4</a>) is used to adjust several camera heights, high,
-middle, and low, close to the subject.</p>
-<div class="figure">
-<img src="Figures/camera_arrows.png" id="camera_arrows" style="width:6cm" alt="" />
-<p class="caption">Camera and lens used to take RAW photos. The red arrows (from top to
-bottom) depict the button to get manual focus, the ISO button and the
-manual parameter on the camera
-dial.</p>
+<p>To obtain the best picture quality for model reconstruction, we need an optimal combination of the light sensibility of the sensor (ISO), the duration of exposure and the focal of the objective (F). As mentioned, it is preferable to use a fixed lens (one that doesn’t allow zooming) to facilitate the model reconstruction in the processing step because the software can’t take zooming into account in the reconstruction process. Maximizing the light source allows us to use the lowest ISO to get crisper images. Adapted time exposure to allow the right amount of light to go to the sensor, avoids low key nor high key photo (under/over exposed photo). This may be adapted according to the subject (light or dark colored subject or background) or if different lighting conditions are used.</p>
+<p>To maximize the depth of field without lowering the image quality, using the manual option on the camera dial, the focal F should be set to F16. Use the manual focus setting on the side of the lens (Figure <a href="settings-and-preparation.html#fig:camera-arrows">3.1</a>) to avoid camera trigger malfunction when the flowers doesn’t land on the detector. If the flower is off centered during rotation, and the automatic focus can’t focus (on the background) the camera trigger is prevented with the automatic focus. On manual, the camera will always be triggered by the turn table, even if the focus isn’t optimal. Because the subject is moving and may be off centered on the turntable, the focus may need to be adapted while the turn table runs. For this you can pause the turntable, manually adjust the focus, and resume the spin.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:camera-arrows"></span>
+<img src="Figures/camera_arrows.png" alt="Camera and lens used to take RAW photos. The red arrows (from top to bottom) depict the button to get manual focus, the ISO button and the manual parameter on the camera dial." width="33%" />
+<p class="caption">
+Figure 3.1: Camera and lens used to take RAW photos. The red arrows (from top to bottom) depict the button to get manual focus, the ISO button and the manual parameter on the camera dial.
+</p>
 </div>
-<div class="figure">
-<img src="Figures/tripod.png" id="tripod" style="width:4cm" alt="" />
-<p class="caption">Flexible tripod used to adjust camera
-positions.</p>
+<p>A flexible tripod (Figure <a href="settings-and-preparation.html#fig:tripod">3.2</a>) is used to adjust several camera heights, high, middle, and low, close to the subject.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tripod"></span>
+<img src="Figures/tripod.png" alt="Flexible tripod used to adjust camera positions." width="33%" />
+<p class="caption">
+Figure 3.2: Flexible tripod used to adjust camera positions.
+</p>
 </div>
 <div id="camera-settings" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Camera settings<a href="settings-and-preparation.html#camera-settings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -204,45 +181,47 @@ positions.</p>
 exposure time (shutter speed) 1/20s, F/16 focal, ISO 100, standard
 exposition on the light meter, and we save pictures as RAW files (ML
 setting on the camera display) format to be able to post-process them
-for color calibration (Figure <a href="settings-and-preparation.html#fig:my_label" reference-type="ref" reference="fig:my_label">5</a>). A RAW photo of the color chart with an
+for color calibration (Figure <a href="settings-and-preparation.html#fig:camera-settings">3.3</a>). A RAW photo of the color chart with an
 identical set of lighting conditions and camera settings as the flower
 to be photographed is needed for each flower photos series. If several
 flowers are processed one after the other without variation of light
 conditions, only one chart photo is needed.</p>
-<div class="tcolorbox">
+<blockquote>
 <p>The nicer and the sharper the photographs, the easier it will be to
 build the models. So make sure that the flower is always in focus. Shade
 or high light reflectance can also impair model reconstruction, so pay
 attention to these while taking the pictures.</p>
-</div>
-<div class="figure">
-<img src="Figures/camera_settings.JPG" id="fig:my_label" style="width:50.0%" alt="" />
-<p class="caption">Camera settings interface of the Canon
-t2i/550D</p>
+</blockquote>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:camera-settings"></span>
+<img src="Figures/camera_settings.JPG" alt="Camera settings interface of the Canon t2i/550D." width="50%" />
+<p class="caption">
+Figure 3.3: Camera settings interface of the Canon t2i/550D.
+</p>
 </div>
 </div>
 <div id="optional-custom-camera-white-balance" class="section level3 hasAnchor" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Optional : custom camera white balance<a href="settings-and-preparation.html#optional-custom-camera-white-balance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Optionally, you can begin by setting a personalized white balance in
+<p>Optionally, you can begin by setting a personalized white balance (WB) in
 your camera with the light gray scale on the chart :</p>
 <ol style="list-style-type: decimal">
-<li><p>For a Canon camera, take a picture of the gray scale</p></li>
-<li><p>Choose <em>Custom WB</em> in your camera settings (Figure
-<a href="settings-and-preparation.html#WB_sub1" reference-type="ref" reference="WB_sub1">6</a>)</p></li>
-<li><p>Select <em>Custom</em> and use the picture of the grey scale to define your
-custome white balance (Figure <a href="settings-and-preparation.html#WB_sub2" reference-type="ref" reference="WB_sub2">7</a>). Be careful, you will still require to
-linearize and calibrate each photo afterwards.</p></li>
+<li><p>For a Canon camera, take a picture of the gray scale;</p></li>
+<li><p>Choose <em>Custom WB</em> in your camera settings (Figure <a href="settings-and-preparation.html#fig:WB">3.4</a>);</p></li>
+<li><p>Select <em>Custom</em> and use the picture of the grey scale to define your custome white balance (Figure <a href="settings-and-preparation.html#fig:WB2">3.5</a>). Be careful, you will still require to linearize and calibrate each photo afterwards.</p></li>
 </ol>
 <p>However, the color chart will always be the reference for
 post-processing the color calibration of each photo. This optional
 section only helps to have a better preview of the photos.</p>
-<div class="figure">
-<img src="Figures/Custom%20WB%20setting.png" id="WB_sub1" style="width:50.0%" alt="" />
-<p class="caption">Custom WB parameter</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:WB"></span>
+<img src="Figures/Custom%20WB%20setting.png" alt="Custom whhite balance parameter." width="50%" />
+<p class="caption">
+Figure 3.4: Custom whhite balance parameter.
+</p>
 </div>
-<div class="figure">
-<img src="Figures/Custom%20WB%20selection.png" id="WB_sub2" style="width:50.0%" alt="" />
-<p class="caption">Select your custom WB</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:WB2"></span>
+<img src="Figures/Custom%20WB%20selection.png" alt="How to select a custom white balance." width="50%" />
+<p class="caption">
+Figure 3.5: How to select a custom white balance.
+</p>
 </div>
 </div>
 </div>
@@ -253,15 +232,17 @@ to allow the camera time to save the images on the SD card after it is
 triggered, and the flower to stabilize after each rotation.</p>
 <ol style="list-style-type: decimal">
 <li><p>Connect the shutter release to your camera and the turntable Syrp
-Genie II (Figure <a href="settings-and-preparation.html#fig:shutter" reference-type="ref" reference="fig:shutter">8</a>).</p></li>
+Genie II (Figure <a href="settings-and-preparation.html#fig:shutter">3.6</a>).</p></li>
 <li><p>Turn the turntable on (to turn it off, hold the <em>on</em> button for 3
 seconds).</p></li>
 <li><p>Connect the Syrp Genie II to your device, and do the updates if
 required (needs an internet connection).</p></li>
-<li><p>Click on <em>create content</em> &gt; <em>turntable</em> (Figure
-<a href="settings-and-preparation.html#genie_root" reference-type="ref" reference="genie_root">9</a>,
-<a href="settings-and-preparation.html#genie_content" reference-type="ref" reference="genie_content">10</a>).</p></li>
-<li><p>In parameters (Figure <a href="settings-and-preparation.html#record" reference-type="ref" reference="record">12</a>), select 20 photos for each run, and 2s of
+<li><p>Click on <em>create content</em> &gt; <em>turntable</em> (Figures
+<a href="settings-and-preparation.html#fig:genie-root">3.7</a>, <a href="settings-and-preparation.html#fig:genie-content">3.8</a>).</p></li>
+<li><p>Make sure the turntable orientation is inverted in the detailed settings
+(Figure <a href="settings-and-preparation.html#fig:genie-settings">3.9</a>)</p></li>
+<li><p>In parameters (Figure <a href="settings-and-preparation.html#fig:genie-record">3.10</a>), select 20 photos for
+each run, and 2s of
 waiting (move-wait-shoot-wait-move). If it is too quick, some
 pictures won’t be able to be saved as the camera needs a delay to
 save them on the memory card. The spinning device will take the
@@ -273,29 +254,35 @@ the flower. If your flower is pale, then use a different background
 exact same color of the background of the lightbox as this will help
 when applying masks later.</p></li>
 </ol>
-<div class="figure">
-<img src="Figures/shutter.jpg" id="fig:shutter" style="width:50.0%" alt="" />
-<p class="caption">Camera shutter release port</p>
-</div>
-<div class="figure">
-<img src="Figures/genie_root.PNG" id="genie_root" style="width:50.0%" alt="" />
-<p class="caption">Genie app interface root</p>
-</div>
-<div class="figure">
-<img src="Figures/genie_create.PNG" id="genie_content" style="width:50.0%" alt="" />
-<p class="caption">Create turntable content</p>
-</div>
-<p><br />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shutter"></span>
+<img src="Figures/shutter.jpg" alt="Camera shutter release port." width="50%" />
+<p class="caption">
+Figure 3.6: Camera shutter release port.
 </p>
-<div class="figure">
-<img src="Figures/genie_settings.PNG" id="fig:genie_settings" style="width:50.0%" alt="" />
-<p class="caption">Genie detailed
-settings</p>
 </div>
-<div class="figure">
-<img src="Figures/genie_turntable_20_1.PNG" id="record" style="width:50.0%" alt="" />
-<p class="caption">Start recording with the
-turntable</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:genie-root"></span>
+<img src="Figures/genie_root.PNG" alt="Camera shutter release port." width="50%" />
+<p class="caption">
+Figure 3.7: Camera shutter release port.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:genie-content"></span>
+<img src="Figures/genie_create.PNG" alt="Camera shutter release port." width="50%" />
+<p class="caption">
+Figure 3.8: Camera shutter release port.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:genie-settings"></span>
+<img src="Figures/genie_settings.PNG" alt="Genie detailed settings." width="50%" />
+<p class="caption">
+Figure 3.9: Genie detailed settings.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:genie-record"></span>
+<img src="Figures/genie_turntable_20_1.PNG" alt="Start recording with the turntable." width="50%" />
+<p class="caption">
+Figure 3.10: Start recording with the turntable.
+</p>
 </div>
 </div>
 <div id="summary-of-settings" class="section level2 hasAnchor" number="3.3">

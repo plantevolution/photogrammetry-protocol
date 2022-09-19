@@ -13,26 +13,13 @@ the color of the flowers to be photographed.
 ## Turn table
 
 We use an automated turntable and shutter release device ([Syrp Genie
-mini II and
-turntable](https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare))
-to rotate each flower on itself (360) and trigger a predetermined number
-of pictures from the camera to get pictures from all around the flower.
-The genie mini II has several hours of autonomy according to its use,
-but it can be plugged in a source of energy during the process (external
-battery, plug, or usb). This device is easily controlled and set
-remotely via its application \"Syrp\" (Figure
-[1](#fig:syrp_app){reference-type="ref" reference="fig:syrp_app"}) on
-any kind of smartphone by Bluetooth
-([Appstore](https://apps.apple.com/us/app/syrp/id1387335063) or
-[Playstore](https://play.google.com/store/apps/details?id=nz.co.syrp.genie2&hl=fr_CA&gl=US))
-after the device has been paired with your phone and after any updates
-suggested by the device has been done.
+mini II and turntable](https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare)) to rotate each flower on itself (360) and trigger a predetermined number of pictures from the camera to get pictures from all around the flower. The genie mini II has several hours of autonomy according to its use, but it can be plugged in a source of energy during the process (external battery, plug, or usb). This device is easily controlled and set remotely via its application \"Syrp\" (Figure \@ref(fig:Syrp)) on any kind of smartphone by Bluetooth ([Appstore](https://apps.apple.com/us/app/syrp/id1387335063) or [Playstore](https://play.google.com/store/apps/details?id=nz.co.syrp.genie2&hl=fr_CA&gl=US)) after the device has been paired with your phone and after any updates suggested by the device has been done.
 
-We also use a 1cm scale placed adjacently to the flower, and include a
-label describing the species name, collection number, date of
-collection, location, and coordinates.
+We also use a 1cm scale placed adjacently to the flower, and include a label describing the species name, collection number, date of collection, location, and coordinates.
 
-![Syrp application](Figures/Syrp_app.png){#fig:syrp_app width="2cm"}
+```{r Syrp, echo=FALSE, message=FALSE, fig.cap="Syrp application", out.width = '20%', fig.align='center'}
+knitr::include_graphics("Figures/Syrp_app.png")
+```
 
 ## Camera
 
@@ -56,11 +43,9 @@ reference target to create Digital Negative (DNG) (@Adobe2012DNG) camera
 profiles from a raw photo (called DNG conversion), and the 75% neutral
 gray patch to calibrate for light exposure.
 
-![Xrite color chart details for standard Red Green and Blue (sRGB)
-values. The 75% neutral gray has values of 0.33 (85/255) for Red Green
-Blue channels in the LightRoom
-software.](Figures/Color_chart_sRGB_values.pdf){#fig:xrite_description
-width="7cm"}
+```{r xrite, echo=FALSE, message=FALSE, fig.cap="Xrite color chart details for standard Red Green and Blue (sRGB) values. The 75% neutral gray has values of 0.33 (85/255) for Red Green Blue channels in the LightRoom software", out.width = '25%', fig.align='center'}
+knitr::include_graphics("Figures/Color_chart_sRGB_values.png")
+```
 
 
 ## Softwares
@@ -79,13 +64,6 @@ photos that need the same calibration. To reconstruct the 3D models from
 photos, we use [Agisoft
 Metashape](https://www.agisoft.com/downloads/installer/).
 
-![Adobe DNG
-Converter](Figures/logo Adobe DNG Converter.png){width="20%"}
-
-![ColorChecker Camera
-Calibration](Figures/logo ColorChecker Camera Calibration.png){width="20%"}
-
-![Adobe Lightroom Classic](Figures/logo Lrc.png){width="15%"}
 
 ## Flowers
 
@@ -98,16 +76,15 @@ Alternatively, flowers can be secured in a truncated pipette tip, itself
 fixed on the turntable, or with alligator clips to rapidly fix the
 flowers.
 
-::: tcolorbox
-Store flowers in 50mL Eppendorf tubes or in foam box no more than an
-hour before taking photos of them.\
-\
-In some cases, it is necessary to remove sepals from the flower before
+>Store flowers in 50mL Eppendorf tubes or in foam box no more than an
+hour before taking photos of them.
+
+>In some cases, it is necessary to remove sepals from the flower before
 building the model to accurately study the corolla shape. To do this,
 use a razor blade and mark the sepal intersections with a waterproof
 pen. The marks will help for the model construction and more importantly
 landmarks positioning.
-:::
+
 
 ## Summary of materials and software
 

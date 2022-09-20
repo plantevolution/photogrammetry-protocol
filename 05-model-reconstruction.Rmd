@@ -9,7 +9,9 @@ requirements](https://www.agisoft.com/downloads/system-requirements/).
 The standard edition doesn't allow the use of the scale option that we
 will need to add a scale on our models.
 
-![Agisoft Metashape](Figures/logo_metashape.jpeg){width="20%"}
+```{r agisoft, echo=FALSE, message=FALSE, fig.cap="Agisoft Metashape", out.width = '33%', fig.align='center'}
+knitr::include_graphics("Figures/logo_metashape.jpeg")
+```
 
 ## Initial tweaks
 

@@ -43,7 +43,7 @@ reference target to create Digital Negative (DNG) (@Adobe2012DNG) camera
 profiles from a raw photo (called DNG conversion), and the 75% neutral
 gray patch to calibrate for light exposure.
 
-```{r xrite, echo=FALSE, message=FALSE, fig.cap="Xrite color chart details for standard Red Green and Blue (sRGB) values. The 75% neutral gray has values of 0.33 (85/255) for Red Green Blue channels in the LightRoom software", out.width = '25%', fig.align='center'}
+```{r xrite, echo=FALSE, message=FALSE, fig.cap="Xrite color chart details for standard Red Green and Blue (sRGB) values. The 75% neutral gray has values of 0.33 (85/255) for Red Green Blue channels in the LightRoom software", out.width = '50%', fig.align='center'}
 knitr::include_graphics("Figures/Color_chart_sRGB_values.png")
 ```
 
@@ -88,109 +88,33 @@ landmarks positioning.
 
 ## Summary of materials and software
 
-::: tabular
-L5cm\|L9cm\|C1.7cm
 
-------------------------------------------------------------------------
 
-& &\
 
-------------------------------------------------------------------------
 
-\
 
-------------------------------------------------------------------------
+| **Materials** | **Description** | **Price** (USD) |
+|---|---|---|
+| **Photography** |  |  |
+| Camera | Digital Single-Lens Reflex (DSLR) (e.g. Canon t2i) | from  $500 |
+| Macro lens | A preferably fixed focal-length lens (e.g. Canon 60mm f/2.8 Macro lens) | from  $400 |
+| Tripod | Preferably flexible, such as a Gorillapod | e.g.  $80 |
+| Stepping motor and turntable kit | ([Syrp Genie mini II and turntable](https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare)), Shoot smooth rotating video and interactive 360° images of objects. Full iOS and Android App control via Bluetooth. Battery life: 6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs | $328 |
+| Lightbox | A portable photo studio, e.g. [Neewer](https://ca.neewer.com/collections/softboxes-diffusers/products/neewer-professional-photo-light-box-kit-66600325) Lightbox 20"/50cm foldable portable photography lighting kit (Neewer Technology Co. LTD, Shenzhen,  China), adjustable brightness with 120 LED lights, CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature, needs to be powered by a portable battery in the field, white, grey, and black backdrops. In the bracket of light intensities possible for this lightbox, we used an intermediate light intensity. [maximum;usually used; minimum] lux light intensities correspond to [3140;2680;1330] lux for a white backdrop and [330;305;238] Lux with a black backdrop. | e.g. $89 |
+| External battery | Powering source for in-field photo capture, essentially for the lightbox or to recharge batteries | optional |
+| **Flower mounting and identification**
+| Flower | Freshly cut flower with peduncle and floral receptacle | / |
+| Labels and container | Identification and storage of fresh flowers to avoid damage and avoid wilting | / |
+| Turntable labels | To provide information on species, collector, collection number, date, locality, and coordinates, and the chunk number. To use as a separate photo before each run of photos. | / |
+| Razor blade | To remove flower parts (e.g., sepals) | / |
+| Small block of dense foam | To fix flowers in place with a pin at the center of the turntable | / |
+| Entomological pins | To pin through the peduncle or floral receptacle and fix the flower on the turntable. | / |
+| Scale | A 1 cm scale to use as reference | / |
+| **Colour calibration** |  |  |
+| Color chart | A color reference to calibrate RAW photos (e.g. [X-rite ColorChecker Passport](https://www.xrite.com/categories/calibration-profiling/colorchecker-targets/colorchecker-passport-photo-2)) | e.g.  $90 |
+| Color calibration software | ColorChecker Camera Calibration, Xrite software for automatic color profile creation | Free |
+| Photo editing software | Adobe Photoshop Lightroom, editing software for image color calibration in batch | Payment plans vary |
+| DNG conversion software | Adobe DNG converter, to convert Camera Raw files from supported cameras to the more widely used DNG raw files | Free |
+| **Model reconstruction** |  |  |
+| 3D reconstruction from photogrammetry software | Agisoft Metashape Pro Software | $549 Academic price |
 
-Camera & Digital Single-Lens Reflex (DSLR) (e.g. Canon t2i) & from
-\$500\
-
-------------------------------------------------------------------------
-
-Macro lens & A preferably fixed lens (e.g. Canon 60mm f/2.8 Macro lens)
-& from \$400\
-
-------------------------------------------------------------------------
-
-Tripod & Preferably flexible, such as a gorillapod & e.g. \$80\
-
-------------------------------------------------------------------------
-
-Stepping motor and turntable kit & [Genie mini
-II](https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare),
-Shoot smooth rotating video and interactive 360${^\circ}$ images of
-objects. Full iOS and Android App control via Bluetooth. Battery life:
-6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs & \$328.00\
-
-------------------------------------------------------------------------
-
-Lightbox & A portable photo studio, e.g.
-[Neewer](https://neewer.com/products/lighting-studio-10094456?_pos=2&_sid=bde9f6ddb&_ss=r)
-20\"/50cm foldable portable photography lighting kit (Neewer Technology
-Co. LTD, Shenzhen, China), adjustable brightness with 120 LED lights,
-CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature,
-needs to be powered by a portable battery in the field, white, grey, and
-black backdrops. In the bracket of light intensities possible for this
-lightbox, we used an intermediate light intensity. \[maximum;usually
-used; minimum\] lux light intensities correspond to \[3140;2680;1330\]
-lux for a white backdrop and \[330;305;238\] Lux with a black backdrop.
-& \$79.99\
-
-------------------------------------------------------------------------
-
-External battery & Powering source for in-field photo capture,
-essentially for the lightbox or to recharge batteries & optional\
-
-------------------------------------------------------------------------
-
-\
-Flower & Freshly cut flower with peduncle and floral receptacle & /\
-Labels and container & Identification and storage of fresh flowers to
-avoid damage and avoid wilting & /\
-Turntable labels & Identification to species, collector, collection
-number, date, locality, and coordinates, and the chunk number. To use as
-a separate photo before each run of photos. & /\
-Razor blade & To remove sepals & /\
-Small block of dense foam & To fix flowers in place with a pin at the
-center of the turntable. & /\
-Entomological pins & To pin through the peduncle or floral receptacle
-and fix the flower on the turntable. & /\
-
-------------------------------------------------------------------------
-
-Scale & A 1 cm scale as reference & /\
-
-------------------------------------------------------------------------
-
-\
-
-------------------------------------------------------------------------
-
-Color chart & A color reference to calibrate RAW photos (e.g. [X-rite
-ColorChecker
-Passport](https://www.xrite.com/categories/calibration-profiling/colorchecker-targets/colorchecker-passport-photo-2))
-& e.g. \$99.00\
-
-------------------------------------------------------------------------
-
-Color calibration software & ColorChecker Camera Calibration, Xrite
-software for automatic color profile creation & Free\
-
-------------------------------------------------------------------------
-
-Photo editing software & Adobe Photoshop Lightroom, editing software for
-image color calibration in batch & Payment plans vary\
-
-------------------------------------------------------------------------
-
-DNG conversion software & Adobe DNG converter, to convert Camera Raw
-files from supported cameras to the more widely used DNG raw files &
-Free\
-
-------------------------------------------------------------------------
-
-\
-3D reconstruction from photogrammetry software & Agisoft Metashape Pro
-Software & \$549 Academic price\
-
-------------------------------------------------------------------------
-:::

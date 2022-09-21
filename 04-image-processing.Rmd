@@ -28,21 +28,20 @@ to the right DNG file. If more than one set of photos with different
 lighting or camera settings are taken, make sure to distinguish the
 color charts that correspond to each set of photos.
 
-::: tcolorbox
-Genus_species\
-GEN_species_CollectionNumber\
-sepal_DD.MM.YYYY or no_sepals_DD.MM.YYYY\
-Model\
-*MetashapeProject*\
-*MetashapeProjectFolder.files*\
-*model.obj*\
-*model.ply*\
-*texture.jpg*\
-Photos calibrated\
-*Place here all the calibrated photos, that you can organize per chunk*\
-Photos to calibrate\
-*Place here all the RAW photos and color chart*\
-:::
+
+>Genus_species\
+&emsp;GEN_species_CollectionNumber\
+&emsp;&emsp;sepal_DD.MM.YYYY or no_sepals_DD.MM.YYYY\
+&emsp;&emsp;&emsp;Model\
+&emsp;&emsp;&emsp;&emsp;*MetashapeProject*\
+&emsp;&emsp;&emsp;&emsp;*MetashapeProjectFolder.files*\
+&emsp;&emsp;&emsp;&emsp;*model.obj*\
+&emsp;&emsp;&emsp;&emsp;*model.ply*\
+&emsp;&emsp;&emsp;&emsp;*texture.jpg*\
+&emsp;&emsp;&emsp;Photos calibrated\
+&emsp;&emsp;&emsp;&emsp;*Place here all the calibrated photos, that you can organize per chunk*\
+&emsp;&emsp;&emsp;Photos to calibrate\
+&emsp;&emsp;&emsp;&emsp;*Place here all the RAW photos and color chart*\
 
 ## Image color calibration
 
@@ -72,33 +71,35 @@ calibration read [@troscianko2015image].
     first box. You need to select a folder, and can't select a specific
     file, the software will convert all the files within this folder.
     Default parameters are ok for step 2-4. It will export the RAW file
-    in the DNG folder to a DNG file with the same file name (Figure
-    [15](#adobe_dng){reference-type="ref" reference="adobe_dng"}).
+    in the DNG folder to a DNG file with the same file name (Figure \@ref(fig:DNG)).
 
 5.  Open the Color Checker Camera Calibration software and drag and drop
     the newly created DNG file in the software. The software will
     automatically draw a grid around it. Make sure that the green grid
     fits the chart, avoiding edge effects on each square of color
-    (Figure [16](#color_checker_camera_calibration){reference-type="ref"
-    reference="color_checker_camera_calibration"}).
+    (Figure \@ref(fig:ColorCheckercalibration).
 
 6.  Click on *create profile* and save it under Color_Chart_DD.MM.YYYY
-    (Figure [17](#color_checker_profile){reference-type="ref"
-    reference="color_checker_profile"}).
+    (Figure \@ref(fig:ColorCheckerprofile).
 
-![Convert RAW chart to DNG in Adobe DNG
-Converter](Figures/AdobeDNGConverter.png){#adobe_dng width="100%"}
 
-![Align grid on chart in ColorChecker Camera
-Calibration](Figures/ColorChecker_camera_calibration.png){#color_checker_camera_calibration
-width="100%"}
 
-![Export the color
-profile](Figures/create_profile.png){#color_checker_profile
-width="100%"}
+```{r DNG, echo=FALSE, message=FALSE, fig.cap="Convert RAW chart to DNG in Adobe DNG Converter", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/DNGConverter.jpg")
+```
 
-![Image color calibration
-workflow](Figures/manual_method.png){#fig:workflow width="80%"}
+```{r Colorcheckercalibration, echo=FALSE, message=FALSE, fig.cap="Align grid on chart in ColorChecker Camera Calibration", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/ColorChecker_camera_calibration.png")
+```
+
+```{r ColorCheckerprofile, echo=FALSE, message=FALSE, fig.cap="Export the color profile", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/create_profile.png")
+```
+
+```{r ColorCheckerworkflow, echo=FALSE, message=FALSE, fig.cap="Image color calibration workflow", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/manual_method.png")
+```
+
 
 **Method 2 : X-Rite Color Checker plug-in installation and automatic
 creation of color profiles on MacOS**
@@ -138,17 +139,13 @@ creation of color profiles on Windows**
 
 2.  If Adobe Lightroom Classic is already installed on your computer,
     the installation program should proposed you to install the Adobe
-    Photoshop Lightroom plug-in (Figure
-    [19](#color_checker_plug_in_win){reference-type="ref"
-    reference="color_checker_plug_in_win"}). Install it.
+    Photoshop Lightroom plug-in (Figure \@ref(fig:ColorCheckerplugin)). Install it.
 
 3.  Once the plug-in is installed, run Adobe Lightroom Classic and
     import your color chart (*File* \> *Import*).
 
 4.  Click on *File* \> *Export* and in the drop-down menu, select
-    *X-Rite Preselection* (Figure
-    [20](#x_rite_preselection){reference-type="ref"
-    reference="x_rite_preselection"}). Name your profile, and click on
+    *X-Rite Preselection* (Figure \@ref(fig:xritepreselection)). Name your profile, and click on
     *Export*.
 
 5.  Restart Lightroom as indicated.
@@ -156,13 +153,15 @@ creation of color profiles on Windows**
 6.  Run the setps 4 and 5 each time you want to create a new color
     profile witht the color chart.
 
-![Color Checker plug-in for Lightroom
-installation](Figures/color_checker_plug_in_win.png){#color_checker_plug_in_win
-height="7cm"}
+```{r ColorCheckerplugin, echo=FALSE, message=FALSE, fig.cap="Color Checker plug-in for Lightroom installation", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/color_checker_plug_in_win.png")
+```
 
-![Color chart profile
-exportation](Figures/x_rite_preselection.png){#x_rite_preselection
-height="7cm"}
+```{r xritepreselection, echo=FALSE, message=FALSE, fig.cap="Color chart profile exportation", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/x_rite_preselection.png")
+```
+
+
 
 ### Color and illuminance calibration from profiles
 
@@ -173,18 +172,16 @@ height="7cm"}
 
 3.  Select the photo of the chart
 
-4.  Select the color profile corresponding to the color chart you have
-    selected (see Figure
-    [\[color profile\]](#color profile){reference-type="ref"
-    reference="color profile"} to manually add a color profile) to
-    calibrate the photo of the chart with its own calibration profile.
+4.  Select the color profile corresponding to the color chart you have selected (see Figure \@ref(fig:addprofile) and \@ref(fig:settingssynchronize)) to manually add a color profile) to calibrate the photo of the chart with its own calibration profile.
 
-    ![Add a new color
-    profile](Figures/profil_capture_1.png){#add_profile height="7cm"}
+```{r addprofile, echo=FALSE, message=FALSE, fig.cap="Add a new color profile", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/profil_capture_1.png")
+```
 
-    ![After adding a profile with the + sign, select it in the list
-    below.](Figures/profil_capture_2.png){#settings_synchronize
-    height="7cm"}
+```{r settingssynchronize, echo=FALSE, message=FALSE, fig.cap="After adding a profile with the + sign, select it in the list below.", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/x_rite_preselection.png")
+```
+
 
 5.  Use the eyedropper over the 75% gray scale (the last one before the
     black chip on the color chart, see Figure
@@ -199,20 +196,16 @@ height="7cm"}
     class). The illuminance is now adjusted in addition to the color
     calibration, but only on the chart.
 
-7.  To apply the modifications we just did to all the photos, select all
-    the photos (Cmd+A or Ctrl+A), and make sure that the one for which
-    you made changes is highlighted (in white compared to light gray for
-    the other ones selected) (see Figure
-    [23](#fig:synchronize){reference-type="ref"
-    reference="fig:synchronize"}). Check the profiles and exposure boxes
-    before synchronizing to all the other photos.
+7.  To apply the modifications we just did to all the photos, select all the photos (Cmd+A or Ctrl+A), and make sure that the one for which you made changes is highlighted (in white compared to light gray for the other ones selected) (see Figure \@ref(fig:synchronize)). Check the profiles and exposure boxes before synchronizing to all the other photos.
 
 8.  Click on the button *synchronize*.
 
-![Synchronize your settings made to the photo of the chart to all the
-other photos and check the two categories you modified (color profile
-and exposure).](Figures/synchronize_capture.png){#fig:synchronize
-width="1\\linewidth"}
+```{r synchronize, echo=FALSE, message=FALSE,fig.cap="Synchronize your settings made to the photo of the chart to all the other photos and check the two categories you modified (color profile and exposure", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/synchronize_capture.png")
+```
+
+
+
 
 ### Export calibrated files to jpg format
 
@@ -222,19 +215,15 @@ width="1\\linewidth"}
 2.  Click on *File* \> *Export*
 
 3.  You can create presets that you will only need to create once to
-    always export the same way in Adobe Lightroom (example Figure
-    [24](#export_parameters){reference-type="ref"
-    reference="export_parameters"}), and add personalized file names
-    such as \_color_calibrated at the end of each .jpg file (see also
-    for that Figure [24](#export_parameters){reference-type="ref"
-    reference="export_parameters"}).
+    always export the same way in Adobe Lightroom (example Figure \@ref(figexportparameters)), and add personalized file names
+    such as \_color_calibrated at the end of each .jpg file.
 
 4.  In their own folder, you can then sort the calibrated photos for
     color and exposure per chunks (easily distinguishable by the
     separation created by a photo of the label).
 
-![You can export using your own personalized parameters and then export
-in batch your selection in a specific folder within your folder of
-uncalibrated photos for easy access. This method can thus work for any
-folder of uncalibrated
-photos.](Figures/export_capture_1.png){#export_parameters width="90%"}
+```{r exportparameters, echo=FALSE, message=FALSE,fig.cap="You can export using your own personalized parameters and then export in batch your selection in a specific folder within your folder of uncalibrated photos for easy access. This method can thus work for any folder of uncalibrated photos.", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/export_capture_1.png")
+```
+
+

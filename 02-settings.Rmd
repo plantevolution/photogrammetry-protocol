@@ -122,30 +122,15 @@ knitr::include_graphics("Figures/genie_turntable_20_1.PNG")
 
 ## Summary of settings
 
-::: tabular
-L4cm\|L12cm **Parameter** & **Description**\
+| **Parameter** | **Value** |
+|---|---|
+| **Camera settings** |  |
+| Aperture | F/16 |
+| Sensibility | ISO 100 (lowest) |
+| Exposure time | 1/20s (depending on light settings) |
+| **Turn table settings** |  |
+| Number of photos | 20 per camera height (high, mid, low) |
+| Wait time | 2s |
 
-------------------------------------------------------------------------
 
-\
-Aperture & F/16\
 
-------------------------------------------------------------------------
-
-Sensibility & ISO 100 (lowest)\
-
-------------------------------------------------------------------------
-
-Exposure time & 1/20s - Can be adapted according to the flower.
-**Reminder** : a photo of the color chart in the exact same light
-conditions and camera parameters as the flower needs to be taken.\
-\
-Number of photos & 20 per 360 for one camera position and one flower
-position. May be adjusted according to each flower.\
-
-------------------------------------------------------------------------
-
-Wait time & 2s\
-
-------------------------------------------------------------------------
-:::

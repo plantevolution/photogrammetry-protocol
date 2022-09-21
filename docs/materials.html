@@ -27,7 +27,7 @@
 <meta name="author" content="Simon Joly" />
 
 
-<meta name="date" content="2022-09-20" />
+<meta name="date" content="2022-09-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,6 +157,7 @@
 <li class="chapter" data-level="6.14" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#model-orientation"><i class="fa fa-check"></i><b>6.14</b> Model orientation</a></li>
 <li class="chapter" data-level="6.15" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#export-model-and-texture"><i class="fa fa-check"></i><b>6.15</b> Export model and texture</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -197,11 +220,11 @@ easily modify the angle at which we take each series of photos.</p>
 Photo
 2</a>.
 The main target that we use is the classic target with a 24-patch color
-reference target to create Digital Negative (DNG) (<span class="citation">(<a href="#ref-Adobe2012DNG" role="doc-biblioref"><strong>Adobe2012DNG?</strong></a>)</span>) camera
+reference target to create Digital Negative (DNG) (<span class="citation"><a href="#ref-Adobe2012DNG" role="doc-biblioref">Adobe Systems Incorporated</a> (<a href="#ref-Adobe2012DNG" role="doc-biblioref">2012</a>)</span>) camera
 profiles from a raw photo (called DNG conversion), and the 75% neutral
 gray patch to calibrate for light exposure.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:xrite"></span>
-<img src="Figures/Color_chart_sRGB_values.png" alt="Xrite color chart details for standard Red Green and Blue (sRGB) values. The 75% neutral gray has values of 0.33 (85/255) for Red Green Blue channels in the LightRoom software" width="25%" />
+<img src="Figures/Color_chart_sRGB_values.png" alt="Xrite color chart details for standard Red Green and Blue (sRGB) values. The 75% neutral gray has values of 0.33 (85/255) for Red Green Blue channels in the LightRoom software" width="50%" />
 <p class="caption">
 Figure 2.2: Xrite color chart details for standard Red Green and Blue (sRGB) values. The 75% neutral gray has values of 0.33 (85/255) for Red Green Blue channels in the LightRoom software
 </p>
@@ -247,96 +270,139 @@ landmarks positioning.</p>
 </div>
 <div id="summary-of-materials-and-software" class="section level2 hasAnchor" number="2.7">
 <h2><span class="header-section-number">2.7</span> Summary of materials and software<a href="materials.html#summary-of-materials-and-software" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="tabular">
-<p>L5cm|L9cm|C1.7cm</p>
-<hr />
-<p>&amp; &amp;<br />
-</p>
-<hr />
-<p><br />
-</p>
-<hr />
-<p>Camera &amp; Digital Single-Lens Reflex (DSLR) (e.g. Canon t2i) &amp; from
-$500<br />
-</p>
-<hr />
-<p>Macro lens &amp; A preferably fixed lens (e.g. Canon 60mm f/2.8 Macro lens)
-&amp; from $400<br />
-</p>
-<hr />
-<p>Tripod &amp; Preferably flexible, such as a gorillapod &amp; e.g. $80<br />
-</p>
-<hr />
-<p>Stepping motor and turntable kit &amp; <a href="https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare">Genie mini
-II</a>,
-Shoot smooth rotating video and interactive 360<span class="math inline">\({^\circ}\)</span> images of
-objects. Full iOS and Android App control via Bluetooth. Battery life:
-6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs &amp; $328.00<br />
-</p>
-<hr />
-<p>Lightbox &amp; A portable photo studio, e.g.
-<a href="https://neewer.com/products/lighting-studio-10094456?_pos=2&amp;_sid=bde9f6ddb&amp;_ss=r">Neewer</a>
-20"/50cm foldable portable photography lighting kit (Neewer Technology
-Co. LTD, Shenzhen, China), adjustable brightness with 120 LED lights,
-CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature,
-needs to be powered by a portable battery in the field, white, grey, and
-black backdrops. In the bracket of light intensities possible for this
-lightbox, we used an intermediate light intensity. <span class="math display">\[maximum;usually
-used; minimum\]</span> lux light intensities correspond to <span class="math display">\[3140;2680;1330\]</span>
-lux for a white backdrop and <span class="math display">\[330;305;238\]</span> Lux with a black backdrop.
-&amp; $79.99<br />
-</p>
-<hr />
-<p>External battery &amp; Powering source for in-field photo capture,
-essentially for the lightbox or to recharge batteries &amp; optional<br />
-</p>
-<hr />
-<p><br />
-Flower &amp; Freshly cut flower with peduncle and floral receptacle &amp; /<br />
-Labels and container &amp; Identification and storage of fresh flowers to
-avoid damage and avoid wilting &amp; /<br />
-Turntable labels &amp; Identification to species, collector, collection
-number, date, locality, and coordinates, and the chunk number. To use as
-a separate photo before each run of photos. &amp; /<br />
-Razor blade &amp; To remove sepals &amp; /<br />
-Small block of dense foam &amp; To fix flowers in place with a pin at the
-center of the turntable. &amp; /<br />
-Entomological pins &amp; To pin through the peduncle or floral receptacle
-and fix the flower on the turntable. &amp; /<br />
-</p>
-<hr />
-<p>Scale &amp; A 1 cm scale as reference &amp; /<br />
-</p>
-<hr />
-<p><br />
-</p>
-<hr />
-<p>Color chart &amp; A color reference to calibrate RAW photos (e.g. <a href="https://www.xrite.com/categories/calibration-profiling/colorchecker-targets/colorchecker-passport-photo-2">X-rite
-ColorChecker
-Passport</a>)
-&amp; e.g. $99.00<br />
-</p>
-<hr />
-<p>Color calibration software &amp; ColorChecker Camera Calibration, Xrite
-software for automatic color profile creation &amp; Free<br />
-</p>
-<hr />
-<p>Photo editing software &amp; Adobe Photoshop Lightroom, editing software for
-image color calibration in batch &amp; Payment plans vary<br />
-</p>
-<hr />
-<p>DNG conversion software &amp; Adobe DNG converter, to convert Camera Raw
-files from supported cameras to the more widely used DNG raw files &amp;
-Free<br />
-</p>
-<hr />
-<p><br />
-3D reconstruction from photogrammetry software &amp; Agisoft Metashape Pro
-Software &amp; $549 Academic price<br />
-</p>
-<hr />
-</div>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Materials</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Price</strong> (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Photography</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Camera</td>
+<td>Digital Single-Lens Reflex (DSLR) (e.g. Canon t2i)</td>
+<td>from  $500</td>
+</tr>
+<tr class="odd">
+<td>Macro lens</td>
+<td>A preferably fixed focal-length lens (e.g. Canon 60mm f/2.8 Macro lens)</td>
+<td>from  $400</td>
+</tr>
+<tr class="even">
+<td>Tripod</td>
+<td>Preferably flexible, such as a Gorillapod</td>
+<td>e.g.  $80</td>
+</tr>
+<tr class="odd">
+<td>Stepping motor and turntable kit</td>
+<td>(<a href="https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare">Syrp Genie mini II and turntable</a>), Shoot smooth rotating video and interactive 360° images of objects. Full iOS and Android App control via Bluetooth. Battery life: 6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs</td>
+<td>$328</td>
+</tr>
+<tr class="even">
+<td>Lightbox</td>
+<td>A portable photo studio, e.g. <a href="https://ca.neewer.com/collections/softboxes-diffusers/products/neewer-professional-photo-light-box-kit-66600325">Neewer</a> Lightbox 20”/50cm foldable portable photography lighting kit (Neewer Technology Co. LTD, Shenzhen, China), adjustable brightness with 120 LED lights, CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature, needs to be powered by a portable battery in the field, white, grey, and black backdrops. In the bracket of light intensities possible for this lightbox, we used an intermediate light intensity. [maximum;usually used; minimum] lux light intensities correspond to [3140;2680;1330] lux for a white backdrop and [330;305;238] Lux with a black backdrop.</td>
+<td>e.g. $89</td>
+</tr>
+<tr class="odd">
+<td>External battery</td>
+<td>Powering source for in-field photo capture, essentially for the lightbox or to recharge batteries</td>
+<td>optional</td>
+</tr>
+<tr class="even">
+<td><strong>Flower mounting and identification</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Flower</td>
+<td>Freshly cut flower with peduncle and floral receptacle</td>
+<td>/</td>
+</tr>
+<tr class="even">
+<td>Labels and container</td>
+<td>Identification and storage of fresh flowers to avoid damage and avoid wilting</td>
+<td>/</td>
+</tr>
+<tr class="odd">
+<td>Turntable labels</td>
+<td>To provide information on species, collector, collection number, date, locality, and coordinates, and the chunk number. To use as a separate photo before each run of photos.</td>
+<td>/</td>
+</tr>
+<tr class="even">
+<td>Razor blade</td>
+<td>To remove flower parts (e.g., sepals)</td>
+<td>/</td>
+</tr>
+<tr class="odd">
+<td>Small block of dense foam</td>
+<td>To fix flowers in place with a pin at the center of the turntable</td>
+<td>/</td>
+</tr>
+<tr class="even">
+<td>Entomological pins</td>
+<td>To pin through the peduncle or floral receptacle and fix the flower on the turntable.</td>
+<td>/</td>
+</tr>
+<tr class="odd">
+<td>Scale</td>
+<td>A 1 cm scale to use as reference</td>
+<td>/</td>
+</tr>
+<tr class="even">
+<td><strong>Colour calibration</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Color chart</td>
+<td>A color reference to calibrate RAW photos (e.g. <a href="https://www.xrite.com/categories/calibration-profiling/colorchecker-targets/colorchecker-passport-photo-2">X-rite ColorChecker Passport</a>)</td>
+<td>e.g.  $90</td>
+</tr>
+<tr class="even">
+<td>Color calibration software</td>
+<td>ColorChecker Camera Calibration, Xrite software for automatic color profile creation</td>
+<td>Free</td>
+</tr>
+<tr class="odd">
+<td>Photo editing software</td>
+<td>Adobe Photoshop Lightroom, editing software for image color calibration in batch</td>
+<td>Payment plans vary</td>
+</tr>
+<tr class="even">
+<td>DNG conversion software</td>
+<td>Adobe DNG converter, to convert Camera Raw files from supported cameras to the more widely used DNG raw files</td>
+<td>Free</td>
+</tr>
+<tr class="odd">
+<td><strong>Model reconstruction</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3D reconstruction from photogrammetry software</td>
+<td>Agisoft Metashape Pro Software</td>
+<td>$549 Academic price</td>
+</tr>
+</tbody>
+</table>
 
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Adobe2012DNG" class="csl-entry">
+Adobe Systems Incorporated. 2012. <span>“Digital Negative (DNG) Specification, Version 1.4.0.0.”</span> Adobe Systems Incorporated: San Jose, CA, USA, 2012.
 </div>
 </div>
             </section>
@@ -399,20 +465,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

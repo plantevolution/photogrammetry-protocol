@@ -27,7 +27,7 @@
 <meta name="author" content="Simon Joly" />
 
 
-<meta name="date" content="2022-09-20" />
+<meta name="date" content="2022-09-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -35,7 +35,7 @@
   
   
 <link rel="prev" href="image-post-processing.html"/>
-
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -59,6 +59,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,6 +157,7 @@
 <li class="chapter" data-level="6.14" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#model-orientation"><i class="fa fa-check"></i><b>6.14</b> Model orientation</a></li>
 <li class="chapter" data-level="6.15" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#export-model-and-texture"><i class="fa fa-check"></i><b>6.15</b> Export model and texture</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -166,7 +189,7 @@ requirements</a>.
 The standard edition doesn’t allow the use of the scale option that we
 will need to add a scale on our models.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:agisoft"></span>
-<img src="Figures/logo_metashape.jpeg" alt="Agisoft Metashape" width="33%" />
+<img src="Figures/logo_metashape.jpeg" alt="Agisoft Metashape" width="20%" />
 <p class="caption">
 Figure 6.1: Agisoft Metashape
 </p>
@@ -190,13 +213,21 @@ structures, such as petal margin, and avoid holes in your mesh in
 Agisoft Metashape 1.5.x or later (up to our knowlege) you will need to
 activate ONCE the <em>Visibility consistent mesh</em> function in <em>Tools &gt;
 Preferences &gt; Advanced &gt;Tweaks</em>, then <em>Add</em> and fill in <em>Parameters</em>
-with <em>BuildModel/tvl1_mesh</em> and select the value as <em>False</em> (figure
-<a href="#metashape_tweaks" reference-type="ref" reference="metashape_tweaks"><span class="math display">\[metashape_tweaks\]</span></a>). Additionally, to use the anterior
+with <em>BuildModel/tvl1_mesh</em> and select the value as <em>False</em> (figure <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:metashapetweaks1">6.2</a>). Additionally, to use the anterior
 version of the depth maps generation process, add ONCE the tweak :
-<em>BuildDepthMaps/pm_enable</em> and set the value to <em>False</em> (figure
-<a href="#metashape_tweaks" reference-type="ref" reference="metashape_tweaks"><span class="math display">\[metashape_tweaks\]</span></a>).</p>
-<p><img src="Figures/Metashape_tweaks_1.png" style="width:100.0%" /></p>
-<p><img src="Figures/Metashape_tweaks_2.png" style="width:100.0%" /></p>
+<em>BuildDepthMaps/pm_enable</em> and set the value to <em>False</em> (figure <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:metashapetweaks2">6.3</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:metashapetweaks1"></span>
+<img src="Figures/Metashape_tweaks_1.png" alt="Tweaks settings" width="80%" />
+<p class="caption">
+Figure 6.2: Tweaks settings
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:metashapetweaks2"></span>
+<img src="Figures/Metashape_tweaks_2.png" alt="Tweaks settings" width="80%" />
+<p class="caption">
+Figure 6.3: Tweaks settings
+</p>
+</div>
 </div>
 <div id="overview-of-the-model-building-pipeline" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> Overview of the model building pipeline<a href="d-model-reconstruction-in-agisoft-metashape.html#overview-of-the-model-building-pipeline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -252,12 +283,10 @@ starting to shoot and use this image as background. This sometimes
 work better.</p></li>
 <li><p>Right click on a photo in one of your chunk in your Metashape
 project.</p></li>
-<li><p>Click on <em>Masks</em>, <em>Import Masks</em> and in the box that appears select
-method "From Background", operation <em>Replacement</em>.</p></li>
+<li><p>Click on <em>Masks</em>, <em>Import Masks</em> (Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:Metashapemasksrightclick">6.4</a>) and in the box that appears select method "From Background", operation <em>Replacement</em>.</p></li>
 <li><p>Enter the same name as the name of your background you just saved.</p></li>
 <li><p>Depending on the flower, the value for <em>Tolerance</em> can vary between
-approximately 40 and 60. For some pale flowers you may need a lower
-tolerance value (e.g. 30).</p></li>
+approximately 40 and 60 (Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:Metashapemaskstolerance">6.5</a>). For some pale flowers you may need a lower tolerance value (e.g. 30).</p></li>
 <li><p>Test different values of tolerance on a single photo first, but when
 you have a value that is satisfactory (that create a masks with the
 border of the flower well defined) you can select <em>Apply to entire
@@ -268,19 +297,17 @@ photos in all your chunks. This is why we need a contrasting white
 background behind the flower.</p></li>
 <li><p>Check for masks that need touch ups (next section).</p></li>
 </ol>
-<div class="figure">
-<img src="Figures/Metashape_mask_right_click.png" style="width:100.0%" alt="" />
-<p class="caption">Right click on an image to select a mask to
-import.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Metashapemasksrightclick"></span>
+<img src="Figures/Metashape_mask_right_click.png" alt="Right click on an image to select a mask to import." width="100%" />
+<p class="caption">
+Figure 6.4: Right click on an image to select a mask to import.
+</p>
 </div>
-<div class="figure">
-<img src="Figures/Metashape_masks_tolerance.png" style="width:100.0%" alt="" />
-<p class="caption">Import mask from a black image <em>background.jpg</em>, and select a
-tolerance value, to test on the selected camera (the image you
-right-clicked on). If the automatic mask is automatically well adjusted
-around the flower shape (darker gray around the flower), then apply to
-entire workspace (all the
-images).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Metashapemaskstolerance"></span>
+<img src="Figures/Metashape_masks_tolerance.png" alt="Import mask from a black image *background.jpg*, and select a tolerance value, to test on the selected camera (the image you right-clicked on). If the automatic mask is automatically well adjusted around the flower shape (darker gray around the flower), then apply to entire workspace (all the images)." width="100%" />
+<p class="caption">
+Figure 6.5: Import mask from a black image <em>background.jpg</em>, and select a tolerance value, to test on the selected camera (the image you right-clicked on). If the automatic mask is automatically well adjusted around the flower shape (darker gray around the flower), then apply to entire workspace (all the images).
+</p>
 </div>
 <p><strong>Alternative masking method using Adobe Photoshop</strong> It is also possible
 to use Adobe Photoshop to apply masks. We did not find particular
@@ -292,29 +319,33 @@ this file, naming it accordingly (e.g. <em>Chunk1-Background</em>).</p></li>
 <li><p>Make a copy of all of the photos you’ll be using and place them in a
 new folder labeled <em>Chunk1-masks</em>.</p></li>
 <li><p>Then, you will need to create ONCE a Photoshop action, that will be
-subsequently reused (see figures below) :</p>
-<div class="figure">
-<img src="Figures/mask_1.png" alt="" />
-<p class="caption">Record a new action called <em>Automatic Mask - 3D
-reconstruction</em></p>
+subsequently reused (see Figures <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:mask1">6.6</a> to <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:mask4">6.9</a> below) :</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mask1"></span>
+<img src="Figures/mask_1.png" alt="Record a new action called *Automatic Mask - 3D reconstruction*" width="100%" />
+<p class="caption">
+Figure 6.6: Record a new action called <em>Automatic Mask - 3D reconstruction</em>
+</p>
 </div>
-<div class="figure">
-<img src="Figures/mask_2.png" alt="" />
-<p class="caption">When you reopen your photo, don’t forget to remove this extra task
-in your action.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mask2"></span>
+<img src="Figures/mask_2.png" alt="When you reopen your photo, don't forget to remove this extra task in your action." width="100%" />
+<p class="caption">
+Figure 6.7: When you reopen your photo, don’t forget to remove this extra task in your action.
+</p>
 </div>
-<div class="figure">
-<img src="Figures/mask_3.png" alt="" />
-<p class="caption">The action should include <em>Select Subject, Fill, Inverse, Fill,
-Save, Close</em>, and you can batch process this action to a specific
-folder of copied photos to create
-masks.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mask3"></span>
+<img src="Figures/mask_3.png" alt="The action should include *Select Subject, Fill, Inverse, Fill, Save, Close*, and you can batch process this action to a specific folder of copied photos to create masks." width="100%" />
+<p class="caption">
+Figure 6.8: The action should include <em>Select Subject, Fill, Inverse, Fill, Save, Close</em>, and you can batch process this action to a specific folder of copied photos to create masks.
+</p>
 </div>
-<div class="figure">
-<img src="Figures/mask_4.png" alt="" />
-<p class="caption">Apply the action to the folder of copied photos called
-<em>Chunk1-masks</em>.</p>
-</div></li>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mask4"></span>
+<img src="Figures/mask_4.png" alt="Apply the action to the folder of copied photos called *Chunk1-masks*." width="100%" />
+<p class="caption">
+Figure 6.9: Apply the action to the folder of copied photos called <em>Chunk1-masks</em>.
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
 <li><p>Now you should have tranformed all your copied photos into masks,
 with the foreground object in white, and the background in black.</p></li>
 <li><p>Go to Agisoft Metashape and right click on the first camera (photo)
@@ -330,16 +361,17 @@ cameras</em> and then click <em>OK</em>.</p></li>
 <p>The automatic application of masks at the previous steps is sometimes
 not entirely satisfactory for all photos. It is possible to add or
 remove parts of masks using the selection tool and the add/remove/invert
-buttons (Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#tools_masks" reference-type="ref" reference="tools_masks">25</a>). You can then use the selection tools to
+buttons (Figure @ref(fig:tools_masks)). You can then use the selection tools to
 select areas that are not the flower and add the selection to the mask
-(Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#tools_masks" reference-type="ref" reference="tools_masks">25</a>). You also remove the scale and the
+(Figure @ref(fig:tools_masks)). You also remove the scale and the
 entomological pin at this step. Additionally, you can invert the
 selection, or remove the selected areas from the mask with the icons on
 the right hand side of the add to mask icon.</p>
-<div class="figure">
-<img src="Figures/tools_masks.png" id="tools_masks" style="width:50.0%" alt="" />
-<p class="caption">Selection tools and add selection to mask
-tool</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:toolsmasks"></span>
+<img src="Figures/tools_masks.png" alt="Selection tools and add selection to mask tool." width="80%" />
+<p class="caption">
+Figure 6.10: Selection tools and add selection to mask tool.
+</p>
 </div>
 </div>
 <div id="camera-alignment" class="section level2 hasAnchor" number="6.7">
@@ -358,12 +390,15 @@ select <em>Apply masks</em> to <em>tie points</em>.</p></li>
 this job in batch for each chunk in <em>workflow</em> &gt; <em>batch process</em> &gt;
 <em>Add</em> button &gt; select the <em>job type</em> as <em>Align photos</em> to apply to
 <em>all chunks</em> or select specific ones &gt; add parameters listed above
-(Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#batch_alignment" reference-type="ref" reference="batch_alignment">26</a>).</p>
-<div class="figure">
-<img src="Figures/metashape_batch_align.png" id="batch_alignment" style="width:50.0%" alt="" />
-<p class="caption">Align photos in multiple
-chunks</p>
-</div></li>
+(Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:batchalign">6.11</a>).</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:batchalign"></span>
+<img src="Figures/metashape_batch_align.png" alt="Align photos in multiple chunks." width="80%" />
+<p class="caption">
+Figure 6.11: Align photos in multiple chunks.
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
 <li><p><strong>Optional: align using markers</strong> If the different camera cannot
 align properly, it is possible to place homologous markers on the
 flower, defined as remarkable points on the flower (distinguishable
@@ -394,8 +429,7 @@ click <em>OK</em>. Repeat for all chunks to align.</p></li>
 <li><p><strong>Optional</strong> If the camera alignment is not satisfactory, it is
 possible to clean the tie point obtained and try to realign the
 cameras. For instance, on the tie point generated by the alignment,
-you can delete outlier and imprecise points (Figure
-<a href="#removing_points" reference-type="ref" reference="removing_points"><span class="math display">\[removing_points\]</span></a>):</p>
+you can delete outlier and imprecise points (Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:removepoints1">6.12</a> and <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:removepoints2">6.13</a>):</p>
 <ol style="list-style-type: decimal">
 <li><p>In the top menu, click on <em>Model</em> and then <em>Gradual Selection</em>.
 Select <em>Reconstruction uncertainty</em> on <em>Criterion</em> and play with
@@ -419,21 +453,25 @@ and click OK. Then press <em>Delete</em>.</p></li>
 </ol></li>
 <li><p>Repeat these steps for each chunk.</p></li>
 </ol>
-<div class="figure">
-<img src="Figures/metashape_delete_selectedpoints.png" id="model_orientation1" style="width:100.0%" alt="" />
-<p class="caption">Use the selection tool to remove background
-points</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:removepoints1"></span>
+<img src="Figures/metashape_delete_selectedpoints.png" alt="Use the selection tool to remove background points." width="100%" />
+<p class="caption">
+Figure 6.12: Use the selection tool to remove background points.
+</p>
 </div>
-<div class="figure">
-<img src="Figures/metashape_gradual_selection.png" id="model_orientation2" style="width:100.0%" alt="" />
-<p class="caption">Use the gradual selection tool to remove additional mis-calculated
-points</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:removepoints2"></span>
+<img src="Figures/metashape_gradual_selection.png" alt="Use the gradual selection tool to remove additional mis-calculated points" width="100%" />
+<p class="caption">
+Figure 6.13: Use the gradual selection tool to remove additional mis-calculated points
+</p>
 </div>
-<p><strong>Note: If the alignment fails using only one chunk and two or more
+<blockquote>
+<p>If the alignment fails using only one chunk and two or more
 camera groups, then it will be necessary to divide your job in several
 chunks. Each chunk should then contain photos from one flower position.
 Once the chunks are ready, you can proceed with the alignment following
-the previous steps.</strong></p>
+the previous steps.**</p>
+</blockquote>
 </div>
 <div id="align-chunks-together" class="section level2 hasAnchor" number="6.8">
 <h2><span class="header-section-number">6.8</span> Align chunks together<a href="d-model-reconstruction-in-agisoft-metashape.html#align-chunks-together" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -448,8 +486,7 @@ markers.</p>
 <ol style="list-style-type: decimal">
 <li><p>Select the chunks to align together.</p></li>
 <li><p>Go to <em>Workflow</em> &gt; <em>Align Chunks</em>, select the chunks you want to
-align together, set the method as <em>Point based</em> (Figure
-<a href="d-model-reconstruction-in-agisoft-metashape.html#Align_chunk" reference-type="ref" reference="Align_chunk">29</a>).</p></li>
+align together, set the method as <em>Point based</em> (Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:alignchunks">6.14</a>).</p></li>
 <li><p>Restrict the key points with masks.</p></li>
 <li><p>Click on <em>OK</em>.</p></li>
 </ol>
@@ -481,23 +518,26 @@ placed).</p></li>
 chunks you want to align, set the method as <em>Markers based</em> and then
 click <em>OK</em>. Repeat for all chunks to align.</p></li>
 </ol>
-<p>When the chunks are aligned, a <span class="math display">\[T\]</span> is put at the end of your chunk
+<p>When the chunks are aligned, a [T] is put at the end of your chunk
 name to notify that it is transformed. You can check the alignment using
 the icon to show aligned chunks (icon of layers on top of each others,
-Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#show_aligned_chunk" reference-type="ref" reference="show_aligned_chunk">30</a>). The different chunks should be well
+Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:showalignedchunks">6.15</a>). The different chunks should be well
 aligned over the whole flower. If the alignment of your chunks is
 unsatisfactory, try to place more markers on recognizable features and
 spread across the whole flower. Additionally, you can manually align
 chunks using the tools to move the models in the space, but this is
 highly not recommended.</p>
-<div class="figure">
-<img src="Figures/metashape_align_chunks.png" id="Align_chunk" style="width:100.0%" alt="" />
-<p class="caption">Align chunks</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:alignchunks"></span>
+<img src="Figures/metashape_align_chunks.png" alt="Align chunks." width="50%" />
+<p class="caption">
+Figure 6.14: Align chunks.
+</p>
 </div>
-<div class="figure">
-<img src="Figures/metashape_show_aligned_chunks.png" id="show_aligned_chunk" style="width:90.0%" alt="" />
-<p class="caption">Show aligned chunks to verify their
-positions</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:showalignedchunks"></span>
+<img src="Figures/metashape_show_aligned_chunks.png" alt="Show aligned chunks to verify their positions." width="100%" />
+<p class="caption">
+Figure 6.15: Show aligned chunks to verify their positions.
+</p>
 </div>
 </div>
 <div id="merge-chunks" class="section level2 hasAnchor" number="6.9">
@@ -516,8 +556,7 @@ above.</p>
 3D mesh (model).</p></li>
 <li><p>Go to <em>Workflow &gt; Build Mesh</em>.</p></li>
 <li><p>In the dialog box, make sure that <em>Source Data</em> is on <em>Depth maps</em>,
-<em>Quality</em> and <em>Face Count</em> on <em>High</em> (Figure
-<a href="d-model-reconstruction-in-agisoft-metashape.html#fig:3d_mesh" reference-type="ref" reference="fig:3d_mesh">31</a>).
+<em>Quality</em> and <em>Face Count</em> on <em>High</em> (Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#fig:build3Dmesh">6.16</a>).
 Note that although it is also possible to generate a mesh from a
 dense point cloud (which has to be built separately), the depth maps
 provide better results for objects with a high number of minor
@@ -528,16 +567,18 @@ floating background parts using the selection tool. This will
 highlight the selection in red.</p></li>
 <li><p>Verify your selection and press delete to remove them.</p></li>
 </ol>
-<div class="figure">
-<img src="Figures/metashape_build_mesh.png" id="fig:3d_mesh" style="width:50.0%" alt="" />
-<p class="caption">Build 3D mesh</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:build3Dmesh"></span>
+<img src="Figures/metashape_build_mesh.png" alt="Build 3D mesh." width="50%" />
+<p class="caption">
+Figure 6.16: Build 3D mesh.
+</p>
 </div>
-<div class="tcolorbox">
+<blockquote>
 <p>Our protocol merges the chunks to build a tie point model of all chunks
 before constructing a model for the merge chunk. We found that this is
 the best approach, although it is also possible to build models for each
 chunk separately and then merge these models to obtain a full model.</p>
-</div>
+</blockquote>
 </div>
 <div id="d-mesh-touch-ups" class="section level2 hasAnchor" number="6.11">
 <h2><span class="header-section-number">6.11</span> 3D mesh touch ups<a href="d-model-reconstruction-in-agisoft-metashape.html#d-mesh-touch-ups" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -567,7 +608,7 @@ these steps :</p>
 <li><p>On a picture displaying the scale bar, add new markers at each end
 of the scale bar and on a couple of additional photos.</p></li>
 <li><p>In the left panel, select both markers and click on the icon <em>Add
-scale</em> (Figure <a href="d-model-reconstruction-in-agisoft-metashape.html#metashape_scale" reference-type="ref" reference="metashape_scale">32</a>).</p></li>
+scale</em> (Figure<a href="d-model-reconstruction-in-agisoft-metashape.html#fig:addscale">6.17</a>).</p></li>
 <li><p>Go to the <em>Reference</em> panel, select the scale and add 0.01 as
 reference.</p></li>
 <li><p>Click on the <em>Update transform</em> button (rotating arrows). This is an
@@ -576,10 +617,11 @@ to your model.</p></li>
 <li><p>To verify if the scale is taken into account, you can use the
 measuring tape tool.</p></li>
 </ol>
-<div class="figure">
-<img src="Figures/metashape_add_scale_2.png" id="metashape_scale" style="width:90.0%" alt="" />
-<p class="caption">Add a scale using
-landmarks</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:addscale"></span>
+<img src="Figures/metashape_add_scale_2.png" alt="Add a scale using landmarks" width="100%" />
+<p class="caption">
+Figure 6.17: Add a scale using landmarks
+</p>
 </div>
 </div>
 <div id="model-orientation" class="section level2 hasAnchor" number="6.14">
@@ -602,8 +644,12 @@ and the two dash facing the opening of the flower. Note that
 depending on the software you use to open the model, the first view
 orientation may change when you open the final object file.</p></li>
 </ol>
-<p><img src="Figures/metashape_orientation.png" style="width:100.0%" /></p>
-<p><img src="Figures/metashape_orientation_2.png" style="width:100.0%" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:orientation"></span>
+<img src="Figures/metashape_orientation.png" alt="Add a scale using landmarks" width="100%" /><img src="Figures/metashape_orientation_2.png" alt="Add a scale using landmarks" width="100%" />
+<p class="caption">
+Figure 6.18: Add a scale using landmarks
+</p>
+</div>
 </div>
 <div id="export-model-and-texture" class="section level2 hasAnchor" number="6.15">
 <h2><span class="header-section-number">6.15</span> Export model and texture<a href="d-model-reconstruction-in-agisoft-metashape.html#export-model-and-texture" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -628,8 +674,8 @@ detail color information that is wrapped on the model.</p></li>
           </div>
         </div>
       </div>
-<a href="image-post-processing.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="image-post-processing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -683,20 +729,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

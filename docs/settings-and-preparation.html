@@ -27,7 +27,7 @@
 <meta name="author" content="Simon Joly" />
 
 
-<meta name="date" content="2022-09-20" />
+<meta name="date" content="2022-09-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,6 +157,7 @@
 <li class="chapter" data-level="6.14" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#model-orientation"><i class="fa fa-check"></i><b>6.14</b> Model orientation</a></li>
 <li class="chapter" data-level="6.15" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#export-model-and-texture"><i class="fa fa-check"></i><b>6.15</b> Export model and texture</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -287,29 +310,44 @@ Figure 3.10: Start recording with the turntable.
 </div>
 <div id="summary-of-settings" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Summary of settings<a href="settings-and-preparation.html#summary-of-settings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="tabular">
-<p>L4cm|L12cm <strong>Parameter</strong> &amp; <strong>Description</strong><br />
-</p>
-<hr />
-<p><br />
-Aperture &amp; F/16<br />
-</p>
-<hr />
-<p>Sensibility &amp; ISO 100 (lowest)<br />
-</p>
-<hr />
-<p>Exposure time &amp; 1/20s - Can be adapted according to the flower.
-<strong>Reminder</strong> : a photo of the color chart in the exact same light
-conditions and camera parameters as the flower needs to be taken.<br />
-<br />
-Number of photos &amp; 20 per 360 for one camera position and one flower
-position. May be adjusted according to each flower.<br />
-</p>
-<hr />
-<p>Wait time &amp; 2s<br />
-</p>
-<hr />
-</div>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Parameter</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Camera settings</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Aperture</td>
+<td>F/16</td>
+</tr>
+<tr class="odd">
+<td>Sensibility</td>
+<td>ISO 100 (lowest)</td>
+</tr>
+<tr class="even">
+<td>Exposure time</td>
+<td>1/20s (depending on light settings)</td>
+</tr>
+<tr class="odd">
+<td><strong>Turn table settings</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Number of photos</td>
+<td>20 per camera height (high, mid, low)</td>
+</tr>
+<tr class="odd">
+<td>Wait time</td>
+<td>2s</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -373,20 +411,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

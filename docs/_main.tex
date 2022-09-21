@@ -4,6 +4,10 @@
 %
 \documentclass[
 ]{book}
+\title{Flower photogrammetry and 3D modeling protocol}
+\author{Marion Leménager \and Jérôme Burkiewicz \and Daniel Schoen \and Diana Constanza Diaz Cardona \and Simon Joly}
+\date{2022-09-21}
+
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -33,6 +37,14 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Flower photogrammetry and 3D modeling protocol},
+  pdfauthor={Marion Leménager; Jérôme Burkiewicz; Daniel Schoen; Diana Constanza Diaz Cardona; Simon Joly},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -66,18 +78,6 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{plainnat}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
-\hypersetup{
-  pdftitle={Flower photogrammetry and 3D modeling protocol},
-  pdfauthor={Marion Leménager; Jérôme Burkiewicz; Daniel Schoen; Diana Constanza Diaz Cardona; Simon Joly},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-
-\title{Flower photogrammetry and 3D modeling protocol}
-\author{Marion Leménager \and Jérôme Burkiewicz \and Daniel Schoen \and Diana Constanza Diaz Cardona \and Simon Joly}
-\date{2022-09-16}
 
 \begin{document}
 \maketitle
@@ -89,9 +89,11 @@
 \hypertarget{about}{%
 \chapter{About}\label{about}}
 
-This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)
+This protocol is an evolving protocol used in the \href{www.plantevolution.org}{Joly lab} at the Université de Montréal (Canada)
 
 This protocol describes how to obtain three-dimensional (3D) reconstructions of flowers using photogrammetry. It describes in details the set-up, settings and steps that has worked for us for building accurate flower models, but other approaches are certainly possible. Hence, we hope this protocol serves as a starting point rather than a final protocol. We welcome any comments.
+
+\includegraphics[width=1\textwidth,height=\textheight]{Figures/cover.jpg}
 
 \hypertarget{citation}{%
 \section{Citation}\label{citation}}
@@ -126,31 +128,17 @@ the color of the flowers to be photographed.
 \section{Turn table}\label{turn-table}}
 
 We use an automated turntable and shutter release device (\href{https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare}{Syrp Genie
-mini II and
-turntable})
-to rotate each flower on itself (360) and trigger a predetermined number
-of pictures from the camera to get pictures from all around the flower.
-The genie mini II has several hours of autonomy according to its use,
-but it can be plugged in a source of energy during the process (external
-battery, plug, or usb). This device is easily controlled and set
-remotely via its application "Syrp" (Figure
-\protect\hyperlink{fig:syrp_app}{1}) on
-any kind of smartphone by Bluetooth
-(\href{https://apps.apple.com/us/app/syrp/id1387335063}{Appstore} or
-\href{https://play.google.com/store/apps/details?id=nz.co.syrp.genie2\&hl=fr_CA\&gl=US}{Playstore})
-after the device has been paired with your phone and after any updates
-suggested by the device has been done.
+mini II and turntable}) to rotate each flower on itself (360) and trigger a predetermined number of pictures from the camera to get pictures from all around the flower. The genie mini II has several hours of autonomy according to its use, but it can be plugged in a source of energy during the process (external battery, plug, or usb). This device is easily controlled and set remotely via its application "Syrp" (Figure \ref{fig:Syrp}) on any kind of smartphone by Bluetooth (\href{https://apps.apple.com/us/app/syrp/id1387335063}{Appstore} or \href{https://play.google.com/store/apps/details?id=nz.co.syrp.genie2\&hl=fr_CA\&gl=US}{Playstore}) after the device has been paired with your phone and after any updates suggested by the device has been done.
 
-We also use a 1cm scale placed adjacently to the flower, and include a
-label describing the species name, collection number, date of
-collection, location, and coordinates.
+We also use a 1cm scale placed adjacently to the flower, and include a label describing the species name, collection number, date of collection, location, and coordinates.
 
 \begin{figure}
-\hypertarget{fig:syrp_app}{%
-\centering
-\includegraphics[width=2cm,height=\textheight]{Figures/Syrp_app.png}
-\caption{Syrp application}\label{fig:syrp_app}
+
+{\centering \includegraphics[width=0.2\linewidth]{Figures/Syrp_app} 
+
 }
+
+\caption{Syrp application}\label{fig:Syrp}
 \end{figure}
 
 \hypertarget{camera}{%
@@ -177,19 +165,17 @@ reference target to create Digital Negative (DNG) (\citet{Adobe2012DNG}) camera
 profiles from a raw photo (called DNG conversion), and the 75\% neutral
 gray patch to calibrate for light exposure.
 
-\begin{figure}
-\hypertarget{fig:xrite_description}{%
-\centering
-\includegraphics[width=7cm,height=\textheight]{Figures/Color_chart_sRGB_values.pdf}
-\caption{Xrite color chart details for standard Red Green and Blue (sRGB)
-values. The 75\% neutral gray has values of 0.33 (85/255) for Red Green
-Blue channels in the LightRoom
-software.}\label{fig:xrite_description}
-}
-\end{figure}
+\textbackslash begin\{figure\}
 
-\hypertarget{software}{%
-\section{Software}\label{software}}
+\{\centering \includegraphics[width=0.5\linewidth]{Figures/Color_chart_sRGB_values}
+
+\}
+
+\textbackslash caption\{Xrite color chart details for standard Red Green and Blue (sRGB) values. The 75\% neutral gray has values of 0.33 (85/255) for Red Green Blue channels in the LightRoom software\}\label{fig:xrite}
+\textbackslash end\{figure\}
+
+\hypertarget{softwares}{%
+\section{Softwares}\label{softwares}}
 
 To convert RAW photos (CR2 for Canon Raw Version 2 image files) to DNG
 files, we either use directly \href{https://www.adobe.com/ca_fr/products/photoshop-lightroom-classic.html}{Adobe Lightroom
@@ -205,26 +191,6 @@ photos that need the same calibration. To reconstruct the 3D models from
 photos, we use \href{https://www.agisoft.com/downloads/installer/}{Agisoft
 Metashape}.
 
-\begin{figure}
-\centering
-\includegraphics[width=0.2\textwidth,height=\textheight]{Figures/logo Adobe DNG Converter.png}
-\caption{Adobe DNG
-Converter}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.2\textwidth,height=\textheight]{Figures/logo ColorChecker Camera Calibration.png}
-\caption{ColorChecker Camera
-Calibration}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.2\textwidth,height=\textheight]{Figures/logo Lrc.png}
-\caption{Adobe Lightroom Classic}
-\end{figure}
-
 \hypertarget{flowers}{%
 \section{Flowers}\label{flowers}}
 
@@ -237,122 +203,60 @@ Alternatively, flowers can be secured in a truncated pipette tip, itself
 fixed on the turntable, or with alligator clips to rapidly fix the
 flowers.
 
+\begin{quote}
 Store flowers in 50mL Eppendorf tubes or in foam box no more than an
-hour before taking photos of them.\\
-\strut \\
+hour before taking photos of them.
+\end{quote}
+
+\begin{quote}
 In some cases, it is necessary to remove sepals from the flower before
 building the model to accurately study the corolla shape. To do this,
 use a razor blade and mark the sepal intersections with a waterproof
 pen. The marks will help for the model construction and more importantly
 landmarks positioning.
+\end{quote}
 
 \hypertarget{summary-of-materials-and-software}{%
 \section{Summary of materials and software}\label{summary-of-materials-and-software}}
 
-L5cm\textbar L9cm\textbar C1.7cm
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\& \&\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\hfill\break
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Camera \& Digital Single-Lens Reflex (DSLR) (e.g.~Canon t2i) \& from
-\$500\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Macro lens \& A preferably fixed lens (e.g.~Canon 60mm f/2.8 Macro lens)
-\& from \$400\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Tripod \& Preferably flexible, such as a gorillapod \& e.g.~\$80\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Stepping motor and turntable kit \& \href{https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare}{Genie mini
-II},
-Shoot smooth rotating video and interactive 360\({^\circ}\) images of
-objects. Full iOS and Android App control via Bluetooth. Battery life:
-6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs \& \$328.00\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Lightbox \& A portable photo studio, e.g.
-\href{https://neewer.com/products/lighting-studio-10094456?_pos=2\&_sid=bde9f6ddb\&_ss=r}{Neewer}
-20"/50cm foldable portable photography lighting kit (Neewer Technology
-Co.~LTD, Shenzhen, China), adjustable brightness with 120 LED lights,
-CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature,
-needs to be powered by a portable battery in the field, white, grey, and
-black backdrops. In the bracket of light intensities possible for this
-lightbox, we used an intermediate light intensity. \[maximum;usually
-used; minimum\] lux light intensities correspond to \[3140;2680;1330\]
-lux for a white backdrop and \[330;305;238\] Lux with a black backdrop.
-\& \$79.99\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-External battery \& Powering source for in-field photo capture,
-essentially for the lightbox or to recharge batteries \& optional\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\hfill\break
-Flower \& Freshly cut flower with peduncle and floral receptacle \& /\\
-Labels and container \& Identification and storage of fresh flowers to
-avoid damage and avoid wilting \& /\\
-Turntable labels \& Identification to species, collector, collection
-number, date, locality, and coordinates, and the chunk number. To use as
-a separate photo before each run of photos. \& /\\
-Razor blade \& To remove sepals \& /\\
-Small block of dense foam \& To fix flowers in place with a pin at the
-center of the turntable. \& /\\
-Entomological pins \& To pin through the peduncle or floral receptacle
-and fix the flower on the turntable. \& /\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Scale \& A 1 cm scale as reference \& /\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\hfill\break
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Color chart \& A color reference to calibrate RAW photos (e.g.~\href{https://www.xrite.com/categories/calibration-profiling/colorchecker-targets/colorchecker-passport-photo-2}{X-rite
-ColorChecker
-Passport})
-\& e.g.~\$99.00\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Color calibration software \& ColorChecker Camera Calibration, Xrite
-software for automatic color profile creation \& Free\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Photo editing software \& Adobe Photoshop Lightroom, editing software for
-image color calibration in batch \& Payment plans vary\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-DNG conversion software \& Adobe DNG converter, to convert Camera Raw
-files from supported cameras to the more widely used DNG raw files \&
-Free\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\hfill\break
-3D reconstruction from photogrammetry software \& Agisoft Metashape Pro
-Software \& \$549 Academic price\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.33}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.33}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.33}}@{}}
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Materials}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Description}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Price} (USD)
+\end{minipage} \\
+\midrule
+\endhead
+\textbf{Photography} & & \\
+Camera & Digital Single-Lens Reflex (DSLR) (e.g.~Canon t2i) & from~ \$500 \\
+Macro lens & A preferably fixed focal-length lens (e.g.~Canon 60mm f/2.8 Macro lens) & from~ \$400 \\
+Tripod & Preferably flexible, such as a Gorillapod & e.g.~ \$80 \\
+Stepping motor and turntable kit & (\href{https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare}{Syrp Genie mini II and turntable}), Shoot smooth rotating video and interactive 360° images of objects. Full iOS and Android App control via Bluetooth. Battery life: 6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs & \$328 \\
+Lightbox & A portable photo studio, e.g.~\href{https://ca.neewer.com/collections/softboxes-diffusers/products/neewer-professional-photo-light-box-kit-66600325}{Neewer} Lightbox 20''/50cm foldable portable photography lighting kit (Neewer Technology Co.~LTD, Shenzhen, China), adjustable brightness with 120 LED lights, CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature, needs to be powered by a portable battery in the field, white, grey, and black backdrops. In the bracket of light intensities possible for this lightbox, we used an intermediate light intensity. {[}maximum;usually used; minimum{]} lux light intensities correspond to {[}3140;2680;1330{]} lux for a white backdrop and {[}330;305;238{]} Lux with a black backdrop. & e.g.~\$89 \\
+External battery & Powering source for in-field photo capture, essentially for the lightbox or to recharge batteries & optional \\
+\textbf{Flower mounting and identification} & & \\
+Flower & Freshly cut flower with peduncle and floral receptacle & / \\
+Labels and container & Identification and storage of fresh flowers to avoid damage and avoid wilting & / \\
+Turntable labels & To provide information on species, collector, collection number, date, locality, and coordinates, and the chunk number. To use as a separate photo before each run of photos. & / \\
+Razor blade & To remove flower parts (e.g., sepals) & / \\
+Small block of dense foam & To fix flowers in place with a pin at the center of the turntable & / \\
+Entomological pins & To pin through the peduncle or floral receptacle and fix the flower on the turntable. & / \\
+Scale & A 1 cm scale to use as reference & / \\
+\textbf{Colour calibration} & & \\
+Color chart & A color reference to calibrate RAW photos (e.g.~\href{https://www.xrite.com/categories/calibration-profiling/colorchecker-targets/colorchecker-passport-photo-2}{X-rite ColorChecker Passport}) & e.g.~ \$90 \\
+Color calibration software & ColorChecker Camera Calibration, Xrite software for automatic color profile creation & Free \\
+Photo editing software & Adobe Photoshop Lightroom, editing software for image color calibration in batch & Payment plans vary \\
+DNG conversion software & Adobe DNG converter, to convert Camera Raw files from supported cameras to the more widely used DNG raw files & Free \\
+\textbf{Model reconstruction} & & \\
+3D reconstruction from photogrammetry software & Agisoft Metashape Pro Software & \$549 Academic price \\
+\bottomrule
+\end{longtable}
 
 \hypertarget{settings-and-preparation}{%
 \chapter{Settings and preparation}\label{settings-and-preparation}}
@@ -360,53 +264,28 @@ Software \& \$549 Academic price\\
 \hypertarget{camera-and-tripod-settings-and-preparation}{%
 \section{Camera and tripod settings and preparation}\label{camera-and-tripod-settings-and-preparation}}
 
-To obtain the best picture quality for model reconstruction, we need an
-optimal combination of the light sensibility of the sensor (ISO), the
-duration of exposure and the focal of the objective (F). As mentioned,
-it is preferable to use a fixed lens (one that doesn't allow zooming) to
-facilitate the model reconstruction in the processing step because the
-software can't take zooming into account in the reconstruction process.
-Maximizing the light source allows us to use the lowest ISO to get
-crisper images. Adapted time exposure to allow the right amount of light
-to go to the sensor, avoids low key nor high key photo (under/over
-exposed photo). This may be adapted according to the subject (light or
-dark colored subject or background) or if different lighting conditions
-are used.
+To obtain the best picture quality for model reconstruction, we need an optimal combination of the light sensibility of the sensor (ISO), the duration of exposure and the focal of the objective (F). As mentioned, it is preferable to use a fixed lens (one that doesn't allow zooming) to facilitate the model reconstruction in the processing step because the software can't take zooming into account in the reconstruction process. Maximizing the light source allows us to use the lowest ISO to get crisper images. Adapted time exposure to allow the right amount of light to go to the sensor, avoids low key nor high key photo (under/over exposed photo). This may be adapted according to the subject (light or dark colored subject or background) or if different lighting conditions are used.
 
-To maximize the depth of field without lowering the image quality, using
-the manual option on the camera dial, the focal F should be set to F16.
-Use the manual focus setting on the side of the lens (Figure
-\protect\hyperlink{camera_arrows}{3}) to
-avoid camera trigger malfunction when the flowers doesn't land on the
-detector. If the flower is off centered during rotation, and the
-automatic focus can't focus (on the background) the camera trigger is
-prevented with the automatic focus. On manual, the camera will always be
-triggered by the turn table, even if the focus isn't optimal. Because
-the subject is moving and may be off centered on the turntable, the
-focus may need to be adapted while the turn table runs. For this you can
-pause the turntable, manually adjust the focus, and resume the spin.
-
-A flexible tripod (Figure \protect\hyperlink{tripod}{4}) is used to adjust several camera heights, high,
-middle, and low, close to the subject.
+To maximize the depth of field without lowering the image quality, using the manual option on the camera dial, the focal F should be set to F16. Use the manual focus setting on the side of the lens (Figure \ref{fig:camera-arrows}) to avoid camera trigger malfunction when the flowers doesn't land on the detector. If the flower is off centered during rotation, and the automatic focus can't focus (on the background) the camera trigger is prevented with the automatic focus. On manual, the camera will always be triggered by the turn table, even if the focus isn't optimal. Because the subject is moving and may be off centered on the turntable, the focus may need to be adapted while the turn table runs. For this you can pause the turntable, manually adjust the focus, and resume the spin.
 
 \begin{figure}
-\hypertarget{camera_arrows}{%
-\centering
-\includegraphics[width=6cm,height=\textheight]{Figures/camera_arrows.png}
-\caption{Camera and lens used to take RAW photos. The red arrows (from top to
-bottom) depict the button to get manual focus, the ISO button and the
-manual parameter on the camera
-dial.}\label{camera_arrows}
+
+{\centering \includegraphics[width=0.33\linewidth]{Figures/camera_arrows} 
+
 }
+
+\caption{Camera and lens used to take RAW photos. The red arrows (from top to bottom) depict the button to get manual focus, the ISO button and the manual parameter on the camera dial.}\label{fig:camera-arrows}
 \end{figure}
 
+A flexible tripod (Figure \ref{fig:tripod}) is used to adjust several camera heights, high, middle, and low, close to the subject.
+
 \begin{figure}
-\hypertarget{tripod}{%
-\centering
-\includegraphics[width=4cm,height=\textheight]{Figures/tripod.png}
-\caption{Flexible tripod used to adjust camera
-positions.}\label{tripod}
+
+{\centering \includegraphics[width=0.33\linewidth]{Figures/tripod} 
+
 }
+
+\caption{Flexible tripod used to adjust camera positions.}\label{fig:tripod}
 \end{figure}
 
 \hypertarget{camera-settings}{%
@@ -417,43 +296,42 @@ The standard settings have to be adjusted depending on the flower
 exposure time (shutter speed) 1/20s, F/16 focal, ISO 100, standard
 exposition on the light meter, and we save pictures as RAW files (ML
 setting on the camera display) format to be able to post-process them
-for color calibration (Figure \protect\hyperlink{fig:my_label}{5}). A RAW photo of the color chart with an
+for color calibration (Figure \ref{fig:camera-settings}). A RAW photo of the color chart with an
 identical set of lighting conditions and camera settings as the flower
 to be photographed is needed for each flower photos series. If several
 flowers are processed one after the other without variation of light
 conditions, only one chart photo is needed.
 
+\begin{quote}
 The nicer and the sharper the photographs, the easier it will be to
 build the models. So make sure that the flower is always in focus. Shade
 or high light reflectance can also impair model reconstruction, so pay
 attention to these while taking the pictures.
+\end{quote}
 
 \begin{figure}
-\hypertarget{fig:my_label}{%
-\centering
-\includegraphics[width=0.5\textwidth,height=\textheight]{Figures/camera_settings.JPG}
-\caption{Camera settings interface of the Canon
-t2i/550D}\label{fig:my_label}
+
+{\centering \includegraphics[width=0.5\linewidth]{Figures/camera_settings} 
+
 }
+
+\caption{Camera settings interface of the Canon t2i/550D.}\label{fig:camera-settings}
 \end{figure}
 
 \hypertarget{optional-custom-camera-white-balance}{%
 \subsection{Optional : custom camera white balance}\label{optional-custom-camera-white-balance}}
 
-Optionally, you can begin by setting a personalized white balance in
+Optionally, you can begin by setting a personalized white balance (WB) in
 your camera with the light gray scale on the chart :
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  For a Canon camera, take a picture of the gray scale
+  For a Canon camera, take a picture of the gray scale;
 \item
-  Choose \emph{Custom WB} in your camera settings (Figure
-  \protect\hyperlink{WB_sub1}{6})
+  Choose \emph{Custom WB} in your camera settings (Figure \ref{fig:WB});
 \item
-  Select \emph{Custom} and use the picture of the grey scale to define your
-  custome white balance (Figure \protect\hyperlink{WB_sub2}{7}). Be careful, you will still require to
-  linearize and calibrate each photo afterwards.
+  Select \emph{Custom} and use the picture of the grey scale to define your custome white balance (Figure \ref{fig:WB2}). Be careful, you will still require to linearize and calibrate each photo afterwards.
 \end{enumerate}
 
 However, the color chart will always be the reference for
@@ -461,19 +339,21 @@ post-processing the color calibration of each photo. This optional
 section only helps to have a better preview of the photos.
 
 \begin{figure}
-\hypertarget{WB_sub1}{%
-\centering
-\includegraphics[width=0.5\textwidth,height=\textheight]{Figures/Custom WB setting.png}
-\caption{Custom WB parameter}\label{WB_sub1}
+
+{\centering \includegraphics[width=0.5\linewidth]{Figures/Custom WB setting} 
+
 }
+
+\caption{Custom whhite balance parameter.}\label{fig:WB}
 \end{figure}
 
 \begin{figure}
-\hypertarget{WB_sub2}{%
-\centering
-\includegraphics[width=0.5\textwidth,height=\textheight]{Figures/Custom WB selection.png}
-\caption{Select your custom WB}\label{WB_sub2}
+
+{\centering \includegraphics[width=0.5\linewidth]{Figures/Custom WB selection} 
+
 }
+
+\caption{How to select a custom white balance.}\label{fig:WB2}
 \end{figure}
 
 \hypertarget{turn-table-settings-and-preparation}{%
@@ -487,7 +367,7 @@ triggered, and the flower to stabilize after each rotation.
 \def\labelenumi{\arabic{enumi}.}
 \item
   Connect the shutter release to your camera and the turntable Syrp
-  Genie II (Figure \protect\hyperlink{fig:shutter}{8}).
+  Genie II (Figure \ref{fig:shutter}).
 \item
   Turn the turntable on (to turn it off, hold the \emph{on} button for 3
   seconds).
@@ -495,11 +375,14 @@ triggered, and the flower to stabilize after each rotation.
   Connect the Syrp Genie II to your device, and do the updates if
   required (needs an internet connection).
 \item
-  Click on \emph{create content} \textgreater{} \emph{turntable} (Figure
-  \protect\hyperlink{genie_root}{9},
-  \protect\hyperlink{genie_content}{10}).
+  Click on \emph{create content} \textgreater{} \emph{turntable} (Figures
+  \ref{fig:genie-root}, \ref{fig:genie-content}).
 \item
-  In parameters (Figure \protect\hyperlink{record}{12}), select 20 photos for each run, and 2s of
+  Make sure the turntable orientation is inverted in the detailed settings
+  (Figure \ref{fig:genie-settings})
+\item
+  In parameters (Figure \ref{fig:genie-record}), select 20 photos for
+  each run, and 2s of
   waiting (move-wait-shoot-wait-move). If it is too quick, some
   pictures won't be able to be saved as the camera needs a delay to
   save them on the memory card. The spinning device will take the
@@ -514,77 +397,67 @@ triggered, and the flower to stabilize after each rotation.
 \end{enumerate}
 
 \begin{figure}
-\hypertarget{fig:shutter}{%
-\centering
-\includegraphics[width=0.5\textwidth,height=\textheight]{Figures/shutter.jpg}
-\caption{Camera shutter release port}\label{fig:shutter}
+
+{\centering \includegraphics[width=0.5\linewidth]{Figures/shutter} 
+
 }
+
+\caption{Camera shutter release port.}\label{fig:shutter}
 \end{figure}
 
 \begin{figure}
-\hypertarget{genie_root}{%
-\centering
-\includegraphics[width=0.5\textwidth,height=\textheight]{Figures/genie_root.PNG}
-\caption{Genie app interface root}\label{genie_root}
+
+{\centering \includegraphics[width=0.5\linewidth]{Figures/genie_root} 
+
 }
+
+\caption{Camera shutter release port.}\label{fig:genie-root}
 \end{figure}
 
 \begin{figure}
-\hypertarget{genie_content}{%
-\centering
-\includegraphics[width=0.5\textwidth,height=\textheight]{Figures/genie_create.PNG}
-\caption{Create turntable content}\label{genie_content}
-}
-\end{figure}
 
-\hfill\break
+{\centering \includegraphics[width=0.5\linewidth]{Figures/genie_create} 
 
-\begin{figure}
-\hypertarget{fig:genie_settings}{%
-\centering
-\includegraphics[width=0.5\textwidth,height=\textheight]{Figures/genie_settings.PNG}
-\caption{Genie detailed
-settings}\label{fig:genie_settings}
 }
+
+\caption{Camera shutter release port.}\label{fig:genie-content}
 \end{figure}
 
 \begin{figure}
-\hypertarget{record}{%
-\centering
-\includegraphics[width=0.5\textwidth,height=\textheight]{Figures/genie_turntable_20_1.PNG}
-\caption{Start recording with the
-turntable}\label{record}
+
+{\centering \includegraphics[width=0.5\linewidth]{Figures/genie_settings} 
+
 }
+
+\caption{Genie detailed settings.}\label{fig:genie-settings}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Figures/genie_turntable_20_1} 
+
+}
+
+\caption{Start recording with the turntable.}\label{fig:genie-record}
 \end{figure}
 
 \hypertarget{summary-of-settings}{%
 \section{Summary of settings}\label{summary-of-settings}}
 
-L4cm\textbar L12cm \textbf{Parameter} \& \textbf{Description}\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\hfill\break
-Aperture \& F/16\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Sensibility \& ISO 100 (lowest)\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Exposure time \& 1/20s - Can be adapted according to the flower.
-\textbf{Reminder} : a photo of the color chart in the exact same light
-conditions and camera parameters as the flower needs to be taken.\\
-\strut \\
-Number of photos \& 20 per 360 for one camera position and one flower
-position. May be adjusted according to each flower.\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Wait time \& 2s\\
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+\endhead
+\textbf{Camera settings} & \\
+Aperture & F/16 \\
+Sensibility & ISO 100 (lowest) \\
+Exposure time & 1/20s (depending on light settings) \\
+\textbf{Turn table settings} & \\
+Number of photos & 20 per camera height (high, mid, low) \\
+Wait time & 2s \\
+\bottomrule
+\end{longtable}
 
 \hypertarget{image-capture-step-by-step}{%
 \chapter{Image capture step-by-step}\label{image-capture-step-by-step}}
@@ -622,16 +495,16 @@ Wait time \& 2s\\
 \item
   Take a picture of the color chart (RAW). Make sure to Incorporate
   each color squares, and the corners of the chart as follows (Figure
-  \protect\hyperlink{colorchart}{13}).
+  \ref{fig:chart}).
 \end{enumerate}
 
 \begin{figure}
-\hypertarget{colorchart}{%
-\centering
-\includegraphics[width=0.3\textwidth,height=\textheight]{Figures/chart_example.png}
-\caption{Colour chart photo taken at the beginning of the process to calibrate
-the photos in post process.}\label{colorchart}
+
+{\centering \includegraphics[width=0.4\linewidth]{Figures/chart_example} 
+
 }
+
+\caption{Colour chart photo taken at the beginning of the process to calibrate the photos in post process.}\label{fig:chart}
 \end{figure}
 
 \hypertarget{flower-placement-image-capture}{%
@@ -643,18 +516,34 @@ angles. Also, the photographs need to overlap with each other for proper
 alignment in the first steps of the reconstruction. For this reason,
 several pictures will be taken of each flower: from different
 orientation and all around the flower. We suggest that flowers should be
-photographed from at least two positions. Note that it is better to take
+photographed from at least two positions (e.g., Figure \ref{fig:flower-two-positions}). For more complex flowers, three positions may be required: horizontal, vertical, and upside down (Figure
+\ref{fig:flower-three-positions}). Note that it is better to take
 more photos than less because if we can drop some pictures during the
 model reconstruction, it is impossible to come back and take more
 pictures if we realize that we should have taken more.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.33\linewidth]{Figures/position_2} \includegraphics[width=0.33\linewidth]{Figures/position_5} 
+
+}
+
+\caption{Two flower positions that are normally suficient for Gesneriaceae flowers.}\label{fig:flower-two-positions}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.33\linewidth]{Figures/flowerplacement_1} \includegraphics[width=0.33\linewidth]{Figures/flowerplacement_2} \includegraphics[width=0.33\linewidth]{Figures/flowerplacement_3} 
+
+}
+
+\caption{More complex flowers can require the pictures to be taken from three flower positions.}\label{fig:flower-three-positions}
+\end{figure}
+
 \begin{quote}
-For Gesneriaceae, we first suggest a standard orientation \protect\hyperlink{flowerplacement_1}{14}) and an
-upside-down position (Figure
-\protect\hyperlink{flowerplacement_2}{15}) of the flower as this generally gives satisfactory
-results . For more complex flowers, three
-positions may be required: horizontal, vertical, and upside down (Figure
-\protect\hyperlink{flowerplacement_3}{16}).
+For Gesneriaceae, we first suggest a standard orientation and an
+upside-down position (Figure \ref{fig:flower-two-positions}) of the flower as this generally gives satisfactory results . For more complex flowers, three positions may be required: horizontal, vertical, and upside down (Figure
+\ref{fig:flower-three-positions}).
 \end{quote}
 
 \begin{enumerate}
@@ -662,8 +551,8 @@ positions may be required: horizontal, vertical, and upside down (Figure
 \item
   Clip the camera on the flexible tripod (gorillapod) and place the
   camera at one of the three position required per flower position :
-  high mid, and low position (see Figure
-  \protect\hyperlink{flowerplacement_2}{14}). Make sure to not use different
+  high mid, and low position (see Figure \ref{fig:camera-positions}.
+  Make sure to not use different
   camera orientations (landscape vs.~portrait).
 \item
   If sepals need to be removed, use a razor blade to cut them at the
@@ -704,46 +593,17 @@ positions may be required: horizontal, vertical, and upside down (Figure
   if needed, then press rec to resume your spin.
 \end{enumerate}
 
-Camera position 1
-
 \begin{figure}
-\centering
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/camera_position_1.JPG}
-\caption{Camera position 1}
+
+{\centering \includegraphics[width=0.33\linewidth]{Figures/camera_position_1} \includegraphics[width=0.33\linewidth]{Figures/camera_position_2} \includegraphics[width=0.33\linewidth]{Figures/camera_position_3} 
+
+}
+
+\caption{The three camera positions from which pictures should be taken for each flower position.}\label{fig:camera-positions}
 \end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/camera_position_2.JPG}
-\caption{Camera position 2}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/camera_position_3.JPG}
-\caption{Camera position 3}
-\end{figure}
-
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/position_2.jpg}
-
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/position_5.jpg}
-
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/flowerplacement_1.png}
-
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/flowerplacement_2.jpg}
-
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/flowerplacement_3.jpg}
 
 \begin{quote}
-Adjust the number of flower positions and number of photos according to
-each flower. For intricate flowers, or flowers that can't be captured
-entirely with only two positions (ventral and dorsal), you can place the
-flower on an another position (Figure
-\protect\hyperlink{flowerplacement_3}{15}). On the
-contrary, if the flower can't be placed on several positions, you may
-need to increase the number of photos per camera height in order to have
-sufficient information for the software to reconstruct accurate 3D
-models.
+Adjust the number of flower positions and number of photos according to each flower. For intricate flowers, or flowers that can't be captured entirely with only two positions (ventral and dorsal), you can place the flower on an another position (Figure \ref{fig:flower-three-positions}). On the contrary, if the flower can't be placed on several positions, you may need to increase the number of photos per camera height in order to have sufficient information for the software to reconstruct accurate 3D models.
 \end{quote}
 
 \hypertarget{image-post-processing}{%
@@ -777,19 +637,21 @@ to the right DNG file. If more than one set of photos with different
 lighting or camera settings are taken, make sure to distinguish the
 color charts that correspond to each set of photos.
 
+\begin{quote}
 Genus\_species\\
-GEN\_species\_CollectionNumber\\
-sepal\_DD.MM.YYYY or no\_sepals\_DD.MM.YYYY\\
-Model\\
-\emph{MetashapeProject}\\
-\emph{MetashapeProjectFolder.files}\\
-\emph{model.obj}\\
-\emph{model.ply}\\
-\emph{texture.jpg}\\
-Photos calibrated\\
-\emph{Place here all the calibrated photos, that you can organize per chunk}\\
-Photos to calibrate\\
-\emph{Place here all the RAW photos and color chart}\\
+ GEN\_species\_CollectionNumber\\
+  sepal\_DD.MM.YYYY or no\_sepals\_DD.MM.YYYY\\
+   Model\\
+    \emph{MetashapeProject}\\
+    \emph{MetashapeProjectFolder.files}\\
+    \emph{model.obj}\\
+    \emph{model.ply}\\
+    \emph{texture.jpg}\\
+   Photos calibrated\\
+    \emph{Place here all the calibrated photos, that you can organize per chunk}\\
+   Photos to calibrate\\
+    \emph{Place here all the RAW photos and color chart}\\
+\end{quote}
 
 \hypertarget{image-color-calibration}{%
 \section{Image color calibration}\label{image-color-calibration}}
@@ -824,53 +686,52 @@ calibration read \citep{troscianko2015image}.
   first box. You need to select a folder, and can't select a specific
   file, the software will convert all the files within this folder.
   Default parameters are ok for step 2-4. It will export the RAW file
-  in the DNG folder to a DNG file with the same file name (Figure
-  \protect\hyperlink{adobe_dng}{15}).
+  in the DNG folder to a DNG file with the same file name (Figure \ref{fig:DNG}).
 \item
   Open the Color Checker Camera Calibration software and drag and drop
   the newly created DNG file in the software. The software will
   automatically draw a grid around it. Make sure that the green grid
   fits the chart, avoiding edge effects on each square of color
-  (Figure \protect\hyperlink{color_checker_camera_calibration}{16}).
+  (Figure \ref{fig:ColorCheckercalibration}.
 \item
   Click on \emph{create profile} and save it under Color\_Chart\_DD.MM.YYYY
-  (Figure \protect\hyperlink{color_checker_profile}{17}).
+  (Figure \ref{fig:ColorCheckerprofile}.
 \end{enumerate}
 
 \begin{figure}
-\hypertarget{adobe_dng}{%
-\centering
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/AdobeDNGConverter.png}
-\caption{Convert RAW chart to DNG in Adobe DNG
-Converter}\label{adobe_dng}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/DNGConverter} 
+
 }
+
+\caption{Convert RAW chart to DNG in Adobe DNG Converter}\label{fig:DNG}
 \end{figure}
 
 \begin{figure}
-\hypertarget{color_checker_camera_calibration}{%
-\centering
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/ColorChecker_camera_calibration.png}
-\caption{Align grid on chart in ColorChecker Camera
-Calibration}\label{color_checker_camera_calibration}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/ColorChecker_camera_calibration} 
+
 }
+
+\caption{Align grid on chart in ColorChecker Camera Calibration}\label{fig:Colorcheckercalibration}
 \end{figure}
 
 \begin{figure}
-\hypertarget{color_checker_profile}{%
-\centering
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/create_profile.png}
-\caption{Export the color
-profile}\label{color_checker_profile}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/create_profile} 
+
 }
+
+\caption{Export the color profile}\label{fig:ColorCheckerprofile}
 \end{figure}
 
 \begin{figure}
-\hypertarget{fig:workflow}{%
-\centering
-\includegraphics[width=0.8\textwidth,height=\textheight]{Figures/manual_method.png}
-\caption{Image color calibration
-workflow}\label{fig:workflow}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/manual_method} 
+
 }
+
+\caption{Image color calibration workflow}\label{fig:ColorCheckerworkflow}
 \end{figure}
 
 \textbf{Method 2 : X-Rite Color Checker plug-in installation and automatic
@@ -922,15 +783,13 @@ creation of color profiles on Windows}
 \item
   If Adobe Lightroom Classic is already installed on your computer,
   the installation program should proposed you to install the Adobe
-  Photoshop Lightroom plug-in (Figure
-  \protect\hyperlink{color_checker_plug_in_win}{19}). Install it.
+  Photoshop Lightroom plug-in (Figure \ref{fig:ColorCheckerplugin}). Install it.
 \item
   Once the plug-in is installed, run Adobe Lightroom Classic and
   import your color chart (\emph{File} \textgreater{} \emph{Import}).
 \item
   Click on \emph{File} \textgreater{} \emph{Export} and in the drop-down menu, select
-  \emph{X-Rite Preselection} (Figure
-  \protect\hyperlink{x_rite_preselection}{20}). Name your profile, and click on
+  \emph{X-Rite Preselection} (Figure \ref{fig:xritepreselection}). Name your profile, and click on
   \emph{Export}.
 \item
   Restart Lightroom as indicated.
@@ -940,21 +799,21 @@ creation of color profiles on Windows}
 \end{enumerate}
 
 \begin{figure}
-\hypertarget{color_checker_plug_in_win}{%
-\centering
-\includegraphics[width=\textwidth,height=7cm]{Figures/color_checker_plug_in_win.png}
-\caption{Color Checker plug-in for Lightroom
-installation}\label{color_checker_plug_in_win}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/color_checker_plug_in_win} 
+
 }
+
+\caption{Color Checker plug-in for Lightroom installation}\label{fig:ColorCheckerplugin}
 \end{figure}
 
 \begin{figure}
-\hypertarget{x_rite_preselection}{%
-\centering
-\includegraphics[width=\textwidth,height=7cm]{Figures/x_rite_preselection.png}
-\caption{Color chart profile
-exportation}\label{x_rite_preselection}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/x_rite_preselection} 
+
 }
+
+\caption{Color chart profile exportation}\label{fig:xritepreselection}
 \end{figure}
 
 \hypertarget{color-and-illuminance-calibration-from-profiles}{%
@@ -970,28 +829,30 @@ exportation}\label{x_rite_preselection}
 \item
   Select the photo of the chart
 \item
-  Select the color profile corresponding to the color chart you have
-  selected (see Figure
-  \protect\hyperlink{colorux5cux2520profile}{\[color profile\]} to manually add a color profile) to
-  calibrate the photo of the chart with its own calibration profile.
+  Select the color profile corresponding to the color chart you have selected (see Figure \ref{fig:addprofile} and \ref{fig:settingssynchronize}) to manually add a color profile) to calibrate the photo of the chart with its own calibration profile.
+\end{enumerate}
 
-  \begin{figure}
-  \hypertarget{add_profile}{%
-  \centering
-  \includegraphics[width=\textwidth,height=7cm]{Figures/profil_capture_1.png}
-  \caption{Add a new color
-  profile}\label{add_profile}
-  }
-  \end{figure}
+\begin{figure}
 
-  \begin{figure}
-  \hypertarget{settings_synchronize}{%
-  \centering
-  \includegraphics[width=\textwidth,height=7cm]{Figures/profil_capture_2.png}
-  \caption{After adding a profile with the + sign, select it in the list
-  below.}\label{settings_synchronize}
-  }
-  \end{figure}
+{\centering \includegraphics[width=0.8\linewidth]{Figures/profil_capture_1} 
+
+}
+
+\caption{Add a new color profile}\label{fig:addprofile}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/x_rite_preselection} 
+
+}
+
+\caption{After adding a profile with the + sign, select it in the list below.}\label{fig:settingssynchronize}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
 \item
   Use the eyedropper over the 75\% gray scale (the last one before the
   black chip on the color chart, see Figure
@@ -1005,24 +866,18 @@ exportation}\label{x_rite_preselection}
   class). The illuminance is now adjusted in addition to the color
   calibration, but only on the chart.
 \item
-  To apply the modifications we just did to all the photos, select all
-  the photos (Cmd+A or Ctrl+A), and make sure that the one for which
-  you made changes is highlighted (in white compared to light gray for
-  the other ones selected) (see Figure
-  \protect\hyperlink{fig:synchronize}{23}). Check the profiles and exposure boxes
-  before synchronizing to all the other photos.
+  To apply the modifications we just did to all the photos, select all the photos (Cmd+A or Ctrl+A), and make sure that the one for which you made changes is highlighted (in white compared to light gray for the other ones selected) (see Figure \ref{fig:synchronize}). Check the profiles and exposure boxes before synchronizing to all the other photos.
 \item
   Click on the button \emph{synchronize}.
 \end{enumerate}
 
 \begin{figure}
-\hypertarget{fig:synchronize}{%
-\centering
-\includegraphics{Figures/synchronize_capture.png}
-\caption{Synchronize your settings made to the photo of the chart to all the
-other photos and check the two categories you modified (color profile
-and exposure).}\label{fig:synchronize}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/synchronize_capture} 
+
 }
+
+\caption{Synchronize your settings made to the photo of the chart to all the other photos and check the two categories you modified (color profile and exposure}\label{fig:synchronize}
 \end{figure}
 
 \hypertarget{export-calibrated-files-to-jpg-format}{%
@@ -1037,10 +892,8 @@ and exposure).}\label{fig:synchronize}
   Click on \emph{File} \textgreater{} \emph{Export}
 \item
   You can create presets that you will only need to create once to
-  always export the same way in Adobe Lightroom (example Figure
-  \protect\hyperlink{export_parameters}{24}), and add personalized file names
-  such as \_color\_calibrated at the end of each .jpg file (see also
-  for that Figure \protect\hyperlink{export_parameters}{24}).
+  always export the same way in Adobe Lightroom (example Figure \ref{figexportparameters}), and add personalized file names
+  such as \_color\_calibrated at the end of each .jpg file.
 \item
   In their own folder, you can then sort the calibrated photos for
   color and exposure per chunks (easily distinguishable by the
@@ -1048,15 +901,12 @@ and exposure).}\label{fig:synchronize}
 \end{enumerate}
 
 \begin{figure}
-\hypertarget{export_parameters}{%
-\centering
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/export_capture_1.png}
-\caption{You can export using your own personalized parameters and then export
-in batch your selection in a specific folder within your folder of
-uncalibrated photos for easy access. This method can thus work for any
-folder of uncalibrated
-photos.}\label{export_parameters}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/export_capture_1} 
+
 }
+
+\caption{You can export using your own personalized parameters and then export in batch your selection in a specific folder within your folder of uncalibrated photos for easy access. This method can thus work for any folder of uncalibrated photos.}\label{fig:exportparameters}
 \end{figure}
 
 \hypertarget{d-model-reconstruction-in-agisoft-metashape}{%
@@ -1073,9 +923,12 @@ The standard edition doesn't allow the use of the scale option that we
 will need to add a scale on our models.
 
 \begin{figure}
-\centering
-\includegraphics[width=0.2\textwidth,height=\textheight]{Figures/logo_metashape.jpeg}
-\caption{Agisoft Metashape}
+
+{\centering \includegraphics[width=0.2\linewidth]{Figures/logo_metashape} 
+
+}
+
+\caption{Agisoft Metashape}\label{fig:agisoft}
 \end{figure}
 
 \hypertarget{initial-tweaks}{%
@@ -1103,15 +956,27 @@ structures, such as petal margin, and avoid holes in your mesh in
 Agisoft Metashape 1.5.x or later (up to our knowlege) you will need to
 activate ONCE the \emph{Visibility consistent mesh} function in \emph{Tools \textgreater{}
 Preferences \textgreater{} Advanced \textgreater Tweaks}, then \emph{Add} and fill in \emph{Parameters}
-with \emph{BuildModel/tvl1\_mesh} and select the value as \emph{False} (figure
-\protect\hyperlink{metashape_tweaks}{\[metashape_tweaks\]}). Additionally, to use the anterior
+with \emph{BuildModel/tvl1\_mesh} and select the value as \emph{False} (figure \ref{fig:metashapetweaks1}). Additionally, to use the anterior
 version of the depth maps generation process, add ONCE the tweak :
-\emph{BuildDepthMaps/pm\_enable} and set the value to \emph{False} (figure
-\protect\hyperlink{metashape_tweaks}{\[metashape_tweaks\]}).
+\emph{BuildDepthMaps/pm\_enable} and set the value to \emph{False} (figure \ref{fig:metashapetweaks2}).
 
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/Metashape_tweaks_1.png}
+\begin{figure}
 
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/Metashape_tweaks_2.png}
+{\centering \includegraphics[width=0.8\linewidth]{Figures/Metashape_tweaks_1} 
+
+}
+
+\caption{Tweaks settings}\label{fig:metashapetweaks1}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/Metashape_tweaks_2} 
+
+}
+
+\caption{Tweaks settings}\label{fig:metashapetweaks2}
+\end{figure}
 
 \hypertarget{overview-of-the-model-building-pipeline}{%
 \section{Overview of the model building pipeline}\label{overview-of-the-model-building-pipeline}}
@@ -1178,14 +1043,12 @@ on the Agisoft helpdesk portal.
   Right click on a photo in one of your chunk in your Metashape
   project.
 \item
-  Click on \emph{Masks}, \emph{Import Masks} and in the box that appears select
-  method "From Background", operation \emph{Replacement}.
+  Click on \emph{Masks}, \emph{Import Masks} (Figure \ref{fig:Metashapemasksrightclick}) and in the box that appears select method "From Background", operation \emph{Replacement}.
 \item
   Enter the same name as the name of your background you just saved.
 \item
   Depending on the flower, the value for \emph{Tolerance} can vary between
-  approximately 40 and 60. For some pale flowers you may need a lower
-  tolerance value (e.g.~30).
+  approximately 40 and 60 (Figure \ref{fig:Metashapemaskstolerance}). For some pale flowers you may need a lower tolerance value (e.g.~30).
 \item
   Test different values of tolerance on a single photo first, but when
   you have a value that is satisfactory (that create a masks with the
@@ -1202,21 +1065,21 @@ on the Agisoft helpdesk portal.
 \end{enumerate}
 
 \begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/Metashape_mask_right_click.png}
-\caption{Right click on an image to select a mask to
-import.}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/Metashape_mask_right_click} 
+
+}
+
+\caption{Right click on an image to select a mask to import.}\label{fig:Metashapemasksrightclick}
 \end{figure}
 
 \begin{figure}
-\centering
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/Metashape_masks_tolerance.png}
-\caption{Import mask from a black image \emph{background.jpg}, and select a
-tolerance value, to test on the selected camera (the image you
-right-clicked on). If the automatic mask is automatically well adjusted
-around the flower shape (darker gray around the flower), then apply to
-entire workspace (all the
-images).}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/Metashape_masks_tolerance} 
+
+}
+
+\caption{Import mask from a black image *background.jpg*, and select a tolerance value, to test on the selected camera (the image you right-clicked on). If the automatic mask is automatically well adjusted around the flower shape (darker gray around the flower), then apply to entire workspace (all the images).}\label{fig:Metashapemaskstolerance}
 \end{figure}
 
 \textbf{Alternative masking method using Adobe Photoshop} It is also possible
@@ -1235,37 +1098,48 @@ improvements compared to the Agisoft Metashape approach.
   new folder labeled \emph{Chunk1-masks}.
 \item
   Then, you will need to create ONCE a Photoshop action, that will be
-  subsequently reused (see figures below) :
+  subsequently reused (see Figures \ref{fig:mask1} to \ref{fig:mask4} below) :
+\end{enumerate}
 
-  \begin{figure}
-  \centering
-  \includegraphics{Figures/mask_1.png}
-  \caption{Record a new action called \emph{Automatic Mask - 3D
-  reconstruction}}
-  \end{figure}
+\begin{figure}
 
-  \begin{figure}
-  \centering
-  \includegraphics{Figures/mask_2.png}
-  \caption{When you reopen your photo, don't forget to remove this extra task
-  in your action.}
-  \end{figure}
+{\centering \includegraphics[width=1\linewidth]{Figures/mask_1} 
 
-  \begin{figure}
-  \centering
-  \includegraphics{Figures/mask_3.png}
-  \caption{The action should include \emph{Select Subject, Fill, Inverse, Fill,
-  Save, Close}, and you can batch process this action to a specific
-  folder of copied photos to create
-  masks.}
-  \end{figure}
+}
 
-  \begin{figure}
-  \centering
-  \includegraphics{Figures/mask_4.png}
-  \caption{Apply the action to the folder of copied photos called
-  \emph{Chunk1-masks}.}
-  \end{figure}
+\caption{Record a new action called *Automatic Mask - 3D reconstruction*}\label{fig:mask1}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/mask_2} 
+
+}
+
+\caption{When you reopen your photo, don't forget to remove this extra task in your action.}\label{fig:mask2}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/mask_3} 
+
+}
+
+\caption{The action should include *Select Subject, Fill, Inverse, Fill, Save, Close*, and you can batch process this action to a specific folder of copied photos to create masks.}\label{fig:mask3}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/mask_4} 
+
+}
+
+\caption{Apply the action to the folder of copied photos called *Chunk1-masks*.}\label{fig:mask4}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
 \item
   Now you should have tranformed all your copied photos into masks,
   with the foreground object in white, and the background in black.
@@ -1285,20 +1159,20 @@ improvements compared to the Agisoft Metashape approach.
 The automatic application of masks at the previous steps is sometimes
 not entirely satisfactory for all photos. It is possible to add or
 remove parts of masks using the selection tool and the add/remove/invert
-buttons (Figure \protect\hyperlink{tools_masks}{25}). You can then use the selection tools to
+buttons (Figure @ref(fig:tools\_masks)). You can then use the selection tools to
 select areas that are not the flower and add the selection to the mask
-(Figure \protect\hyperlink{tools_masks}{25}). You also remove the scale and the
+(Figure @ref(fig:tools\_masks)). You also remove the scale and the
 entomological pin at this step. Additionally, you can invert the
 selection, or remove the selected areas from the mask with the icons on
 the right hand side of the add to mask icon.
 
 \begin{figure}
-\hypertarget{tools_masks}{%
-\centering
-\includegraphics[width=0.5\textwidth,height=\textheight]{Figures/tools_masks.png}
-\caption{Selection tools and add selection to mask
-tool}\label{tools_masks}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/tools_masks} 
+
 }
+
+\caption{Selection tools and add selection to mask tool.}\label{fig:toolsmasks}
 \end{figure}
 
 \hypertarget{camera-alignment}{%
@@ -1323,16 +1197,21 @@ tool}\label{tools_masks}
   this job in batch for each chunk in \emph{workflow} \textgreater{} \emph{batch process} \textgreater{}
   \emph{Add} button \textgreater{} select the \emph{job type} as \emph{Align photos} to apply to
   \emph{all chunks} or select specific ones \textgreater{} add parameters listed above
-  (Figure \protect\hyperlink{batch_alignment}{26}).
+  (Figure \ref{fig:batchalign}).
+\end{enumerate}
 
-  \begin{figure}
-  \hypertarget{batch_alignment}{%
-  \centering
-  \includegraphics[width=0.5\textwidth,height=\textheight]{Figures/metashape_batch_align.png}
-  \caption{Align photos in multiple
-  chunks}\label{batch_alignment}
-  }
-  \end{figure}
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/metashape_batch_align} 
+
+}
+
+\caption{Align photos in multiple chunks.}\label{fig:batchalign}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
 \item
   \textbf{Optional: align using markers} If the different camera cannot
   align properly, it is possible to place homologous markers on the
@@ -1373,8 +1252,7 @@ tool}\label{tools_masks}
   \textbf{Optional} If the camera alignment is not satisfactory, it is
   possible to clean the tie point obtained and try to realign the
   cameras. For instance, on the tie point generated by the alignment,
-  you can delete outlier and imprecise points (Figure
-  \protect\hyperlink{removing_points}{\[removing_points\]}):
+  you can delete outlier and imprecise points (Figure \ref{fig:removepoints1} and \ref{fig:removepoints2}):
 
   \begin{enumerate}
   \def\labelenumii{\arabic{enumii}.}
@@ -1407,28 +1285,30 @@ tool}\label{tools_masks}
 \end{enumerate}
 
 \begin{figure}
-\hypertarget{model_orientation1}{%
-\centering
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/metashape_delete_selectedpoints.png}
-\caption{Use the selection tool to remove background
-points}\label{model_orientation1}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/metashape_delete_selectedpoints} 
+
 }
+
+\caption{Use the selection tool to remove background points.}\label{fig:removepoints1}
 \end{figure}
 
 \begin{figure}
-\hypertarget{model_orientation2}{%
-\centering
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/metashape_gradual_selection.png}
-\caption{Use the gradual selection tool to remove additional mis-calculated
-points}\label{model_orientation2}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/metashape_gradual_selection} 
+
 }
+
+\caption{Use the gradual selection tool to remove additional mis-calculated points}\label{fig:removepoints2}
 \end{figure}
 
-\textbf{Note: If the alignment fails using only one chunk and two or more
+\begin{quote}
+If the alignment fails using only one chunk and two or more
 camera groups, then it will be necessary to divide your job in several
 chunks. Each chunk should then contain photos from one flower position.
 Once the chunks are ready, you can proceed with the alignment following
-the previous steps.}
+the previous steps.**
+\end{quote}
 
 \hypertarget{align-chunks-together}{%
 \section{Align chunks together}\label{align-chunks-together}}
@@ -1450,8 +1330,7 @@ To align using tie points :
   Select the chunks to align together.
 \item
   Go to \emph{Workflow} \textgreater{} \emph{Align Chunks}, select the chunks you want to
-  align together, set the method as \emph{Point based} (Figure
-  \protect\hyperlink{Align_chunk}{29}).
+  align together, set the method as \emph{Point based} (Figure \ref{fig:alignchunks}).
 \item
   Restrict the key points with masks.
 \item
@@ -1498,10 +1377,10 @@ To align using markers :
   click \emph{OK}. Repeat for all chunks to align.
 \end{enumerate}
 
-When the chunks are aligned, a \[T\] is put at the end of your chunk
+When the chunks are aligned, a {[}T{]} is put at the end of your chunk
 name to notify that it is transformed. You can check the alignment using
 the icon to show aligned chunks (icon of layers on top of each others,
-Figure \protect\hyperlink{show_aligned_chunk}{30}). The different chunks should be well
+Figure \ref{fig:showalignedchunks}). The different chunks should be well
 aligned over the whole flower. If the alignment of your chunks is
 unsatisfactory, try to place more markers on recognizable features and
 spread across the whole flower. Additionally, you can manually align
@@ -1509,20 +1388,20 @@ chunks using the tools to move the models in the space, but this is
 highly not recommended.
 
 \begin{figure}
-\hypertarget{Align_chunk}{%
-\centering
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/metashape_align_chunks.png}
-\caption{Align chunks}\label{Align_chunk}
-}
-\end{figure}
 
-\begin{figure}
-\hypertarget{show_aligned_chunk}{%
-\centering
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/metashape_show_aligned_chunks.png}
-\caption{Show aligned chunks to verify their
-positions}\label{show_aligned_chunk}
+{\centering \includegraphics[width=0.5\linewidth]{Figures/metashape_align_chunks} 
+
 }
+
+\caption{Align chunks.}\label{fig:alignchunks}
+\end{figure}
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/metashape_show_aligned_chunks} 
+
+}
+
+\caption{Show aligned chunks to verify their positions.}\label{fig:showalignedchunks}
 \end{figure}
 
 \hypertarget{merge-chunks}{%
@@ -1548,8 +1427,7 @@ above.
   Go to \emph{Workflow \textgreater{} Build Mesh}.
 \item
   In the dialog box, make sure that \emph{Source Data} is on \emph{Depth maps},
-  \emph{Quality} and \emph{Face Count} on \emph{High} (Figure
-  \protect\hyperlink{fig:3d_mesh}{31}).
+  \emph{Quality} and \emph{Face Count} on \emph{High} (Figure \ref{fig:build3Dmesh}).
   Note that although it is also possible to generate a mesh from a
   dense point cloud (which has to be built separately), the depth maps
   provide better results for objects with a high number of minor
@@ -1565,17 +1443,20 @@ above.
 \end{enumerate}
 
 \begin{figure}
-\hypertarget{fig:3d_mesh}{%
-\centering
-\includegraphics[width=0.5\textwidth,height=\textheight]{Figures/metashape_build_mesh.png}
-\caption{Build 3D mesh}\label{fig:3d_mesh}
+
+{\centering \includegraphics[width=0.5\linewidth]{Figures/metashape_build_mesh} 
+
 }
+
+\caption{Build 3D mesh.}\label{fig:build3Dmesh}
 \end{figure}
 
+\begin{quote}
 Our protocol merges the chunks to build a tie point model of all chunks
 before constructing a model for the merge chunk. We found that this is
 the best approach, although it is also possible to build models for each
 chunk separately and then merge these models to obtain a full model.
+\end{quote}
 
 \hypertarget{d-mesh-touch-ups}{%
 \section{3D mesh touch ups}\label{d-mesh-touch-ups}}
@@ -1615,7 +1496,7 @@ these steps :
   of the scale bar and on a couple of additional photos.
 \item
   In the left panel, select both markers and click on the icon \emph{Add
-  scale} (Figure \protect\hyperlink{metashape_scale}{32}).
+  scale} (Figure\ref{fig:addscale}).
 \item
   Go to the \emph{Reference} panel, select the scale and add 0.01 as
   reference.
@@ -1629,12 +1510,12 @@ these steps :
 \end{enumerate}
 
 \begin{figure}
-\hypertarget{metashape_scale}{%
-\centering
-\includegraphics[width=0.9\textwidth,height=\textheight]{Figures/metashape_add_scale_2.png}
-\caption{Add a scale using
-landmarks}\label{metashape_scale}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/metashape_add_scale_2} 
+
 }
+
+\caption{Add a scale using landmarks}\label{fig:addscale}
 \end{figure}
 
 \hypertarget{model-orientation}{%
@@ -1666,9 +1547,14 @@ landmarks}\label{metashape_scale}
   orientation may change when you open the final object file.
 \end{enumerate}
 
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/metashape_orientation.png}
+\begin{figure}
 
-\includegraphics[width=1\textwidth,height=\textheight]{Figures/metashape_orientation_2.png}
+{\centering \includegraphics[width=1\linewidth]{Figures/metashape_orientation} \includegraphics[width=1\linewidth]{Figures/metashape_orientation_2} 
+
+}
+
+\caption{Add a scale using landmarks}\label{fig:orientation}
+\end{figure}
 
 \hypertarget{export-model-and-texture}{%
 \section{Export model and texture}\label{export-model-and-texture}}
@@ -1695,6 +1581,6 @@ landmarks}\label{metashape_scale}
   Click on \emph{OK}.
 \end{enumerate}
 
-  \bibliography{book.bib,packages.bib}
+  \bibliography{book.bib}
 
 \end{document}

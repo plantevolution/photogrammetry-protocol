@@ -31,7 +31,7 @@
     each color squares, and the corners of the chart as follows (Figure
     \@ref(fig:chart)).
 
-```{r chart, echo=FALSE, message=FALSE, fig.cap="Colour chart photo taken at the beginning of the process to calibrate the photos in post process.", out.width = '33%', fig.align='center'}
+```{r chart, echo=FALSE, message=FALSE, fig.cap="Colour chart photo taken at the beginning of the process to calibrate the photos in post process.", out.width = '40%', fig.align='center'}
 knitr::include_graphics("Figures/chart_example.png")
 ```
 

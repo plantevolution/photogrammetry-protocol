@@ -9,7 +9,7 @@ requirements](https://www.agisoft.com/downloads/system-requirements/).
 The standard edition doesn't allow the use of the scale option that we
 will need to add a scale on our models.
 
-```{r agisoft, echo=FALSE, message=FALSE, fig.cap="Agisoft Metashape", out.width = '33%', fig.align='center'}
+```{r agisoft, echo=FALSE, message=FALSE, fig.cap="Agisoft Metashape", out.width = '20%', fig.align='center'}
 knitr::include_graphics("Figures/logo_metashape.jpeg")
 ```
 
@@ -34,17 +34,17 @@ structures, such as petal margin, and avoid holes in your mesh in
 Agisoft Metashape 1.5.x or later (up to our knowlege) you will need to
 activate ONCE the *Visibility consistent mesh* function in *Tools \>
 Preferences \> Advanced \>Tweaks*, then *Add* and fill in *Parameters*
-with *BuildModel/tvl1_mesh* and select the value as *False* (figure
-[\[metashape_tweaks\]](#metashape_tweaks){reference-type="ref"
-reference="metashape_tweaks"}). Additionally, to use the anterior
+with *BuildModel/tvl1_mesh* and select the value as *False* (figure \@ref(fig:metashapetweaks1)). Additionally, to use the anterior
 version of the depth maps generation process, add ONCE the tweak :
-*BuildDepthMaps/pm_enable* and set the value to *False* (figure
-[\[metashape_tweaks\]](#metashape_tweaks){reference-type="ref"
-reference="metashape_tweaks"}).
+*BuildDepthMaps/pm_enable* and set the value to *False* (figure \@ref(fig:metashapetweaks2)).
 
-![](Figures/Metashape_tweaks_1.png){width="100%"}
+```{r metashapetweaks1, echo=FALSE, message=FALSE, fig.cap="Tweaks settings", out.width = '80%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/Metashape_tweaks_1.png")
+```
 
-![](Figures/Metashape_tweaks_2.png){width="100%"}
+```{r metashapetweaks2, echo=FALSE, message=FALSE, fig.cap="Tweaks settings", out.width = '80%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/Metashape_tweaks_2.png")
+```
 
 ## Overview of the model building pipeline
 
@@ -105,14 +105,12 @@ on the Agisoft helpdesk portal.
 2.  Right click on a photo in one of your chunk in your Metashape
     project.
 
-3.  Click on *Masks*, *Import Masks* and in the box that appears select
-    method \"From Background\", operation *Replacement*.
+3.  Click on *Masks*, *Import Masks* (Figure \@ref(fig:Metashapemasksrightclick)) and in the box that appears select method \"From Background\", operation *Replacement*.
 
 4.  Enter the same name as the name of your background you just saved.
 
 5.  Depending on the flower, the value for *Tolerance* can vary between
-    approximately 40 and 60. For some pale flowers you may need a lower
-    tolerance value (e.g. 30).
+    approximately 40 and 60 (Figure \@ref(fig:Metashapemaskstolerance)). For some pale flowers you may need a lower tolerance value (e.g. 30).
 
 6.  Test different values of tolerance on a single photo first, but when
     you have a value that is satisfactory (that create a masks with the
@@ -127,15 +125,16 @@ on the Agisoft helpdesk portal.
 
 9.  Check for masks that need touch ups (next section).
 
-![Right click on an image to select a mask to
-import.](Figures/Metashape_mask_right_click.png){width="100%"}
+```{r Metashapemasksrightclick, echo=FALSE, message=FALSE, fig.cap="Right click on an image to select a mask to import.", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/Metashape_mask_right_click.png")
+```
 
-![Import mask from a black image *background.jpg*, and select a
-tolerance value, to test on the selected camera (the image you
-right-clicked on). If the automatic mask is automatically well adjusted
-around the flower shape (darker gray around the flower), then apply to
-entire workspace (all the
-images).](Figures/Metashape_masks_tolerance.png){width="100%"}
+```{r Metashapemaskstolerance, echo=FALSE, message=FALSE, fig.cap="Import mask from a black image *background.jpg*, and select a tolerance value, to test on the selected camera (the image you right-clicked on). If the automatic mask is automatically well adjusted around the flower shape (darker gray around the flower), then apply to entire workspace (all the images).", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/Metashape_masks_tolerance.png")
+```
+
+
+
 
 **Alternative masking method using Adobe Photoshop** It is also possible
 to use Adobe Photoshop to apply masks. We did not find particular
@@ -150,21 +149,25 @@ improvements compared to the Agisoft Metashape approach.
     new folder labeled *Chunk1-masks*.
 
 4.  Then, you will need to create ONCE a Photoshop action, that will be
-    subsequently reused (see figures below) :
+    subsequently reused (see Figures \@ref(fig:mask1) to \@ref(fig:mask4) below) :
 
-    ![Record a new action called *Automatic Mask - 3D
-    reconstruction*](Figures/mask_1.png){width="1\\linewidth"}
+```{r mask1, echo=FALSE, message=FALSE, fig.cap="Record a new action called *Automatic Mask - 3D reconstruction*", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/mask_1.png")
+```
 
-    ![When you reopen your photo, don't forget to remove this extra task
-    in your action.](Figures/mask_2.png){width="1\\linewidth"}
 
-    ![The action should include *Select Subject, Fill, Inverse, Fill,
-    Save, Close*, and you can batch process this action to a specific
-    folder of copied photos to create
-    masks.](Figures/mask_3.png){width="1\\linewidth"}
+```{r mask2, echo=FALSE, message=FALSE, fig.cap="When you reopen your photo, don't forget to remove this extra task in your action.", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/mask_2.png")
+```
 
-    ![Apply the action to the folder of copied photos called
-    *Chunk1-masks*.](Figures/mask_4.png){width="1\\linewidth"}
+```{r mask3, echo=FALSE, message=FALSE, fig.cap="The action should include *Select Subject, Fill, Inverse, Fill, Save, Close*, and you can batch process this action to a specific folder of copied photos to create masks.", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/mask_3.png")
+```
+
+```{r mask4, echo=FALSE, message=FALSE, fig.cap="Apply the action to the folder of copied photos called *Chunk1-masks*.", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/mask_4.png")
+```
+
 
 5.  Now you should have tranformed all your copied photos into masks,
     with the foreground object in white, and the background in black.
@@ -182,17 +185,20 @@ improvements compared to the Agisoft Metashape approach.
 The automatic application of masks at the previous steps is sometimes
 not entirely satisfactory for all photos. It is possible to add or
 remove parts of masks using the selection tool and the add/remove/invert
-buttons (Figure [25](#tools_masks){reference-type="ref"
-reference="tools_masks"}). You can then use the selection tools to
+buttons (Figure \@ref(fig:tools_masks)). You can then use the selection tools to
 select areas that are not the flower and add the selection to the mask
-(Figure [25](#tools_masks){reference-type="ref"
-reference="tools_masks"}). You also remove the scale and the
+(Figure  \@ref(fig:tools_masks)). You also remove the scale and the
 entomological pin at this step. Additionally, you can invert the
 selection, or remove the selected areas from the mask with the icons on
 the right hand side of the add to mask icon.
 
-![Selection tools and add selection to mask
-tool](Figures/tools_masks.png){#tools_masks width="50%"}
+```{r toolsmasks, echo=FALSE, message=FALSE, fig.cap="Selection tools and add selection to mask tool.", out.width = '80%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/tools_masks.png")
+```
+
+
+
+
 
 ## Camera alignment
 
@@ -212,12 +218,14 @@ tool](Figures/tools_masks.png){#tools_masks width="50%"}
     this job in batch for each chunk in *workflow* \> *batch process* \>
     *Add* button \> select the *job type* as *Align photos* to apply to
     *all chunks* or select specific ones \> add parameters listed above
-    (Figure [26](#batch_alignment){reference-type="ref"
-    reference="batch_alignment"}).
+    (Figure \@ref(fig:batchalign)).
 
-    ![Align photos in multiple
-    chunks](Figures/metashape_batch_align.png){#batch_alignment
-    width="50%"}
+    
+```{r batchalign, echo=FALSE, message=FALSE, fig.cap="Align photos in multiple chunks.", out.width = '80%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/metashape_batch_align.png")
+```
+
+
 
 5.  **Optional: align using markers** If the different camera cannot
     align properly, it is possible to place homologous markers on the
@@ -254,9 +262,7 @@ tool](Figures/tools_masks.png){#tools_masks width="50%"}
 9.  **Optional** If the camera alignment is not satisfactory, it is
     possible to clean the tie point obtained and try to realign the
     cameras. For instance, on the tie point generated by the alignment,
-    you can delete outlier and imprecise points (Figure
-    [\[removing_points\]](#removing_points){reference-type="ref"
-    reference="removing_points"}):
+    you can delete outlier and imprecise points (Figure \@ref(fig:removepoints1) and  \@ref(fig:removepoints2)):
 
     1.  In the top menu, click on *Model* and then *Gradual Selection*.
         Select *Reconstruction uncertainty* on *Criterion* and play with
@@ -283,19 +289,22 @@ tool](Figures/tools_masks.png){#tools_masks width="50%"}
 
 10. Repeat these steps for each chunk.
 
-![Use the selection tool to remove background
-points](Figures/metashape_delete_selectedpoints.png){#model_orientation1
-width="100%"}
+```{r removepoints1, echo=FALSE, message=FALSE, fig.cap="Use the selection tool to remove background points.", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/metashape_delete_selectedpoints.png")
+```
 
-![Use the gradual selection tool to remove additional mis-calculated
-points](Figures/metashape_gradual_selection.png){#model_orientation2
-width="100%"}
+```{r removepoints2, echo=FALSE, message=FALSE, fig.cap="Use the gradual selection tool to remove additional mis-calculated points", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/metashape_gradual_selection.png")
+```
 
-**Note: If the alignment fails using only one chunk and two or more
+
+> If the alignment fails using only one chunk and two or more
 camera groups, then it will be necessary to divide your job in several
 chunks. Each chunk should then contain photos from one flower position.
 Once the chunks are ready, you can proceed with the alignment following
 the previous steps.**
+
+
 
 ## Align chunks together
 
@@ -313,8 +322,7 @@ To align using tie points :
 1.  Select the chunks to align together.
 
 2.  Go to *Workflow* \> *Align Chunks*, select the chunks you want to
-    align together, set the method as *Point based* (Figure
-    [29](#Align_chunk){reference-type="ref" reference="Align_chunk"}).
+    align together, set the method as *Point based* (Figure \@ref(fig:alignchunks)).
 
 3.  Restrict the key points with masks.
 
@@ -352,23 +360,23 @@ To align using markers :
     chunks you want to align, set the method as *Markers based* and then
     click *OK*. Repeat for all chunks to align.
 
-When the chunks are aligned, a \[T\] is put at the end of your chunk
+When the chunks are aligned, a [T] is put at the end of your chunk
 name to notify that it is transformed. You can check the alignment using
 the icon to show aligned chunks (icon of layers on top of each others,
-Figure [30](#show_aligned_chunk){reference-type="ref"
-reference="show_aligned_chunk"}). The different chunks should be well
+Figure \@ref(fig:showalignedchunks)). The different chunks should be well
 aligned over the whole flower. If the alignment of your chunks is
 unsatisfactory, try to place more markers on recognizable features and
 spread across the whole flower. Additionally, you can manually align
 chunks using the tools to move the models in the space, but this is
 highly not recommended.
 
-![Align chunks](Figures/metashape_align_chunks.png){#Align_chunk
-width="100%"}
 
-![Show aligned chunks to verify their
-positions](Figures/metashape_show_aligned_chunks.png){#show_aligned_chunk
-width="90%"}
+```{r alignchunks, echo=FALSE, message=FALSE, fig.cap="Align chunks.", out.width = '50%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/metashape_align_chunks.png")
+```
+```{r showalignedchunks, echo=FALSE, message=FALSE, fig.cap="Show aligned chunks to verify their positions.", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/metashape_show_aligned_chunks.png")
+```
 
 ## Merge chunks
 
@@ -388,8 +396,7 @@ above.
 2.  Go to *Workflow \> Build Mesh*.
 
 3.  In the dialog box, make sure that *Source Data* is on *Depth maps*,
-    *Quality* and *Face Count* on *High* (Figure
-    [31](#fig:3d_mesh){reference-type="ref" reference="fig:3d_mesh"}).
+    *Quality* and *Face Count* on *High* (Figure \@ref(fig:build3Dmesh)).
     Note that although it is also possible to generate a mesh from a
     dense point cloud (which has to be built separately), the depth maps
     provide better results for objects with a high number of minor
@@ -403,15 +410,18 @@ above.
 
 6.  Verify your selection and press delete to remove them.
 
-![Build 3D mesh](Figures/metashape_build_mesh.png){#fig:3d_mesh
-width="50%"}
 
-::: tcolorbox
-Our protocol merges the chunks to build a tie point model of all chunks
+```{r build3Dmesh, echo=FALSE, message=FALSE, fig.cap="Build 3D mesh.", out.width = '50%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/metashape_build_mesh.png")
+```
+
+
+>Our protocol merges the chunks to build a tie point model of all chunks
 before constructing a model for the merge chunk. We found that this is
 the best approach, although it is also possible to build models for each
 chunk separately and then merge these models to obtain a full model.
-:::
+
+
 
 ## 3D mesh touch ups
 
@@ -441,8 +451,7 @@ these steps :
     of the scale bar and on a couple of additional photos.
 
 2.  In the left panel, select both markers and click on the icon *Add
-    scale* (Figure [32](#metashape_scale){reference-type="ref"
-    reference="metashape_scale"}).
+    scale* (Figure\@ref(fig:addscale)).
 
 3.  Go to the *Reference* panel, select the scale and add 0.01 as
     reference.
@@ -454,9 +463,11 @@ these steps :
 5.  To verify if the scale is taken into account, you can use the
     measuring tape tool.
 
-![Add a scale using
-landmarks](Figures/metashape_add_scale_2.png){#metashape_scale
-width="90%"}
+
+```{r addscale, echo=FALSE, message=FALSE, fig.cap="Add a scale using landmarks", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/metashape_add_scale_2.png")
+```
+
 
 ## Model orientation
 
@@ -481,10 +492,14 @@ width="90%"}
     and the two dash facing the opening of the flower. Note that
     depending on the software you use to open the model, the first view
     orientation may change when you open the final object file.
+    
+    
+```{r orientation, echo=FALSE, message=FALSE, fig.cap="Add a scale using landmarks", out.width = '100%', fig.align='center',fig.show = 'hold'}
+knitr::include_graphics("Figures/metashape_orientation.png")
+knitr::include_graphics("Figures/metashape_orientation_2.png")
+```
 
-![](Figures/metashape_orientation.png){width="100%"}
 
-![](Figures/metashape_orientation_2.png){width="100%"}
 
 ## Export model and texture
 

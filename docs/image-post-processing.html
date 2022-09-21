@@ -27,7 +27,7 @@
 <meta name="author" content="Simon Joly" />
 
 
-<meta name="date" content="2022-09-20" />
+<meta name="date" content="2022-09-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,6 +157,7 @@
 <li class="chapter" data-level="6.14" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#model-orientation"><i class="fa fa-check"></i><b>6.14</b> Model orientation</a></li>
 <li class="chapter" data-level="6.15" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#export-model-and-texture"><i class="fa fa-check"></i><b>6.15</b> Export model and texture</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -180,22 +203,22 @@ photos are taken is important because it helps matching the calibration
 to the right DNG file. If more than one set of photos with different
 lighting or camera settings are taken, make sure to distinguish the
 color charts that correspond to each set of photos.</p>
-<div class="tcolorbox">
+<blockquote>
 <p>Genus_species<br />
-GEN_species_CollectionNumber<br />
-sepal_DD.MM.YYYY or no_sepals_DD.MM.YYYY<br />
-Model<br />
-<em>MetashapeProject</em><br />
-<em>MetashapeProjectFolder.files</em><br />
-<em>model.obj</em><br />
-<em>model.ply</em><br />
-<em>texture.jpg</em><br />
-Photos calibrated<br />
-<em>Place here all the calibrated photos, that you can organize per chunk</em><br />
-Photos to calibrate<br />
-<em>Place here all the RAW photos and color chart</em><br />
+ GEN_species_CollectionNumber<br />
+  sepal_DD.MM.YYYY or no_sepals_DD.MM.YYYY<br />
+   Model<br />
+    <em>MetashapeProject</em><br />
+    <em>MetashapeProjectFolder.files</em><br />
+    <em>model.obj</em><br />
+    <em>model.ply</em><br />
+    <em>texture.jpg</em><br />
+   Photos calibrated<br />
+    <em>Place here all the calibrated photos, that you can organize per chunk</em><br />
+   Photos to calibrate<br />
+    <em>Place here all the RAW photos and color chart</em><br />
 </p>
-</div>
+</blockquote>
 </div>
 <div id="image-color-calibration" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Image color calibration<a href="image-post-processing.html#image-color-calibration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -206,7 +229,7 @@ allows to manually check the automatic detection of the color chart, the
 second and third ones are fully automatic (on MacOS and windows
 respectively).</p>
 <p>This does not linearize the photos. For further details on color
-calibration read <span class="citation">(<a href="#ref-troscianko2015image" role="doc-biblioref"><strong>troscianko2015image?</strong></a>)</span>.</p>
+calibration read <span class="citation">(<a href="#ref-troscianko2015image" role="doc-biblioref">Troscianko and Stevens 2015</a>)</span>.</p>
 <p><strong>Method 1 : Manual creation of color profiles</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>Get the <a href="https://xritephoto.com/ph_product_overview.aspx?ID=938&amp;Action=Support&amp;SoftwareID=2030">Xrite ColorChecker Camera Calibration
@@ -220,35 +243,38 @@ and rename it accordingly (e.g. Color_chart_DD.MM.YYYY).</p></li>
 first box. You need to select a folder, and can’t select a specific
 file, the software will convert all the files within this folder.
 Default parameters are ok for step 2-4. It will export the RAW file
-in the DNG folder to a DNG file with the same file name (Figure
-<a href="image-post-processing.html#adobe_dng" reference-type="ref" reference="adobe_dng">15</a>).</p></li>
+in the DNG folder to a DNG file with the same file name (Figure <a href="image-post-processing.html#fig:DNG">5.1</a>).</p></li>
 <li><p>Open the Color Checker Camera Calibration software and drag and drop
 the newly created DNG file in the software. The software will
 automatically draw a grid around it. Make sure that the green grid
 fits the chart, avoiding edge effects on each square of color
-(Figure <a href="image-post-processing.html#color_checker_camera_calibration" reference-type="ref" reference="color_checker_camera_calibration">16</a>).</p></li>
+(Figure <a href="#fig:ColorCheckercalibration"><strong>??</strong></a>.</p></li>
 <li><p>Click on <em>create profile</em> and save it under Color_Chart_DD.MM.YYYY
-(Figure <a href="image-post-processing.html#color_checker_profile" reference-type="ref" reference="color_checker_profile">17</a>).</p></li>
+(Figure <a href="image-post-processing.html#fig:ColorCheckerprofile">5.3</a>.</p></li>
 </ol>
-<div class="figure">
-<img src="Figures/AdobeDNGConverter.png" id="adobe_dng" style="width:100.0%" alt="" />
-<p class="caption">Convert RAW chart to DNG in Adobe DNG
-Converter</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DNG"></span>
+<img src="Figures/DNGConverter.jpg" alt="Convert RAW chart to DNG in Adobe DNG Converter" width="80%" />
+<p class="caption">
+Figure 5.1: Convert RAW chart to DNG in Adobe DNG Converter
+</p>
 </div>
-<div class="figure">
-<img src="Figures/ColorChecker_camera_calibration.png" id="color_checker_camera_calibration" style="width:100.0%" alt="" />
-<p class="caption">Align grid on chart in ColorChecker Camera
-Calibration</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Colorcheckercalibration"></span>
+<img src="Figures/ColorChecker_camera_calibration.png" alt="Align grid on chart in ColorChecker Camera Calibration" width="80%" />
+<p class="caption">
+Figure 5.2: Align grid on chart in ColorChecker Camera Calibration
+</p>
 </div>
-<div class="figure">
-<img src="Figures/create_profile.png" id="color_checker_profile" style="width:100.0%" alt="" />
-<p class="caption">Export the color
-profile</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ColorCheckerprofile"></span>
+<img src="Figures/create_profile.png" alt="Export the color profile" width="80%" />
+<p class="caption">
+Figure 5.3: Export the color profile
+</p>
 </div>
-<div class="figure">
-<img src="Figures/manual_method.png" id="fig:workflow" style="width:80.0%" alt="" />
-<p class="caption">Image color calibration
-workflow</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ColorCheckerworkflow"></span>
+<img src="Figures/manual_method.png" alt="Image color calibration workflow" width="80%" />
+<p class="caption">
+Figure 5.4: Image color calibration workflow
+</p>
 </div>
 <p><strong>Method 2 : X-Rite Color Checker plug-in installation and automatic
 creation of color profiles on MacOS</strong></p>
@@ -281,27 +307,27 @@ and download the <em>PC Version</em>. Save the <em>CameraCalibrationSetup.exe</e
 in your downloads, for example, and run the program.</p></li>
 <li><p>If Adobe Lightroom Classic is already installed on your computer,
 the installation program should proposed you to install the Adobe
-Photoshop Lightroom plug-in (Figure
-<a href="image-post-processing.html#color_checker_plug_in_win" reference-type="ref" reference="color_checker_plug_in_win">19</a>). Install it.</p></li>
+Photoshop Lightroom plug-in (Figure <a href="image-post-processing.html#fig:ColorCheckerplugin">5.5</a>). Install it.</p></li>
 <li><p>Once the plug-in is installed, run Adobe Lightroom Classic and
 import your color chart (<em>File</em> &gt; <em>Import</em>).</p></li>
 <li><p>Click on <em>File</em> &gt; <em>Export</em> and in the drop-down menu, select
-<em>X-Rite Preselection</em> (Figure
-<a href="image-post-processing.html#x_rite_preselection" reference-type="ref" reference="x_rite_preselection">20</a>). Name your profile, and click on
+<em>X-Rite Preselection</em> (Figure <a href="image-post-processing.html#fig:xritepreselection">5.6</a>). Name your profile, and click on
 <em>Export</em>.</p></li>
 <li><p>Restart Lightroom as indicated.</p></li>
 <li><p>Run the setps 4 and 5 each time you want to create a new color
 profile witht the color chart.</p></li>
 </ol>
-<div class="figure">
-<img src="Figures/color_checker_plug_in_win.png" id="color_checker_plug_in_win" style="height:7cm" alt="" />
-<p class="caption">Color Checker plug-in for Lightroom
-installation</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ColorCheckerplugin"></span>
+<img src="Figures/color_checker_plug_in_win.png" alt="Color Checker plug-in for Lightroom installation" width="80%" />
+<p class="caption">
+Figure 5.5: Color Checker plug-in for Lightroom installation
+</p>
 </div>
-<div class="figure">
-<img src="Figures/x_rite_preselection.png" id="x_rite_preselection" style="height:7cm" alt="" />
-<p class="caption">Color chart profile
-exportation</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:xritepreselection"></span>
+<img src="Figures/x_rite_preselection.png" alt="Color chart profile exportation" width="80%" />
+<p class="caption">
+Figure 5.6: Color chart profile exportation
+</p>
 </div>
 </div>
 <div id="color-and-illuminance-calibration-from-profiles" class="section level3 hasAnchor" number="5.2.2">
@@ -311,20 +337,21 @@ exportation</p>
 select your folder of RAW photos.</p></li>
 <li><p>Select the tab <em>development</em>.</p></li>
 <li><p>Select the photo of the chart</p></li>
-<li><p>Select the color profile corresponding to the color chart you have
-selected (see Figure
-<a href="#color%20profile" reference-type="ref" reference="color profile"><span class="math display">\[color profile\]</span></a> to manually add a color profile) to
-calibrate the photo of the chart with its own calibration profile.</p>
-<div class="figure">
-<img src="Figures/profil_capture_1.png" id="add_profile" style="height:7cm" alt="" />
-<p class="caption">Add a new color
-profile</p>
+<li><p>Select the color profile corresponding to the color chart you have selected (see Figure <a href="image-post-processing.html#fig:addprofile">5.7</a> and <a href="image-post-processing.html#fig:settingssynchronize">5.8</a>) to manually add a color profile) to calibrate the photo of the chart with its own calibration profile.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:addprofile"></span>
+<img src="Figures/profil_capture_1.png" alt="Add a new color profile" width="80%" />
+<p class="caption">
+Figure 5.7: Add a new color profile
+</p>
 </div>
-<div class="figure">
-<img src="Figures/profil_capture_2.png" id="settings_synchronize" style="height:7cm" alt="" />
-<p class="caption">After adding a profile with the + sign, select it in the list
-below.</p>
-</div></li>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:settingssynchronize"></span>
+<img src="Figures/x_rite_preselection.png" alt="After adding a profile with the + sign, select it in the list below." width="80%" />
+<p class="caption">
+Figure 5.8: After adding a profile with the + sign, select it in the list below.
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
 <li><p>Use the eyedropper over the 75% gray scale (the last one before the
 black chip on the color chart, see Figure
 <a href="#fig:xrite_description" reference-type="ref" reference="fig:xrite_description">2</a>). Do not click on the photo with
@@ -335,19 +362,14 @@ the RGB values of the closest values to 0.33 0.33 0.33
 (corresponding to 85/255 for each of the red, blue, and green
 class). The illuminance is now adjusted in addition to the color
 calibration, but only on the chart.</p></li>
-<li><p>To apply the modifications we just did to all the photos, select all
-the photos (Cmd+A or Ctrl+A), and make sure that the one for which
-you made changes is highlighted (in white compared to light gray for
-the other ones selected) (see Figure
-<a href="image-post-processing.html#fig:synchronize" reference-type="ref" reference="fig:synchronize">23</a>). Check the profiles and exposure boxes
-before synchronizing to all the other photos.</p></li>
+<li><p>To apply the modifications we just did to all the photos, select all the photos (Cmd+A or Ctrl+A), and make sure that the one for which you made changes is highlighted (in white compared to light gray for the other ones selected) (see Figure <a href="image-post-processing.html#fig:synchronize">5.9</a>). Check the profiles and exposure boxes before synchronizing to all the other photos.</p></li>
 <li><p>Click on the button <em>synchronize</em>.</p></li>
 </ol>
-<div class="figure">
-<img src="Figures/synchronize_capture.png" id="fig:synchronize" alt="" />
-<p class="caption">Synchronize your settings made to the photo of the chart to all the
-other photos and check the two categories you modified (color profile
-and exposure).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:synchronize"></span>
+<img src="Figures/synchronize_capture.png" alt="Synchronize your settings made to the photo of the chart to all the other photos and check the two categories you modified (color profile and exposure" width="80%" />
+<p class="caption">
+Figure 5.9: Synchronize your settings made to the photo of the chart to all the other photos and check the two categories you modified (color profile and exposure
+</p>
 </div>
 </div>
 <div id="export-calibrated-files-to-jpg-format" class="section level3 hasAnchor" number="5.2.3">
@@ -357,24 +379,26 @@ and exposure).</p>
 windows+A)</p></li>
 <li><p>Click on <em>File</em> &gt; <em>Export</em></p></li>
 <li><p>You can create presets that you will only need to create once to
-always export the same way in Adobe Lightroom (example Figure
-<a href="image-post-processing.html#export_parameters" reference-type="ref" reference="export_parameters">24</a>), and add personalized file names
-such as _color_calibrated at the end of each .jpg file (see also
-for that Figure <a href="image-post-processing.html#export_parameters" reference-type="ref" reference="export_parameters">24</a>).</p></li>
+always export the same way in Adobe Lightroom (example Figure <a href="#figexportparameters"><strong>??</strong></a>), and add personalized file names
+such as _color_calibrated at the end of each .jpg file.</p></li>
 <li><p>In their own folder, you can then sort the calibrated photos for
 color and exposure per chunks (easily distinguishable by the
 separation created by a photo of the label).</p></li>
 </ol>
-<div class="figure">
-<img src="Figures/export_capture_1.png" id="export_parameters" style="width:90.0%" alt="" />
-<p class="caption">You can export using your own personalized parameters and then export
-in batch your selection in a specific folder within your folder of
-uncalibrated photos for easy access. This method can thus work for any
-folder of uncalibrated
-photos.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:exportparameters"></span>
+<img src="Figures/export_capture_1.png" alt="You can export using your own personalized parameters and then export in batch your selection in a specific folder within your folder of uncalibrated photos for easy access. This method can thus work for any folder of uncalibrated photos." width="80%" />
+<p class="caption">
+Figure 5.10: You can export using your own personalized parameters and then export in batch your selection in a specific folder within your folder of uncalibrated photos for easy access. This method can thus work for any folder of uncalibrated photos.
+</p>
 </div>
 
 </div>
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-troscianko2015image" class="csl-entry">
+Troscianko, Jolyon, and Martin Stevens. 2015. <span>“Image Calibration and Analysis Toolbox–a Free Software Suite for Objectively Measuring Reflectance, Colour and Pattern.”</span> <em>Methods in Ecology and Evolution</em> 6 (11): 1320–31.
 </div>
 </div>
             </section>
@@ -437,20 +461,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

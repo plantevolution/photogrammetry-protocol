@@ -185,14 +185,14 @@ knitr::include_graphics("Figures/mask_4.png")
 The automatic application of masks at the previous steps is sometimes
 not entirely satisfactory for all photos. It is possible to add or
 remove parts of masks using the selection tool and the add/remove/invert
-buttons (Figure \@ref(fig:tools_masks)). You can then use the selection tools to
+buttons (Figure \@ref(fig:toolsmasks)). You can then use the selection tools to
 select areas that are not the flower and add the selection to the mask
-(Figure  \@ref(fig:tools_masks)). You also remove the scale and the
+(Figure  \@ref(fig:toolsmasks)). You also remove the scale and the
 entomological pin at this step. Additionally, you can invert the
 selection, or remove the selected areas from the mask with the icons on
 the right hand side of the add to mask icon.
 
-```{r toolsmasks, echo=FALSE, message=FALSE, fig.cap="Selection tools and add selection to mask tool.", out.width = '80%', fig.align='center',fig.show = 'hold'}
+```{r toolsmasks, echo=FALSE, message=FALSE, fig.cap="Selection tools and add selection to mask tool.", out.width = '60%', fig.align='center',fig.show = 'hold'}
 knitr::include_graphics("Figures/tools_masks.png")
 ```
 
@@ -451,7 +451,7 @@ these steps :
     of the scale bar and on a couple of additional photos.
 
 2.  In the left panel, select both markers and click on the icon *Add
-    scale* (Figure\@ref(fig:addscale)).
+    scale* (Figure \@ref(fig:addscale)).
 
 3.  Go to the *Reference* panel, select the scale and add 0.01 as
     reference.

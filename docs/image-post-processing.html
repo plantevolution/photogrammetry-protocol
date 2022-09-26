@@ -27,7 +27,7 @@
 <meta name="author" content="Simon Joly" />
 
 
-<meta name="date" content="2022-09-21" />
+<meta name="date" content="2022-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -232,10 +232,10 @@ respectively).</p>
 calibration read <span class="citation">(<a href="#ref-troscianko2015image" role="doc-biblioref">Troscianko and Stevens 2015</a>)</span>.</p>
 <p><strong>Method 1 : Manual creation of color profiles</strong></p>
 <ol style="list-style-type: decimal">
-<li><p>Get the <a href="https://xritephoto.com/ph_product_overview.aspx?ID=938&amp;Action=Support&amp;SoftwareID=2030">Xrite ColorChecker Camera Calibration
+<li><p>This method uses the <a href="https://xritephoto.com/ph_product_overview.aspx?ID=938&amp;Action=Support&amp;SoftwareID=2030">Xrite ColorChecker Camera Calibration
 software</a>
 and <a href="https://helpx.adobe.com/photoshop/using/adobe-dng-converter.html">Adobe DNG converter
-software</a>.</p></li>
+software</a> (Figure <a href="image-post-processing.html#fig:ColorCheckerworkflow">5.1</a>).</p></li>
 <li><p>Create a new empty folder called DNG.</p></li>
 <li><p>Copy the RAW file representing your color chart in your DNG folder,
 and rename it accordingly (e.g. Color_chart_DD.MM.YYYY).</p></li>
@@ -243,37 +243,37 @@ and rename it accordingly (e.g. Color_chart_DD.MM.YYYY).</p></li>
 first box. You need to select a folder, and can’t select a specific
 file, the software will convert all the files within this folder.
 Default parameters are ok for step 2-4. It will export the RAW file
-in the DNG folder to a DNG file with the same file name (Figure <a href="image-post-processing.html#fig:DNG">5.1</a>).</p></li>
+in the DNG folder to a DNG file with the same file name (Figure <a href="image-post-processing.html#fig:DNG">5.2</a>).</p></li>
 <li><p>Open the Color Checker Camera Calibration software and drag and drop
 the newly created DNG file in the software. The software will
 automatically draw a grid around it. Make sure that the green grid
 fits the chart, avoiding edge effects on each square of color
-(Figure <a href="#fig:ColorCheckercalibration"><strong>??</strong></a>.</p></li>
+(Figure <a href="image-post-processing.html#fig:Colorcheckercalibration">5.3</a>.</p></li>
 <li><p>Click on <em>create profile</em> and save it under Color_Chart_DD.MM.YYYY
-(Figure <a href="image-post-processing.html#fig:ColorCheckerprofile">5.3</a>.</p></li>
+(Figure <a href="image-post-processing.html#fig:ColorCheckerprofile">5.4</a>.</p></li>
 </ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ColorCheckerworkflow"></span>
+<img src="Figures/manual_method.png" alt="Image color calibration workflow" width="80%" />
+<p class="caption">
+Figure 5.1: Image color calibration workflow
+</p>
+</div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:DNG"></span>
 <img src="Figures/DNGConverter.jpg" alt="Convert RAW chart to DNG in Adobe DNG Converter" width="80%" />
 <p class="caption">
-Figure 5.1: Convert RAW chart to DNG in Adobe DNG Converter
+Figure 5.2: Convert RAW chart to DNG in Adobe DNG Converter
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Colorcheckercalibration"></span>
 <img src="Figures/ColorChecker_camera_calibration.png" alt="Align grid on chart in ColorChecker Camera Calibration" width="80%" />
 <p class="caption">
-Figure 5.2: Align grid on chart in ColorChecker Camera Calibration
+Figure 5.3: Align grid on chart in ColorChecker Camera Calibration
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ColorCheckerprofile"></span>
 <img src="Figures/create_profile.png" alt="Export the color profile" width="80%" />
 <p class="caption">
-Figure 5.3: Export the color profile
-</p>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ColorCheckerworkflow"></span>
-<img src="Figures/manual_method.png" alt="Image color calibration workflow" width="80%" />
-<p class="caption">
-Figure 5.4: Image color calibration workflow
+Figure 5.4: Export the color profile
 </p>
 </div>
 <p><strong>Method 2 : X-Rite Color Checker plug-in installation and automatic
@@ -353,8 +353,7 @@ Figure 5.8: After adding a profile with the + sign, select it in the list below.
 </div>
 <ol start="5" style="list-style-type: decimal">
 <li><p>Use the eyedropper over the 75% gray scale (the last one before the
-black chip on the color chart, see Figure
-<a href="#fig:xrite_description" reference-type="ref" reference="fig:xrite_description">2</a>). Do not click on the photo with
+black chip on the color chart). Do not click on the photo with
 the eye dropper, only hover over the photo.</p></li>
 <li><p>Select the exposition setting, and adjust the values the eyedropper
 indicates of the gray scale using the exposition setting to obtain
@@ -379,7 +378,7 @@ Figure 5.9: Synchronize your settings made to the photo of the chart to all the 
 windows+A)</p></li>
 <li><p>Click on <em>File</em> &gt; <em>Export</em></p></li>
 <li><p>You can create presets that you will only need to create once to
-always export the same way in Adobe Lightroom (example Figure <a href="#figexportparameters"><strong>??</strong></a>), and add personalized file names
+always export the same way in Adobe Lightroom (example Figure <a href="image-post-processing.html#fig:exportparameters">5.10</a>), and add personalized file names
 such as _color_calibrated at the end of each .jpg file.</p></li>
 <li><p>In their own folder, you can then sort the calibrated photos for
 color and exposure per chunks (easily distinguishable by the

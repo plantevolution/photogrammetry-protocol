@@ -14,10 +14,10 @@ fig:chart
 fig:flower-two-positions
 fig:flower-three-positions
 fig:camera-positions
+fig:ColorCheckerworkflow
 fig:DNG
 fig:Colorcheckercalibration
 fig:ColorCheckerprofile
-fig:ColorCheckerworkflow
 fig:ColorCheckerplugin
 fig:xritepreselection
 fig:addprofile

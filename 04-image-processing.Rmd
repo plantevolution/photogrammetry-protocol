@@ -57,10 +57,10 @@ calibration read [@troscianko2015image].
 
 **Method 1 : Manual creation of color profiles**
 
-1.  Get the [Xrite ColorChecker Camera Calibration
+1.  This method uses the [Xrite ColorChecker Camera Calibration
     software](https://xritephoto.com/ph_product_overview.aspx?ID=938&Action=Support&SoftwareID=2030)
     and [Adobe DNG converter
-    software](https://helpx.adobe.com/photoshop/using/adobe-dng-converter.html).
+    software](https://helpx.adobe.com/photoshop/using/adobe-dng-converter.html) (Figure \@ref(fig:ColorCheckerworkflow)).
 
 2.  Create a new empty folder called DNG.
 
@@ -77,12 +77,14 @@ calibration read [@troscianko2015image].
     the newly created DNG file in the software. The software will
     automatically draw a grid around it. Make sure that the green grid
     fits the chart, avoiding edge effects on each square of color
-    (Figure \@ref(fig:ColorCheckercalibration).
+    (Figure \@ref(fig:Colorcheckercalibration).
 
 6.  Click on *create profile* and save it under Color_Chart_DD.MM.YYYY
     (Figure \@ref(fig:ColorCheckerprofile).
 
-
+```{r ColorCheckerworkflow, echo=FALSE, message=FALSE, fig.cap="Image color calibration workflow", out.width = '80%', fig.align='center', fig.show = 'hold'}
+knitr::include_graphics("Figures/manual_method.png")
+```
 
 ```{r DNG, echo=FALSE, message=FALSE, fig.cap="Convert RAW chart to DNG in Adobe DNG Converter", out.width = '80%', fig.align='center', fig.show = 'hold'}
 knitr::include_graphics("Figures/DNGConverter.jpg")
@@ -96,9 +98,7 @@ knitr::include_graphics("Figures/ColorChecker_camera_calibration.png")
 knitr::include_graphics("Figures/create_profile.png")
 ```
 
-```{r ColorCheckerworkflow, echo=FALSE, message=FALSE, fig.cap="Image color calibration workflow", out.width = '80%', fig.align='center', fig.show = 'hold'}
-knitr::include_graphics("Figures/manual_method.png")
-```
+
 
 
 **Method 2 : X-Rite Color Checker plug-in installation and automatic
@@ -184,9 +184,7 @@ knitr::include_graphics("Figures/x_rite_preselection.png")
 
 
 5.  Use the eyedropper over the 75% gray scale (the last one before the
-    black chip on the color chart, see Figure
-    [2](#fig:xrite_description){reference-type="ref"
-    reference="fig:xrite_description"}). Do not click on the photo with
+    black chip on the color chart). Do not click on the photo with
     the eye dropper, only hover over the photo.
 
 6.  Select the exposition setting, and adjust the values the eyedropper
@@ -215,7 +213,7 @@ knitr::include_graphics("Figures/synchronize_capture.png")
 2.  Click on *File* \> *Export*
 
 3.  You can create presets that you will only need to create once to
-    always export the same way in Adobe Lightroom (example Figure \@ref(figexportparameters)), and add personalized file names
+    always export the same way in Adobe Lightroom (example Figure \@ref(fig:exportparameters)), and add personalized file names
     such as \_color_calibrated at the end of each .jpg file.
 
 4.  In their own folder, you can then sort the calibrated photos for

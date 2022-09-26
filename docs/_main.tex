@@ -6,7 +6,7 @@
 ]{book}
 \title{Flower photogrammetry and 3D modeling protocol}
 \author{Marion Leménager \and Jérôme Burkiewicz \and Daniel Schoen \and Diana Constanza Diaz Cardona \and Simon Joly}
-\date{2022-09-21}
+\date{2022-09-26}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -672,10 +672,10 @@ calibration read \citep{troscianko2015image}.
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Get the \href{https://xritephoto.com/ph_product_overview.aspx?ID=938\&Action=Support\&SoftwareID=2030}{Xrite ColorChecker Camera Calibration
+  This method uses the \href{https://xritephoto.com/ph_product_overview.aspx?ID=938\&Action=Support\&SoftwareID=2030}{Xrite ColorChecker Camera Calibration
   software}
   and \href{https://helpx.adobe.com/photoshop/using/adobe-dng-converter.html}{Adobe DNG converter
-  software}.
+  software} (Figure \ref{fig:ColorCheckerworkflow}).
 \item
   Create a new empty folder called DNG.
 \item
@@ -692,11 +692,20 @@ calibration read \citep{troscianko2015image}.
   the newly created DNG file in the software. The software will
   automatically draw a grid around it. Make sure that the green grid
   fits the chart, avoiding edge effects on each square of color
-  (Figure \ref{fig:ColorCheckercalibration}.
+  (Figure \ref{fig:Colorcheckercalibration}.
 \item
   Click on \emph{create profile} and save it under Color\_Chart\_DD.MM.YYYY
   (Figure \ref{fig:ColorCheckerprofile}.
 \end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Figures/manual_method} 
+
+}
+
+\caption{Image color calibration workflow}\label{fig:ColorCheckerworkflow}
+\end{figure}
 
 \begin{figure}
 
@@ -723,15 +732,6 @@ calibration read \citep{troscianko2015image}.
 }
 
 \caption{Export the color profile}\label{fig:ColorCheckerprofile}
-\end{figure}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{Figures/manual_method} 
-
-}
-
-\caption{Image color calibration workflow}\label{fig:ColorCheckerworkflow}
 \end{figure}
 
 \textbf{Method 2 : X-Rite Color Checker plug-in installation and automatic
@@ -855,8 +855,7 @@ creation of color profiles on Windows}
 \setcounter{enumi}{4}
 \item
   Use the eyedropper over the 75\% gray scale (the last one before the
-  black chip on the color chart, see Figure
-  \protect\hyperlink{fig:xrite_description}{2}). Do not click on the photo with
+  black chip on the color chart). Do not click on the photo with
   the eye dropper, only hover over the photo.
 \item
   Select the exposition setting, and adjust the values the eyedropper
@@ -892,7 +891,7 @@ creation of color profiles on Windows}
   Click on \emph{File} \textgreater{} \emph{Export}
 \item
   You can create presets that you will only need to create once to
-  always export the same way in Adobe Lightroom (example Figure \ref{figexportparameters}), and add personalized file names
+  always export the same way in Adobe Lightroom (example Figure \ref{fig:exportparameters}), and add personalized file names
   such as \_color\_calibrated at the end of each .jpg file.
 \item
   In their own folder, you can then sort the calibrated photos for
@@ -1159,16 +1158,16 @@ improvements compared to the Agisoft Metashape approach.
 The automatic application of masks at the previous steps is sometimes
 not entirely satisfactory for all photos. It is possible to add or
 remove parts of masks using the selection tool and the add/remove/invert
-buttons (Figure @ref(fig:tools\_masks)). You can then use the selection tools to
+buttons (Figure \ref{fig:toolsmasks}). You can then use the selection tools to
 select areas that are not the flower and add the selection to the mask
-(Figure @ref(fig:tools\_masks)). You also remove the scale and the
+(Figure \ref{fig:toolsmasks}). You also remove the scale and the
 entomological pin at this step. Additionally, you can invert the
 selection, or remove the selected areas from the mask with the icons on
 the right hand side of the add to mask icon.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Figures/tools_masks} 
+{\centering \includegraphics[width=0.6\linewidth]{Figures/tools_masks} 
 
 }
 
@@ -1496,7 +1495,7 @@ these steps :
   of the scale bar and on a couple of additional photos.
 \item
   In the left panel, select both markers and click on the icon \emph{Add
-  scale} (Figure\ref{fig:addscale}).
+  scale} (Figure \ref{fig:addscale}).
 \item
   Go to the \emph{Reference} panel, select the scale and add 0.01 as
   reference.

@@ -1,49 +1,79 @@
 # Settings and preparation
 
+
 ## Camera and tripod settings and preparation
 
-To obtain the best picture quality for model reconstruction, we need an optimal combination of the light sensibility of the sensor (ISO), the duration of exposure and the focal of the objective (F). As mentioned, it is preferable to use a fixed lens (one that doesn't allow zooming) to facilitate the model reconstruction in the processing step because the software can't take zooming into account in the reconstruction process. Maximizing the light source allows us to use the lowest ISO to get crisper images. Adapted time exposure to allow the right amount of light to go to the sensor, avoids low key nor high key photo (under/over exposed photo). This may be adapted according to the subject (light or dark colored subject or background) or if different lighting conditions are used.
+To obtain the best picture quality for model reconstruction, we need an optimal combination of the light sensibility of the sensor (ISO), the duration of exposure and the focal of the objective (F). As mentioned, it is preferable to use a fixed lens (one that doesn't allow zooming) to facilitate the model reconstruction in the processing step because the software can't take zooming into account in the reconstruction process. Maximizing the light source allows us to use the lowest ISO to get crisper images. Adjust the time exposure to allow the right amount of light to go to the sensor, avoiding low key and high key photos (i.e., under/over exposed photos). This may be adjusted according to the subject (light or dark colored subject or background) or if different lighting conditions are used.
 
-To maximize the depth of field without lowering the image quality, using the manual option on the camera dial, the focal F should be set to F16. Use the manual focus setting on the side of the lens (Figure \@ref(fig:camera-arrows)) to avoid camera trigger malfunction when the flowers doesn't land on the detector. If the flower is off centered during rotation, and the automatic focus can't focus (on the background) the camera trigger is prevented with the automatic focus. On manual, the camera will always be triggered by the turn table, even if the focus isn't optimal. Because the subject is moving and may be off centered on the turntable, the focus may need to be adapted while the turn table runs. For this you can pause the turntable, manually adjust the focus, and resume the spin.
+A flexible tripod (Figure \@ref(fig:flexible-tripod)) can be used to easily and quickly adjust several camera heights (high, middle, and low) close to the subject. If this option cannot safely support your camera and prevent its movement during the shooting, opt for a rigid collapsible tripod, as it is crucial to avoid camera movement, especially during focus bracketing (Figure \@ref(fig:collapsible-tripod)). 
 
-```{r camera-arrows, echo=FALSE, message=FALSE, fig.cap="Camera and lens used to take RAW photos. The red arrows (from top to bottom) depict the button to get manual focus, the ISO button and the manual parameter on the camera dial.", out.width = '33%', fig.align='center'}
-knitr::include_graphics("Figures/camera_arrows.png")
-```
-
-A flexible tripod (Figure \@ref(fig:tripod)) is used to adjust several camera heights, high, middle, and low, close to the subject.
-
-```{r tripod, echo=FALSE, message=FALSE, fig.cap="Flexible tripod used to adjust camera positions.", out.width = '33%', fig.align='center'}
+```{r flexible-tripod, echo=FALSE, message=FALSE, fig.cap="Flexible tripod.", out.width = '33%', fig.align='center'}
 knitr::include_graphics("Figures/tripod.png")
 ```
 
+```{r collapsible-tripod, echo=FALSE, message=FALSE, fig.cap="Collapsible tripod.", out.width = '33%', fig.align='center'}
+knitr::include_graphics("Figures/Collapsible_tripod.png")
+```
 
 ### Camera settings
 
-The standard settings have to be adjusted depending on the flower
-(colour mostly and conditions). We often use the following settings :
-exposure time (shutter speed) 1/20s, F/16 focal, ISO 100, standard
-exposition on the light meter, and we save pictures as RAW files (ML
-setting on the camera display) format to be able to post-process them
-for color calibration (Figure \@ref(fig:camera-settings)). A RAW photo of the color chart with an
-identical set of lighting conditions and camera settings as the flower
-to be photographed is needed for each flower photos series. If several
-flowers are processed one after the other without variation of light
-conditions, only one chart photo is needed.
+The standard settings have to be adjusted depending on the flower (mostly colour and conditions). 
+
+
+#### Without focus stacking
+
+If not doing focus stacking, we often use the following settings: M (Manual Exposure) mode dial,
+1/20s exposure time (shutter speed), F/16 aperture, ISO 100, and standard
+exposure on the light meter. Using the "Manual Exposure" on the camera dial and 
+setting the focal F to F16 will maximize the depth of field without lowering the image quality. 
+
+Use the manual focus setting on the side of the lens (Figure \@ref(fig:camera-arrows-no-FS)) to avoid camera trigger malfunction when the flower doesn't land on the detector. If the focus setting is set to automatic and the flower is off centered during rotation, the camera might not be able to focus (on the background) and thus, prevent the camera trigger. On manual, the camera will always be triggered by the turntable, even if the focus isn't optimal. 
+
+Because the subject is moving and may be off centered on the turntable, the focus may need to be adjusted while the turntable runs. For this you can pause the turntable, manually adjust the focus, and resume the spin.
+
+In general, we save pictures as RAW files (ML setting on the camera display) to be able to post-process them
+for color calibration (Figure \@ref(fig:camera-settings-no-FS)). A RAW photo of the color chart with an identical set of lighting conditions and camera settings as the flower to be photographed is needed for each flower photos series. If several flowers are processed one after the other without variation of light conditions, only one chart photo is needed.
 
 >The nicer and the sharper the photographs, the easier it will be to
 build the models. So make sure that the flower is always in focus. Shade
 or high light reflectance can also impair model reconstruction, so pay
 attention to these while taking the pictures.
 
-```{r camera-settings, echo=FALSE, message=FALSE, fig.cap="Camera settings interface of the Canon t2i/550D.", out.width = '50%', fig.align='center'}
+```{r camera-arrows-no-FS, echo=FALSE, message=FALSE, fig.cap="Camera (Canon T2i/550D) and lens (60mm f/2.8 Macro lens) used to take RAW photos. The red arrows (from top to bottom) depict the button to get manual focus, the ISO button and the Manual Exposure mode dial.", out.width = '33%', fig.align='center'}
+knitr::include_graphics("Figures/camera_arrows.png")
+```
+
+```{r camera-settings-no-FS, echo=FALSE, message=FALSE, fig.cap="Camera settings interface of the Canon t2i/550D (no focus stacking).", out.width = '50%', fig.align='center'}
 knitr::include_graphics("Figures/camera_settings.JPG")
 ```
 
 
-### Optional : custom camera white balance
+#### With focus stacking
+
+If you decide to do focus stacking for your project, check the manual of your camera for optimal parameters during focus bracketing as they may slightly differ from what we use. For a Canon EOS 90D camera, we use the following settings: M (Manual Exposure) mode dial, 1/20 exposure time, F/11 aperture, ISO 100, Auto Focus (AF) lens focus mode, RAW image format (Figure \@ref(fig:camera-settings-FS), Figure \@ref(fig:camera-arrows-FS)).We usually use the *Zone AF* method and enable *Continuous AF* (Shooting Menu, Tab 6). 
+
+Turn off the *Image Review* option (Shooting Menu, Tab 1) to prevent delays after taking each set of pictures. To enable focus bracketing on EOS 90D, press the "START-STOP" button to enter the *Live View Shooting Mode*, then enable *Focus Bracketing* (Shooting Menu, Tab 5). If using an EF 100mm f/2.8L MACRO IS USM lens, disable *Exposure Smoothing* (option within *Focus Bracketing*), otherwise it may cause changes in image brightness. 
+
+The optimal number of shots and focus increments depend on the size of the flower, as well as its position and distance from the camera. For example, from the highest camera position, 8 images with a focus increment of 4 works good for a ~2.5x1x1cm (LxWxH) tubular flower, but from an en-face camera angle (i.e. the flower opening facing the camera), 10-12 images with a focus increment of 3 may work better. Test what parameters would produce the smallest number of shots with each part of your flower in focus in each case. Generally, the higher the number of shots, the smaller the focus increments can be.
+
+If the camera fails to capture all parts of the flower in focus, the turntable can be paused to make the appropriate adjustments. This may be the number of shots and focus increments, and/or the starting focal point, which should ideally be on the flower part nearest to the lens. Following the adjustment, the spin may be resumed to continue with image capturing. To save time, optimize the number of shots and focus increments from the start to avoid adjustments during image capturing, and help the camera focus by tapping on the part of the flower nearest to the lens after each rotation, before the camera is triggered. This part will be in focus in the first image taken at each rotation point, while the focus will gradually shift to points further from the lens with each subsequent image.
+
+```{r camera-arrows-FS, echo=FALSE, message=FALSE, fig.cap="Camera (Canon EOS 90D) and lens (EF 100m f/2.8L MACRO IS USM) used to take RAW photos for focus stacking. Arrow on the lens: Focus mode button set to Auto Focus (AF). Arrows on the camera body (from top to bottom): ISO button, Manual Exposure mode dial and \"START-STOP\" button (for *Live View Shooting Mode*).", out.width = '75%', fig.align='center'}
+knitr::include_graphics("Figures/Canon_EOS_90D_buttons.png")
+```
+
+```{r camera-settings-FS, echo=FALSE, message=FALSE, fig.cap="Camera settings interface of the Canon EOS 90D, used for projects with focus stacking.", out.width = '50%', fig.align='center'}
+knitr::include_graphics("Figures/Canon_EOS_90D_settings.png")
+```
+
+```{r focus-stacking-settings, echo=FALSE, message=FALSE, fig.cap="Focus bracketing settings of the Canon EOS 90D.", out.width = '50%', fig.align='center'}
+knitr::include_graphics("Figures/Focus_bracketing_settings.png")
+```
+
+### Optional: custom camera white balance
 
 Optionally, you can begin by setting a personalized white balance (WB) in
-your camera with the light gray scale on the chart :
+your camera with the light gray scale on the chart:
 
 1.  For a Canon camera, take a picture of the gray scale;
 
@@ -64,11 +94,10 @@ knitr::include_graphics("Figures/Custom WB selection.png")
 ```
 
 
-## Turn table settings and preparation
+## Turntable settings and preparation
 
-For each run (one 360 spin of the turn table), we use a wait time of 2s
-to allow the camera time to save the images on the SD card after it is
-triggered, and the flower to stabilize after each rotation.
+If not doing focus stacking, for each run (one 360° spin of the turntable), we use a wait time of 2s
+to allow the camera time to save the images on the SD card after it is triggered, and the flower to stabilize after each rotation. If doing focus stacking, we use a wait time of 6-8s depending on the number of shots and focus increments.
 
 1.  Connect the shutter release to your camera and the turntable Syrp
     Genie II (Figure \@ref(fig:shutter)).
@@ -79,24 +108,24 @@ triggered, and the flower to stabilize after each rotation.
 3.  Connect the Syrp Genie II to your device, and do the updates if
     required (needs an internet connection).
 
-4.  Click on *create content* \> *turntable* (Figures
+4.  Click on *Create Content* \> *Turntable* (Figures
     \@ref(fig:genie-root), \@ref(fig:genie-content)).
     
 5.  Make sure the turntable orientation is inverted in the detailed settings
     (Figure \@ref(fig:genie-settings))
 
 5.  In parameters (Figure \@ref(fig:genie-record)), select 20 photos for 
-    each run, and 2s of
-    waiting (move-wait-shoot-wait-move). If it is too quick, some
+    each run, and the appropriate amount of waiting time depending on if you are doing focus stacking (6-8s) 
+    or not (2s; move-wait-shoot-wait-move). If it is too quick, some
     pictures won't be able to be saved as the camera needs a delay to
     save them on the memory card. The spinning device will take the
     first picture then proceed to a move-shoot-move run until the last
     photo.
 
-6.  Place the white background circle on the turntable to contrast with
+6.  Place the white background paper disk with the foam block on the turntable to contrast with
     the flower. If your flower is pale, then use a different background
-    (colored or darker). Ideally, the color of the circle should be the
-    exact same color of the background of the lightbox as this will help
+    (colored or darker). Ideally, the color of the disk and the foam block should be the
+    exact same as the color of the backdrop in the lightbox as this will help
     when applying masks later.
 
 ```{r shutter, echo=FALSE, message=FALSE, fig.cap="Camera shutter release port.", out.width = '50%', fig.align='center'}
@@ -125,12 +154,12 @@ knitr::include_graphics("Figures/genie_turntable_20_1.PNG")
 | **Parameter** | **Value** |
 |---|---|
 | **Camera settings** |  |
-| Aperture | F/16 |
+| Aperture | F/16 (no focus stacking) or F11 (focus stacking) |
 | Sensibility | ISO 100 (lowest) |
 | Exposure time | 1/20s (depending on light settings) |
-| **Turn table settings** |  |
+| **Turntable settings** |  |
 | Number of photos | 20 per camera height (high, mid, low) |
-| Wait time | 2s |
+| Wait time | 2s (no focus stacking) or 6-8s (focus stacking) |
 
 
 

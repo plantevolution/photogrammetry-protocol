@@ -1,7 +1,6 @@
 `r if (knitr::is_html_output()) '
 # References {-}
 '`
-
 ---
 bibliography: book.bib
 link-citations: true

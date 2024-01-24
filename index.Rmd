@@ -3,6 +3,7 @@ title: "Flower photogrammetry and 3D modeling protocol"
 author:
 - Marion Leménager
 - Jérôme Burkiewicz
+- Loudmila Jelinscaia Lagou
 - Daniel Schoen
 - Diana Constanza Diaz Cardona
 - Simon Joly

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Image post processing | Flower photogrammetry and 3D modeling protocol</title>
   <meta name="description" content="This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Image post processing | Flower photogrammetry and 3D modeling protocol" />
   <meta property="og:type" content="book" />
@@ -24,10 +24,11 @@
 <meta name="author" content="Jérôme Burkiewicz" />
 <meta name="author" content="Daniel Schoen" />
 <meta name="author" content="Diana Constanza Diaz Cardona" />
+<meta name="author" content="Loudmila Jelinscaia Lagou" />
 <meta name="author" content="Simon Joly" />
 
 
-<meta name="date" content="2022-09-26" />
+<meta name="date" content="2024-01-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +60,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -107,7 +112,7 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="materials.html"><a href="materials.html"><i class="fa fa-check"></i><b>2</b> Materials</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="materials.html"><a href="materials.html#lighting"><i class="fa fa-check"></i><b>2.1</b> Lighting</a></li>
-<li class="chapter" data-level="2.2" data-path="materials.html"><a href="materials.html#turn-table"><i class="fa fa-check"></i><b>2.2</b> Turn table</a></li>
+<li class="chapter" data-level="2.2" data-path="materials.html"><a href="materials.html#turntable"><i class="fa fa-check"></i><b>2.2</b> Turntable</a></li>
 <li class="chapter" data-level="2.3" data-path="materials.html"><a href="materials.html#camera"><i class="fa fa-check"></i><b>2.3</b> Camera</a></li>
 <li class="chapter" data-level="2.4" data-path="materials.html"><a href="materials.html#color-chart"><i class="fa fa-check"></i><b>2.4</b> Color chart</a></li>
 <li class="chapter" data-level="2.5" data-path="materials.html"><a href="materials.html#softwares"><i class="fa fa-check"></i><b>2.5</b> Softwares</a></li>
@@ -119,15 +124,15 @@ div.csl-indent {
 <li class="chapter" data-level="3.1" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#camera-and-tripod-settings-and-preparation"><i class="fa fa-check"></i><b>3.1</b> Camera and tripod settings and preparation</a>
 <ul>
 <li class="chapter" data-level="3.1.1" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#camera-settings"><i class="fa fa-check"></i><b>3.1.1</b> Camera settings</a></li>
-<li class="chapter" data-level="3.1.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#optional-custom-camera-white-balance"><i class="fa fa-check"></i><b>3.1.2</b> Optional : custom camera white balance</a></li>
+<li class="chapter" data-level="3.1.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#optional-custom-camera-white-balance"><i class="fa fa-check"></i><b>3.1.2</b> Optional: custom camera white balance</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#turn-table-settings-and-preparation"><i class="fa fa-check"></i><b>3.2</b> Turn table settings and preparation</a></li>
+<li class="chapter" data-level="3.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#turntable-settings-and-preparation"><i class="fa fa-check"></i><b>3.2</b> Turntable settings and preparation</a></li>
 <li class="chapter" data-level="3.3" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#summary-of-settings"><i class="fa fa-check"></i><b>3.3</b> Summary of settings</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html"><i class="fa fa-check"></i><b>4</b> Image capture step-by-step</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#take-a-picture-of-the-color-chart"><i class="fa fa-check"></i><b>4.1</b> Take a picture of the color chart</a></li>
-<li class="chapter" data-level="4.2" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#flower-placement-image-capture"><i class="fa fa-check"></i><b>4.2</b> Flower placement &amp; Image capture</a></li>
+<li class="chapter" data-level="4.2" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#flower-placement-image-capture"><i class="fa fa-check"></i><b>4.2</b> Flower placement &amp; image capture</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="image-post-processing.html"><a href="image-post-processing.html"><i class="fa fa-check"></i><b>5</b> Image post processing</a>
 <ul>
@@ -135,9 +140,12 @@ div.csl-indent {
 <li class="chapter" data-level="5.2" data-path="image-post-processing.html"><a href="image-post-processing.html#image-color-calibration"><i class="fa fa-check"></i><b>5.2</b> Image color calibration</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="image-post-processing.html"><a href="image-post-processing.html#creating-color-profiles"><i class="fa fa-check"></i><b>5.2.1</b> Creating color profiles</a></li>
-<li class="chapter" data-level="5.2.2" data-path="image-post-processing.html"><a href="image-post-processing.html#color-and-illuminance-calibration-from-profiles"><i class="fa fa-check"></i><b>5.2.2</b> Color and illuminance calibration from profiles</a></li>
-<li class="chapter" data-level="5.2.3" data-path="image-post-processing.html"><a href="image-post-processing.html#export-calibrated-files-to-jpg-format"><i class="fa fa-check"></i><b>5.2.3</b> Export calibrated files to jpg format</a></li>
+<li class="chapter" data-level="5.2.2" data-path="image-post-processing.html"><a href="image-post-processing.html#color-and-exposure-calibration-from-profiles"><i class="fa fa-check"></i><b>5.2.2</b> Color and exposure calibration from profiles</a></li>
+<li class="chapter" data-level="5.2.3" data-path="image-post-processing.html"><a href="image-post-processing.html#export-calibrated-files"><i class="fa fa-check"></i><b>5.2.3</b> Export calibrated files</a></li>
 </ul></li>
+<li class="chapter" data-level="5.3" data-path="image-post-processing.html"><a href="image-post-processing.html#image-clustering-one-folder-at-a-time"><i class="fa fa-check"></i><b>5.3</b> Image clustering (one folder at a time)</a></li>
+<li class="chapter" data-level="5.4" data-path="image-post-processing.html"><a href="image-post-processing.html#focus-stacking-one-folder-at-a-time"><i class="fa fa-check"></i><b>5.4</b> Focus stacking (one folder at a time)</a></li>
+<li class="chapter" data-level="5.5" data-path="image-post-processing.html"><a href="image-post-processing.html#alternatively-cluster-and-focus-stack-photos-from-multiple-folders-at-once"><i class="fa fa-check"></i><b>5.5</b> Alternatively: Cluster and focus stack photos from multiple folders at once</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html"><i class="fa fa-check"></i><b>6</b> 3D model reconstruction in Agisoft Metashape</a>
 <ul>
@@ -147,7 +155,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.4" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#photo-importation"><i class="fa fa-check"></i><b>6.4</b> Photo importation</a></li>
 <li class="chapter" data-level="6.5" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#mask-application"><i class="fa fa-check"></i><b>6.5</b> Mask application</a></li>
 <li class="chapter" data-level="6.6" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#masks-touch-ups"><i class="fa fa-check"></i><b>6.6</b> Masks touch ups</a></li>
-<li class="chapter" data-level="6.7" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#camera-alignment"><i class="fa fa-check"></i><b>6.7</b> Camera alignment</a></li>
+<li class="chapter" data-level="6.7" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#image-alignment"><i class="fa fa-check"></i><b>6.7</b> Image alignment</a></li>
 <li class="chapter" data-level="6.8" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#align-chunks-together"><i class="fa fa-check"></i><b>6.8</b> Align chunks together</a></li>
 <li class="chapter" data-level="6.9" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#merge-chunks"><i class="fa fa-check"></i><b>6.9</b> Merge chunks</a></li>
 <li class="chapter" data-level="6.10" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#build-3d-mesh"><i class="fa fa-check"></i><b>6.10</b> Build 3D mesh</a></li>
@@ -183,22 +191,22 @@ div.csl-indent {
 <div id="file-names-and-storage" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> File names and storage<a href="image-post-processing.html#file-names-and-storage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We found that it is critical to have a very organized structure for
-saving files, especially when several persons are working on the same
+saving files, especially when several people are working on the same
 project. We propose here what has been working so far for us.</p>
 <p>In a species folder named with the name of the species
 (<em>Genus_species</em>), there should be a distinct folder for each individual
 photographed, usually with a different collection number. If the same
 individual has been photographed several times, the date of photos
 acquisition should be appended to the folder name to discriminate them.
-We also indicate with the folder name if the individual has been
+We also indicate in the folder name whether the individual has been
 photographed with or without sepals.</p>
 <p>For each flower, we have one folder for uncalibrated photos, one for
-calibrated photos, and one for the model. The picture of the color chart
+calibrated photos, and one for the model. The RAW picture of the color chart
 should be placed in the uncalibrated photos.</p>
 <p>To distinguish which photo goes in which chunk, a photo of the label is
-taken at the beginning of each chunk (each set of photo per side of
+taken at the beginning of each chunk (each set of photos per side of
 flower). We suggest to place the photos from different chunks in
-different folders, once the photos are calibrated. The date of when the
+different folders once the photos are calibrated. The date of when the
 photos are taken is important because it helps matching the calibration
 to the right DNG file. If more than one set of photos with different
 lighting or camera settings are taken, make sure to distinguish the
@@ -213,10 +221,20 @@ color charts that correspond to each set of photos.</p>
     <em>model.obj</em><br />
     <em>model.ply</em><br />
     <em>texture.jpg</em><br />
-   Photos calibrated<br />
-    <em>Place here all the calibrated photos, that you can organize per chunk</em><br />
-   Photos to calibrate<br />
+   01_Photos_to_calibrate<br />
     <em>Place here all the RAW photos and color chart</em><br />
+   02_Photos_calibrated<br />
+    <em>Place here all the calibrated photos, that you can organize per chunk</em><br />
+</p>
+</blockquote>
+<p><br />
+</p>
+<p>If you are doing focus stacking, you can also create the following two folders in addition to the above:</p>
+<blockquote>
+<p>   03_Photos_clustered<br />
+    <em>Place here the calibrated photos that have been clustered based on time intervals into separate subfolders containing series of pictures taken using the Focus Bracketing function at each rotation point</em><br />
+   04_Photos_focus_stacked<br />
+    <em>Place here all the final images after focus stacking</em><br />
 </p>
 </blockquote>
 </div>
@@ -229,7 +247,7 @@ allows to manually check the automatic detection of the color chart, the
 second and third ones are fully automatic (on MacOS and windows
 respectively).</p>
 <p>This does not linearize the photos. For further details on color
-calibration read <span class="citation">(<a href="#ref-troscianko2015image" role="doc-biblioref">Troscianko and Stevens 2015</a>)</span>.</p>
+calibration, read <span class="citation">Troscianko and Stevens (<a href="#ref-troscianko2015image">2015</a>)</span>.</p>
 <p><strong>Method 1 : Manual creation of color profiles</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>This method uses the <a href="https://xritephoto.com/ph_product_overview.aspx?ID=938&amp;Action=Support&amp;SoftwareID=2030">Xrite ColorChecker Camera Calibration
@@ -239,66 +257,65 @@ software</a> (Figure <a href="image-post-processing.html#fig:ColorCheckerworkflo
 <li><p>Create a new empty folder called DNG.</p></li>
 <li><p>Copy the RAW file representing your color chart in your DNG folder,
 and rename it accordingly (e.g. Color_chart_DD.MM.YYYY).</p></li>
-<li><p>Open DNG converter and select the DNG folder we created for the
-first box. You need to select a folder, and can’t select a specific
-file, the software will convert all the files within this folder.
-Default parameters are ok for step 2-4. It will export the RAW file
+<li><p>Open DNG converter and select the DNG folder you created in the
+first step. You can’t select a specific file, you need to select a folder,
+and the software will convert all the files within this folder.
+Default parameters are fine for step 2-4. It will export the RAW file
 in the DNG folder to a DNG file with the same file name (Figure <a href="image-post-processing.html#fig:DNG">5.2</a>).</p></li>
 <li><p>Open the Color Checker Camera Calibration software and drag and drop
 the newly created DNG file in the software. The software will
 automatically draw a grid around it. Make sure that the green grid
 fits the chart, avoiding edge effects on each square of color
 (Figure <a href="image-post-processing.html#fig:Colorcheckercalibration">5.3</a>.</p></li>
-<li><p>Click on <em>create profile</em> and save it under Color_Chart_DD.MM.YYYY
+<li><p>Click on <em>Create Profile</em> and save it under Color_Chart_DD.MM.YYYY
 (Figure <a href="image-post-processing.html#fig:ColorCheckerprofile">5.4</a>.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ColorCheckerworkflow"></span>
-<img src="Figures/manual_method.png" alt="Image color calibration workflow" width="80%" />
+<img src="Figures/manual_method.png" alt="Image color calibration workflow." width="80%" />
 <p class="caption">
-Figure 5.1: Image color calibration workflow
+Figure 5.1: Image color calibration workflow.
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:DNG"></span>
-<img src="Figures/DNGConverter.jpg" alt="Convert RAW chart to DNG in Adobe DNG Converter" width="80%" />
+<img src="Figures/DNGConverter.jpg" alt="Convert RAW chart to DNG in Adobe DNG Converter." width="80%" />
 <p class="caption">
-Figure 5.2: Convert RAW chart to DNG in Adobe DNG Converter
+Figure 5.2: Convert RAW chart to DNG in Adobe DNG Converter.
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Colorcheckercalibration"></span>
-<img src="Figures/ColorChecker_camera_calibration.png" alt="Align grid on chart in ColorChecker Camera Calibration" width="80%" />
+<img src="Figures/ColorChecker_camera_calibration.png" alt="Align grid on chart in ColorChecker Camera Calibration." width="80%" />
 <p class="caption">
-Figure 5.3: Align grid on chart in ColorChecker Camera Calibration
+Figure 5.3: Align grid on chart in ColorChecker Camera Calibration.
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ColorCheckerprofile"></span>
-<img src="Figures/create_profile.png" alt="Export the color profile" width="80%" />
+<img src="Figures/create_profile.png" alt="Export the color profile." width="80%" />
 <p class="caption">
-Figure 5.4: Export the color profile
+Figure 5.4: Export the color profile.
 </p>
 </div>
-<p><strong>Method 2 : X-Rite Color Checker plug-in installation and automatic
-creation of color profiles on MacOS</strong></p>
+<p><strong>Method 2: X-Rite Color Checker plug-in installation and automatic creation of color profiles on MacOS</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>Directly in Adobe Lightroom, you can add ColorChecker Camera
 Calibration as a module to a means of exporting files directly into
 a color profile.</p>
 <ol style="list-style-type: decimal">
-<li><p>Click on File &gt; Export &gt; <em>Plug-in Manager</em> (or <em>gestionnaire
-des modules externes</em> in the left bottom corner)</p></li>
-<li><p>Click on <em>Add</em></p></li>
+<li><p>Click on <em>File</em> &gt; <em>Export</em> &gt; <em>Plug-in Manager</em> (or <em>gestionnaire
+des modules externes</em> in the left bottom corner).</p></li>
+<li><p>Click on <em>Add</em>.</p></li>
 <li><p>Navigate to <em>Library</em> &gt; <em>Application Support</em> &gt; <em>Adobe</em> &gt;
-<em>Lightroom</em> &gt; <em>Modules</em></p></li>
+<em>Lightroom</em> &gt; <em>Modules</em>.</p></li>
 <li><p>Select <em>XRiteColorCheckerPassport.lrplugin</em> and then click on
-<em>Add Plug-in</em> and <em>done</em>.</p></li>
+<em>Add Plug-in</em> and <em>Done</em>.</p></li>
 </ol></li>
 <li><p>Click on the color chart then <em>File</em> &gt; <em>Export</em> &gt; Choose <em>Xrite
 presets</em> from the drop down menu.</p></li>
-<li><p>Name your profile then &gt; <em>Export</em></p></li>
+<li><p>Name your profile then &gt; <em>Export</em>.</p></li>
 <li><p>It will go through ColorCheckerCamera calibration to automatically
 create the profile.</p></li>
 <li><p>Restart Lightroom as indicated.</p></li>
 </ol>
-<p><strong>Method 3 : X-Rite Color Checker plug-in installation and automatic
+<p><strong>Method 3: X-Rite Color Checker plug-in installation and automatic
 creation of color profiles on Windows</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>Get the <a href="https://xritephoto.com/ph_product_overview.aspx?ID=938&amp;Action=Support&amp;SoftwareID=2030">Xrite ColorChecker Camera Calibration
@@ -318,31 +335,31 @@ import your color chart (<em>File</em> &gt; <em>Import</em>).</p></li>
 profile witht the color chart.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ColorCheckerplugin"></span>
-<img src="Figures/color_checker_plug_in_win.png" alt="Color Checker plug-in for Lightroom installation" width="80%" />
+<img src="Figures/color_checker_plug_in_win.png" alt="Color Checker plug-in for Lightroom installation." width="80%" />
 <p class="caption">
-Figure 5.5: Color Checker plug-in for Lightroom installation
+Figure 5.5: Color Checker plug-in for Lightroom installation.
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:xritepreselection"></span>
-<img src="Figures/x_rite_preselection.png" alt="Color chart profile exportation" width="80%" />
+<img src="Figures/x_rite_preselection.png" alt="Color chart profile exportation." width="80%" />
 <p class="caption">
-Figure 5.6: Color chart profile exportation
+Figure 5.6: Color chart profile exportation.
 </p>
 </div>
 </div>
-<div id="color-and-illuminance-calibration-from-profiles" class="section level3 hasAnchor" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> Color and illuminance calibration from profiles<a href="image-post-processing.html#color-and-illuminance-calibration-from-profiles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="color-and-exposure-calibration-from-profiles" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Color and exposure calibration from profiles<a href="image-post-processing.html#color-and-exposure-calibration-from-profiles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p>Import your photos in Lightroom Classic. <em>File</em> &gt; <em>Import</em> then
 select your folder of RAW photos.</p></li>
-<li><p>Select the tab <em>development</em>.</p></li>
-<li><p>Select the photo of the chart</p></li>
-<li><p>Select the color profile corresponding to the color chart you have selected (see Figure <a href="image-post-processing.html#fig:addprofile">5.7</a> and <a href="image-post-processing.html#fig:settingssynchronize">5.8</a>) to manually add a color profile) to calibrate the photo of the chart with its own calibration profile.</p></li>
+<li><p>Select the photo of the color chart.</p></li>
+<li><p>Go to the <em>Development</em> module.</p></li>
+<li><p>Select the color profile corresponding to the color chart you have selected (see Figure <a href="image-post-processing.html#fig:addprofile">5.7</a> and <a href="image-post-processing.html#fig:settingssynchronize">5.8</a> to manually add a color profile) to calibrate the photo of the chart with its own calibration profile.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:addprofile"></span>
-<img src="Figures/profil_capture_1.png" alt="Add a new color profile" width="80%" />
+<img src="Figures/profil_capture_1.png" alt="Add a new color profile." width="80%" />
 <p class="caption">
-Figure 5.7: Add a new color profile
+Figure 5.7: Add a new color profile.
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:settingssynchronize"></span>
@@ -352,37 +369,43 @@ Figure 5.8: After adding a profile with the + sign, select it in the list below.
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li><p>Use the eyedropper over the 75% gray scale (the last one before the
-black chip on the color chart). Do not click on the photo with
-the eye dropper, only hover over the photo.</p></li>
-<li><p>Select the exposition setting, and adjust the values the eyedropper
-indicates of the gray scale using the exposition setting to obtain
-the RGB values of the closest values to 0.33 0.33 0.33
+<li><p>Use the eyedropper over the 75% gray scale (the dark gray patch right before the
+black patch on the color chart). Do not click on the photo with
+the eye dropper, only hover over it.</p></li>
+<li><p>Adjust the RGB values the eyedropper indicates on the 75% gray scale by changing the
+exposure setting to make them as close as possible to 0.33 0.33 0.33
 (corresponding to 85/255 for each of the red, blue, and green
-class). The illuminance is now adjusted in addition to the color
-calibration, but only on the chart.</p></li>
-<li><p>To apply the modifications we just did to all the photos, select all the photos (Cmd+A or Ctrl+A), and make sure that the one for which you made changes is highlighted (in white compared to light gray for the other ones selected) (see Figure <a href="image-post-processing.html#fig:synchronize">5.9</a>). Check the profiles and exposure boxes before synchronizing to all the other photos.</p></li>
-<li><p>Click on the button <em>synchronize</em>.</p></li>
+class). The exposure is now adjusted in addition to the color
+calibration, but only on the chart image.</p></li>
+<li><p>To apply the modifications we just did to all the photos, go to the <em>Library</em>
+module, select all the photos (<em>Cmd+A</em> or <em>Ctrl+A</em>), and make sure that the one
+for which you made changes is highlighted (in white compared to the light gray
+of the newly selected images).</p></li>
+<li><p>Go back to the <em>Development</em> module and click on the <em>Synchronize</em> option, check the profile and exposure boxes in
+the pop-up window and click on <em>Synchronize</em> (see Figure <a href="image-post-processing.html#fig:synchronize">5.9</a>).</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:synchronize"></span>
-<img src="Figures/synchronize_capture.png" alt="Synchronize your settings made to the photo of the chart to all the other photos and check the two categories you modified (color profile and exposure" width="80%" />
+<img src="Figures/synchronize_capture.png" alt="Synchronize your settings made to the photo of the chart to all the other photos and check the two categories you modified (color profile and exposure)." width="80%" />
 <p class="caption">
-Figure 5.9: Synchronize your settings made to the photo of the chart to all the other photos and check the two categories you modified (color profile and exposure
+Figure 5.9: Synchronize your settings made to the photo of the chart to all the other photos and check the two categories you modified (color profile and exposure).
 </p>
 </div>
 </div>
-<div id="export-calibrated-files-to-jpg-format" class="section level3 hasAnchor" number="5.2.3">
-<h3><span class="header-section-number">5.2.3</span> Export calibrated files to jpg format<a href="image-post-processing.html#export-calibrated-files-to-jpg-format" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="export-calibrated-files" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Export calibrated files<a href="image-post-processing.html#export-calibrated-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li><p>Select all the photos you need to export or all of them (cmd+A or
-windows+A)</p></li>
-<li><p>Click on <em>File</em> &gt; <em>Export</em></p></li>
+<li><p>Select all the photos you need to export or all of them (<em>Cmd+A</em> or
+<em>Ctrl+A</em>).</p></li>
+<li><p>Click on <em>File</em> &gt; <em>Export</em>.</p></li>
 <li><p>You can create presets that you will only need to create once to
-always export the same way in Adobe Lightroom (example Figure <a href="image-post-processing.html#fig:exportparameters">5.10</a>), and add personalized file names
-such as _color_calibrated at the end of each .jpg file.</p></li>
-<li><p>In their own folder, you can then sort the calibrated photos for
-color and exposure per chunks (easily distinguishable by the
-separation created by a photo of the label).</p></li>
+always export the same way in Adobe Lightroom (example Figure <a href="image-post-processing.html#fig:exportparameters">5.10</a>), and add personalized file names such as "_color_calibrated" at the end of each image file.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Without focus stacking: Save the calibrated images as JPEG.</li>
+<li>With focus stacking: Save the calibrated images as TIFF (300 PPI). Make sure to include all metadata.</li>
+</ol></li>
+<li><p>The calibrated folders can be saved into their own folder, and further divided
+into different subfolders representing different chunks (easily distinguishable
+by the separation created by a photo of the label).</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:exportparameters"></span>
 <img src="Figures/export_capture_1.png" alt="You can export using your own personalized parameters and then export in batch your selection in a specific folder within your folder of uncalibrated photos for easy access. This method can thus work for any folder of uncalibrated photos." width="80%" />
@@ -390,8 +413,143 @@ separation created by a photo of the label).</p></li>
 Figure 5.10: You can export using your own personalized parameters and then export in batch your selection in a specific folder within your folder of uncalibrated photos for easy access. This method can thus work for any folder of uncalibrated photos.
 </p>
 </div>
-
+<p><br />
+</p>
 </div>
+</div>
+<div id="image-clustering-one-folder-at-a-time" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Image clustering (one folder at a time)<a href="image-post-processing.html#image-clustering-one-folder-at-a-time" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span style="color: red;"><strong>Note: This step is only necessary if you chose to do <em>focus stacking</em> in your project.</strong></span></p>
+<p>If you used the <em>Focus Bracketing</em> function during image capture and wish to proceed
+with focus stacking, you can make the process easier by first grouping (i.e., <em>clustering</em>)
+the series of photos taken at each angle and rotation point in separate subfolders. This
+way, each folder will contain images that can be stacked together as they depict
+the same flower angle and rotation point but with different focus distances.</p>
+<p>This can be achieved using <a href="https://exiftool.org/">ExifTool</a>. ExifTool extracts time-stamps from the metadata
+of images and can be used to separate the image clusters from each other based on
+time intervals. The time intervals between photos taken at each
+rotation point (i.e., at the same exact perspective, but with different focus distances)
+is smaller than between photos taken between two rotation points (i.e., after the
+turntable changes the flower angle) when using the <em>Focus Bracketing</em> function.</p>
+<p>To make image clustering faster, a python script developed by the Eaton Lab can be
+used (<a href="https://github.com/yuemeanshappy/photogram/blob/main/python_scripts/cluster_photos_by_time_intervals.py">cluster_photos_by_time_intervals.py</a>).</p>
+<p>Command structure:</p>
+<pre><code>python3 cluster_photos_by_time_intervals.py -i &lt;input folder with calibrated images&gt; -o &lt;output folder with clustered images&gt;</code></pre>
+<p>Example:</p>
+<pre><code>python3 cluster_photos_by_time_intervals.py -i 02_Photos_calibrated -o 03_Photos_clustered</code></pre>
+<p>After running the command above, you will have a <code>03_Photos_clustered</code> folder containing subfolders with the different
+image clusters, distinguished by angle and rotation numbers based on their time-stamps.</p>
+</div>
+<div id="focus-stacking-one-folder-at-a-time" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Focus stacking (one folder at a time)<a href="image-post-processing.html#focus-stacking-one-folder-at-a-time" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span style="color: red;"><strong>Note: This step is only necessary if you chose to do <em>focus stacking</em> in your project.</strong></span></p>
+<p>With the image groups taken at each rotation point and angle separated into different folders,
+they can now be easily focus stacked to produce one image per cluster with the whole flower in focus.
+Similarly to image clustering, this can be achieved by running another python script developed by the Eaton Lab
+(<a href="https://github.com/yuemeanshappy/photogram/blob/main/python_scripts/helicon_focus.py">helicon_focus.py</a>).</p>
+<p>Command structure:</p>
+<pre><code>python3 helicon_focus.py -i &lt;input folder with clustered images&gt; -o &lt;output folder with focus stacked images&gt;</code></pre>
+<p>Example:</p>
+<pre><code>python3 cluster_photos_by_time_intervals.py -i 03_Photos_clustered -o 04_Photos_focus_stacked</code></pre>
+<p>Now you should have a <code>04_Photos_focus_stacked</code> folder containing one focus
+stacked image corresponding to each angle and rotation point cluster.</p>
+</div>
+<div id="alternatively-cluster-and-focus-stack-photos-from-multiple-folders-at-once" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Alternatively: Cluster and focus stack photos from multiple folders at once<a href="image-post-processing.html#alternatively-cluster-and-focus-stack-photos-from-multiple-folders-at-once" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In case you would like to cluster and focus stack images of multiple specimens at
+once, to make the process even faster, you could also use the <a href="https://github.com/yuemeanshappy/photogram/wiki/Automated-pipeline-scripts">Automated Pipeline Scripts</a>
+developed by the Eaton Lab.</p>
+<p>You can use these scripts for all steps (i.e., from image
+calibration to focus stacking) or modify them according to your preferences and needs.
+We normally do the calibration step manually in Adobe Lightroom Classic as it does not take
+significantly more time and allows for calibrating both the colors and exposure of the images.</p>
+<p>To make the scripts work, we save the calibrated images in a subfolder directly in
+the corresponding RAW image folder, for example in <code>3D_Modelization/Genus_species_A/01_Photos_calibrated/</code>,
+with the RAW images being in <code>3D_Modelization/Genus_species_A/</code>, while the directory containing the
+<code>3D_Modelization/</code> contains other folders that are similarly structured for other species.</p>
+<blockquote>
+<p>3D_Modelization<br />
+ Genus_species_A<br />
+  <em>RAW_photo_A1.CR3</em><br />
+  <em>RAW_photo_A2.CR3</em><br />
+  <em>RAW_photo_A3.CR3</em><br />
+  …<br />
+  01_Photos_calibrated<br />
+   <em>Calibrated_photo_A1.tif</em><br />
+   <em>Calibrated_photo_A.tif2</em><br />
+   <em>Calibrated_photo_A3.tif</em><br />
+   …<br />
+ Genus_species_B<br />
+  <em>RAW_photo_B1.CR3</em><br />
+  <em>RAW_photo_B2.CR3</em><br />
+  <em>RAW_photo_B3.CR3</em><br />
+  …<br />
+  01_Photos_calibrated<br />
+   <em>Calibrated_photo_B1.tif</em><br />
+   <em>Calibrated_photo_B2.tif</em><br />
+   <em>Calibrated_photo_B3,tif</em><br />
+   …<br />
+ …<br />
+</p>
+</blockquote>
+<p><strong>For the sake of simplifying the following examples,<code>3d_Modelization/</code> would represent the path to your working directory that contains all your folders.</strong></p>
+<p>First, you need to create a text file containing a list of folder names in your
+working directory, i.e., the folders names in the directory <code>3D_Modelization/</code>
+following the example above. <code>cd</code> to this directory and run the following command:</p>
+<pre><code>ls -b1A &gt;&gt; folder_name.txt</code></pre>
+<p>This command will create a <code>folder_name.txt</code> file in your working directory with the names of
+all the folders in it. Then you need to create a text file containing the list of
+the RAW photo names within these folders.</p>
+<p>Command structure:</p>
+<pre><code>for i in `cat folder_name.txt`; do cd 3D_Modelization/${i} &amp;&amp; ls *.CR3 | sed -e &#39;s!.CR3!!&#39; &gt;&gt; photo_names.txt; done
+</code></pre>
+<p>Now, aside from the RAW photos and the subfolder with the calibrated .tif photos,
+the <code>Genus_species_#/</code> folders within the <code>3D_Modelization/</code> directory should contain
+a <code>photo_names.txt</code> file with a list of the names of all the RAW photos in each folder.</p>
+<p>We usually run the following modified automated script for processing multiple folders at once.</p>
+<ul>
+<li>Automated script structure for clustering and focus stacking photos from multiple folders at once:</li>
+</ul>
+<pre><code>for i in `cat 3D_Modelization/folder_name.txt`
+    do python3 cluster_photos_by_time_intervals.py -i 3D_Modelization/${i}/01_Photos_calibrated -o ~/Desktop/Focus_stacking_test_Mila/Test/${i}/02_Photos_clustered &amp;&amp;
+    python3 helicon_focus.py -i 3D_Modelization/${i}/02_Photos_clustered -o 3D_Modelization/${i}/03_Photos_focus_stacked
+done</code></pre>
+<p>The <code>for</code> loop above should create two new subfolders in each of
+your <code>3D_Modelization/Genus_species_#/</code> directories:</p>
+<ol style="list-style-type: decimal">
+<li><p><code>02_Photos_clustered</code>, containing the calibrated photos that have been clustered
+by angle and rotation points based on time intervals.</p></li>
+<li><p><code>03_Photos_focus_stacked</code>, containing the final focus stacked photos.</p></li>
+</ol>
+<p>Although the original automated pipeline script by the Eaton Lab includes a step
+for resizing the photos after focus stacking, we do not typically include this step
+in the process as the photos’ dimensions before and after focus stacking remains the same
+most of the time. Additionally, changing the images’ dimensions to a different ratio
+can distort the shape of your 3D Model.</p>
+<p>For those few images whose dimensions do change after focus stacking (for us it’s
+normally no more that 3 per specimen), during the masking step in Agisoft Metashape
+it will notify you that the background image you are using does not have the same
+size as some of the images. You can find those unmasked photos and create a background
+images using their dimensions for masking them. However, as mentioned, this happens
+rarely.</p>
+<p>If you wish to resize all your images after focus stacking following the original script,
+you will need to install <code>imagemagick</code>, which could be done using <em>homebrew</em>.</p>
+<pre><code>brew install imagemagick</code></pre>
+<ul>
+<li>Automated script structure for clustering, focus stacking, and resizing photos from multiple folders at once:</li>
+</ul>
+<pre><code>for i in `cat 3D_Modelization/folder_name.txt`
+    do python3 cluster_photos_by_time_intervals.py -i 3D_Modelization/${i}/01_Photos_calibrated -o ~/Desktop/Focus_stacking_test_Mila/Test/${i}/02_Photos_clustered &amp;&amp;
+    python3 helicon_focus.py -i 3D_Modelization/${i}/02_Photos_clustered -o 3D_Modelization/${i}/03_Photos_focus_stacked &amp;&amp;
+    cd 3D_Modelization/${i}/03_Photos_focus_stacked &amp;&amp; ls -b1A | sed -e &#39;s!.tiff!!&#39; &gt;&gt; stacking_names.txt &amp;&amp;
+    for i in `cat stacking_names.txt`
+        do convert ./${i}.tiff -resize 5300x3500! ./${i}.tiff
+    done
+done</code></pre>
+<p>Remember to add the path to your python script files if they are not located in your
+working directory, as well as modify the final image size if you wish it to be
+different.</p>
+
 </div>
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>

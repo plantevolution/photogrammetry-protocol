@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Materials | Flower photogrammetry and 3D modeling protocol</title>
   <meta name="description" content="This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Materials | Flower photogrammetry and 3D modeling protocol" />
   <meta property="og:type" content="book" />
@@ -24,10 +24,11 @@
 <meta name="author" content="Jérôme Burkiewicz" />
 <meta name="author" content="Daniel Schoen" />
 <meta name="author" content="Diana Constanza Diaz Cardona" />
+<meta name="author" content="Loudmila Jelinscaia Lagou" />
 <meta name="author" content="Simon Joly" />
 
 
-<meta name="date" content="2022-09-26" />
+<meta name="date" content="2024-01-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +60,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -107,7 +112,7 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="materials.html"><a href="materials.html"><i class="fa fa-check"></i><b>2</b> Materials</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="materials.html"><a href="materials.html#lighting"><i class="fa fa-check"></i><b>2.1</b> Lighting</a></li>
-<li class="chapter" data-level="2.2" data-path="materials.html"><a href="materials.html#turn-table"><i class="fa fa-check"></i><b>2.2</b> Turn table</a></li>
+<li class="chapter" data-level="2.2" data-path="materials.html"><a href="materials.html#turntable"><i class="fa fa-check"></i><b>2.2</b> Turntable</a></li>
 <li class="chapter" data-level="2.3" data-path="materials.html"><a href="materials.html#camera"><i class="fa fa-check"></i><b>2.3</b> Camera</a></li>
 <li class="chapter" data-level="2.4" data-path="materials.html"><a href="materials.html#color-chart"><i class="fa fa-check"></i><b>2.4</b> Color chart</a></li>
 <li class="chapter" data-level="2.5" data-path="materials.html"><a href="materials.html#softwares"><i class="fa fa-check"></i><b>2.5</b> Softwares</a></li>
@@ -119,15 +124,15 @@ div.csl-indent {
 <li class="chapter" data-level="3.1" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#camera-and-tripod-settings-and-preparation"><i class="fa fa-check"></i><b>3.1</b> Camera and tripod settings and preparation</a>
 <ul>
 <li class="chapter" data-level="3.1.1" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#camera-settings"><i class="fa fa-check"></i><b>3.1.1</b> Camera settings</a></li>
-<li class="chapter" data-level="3.1.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#optional-custom-camera-white-balance"><i class="fa fa-check"></i><b>3.1.2</b> Optional : custom camera white balance</a></li>
+<li class="chapter" data-level="3.1.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#optional-custom-camera-white-balance"><i class="fa fa-check"></i><b>3.1.2</b> Optional: custom camera white balance</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#turn-table-settings-and-preparation"><i class="fa fa-check"></i><b>3.2</b> Turn table settings and preparation</a></li>
+<li class="chapter" data-level="3.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#turntable-settings-and-preparation"><i class="fa fa-check"></i><b>3.2</b> Turntable settings and preparation</a></li>
 <li class="chapter" data-level="3.3" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#summary-of-settings"><i class="fa fa-check"></i><b>3.3</b> Summary of settings</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html"><i class="fa fa-check"></i><b>4</b> Image capture step-by-step</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#take-a-picture-of-the-color-chart"><i class="fa fa-check"></i><b>4.1</b> Take a picture of the color chart</a></li>
-<li class="chapter" data-level="4.2" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#flower-placement-image-capture"><i class="fa fa-check"></i><b>4.2</b> Flower placement &amp; Image capture</a></li>
+<li class="chapter" data-level="4.2" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#flower-placement-image-capture"><i class="fa fa-check"></i><b>4.2</b> Flower placement &amp; image capture</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="image-post-processing.html"><a href="image-post-processing.html"><i class="fa fa-check"></i><b>5</b> Image post processing</a>
 <ul>
@@ -135,9 +140,12 @@ div.csl-indent {
 <li class="chapter" data-level="5.2" data-path="image-post-processing.html"><a href="image-post-processing.html#image-color-calibration"><i class="fa fa-check"></i><b>5.2</b> Image color calibration</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="image-post-processing.html"><a href="image-post-processing.html#creating-color-profiles"><i class="fa fa-check"></i><b>5.2.1</b> Creating color profiles</a></li>
-<li class="chapter" data-level="5.2.2" data-path="image-post-processing.html"><a href="image-post-processing.html#color-and-illuminance-calibration-from-profiles"><i class="fa fa-check"></i><b>5.2.2</b> Color and illuminance calibration from profiles</a></li>
-<li class="chapter" data-level="5.2.3" data-path="image-post-processing.html"><a href="image-post-processing.html#export-calibrated-files-to-jpg-format"><i class="fa fa-check"></i><b>5.2.3</b> Export calibrated files to jpg format</a></li>
+<li class="chapter" data-level="5.2.2" data-path="image-post-processing.html"><a href="image-post-processing.html#color-and-exposure-calibration-from-profiles"><i class="fa fa-check"></i><b>5.2.2</b> Color and exposure calibration from profiles</a></li>
+<li class="chapter" data-level="5.2.3" data-path="image-post-processing.html"><a href="image-post-processing.html#export-calibrated-files"><i class="fa fa-check"></i><b>5.2.3</b> Export calibrated files</a></li>
 </ul></li>
+<li class="chapter" data-level="5.3" data-path="image-post-processing.html"><a href="image-post-processing.html#image-clustering-one-folder-at-a-time"><i class="fa fa-check"></i><b>5.3</b> Image clustering (one folder at a time)</a></li>
+<li class="chapter" data-level="5.4" data-path="image-post-processing.html"><a href="image-post-processing.html#focus-stacking-one-folder-at-a-time"><i class="fa fa-check"></i><b>5.4</b> Focus stacking (one folder at a time)</a></li>
+<li class="chapter" data-level="5.5" data-path="image-post-processing.html"><a href="image-post-processing.html#alternatively-cluster-and-focus-stack-photos-from-multiple-folders-at-once"><i class="fa fa-check"></i><b>5.5</b> Alternatively: Cluster and focus stack photos from multiple folders at once</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html"><i class="fa fa-check"></i><b>6</b> 3D model reconstruction in Agisoft Metashape</a>
 <ul>
@@ -147,7 +155,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.4" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#photo-importation"><i class="fa fa-check"></i><b>6.4</b> Photo importation</a></li>
 <li class="chapter" data-level="6.5" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#mask-application"><i class="fa fa-check"></i><b>6.5</b> Mask application</a></li>
 <li class="chapter" data-level="6.6" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#masks-touch-ups"><i class="fa fa-check"></i><b>6.6</b> Masks touch ups</a></li>
-<li class="chapter" data-level="6.7" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#camera-alignment"><i class="fa fa-check"></i><b>6.7</b> Camera alignment</a></li>
+<li class="chapter" data-level="6.7" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#image-alignment"><i class="fa fa-check"></i><b>6.7</b> Image alignment</a></li>
 <li class="chapter" data-level="6.8" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#align-chunks-together"><i class="fa fa-check"></i><b>6.8</b> Align chunks together</a></li>
 <li class="chapter" data-level="6.9" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#merge-chunks"><i class="fa fa-check"></i><b>6.9</b> Merge chunks</a></li>
 <li class="chapter" data-level="6.10" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#build-3d-mesh"><i class="fa fa-check"></i><b>6.10</b> Build 3D mesh</a></li>
@@ -190,11 +198,11 @@ a maximum. This lightbox needs to be powered from an outlet or from an
 external battery. The color of the background used should contrast with
 the color of the flowers to be photographed.</p>
 </div>
-<div id="turn-table" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Turn table<a href="materials.html#turn-table" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="turntable" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Turntable<a href="materials.html#turntable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We use an automated turntable and shutter release device (<a href="https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare">Syrp Genie
-mini II and turntable</a>) to rotate each flower on itself (360) and trigger a predetermined number of pictures from the camera to get pictures from all around the flower. The genie mini II has several hours of autonomy according to its use, but it can be plugged in a source of energy during the process (external battery, plug, or usb). This device is easily controlled and set remotely via its application "Syrp" (Figure <a href="materials.html#fig:Syrp">2.1</a>) on any kind of smartphone by Bluetooth (<a href="https://apps.apple.com/us/app/syrp/id1387335063">Appstore</a> or <a href="https://play.google.com/store/apps/details?id=nz.co.syrp.genie2&amp;hl=fr_CA&amp;gl=US">Playstore</a>) after the device has been paired with your phone and after any updates suggested by the device has been done.</p>
-<p>We also use a 1cm scale placed adjacently to the flower, and include a label describing the species name, collection number, date of collection, location, and coordinates.</p>
+mini II and turntable</a>) to rotate each flower around itself (360°) and trigger a predetermined number of pictures from the camera to get pictures from all around the flower. The Genie Mini II has several hours of autonomy depending on its use, but it can be plugged in a source of energy during the process (external battery, plug, or usb). This device is easily controlled and set remotely via its application "Syrp" (Figure <a href="materials.html#fig:Syrp">2.1</a>) on any kind of smartphone (although not all Android versions) with Bluetooth (<a href="https://apps.apple.com/us/app/syrp/id1387335063">Appstore</a> or <a href="https://play.google.com/store/apps/details?id=nz.co.syrp.genie2&amp;hl=fr_CA&amp;gl=US">Playstore</a>) after the device has been paired with your phone and after any updates suggested by the device has been done.</p>
+<p>We also use a 1 cm scale placed adjacently to the flower, and include a label describing the species name, collection number, date of collection, location, and coordinates.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Syrp"></span>
 <img src="Figures/Syrp_app.png" alt="Syrp application" width="20%" />
 <p class="caption">
@@ -205,14 +213,21 @@ Figure 2.1: Syrp application
 <div id="camera" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Camera<a href="materials.html#camera" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>It is important to have very sharp pictures for optimal model
-construction. However, a professional camera is not necessary. We
+reconstruction. Ideally, the whole flower should be in focus to maximize the amount
+of details captured. This could be achieved with focus bracketing (i.e., shooting a series of pictures of the flower at different focus distances) and subsequently, focus stacking (i.e., combining the series of pictures to produce a sharp image with a greater depth of field than any single image; Figure <a href="materials.html#fig:Focus-Stacking-Graphic">2.2</a>). Focus bracketing can be easily achieved with a camera that provides this option (we use Canon EOS 90D with a fixed macro lens EF 100mm f/2.8L MACRO IS USM), while focus stacking can be done using software like Helicon Focus (paid) or Enfuse (free in Linux).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Focus-Stacking-Graphic"></span>
+<img src="Figures/Focus_Stacking_Graphic.png" alt="A simplified visual summary of the focus stacking process. (1) Focus bracketing: The camera shoots a series of pictures at different focus distances. (2) Focus Stacking: The series of pictures is combined using specialised software. (3) Final Image: The final image is sharp, with a greater depth of field than any single image taken during focus bracketing. The black arrows show the parts of the flower in focus." width="100%" />
+<p class="caption">
+Figure 2.2: A simplified visual summary of the focus stacking process. (1) Focus bracketing: The camera shoots a series of pictures at different focus distances. (2) Focus Stacking: The series of pictures is combined using specialised software. (3) Final Image: The final image is sharp, with a greater depth of field than any single image taken during focus bracketing. The black arrows show the parts of the flower in focus.
+</p>
+</div>
+<p>However, using a professional camera and doing focus bracketing and stacking are not necessary. We also
 obtained good results with a Canon T2i/550D camera that shoots 18.0 MP
-RAW photos (5184 x 3456 pixels). We recommend a fixed macro lens (we use
-a 60mm fixed Canon lens). Avoid using a lens that isn’t fixed : zooming
+RAW photos (5184 x 3456 pixels) and a fixed macro lens (60mm f/2.8 Macro lens).</p>
+<p>In general, avoid using a lens that isn’t fixed; zooming
 in and out can create artifacts during the model reconstruction. Ideally
 the flower should take a large portion of the photographs for best
-results. We also use a flexible short tripod to support the camera and
-easily modify the angle at which we take each series of photos.</p>
+results. Depending on the weight of the camera, a flexible or a rigid tripod could be used. If a short flexible table-top tripod can safely support your camera and prevent its movement during the shooting, we recommend it for easier and quicker modification of the camera angle at which we take each series of photos. Otherwise, opt for a rigid collapsible tripod, as it is crucial to avoid camera movement, especially during focus bracketing.</p>
 </div>
 <div id="color-chart" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Color chart<a href="materials.html#color-chart" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -220,19 +235,19 @@ easily modify the angle at which we take each series of photos.</p>
 Photo
 2</a>.
 The main target that we use is the classic target with a 24-patch color
-reference target to create Digital Negative (DNG) (<span class="citation"><a href="#ref-Adobe2012DNG" role="doc-biblioref">Adobe Systems Incorporated</a> (<a href="#ref-Adobe2012DNG" role="doc-biblioref">2012</a>)</span>) camera
+reference target to create Digital Negative (DNG) (<span class="citation">Adobe Systems Incorporated (<a href="#ref-Adobe2012DNG">2012</a>)</span>) camera
 profiles from a raw photo (called DNG conversion), and the 75% neutral
 gray patch to calibrate for light exposure.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:xrite"></span>
 <img src="Figures/Color_chart_sRGB_values.png" alt="Xrite color chart details for standard Red Green and Blue (sRGB) values. The 75% neutral gray has values of 0.33 (85/255) for Red Green Blue channels in the LightRoom software" width="50%" />
 <p class="caption">
-Figure 2.2: Xrite color chart details for standard Red Green and Blue (sRGB) values. The 75% neutral gray has values of 0.33 (85/255) for Red Green Blue channels in the LightRoom software
+Figure 2.3: Xrite color chart details for standard Red Green and Blue (sRGB) values. The 75% neutral gray has values of 0.33 (85/255) for Red Green Blue channels in the LightRoom software
 </p>
 </div>
 </div>
 <div id="softwares" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Softwares<a href="materials.html#softwares" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To convert RAW photos (CR2 for Canon Raw Version 2 image files) to DNG
+<p>To convert RAW photos (CR2 or CR3 for Canon Raw Version 2 or 3 image files, respectively) to DNG
 files, we either use directly <a href="https://www.adobe.com/ca_fr/products/photoshop-lightroom-classic.html">Adobe Lightroom
 Classic</a>
 to export in DNG format the CR2 photos or <a href="https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html">Adobe DNG
@@ -242,16 +257,14 @@ Color
 Checker</a>
 software to create DCP camera profiles from DNG files, and Adobe
 Lightroom to use these profiles and apply them on an entire set of
-photos that need the same calibration. To reconstruct the 3D models from
-photos, we use <a href="https://www.agisoft.com/downloads/installer/">Agisoft
-Metashape</a>.</p>
+photos that need the same calibration. To do focus stacking, we first cluster the series of images to be combined based on time intervals using ExifTool and then we use Helicon Focus to stack them. Both can be easily done from the command line using the python scripts provided by the <a href="https://github.com/yuemeanshappy/photogram">Eaton Lab</a>. To reconstruct the 3D models from photos, we use <a href="https://www.agisoft.com/downloads/installer/">Agisoft Metashape</a>.</p>
 </div>
 <div id="flowers" class="section level2 hasAnchor" number="2.6">
 <h2><span class="header-section-number">2.6</span> Flowers<a href="materials.html#flowers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Collect fresh flowers from the plant, label them and store them in a
-cool place or with the tip of the peduncle in some water to prevent
+cool place or with the tip of the pedicel in some water to prevent
 accelerated wilting. Different flowers will wilt at different paces.
-Flowers are pinned through the floral receptacle or peduncle using
+Flowers are pinned through the floral receptacle or pedicel using
 entomological pins in dense foam at the center of the turntable.
 Alternatively, flowers can be secured in a truncated pipette tip, itself
 fixed on the turntable, or with alligator clips to rapidly fix the
@@ -291,27 +304,27 @@ landmarks positioning.</p>
 </tr>
 <tr class="even">
 <td>Camera</td>
-<td>Digital Single-Lens Reflex (DSLR) (e.g. Canon t2i)</td>
+<td>Digital Single-Lens Reflex (DSLR) (e.g., Canon t2i or Canon EOS 90D for taking images without or with focus bracketing, respectively)</td>
 <td>from  $500</td>
 </tr>
 <tr class="odd">
 <td>Macro lens</td>
-<td>A preferably fixed focal-length lens (e.g. Canon 60mm f/2.8 Macro lens)</td>
+<td>A preferably fixed focal-length lens (e.g., Canon 60mm f/2.8 Macro lens for the Canon t2i camera, or Canon EF 100mm f/2.8L MACRO IS USM for the Canon EOS 90D camera)</td>
 <td>from  $400</td>
 </tr>
 <tr class="even">
 <td>Tripod</td>
-<td>Preferably flexible, such as a Gorillapod</td>
-<td>e.g.  $80</td>
+<td>Preferably flexible (e.g. Gorillapod), or collapsible</td>
+<td>from  $30</td>
 </tr>
 <tr class="odd">
 <td>Stepping motor and turntable kit</td>
-<td>(<a href="https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare">Syrp Genie mini II and turntable</a>), Shoot smooth rotating video and interactive 360° images of objects. Full iOS and Android App control via Bluetooth. Battery life: 6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs</td>
+<td><a href="https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare">Syrp Genie mini II and turntable</a>, used to shoot smooth rotating video and interactive 360° images of objects. Full iOS and Android App control via Bluetooth. Battery life: 6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs</td>
 <td>$328</td>
 </tr>
 <tr class="even">
 <td>Lightbox</td>
-<td>A portable photo studio, e.g. <a href="https://ca.neewer.com/collections/softboxes-diffusers/products/neewer-professional-photo-light-box-kit-66600325">Neewer</a> Lightbox 20”/50cm foldable portable photography lighting kit (Neewer Technology Co. LTD, Shenzhen, China), adjustable brightness with 120 LED lights, CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature, needs to be powered by a portable battery in the field, white, grey, and black backdrops. In the bracket of light intensities possible for this lightbox, we used an intermediate light intensity. [maximum;usually used; minimum] lux light intensities correspond to [3140;2680;1330] lux for a white backdrop and [330;305;238] Lux with a black backdrop.</td>
+<td>A portable photo studio, e.g. <a href="https://ca.neewer.com/collections/softboxes-diffusers/products/neewer-professional-photo-light-box-kit-66600325">Neewer</a> Lightbox 20”/50cm foldable portable photography lighting kit (Neewer Technology Co. LTD, Shenzhen, China), adjustable brightness with 120 LED lights, CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature, needs to be powered by a portable battery in the field and comes with white, grey, black and orange backdrops. In the bracket of light intensities possible for this lightbox, we used an intermediate light intensity. [maximum;usually used; minimum] lux light intensities correspond to [3140;2680;1330] lux for a white backdrop and [330;305;238] lux with a black backdrop.</td>
 <td>e.g. $89</td>
 </tr>
 <tr class="odd">
@@ -326,7 +339,7 @@ landmarks positioning.</p>
 </tr>
 <tr class="odd">
 <td>Flower</td>
-<td>Freshly cut flower with peduncle and floral receptacle</td>
+<td>Freshly cut flower with pedicel and floral receptacle</td>
 <td>/</td>
 </tr>
 <tr class="even">
@@ -345,8 +358,8 @@ landmarks positioning.</p>
 <td>/</td>
 </tr>
 <tr class="odd">
-<td>Small block of dense foam</td>
-<td>To fix flowers in place with a pin at the center of the turntable</td>
+<td>Small block of dense foam attached to the center of a paper disk</td>
+<td>To fix flowers in place with a pin at the center of the turntable. The foam and the paper disk should have the same color as the backdrop used.</td>
 <td>/</td>
 </tr>
 <tr class="even">
@@ -382,6 +395,26 @@ landmarks positioning.</p>
 <tr class="even">
 <td>DNG conversion software</td>
 <td>Adobe DNG converter, to convert Camera Raw files from supported cameras to the more widely used DNG raw files</td>
+<td>Free</td>
+</tr>
+<tr class="odd">
+<td><strong>Focus stacking (optional)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Image clustering software</td>
+<td><a href="https://exiftool.org/">ExifTool</a>, to cluster the images taken with focus bracketing from each angle based on time intervals</td>
+<td>Free</td>
+</tr>
+<tr class="odd">
+<td>Focus stacking software</td>
+<td><a href="https://www.heliconsoft.com/heliconsoft-products/helicon-focus/">Helicon Focus Pro</a> (Mac OS X, Windows) or <a href="https://enblend.sourceforge.net/enfuse.doc/enfuse_4.2.xhtml/enfuse.html">Enfuse</a> (Linux), to focus stack the clustered images and produce a sharp image with a high depth of field</td>
+<td>Payment plans vary</td>
+</tr>
+<tr class="even">
+<td>Python scripts</td>
+<td><a href="https://github.com/yuemeanshappy/photogram">Python scripts</a> developed by the Eaton Lab to use ExifTool and Helicon Focus through the command line for faster processing</td>
 <td>Free</td>
 </tr>
 <tr class="odd">

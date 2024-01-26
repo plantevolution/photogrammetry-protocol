@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Flower photogrammetry and 3D modeling protocol</title>
   <meta name="description" content="This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)" />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Flower photogrammetry and 3D modeling protocol" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="http://www.plantevolution.org/photogrammetry-protocol/Figures/cover.jpg" />
   <meta property="og:description" content="This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)" />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta name="github-repo" content="plantevolution/photogrammetry-protocol" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Flower photogrammetry and 3D modeling protocol" />
@@ -22,12 +22,13 @@
 
 <meta name="author" content="Marion Leménager" />
 <meta name="author" content="Jérôme Burkiewicz" />
+<meta name="author" content="Loudmila Jelinscaia Lagou" />
 <meta name="author" content="Daniel Schoen" />
 <meta name="author" content="Diana Constanza Diaz Cardona" />
 <meta name="author" content="Simon Joly" />
 
 
-<meta name="date" content="2023-12-06" />
+<meta name="date" content="2024-01-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,32 +60,6 @@
 
 
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -111,7 +86,7 @@ div.csl-indent {
 <li class="chapter" data-level="2" data-path="materials.html"><a href="materials.html"><i class="fa fa-check"></i><b>2</b> Materials</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="materials.html"><a href="materials.html#lighting"><i class="fa fa-check"></i><b>2.1</b> Lighting</a></li>
-<li class="chapter" data-level="2.2" data-path="materials.html"><a href="materials.html#turn-table"><i class="fa fa-check"></i><b>2.2</b> Turn table</a></li>
+<li class="chapter" data-level="2.2" data-path="materials.html"><a href="materials.html#turntable"><i class="fa fa-check"></i><b>2.2</b> Turntable</a></li>
 <li class="chapter" data-level="2.3" data-path="materials.html"><a href="materials.html#camera"><i class="fa fa-check"></i><b>2.3</b> Camera</a></li>
 <li class="chapter" data-level="2.4" data-path="materials.html"><a href="materials.html#color-chart"><i class="fa fa-check"></i><b>2.4</b> Color chart</a></li>
 <li class="chapter" data-level="2.5" data-path="materials.html"><a href="materials.html#softwares"><i class="fa fa-check"></i><b>2.5</b> Softwares</a></li>
@@ -123,15 +98,15 @@ div.csl-indent {
 <li class="chapter" data-level="3.1" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#camera-and-tripod-settings-and-preparation"><i class="fa fa-check"></i><b>3.1</b> Camera and tripod settings and preparation</a>
 <ul>
 <li class="chapter" data-level="3.1.1" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#camera-settings"><i class="fa fa-check"></i><b>3.1.1</b> Camera settings</a></li>
-<li class="chapter" data-level="3.1.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#optional-custom-camera-white-balance"><i class="fa fa-check"></i><b>3.1.2</b> Optional : custom camera white balance</a></li>
+<li class="chapter" data-level="3.1.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#optional-custom-camera-white-balance"><i class="fa fa-check"></i><b>3.1.2</b> Optional: custom camera white balance</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#turn-table-settings-and-preparation"><i class="fa fa-check"></i><b>3.2</b> Turn table settings and preparation</a></li>
+<li class="chapter" data-level="3.2" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#turntable-settings-and-preparation"><i class="fa fa-check"></i><b>3.2</b> Turntable settings and preparation</a></li>
 <li class="chapter" data-level="3.3" data-path="settings-and-preparation.html"><a href="settings-and-preparation.html#summary-of-settings"><i class="fa fa-check"></i><b>3.3</b> Summary of settings</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html"><i class="fa fa-check"></i><b>4</b> Image capture step-by-step</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#take-a-picture-of-the-color-chart"><i class="fa fa-check"></i><b>4.1</b> Take a picture of the color chart</a></li>
-<li class="chapter" data-level="4.2" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#flower-placement-image-capture"><i class="fa fa-check"></i><b>4.2</b> Flower placement &amp; Image capture</a></li>
+<li class="chapter" data-level="4.2" data-path="image-capture-step-by-step.html"><a href="image-capture-step-by-step.html#flower-placement-image-capture"><i class="fa fa-check"></i><b>4.2</b> Flower placement &amp; image capture</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="image-post-processing.html"><a href="image-post-processing.html"><i class="fa fa-check"></i><b>5</b> Image post processing</a>
 <ul>
@@ -139,9 +114,12 @@ div.csl-indent {
 <li class="chapter" data-level="5.2" data-path="image-post-processing.html"><a href="image-post-processing.html#image-color-calibration"><i class="fa fa-check"></i><b>5.2</b> Image color calibration</a>
 <ul>
 <li class="chapter" data-level="5.2.1" data-path="image-post-processing.html"><a href="image-post-processing.html#creating-color-profiles"><i class="fa fa-check"></i><b>5.2.1</b> Creating color profiles</a></li>
-<li class="chapter" data-level="5.2.2" data-path="image-post-processing.html"><a href="image-post-processing.html#color-and-illuminance-calibration-from-profiles"><i class="fa fa-check"></i><b>5.2.2</b> Color and illuminance calibration from profiles</a></li>
-<li class="chapter" data-level="5.2.3" data-path="image-post-processing.html"><a href="image-post-processing.html#export-calibrated-files-to-jpg-format"><i class="fa fa-check"></i><b>5.2.3</b> Export calibrated files to jpg format</a></li>
+<li class="chapter" data-level="5.2.2" data-path="image-post-processing.html"><a href="image-post-processing.html#color-and-exposure-calibration-from-profiles"><i class="fa fa-check"></i><b>5.2.2</b> Color and exposure calibration from profiles</a></li>
+<li class="chapter" data-level="5.2.3" data-path="image-post-processing.html"><a href="image-post-processing.html#export-calibrated-files"><i class="fa fa-check"></i><b>5.2.3</b> Export calibrated files</a></li>
 </ul></li>
+<li class="chapter" data-level="5.3" data-path="image-post-processing.html"><a href="image-post-processing.html#image-clustering-one-folder-at-a-time"><i class="fa fa-check"></i><b>5.3</b> Image clustering (one folder at a time)</a></li>
+<li class="chapter" data-level="5.4" data-path="image-post-processing.html"><a href="image-post-processing.html#focus-stacking-one-folder-at-a-time"><i class="fa fa-check"></i><b>5.4</b> Focus stacking (one folder at a time)</a></li>
+<li class="chapter" data-level="5.5" data-path="image-post-processing.html"><a href="image-post-processing.html#alternatively-cluster-and-focus-stack-photos-from-multiple-folders-at-once"><i class="fa fa-check"></i><b>5.5</b> Alternatively: Cluster and focus stack photos from multiple folders at once</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html"><i class="fa fa-check"></i><b>6</b> 3D model reconstruction in Agisoft Metashape</a>
 <ul>
@@ -151,7 +129,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.4" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#photo-importation"><i class="fa fa-check"></i><b>6.4</b> Photo importation</a></li>
 <li class="chapter" data-level="6.5" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#mask-application"><i class="fa fa-check"></i><b>6.5</b> Mask application</a></li>
 <li class="chapter" data-level="6.6" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#masks-touch-ups"><i class="fa fa-check"></i><b>6.6</b> Masks touch ups</a></li>
-<li class="chapter" data-level="6.7" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#camera-alignment"><i class="fa fa-check"></i><b>6.7</b> Camera alignment</a></li>
+<li class="chapter" data-level="6.7" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#image-alignment"><i class="fa fa-check"></i><b>6.7</b> Image alignment</a></li>
 <li class="chapter" data-level="6.8" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#align-chunks-together"><i class="fa fa-check"></i><b>6.8</b> Align chunks together</a></li>
 <li class="chapter" data-level="6.9" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#merge-chunks"><i class="fa fa-check"></i><b>6.9</b> Merge chunks</a></li>
 <li class="chapter" data-level="6.10" data-path="d-model-reconstruction-in-agisoft-metashape.html"><a href="d-model-reconstruction-in-agisoft-metashape.html#build-3d-mesh"><i class="fa fa-check"></i><b>6.10</b> Build 3D mesh</a></li>
@@ -186,10 +164,11 @@ div.csl-indent {
 <h1 class="title">Flower photogrammetry and 3D modeling protocol</h1>
 <p class="author"><em>Marion Leménager</em></p>
 <p class="author"><em>Jérôme Burkiewicz</em></p>
+<p class="author"><em>Loudmila Jelinscaia Lagou</em></p>
 <p class="author"><em>Daniel Schoen</em></p>
 <p class="author"><em>Diana Constanza Diaz Cardona</em></p>
 <p class="author"><em>Simon Joly</em></p>
-<p class="date"><em>2023-12-06</em></p>
+<p class="date"><em>2024-01-26</em></p>
 </div>
 <div id="about" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">1</span> About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -198,7 +177,7 @@ div.csl-indent {
 <p><img src="Figures/cover.jpg" style="width:100.0%" /></p>
 <div id="citation" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Citation<a href="index.html#citation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Leménager, M., J. Burkiewicz, D. J. Schoen, S. Joly. Studying flowers in 3D using photogrammetry. New Phytologist. Accepted pending minor revisions.</p>
+<p>Leménager, M., J. Burkiewicz, D. J. Schoen, S. Joly. Studying flowers in 3D using photogrammetry. New Phytologist. 237(5): 1922-1933.</p>
 </div>
 <div id="contributing" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Contributing<a href="index.html#contributing" class="anchor-section" aria-label="Anchor link to header"></a></h2>

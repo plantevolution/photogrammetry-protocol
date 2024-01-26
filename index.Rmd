@@ -10,13 +10,14 @@ author:
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, packages.bib]
-url: http://www.plantevolution.org/photogrammetry-protocol/
+bibliography:
+- book.bib
+url: "http://www.plantevolution.org/photogrammetry-protocol/"
 cover-image: Figures/cover.jpg
 description: |
   This protocol is an evolving protocol used in the Joly lab at the Université de Montréal (Canada)
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: "plantevolution/photogrammetry-protocol"
 ---
 
 # About
@@ -29,7 +30,7 @@ This protocol describes how to obtain three-dimensional (3D) reconstructions of 
 
 ## Citation
 
-Leménager, M., J. Burkiewicz, D. J. Schoen, S. Joly. Studying flowers in 3D using photogrammetry. New Phytologist. Accepted pending minor revisions. 
+Leménager, M., J. Burkiewicz, D. J. Schoen, S. Joly. Studying flowers in 3D using photogrammetry. New Phytologist. 237(5): 1922-1933.
 
 ## Contributing
 

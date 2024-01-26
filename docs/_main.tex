@@ -4,10 +4,6 @@
 %
 \documentclass[
 ]{book}
-\title{Flower photogrammetry and 3D modeling protocol}
-\author{Marion Leménager \and Jérôme Burkiewicz \and Daniel Schoen \and Diana Constanza Diaz Cardona \and Simon Joly}
-\date{2022-09-26}
-
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -37,14 +33,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Flower photogrammetry and 3D modeling protocol},
-  pdfauthor={Marion Leménager; Jérôme Burkiewicz; Daniel Schoen; Diana Constanza Diaz Cardona; Simon Joly},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -78,6 +66,18 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{plainnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Flower photogrammetry and 3D modeling protocol},
+  pdfauthor={Marion Leménager; Jérôme Burkiewicz; Loudmila Jelinscaia Lagou; Daniel Schoen; Diana Constanza Diaz Cardona; Simon Joly},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Flower photogrammetry and 3D modeling protocol}
+\author{Marion Leménager \and Jérôme Burkiewicz \and Loudmila Jelinscaia Lagou \and Daniel Schoen \and Diana Constanza Diaz Cardona \and Simon Joly}
+\date{2024-01-26}
 
 \begin{document}
 \maketitle
@@ -98,7 +98,7 @@ This protocol describes how to obtain three-dimensional (3D) reconstructions of 
 \hypertarget{citation}{%
 \section{Citation}\label{citation}}
 
-Leménager, M., J. Burkiewicz, D. J. Schoen, S. Joly. Studying flowers in 3D using photogrammetry. New Phytologist. Accepted pending minor revisions.
+Leménager, M., J. Burkiewicz, D. J. Schoen, S. Joly. Studying flowers in 3D using photogrammetry. New Phytologist. 237(5): 1922-1933.
 
 \hypertarget{contributing}{%
 \section{Contributing}\label{contributing}}
@@ -124,13 +124,13 @@ a maximum. This lightbox needs to be powered from an outlet or from an
 external battery. The color of the background used should contrast with
 the color of the flowers to be photographed.
 
-\hypertarget{turn-table}{%
-\section{Turn table}\label{turn-table}}
+\hypertarget{turntable}{%
+\section{Turntable}\label{turntable}}
 
 We use an automated turntable and shutter release device (\href{https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare}{Syrp Genie
-mini II and turntable}) to rotate each flower on itself (360) and trigger a predetermined number of pictures from the camera to get pictures from all around the flower. The genie mini II has several hours of autonomy according to its use, but it can be plugged in a source of energy during the process (external battery, plug, or usb). This device is easily controlled and set remotely via its application "Syrp" (Figure \ref{fig:Syrp}) on any kind of smartphone by Bluetooth (\href{https://apps.apple.com/us/app/syrp/id1387335063}{Appstore} or \href{https://play.google.com/store/apps/details?id=nz.co.syrp.genie2\&hl=fr_CA\&gl=US}{Playstore}) after the device has been paired with your phone and after any updates suggested by the device has been done.
+mini II and turntable}) to rotate each flower around itself (360°) and trigger a predetermined number of pictures from the camera to get pictures from all around the flower. The Genie Mini II has several hours of autonomy depending on its use, but it can be plugged in a source of energy during the process (external battery, plug, or usb). This device is easily controlled and set remotely via its application "Syrp" (Figure \ref{fig:Syrp}) on any kind of smartphone (although not all Android versions) with Bluetooth (\href{https://apps.apple.com/us/app/syrp/id1387335063}{Appstore} or \href{https://play.google.com/store/apps/details?id=nz.co.syrp.genie2\&hl=fr_CA\&gl=US}{Playstore}) after the device has been paired with your phone and after any updates suggested by the device has been done.
 
-We also use a 1cm scale placed adjacently to the flower, and include a label describing the species name, collection number, date of collection, location, and coordinates.
+We also use a 1 cm scale placed adjacently to the flower, and include a label describing the species name, collection number, date of collection, location, and coordinates.
 
 \begin{figure}
 
@@ -145,14 +145,26 @@ We also use a 1cm scale placed adjacently to the flower, and include a label des
 \section{Camera}\label{camera}}
 
 It is important to have very sharp pictures for optimal model
-construction. However, a professional camera is not necessary. We
+reconstruction. Ideally, the whole flower should be in focus to maximize the amount
+of details captured. This could be achieved with focus bracketing (i.e., shooting a series of pictures of the flower at different focus distances) and subsequently, focus stacking (i.e., combining the series of pictures to produce a sharp image with a greater depth of field than any single image; Figure \ref{fig:Focus-Stacking-Graphic}). Focus bracketing can be easily achieved with a camera that provides this option (we use Canon EOS 90D with a fixed macro lens EF 100mm f/2.8L MACRO IS USM), while focus stacking can be done using software like Helicon Focus (paid) or Enfuse (free in Linux).
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/Focus_Stacking_Graphic} 
+
+}
+
+\caption{A simplified visual summary of the focus stacking process. (1) Focus bracketing: The camera shoots a series of pictures at different focus distances. (2) Focus Stacking: The series of pictures is combined using specialised software. (3) Final Image: The final image is sharp, with a greater depth of field than any single image taken during focus bracketing. The black arrows show the parts of the flower in focus.}\label{fig:Focus-Stacking-Graphic}
+\end{figure}
+
+However, using a professional camera and doing focus bracketing and stacking are not necessary. We also
 obtained good results with a Canon T2i/550D camera that shoots 18.0 MP
-RAW photos (5184 x 3456 pixels). We recommend a fixed macro lens (we use
-a 60mm fixed Canon lens). Avoid using a lens that isn't fixed : zooming
+RAW photos (5184 x 3456 pixels) and a fixed macro lens (60mm f/2.8 Macro lens).
+
+In general, avoid using a lens that isn't fixed; zooming
 in and out can create artifacts during the model reconstruction. Ideally
 the flower should take a large portion of the photographs for best
-results. We also use a flexible short tripod to support the camera and
-easily modify the angle at which we take each series of photos.
+results. Depending on the weight of the camera, a flexible or a rigid tripod could be used. If a short flexible table-top tripod can safely support your camera and prevent its movement during the shooting, we recommend it for easier and quicker modification of the camera angle at which we take each series of photos. Otherwise, opt for a rigid collapsible tripod, as it is crucial to avoid camera movement, especially during focus bracketing.
 
 \hypertarget{color-chart}{%
 \section{Color chart}\label{color-chart}}
@@ -177,7 +189,7 @@ gray patch to calibrate for light exposure.
 \hypertarget{softwares}{%
 \section{Softwares}\label{softwares}}
 
-To convert RAW photos (CR2 for Canon Raw Version 2 image files) to DNG
+To convert RAW photos (CR2 or CR3 for Canon Raw Version 2 or 3 image files, respectively) to DNG
 files, we either use directly \href{https://www.adobe.com/ca_fr/products/photoshop-lightroom-classic.html}{Adobe Lightroom
 Classic}
 to export in DNG format the CR2 photos or \href{https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html}{Adobe DNG
@@ -187,17 +199,15 @@ Color
 Checker}
 software to create DCP camera profiles from DNG files, and Adobe
 Lightroom to use these profiles and apply them on an entire set of
-photos that need the same calibration. To reconstruct the 3D models from
-photos, we use \href{https://www.agisoft.com/downloads/installer/}{Agisoft
-Metashape}.
+photos that need the same calibration. To do focus stacking, we first cluster the series of images to be combined based on time intervals using ExifTool and then we use Helicon Focus to stack them. Both can be easily done from the command line using the python scripts provided by the \href{https://github.com/yuemeanshappy/photogram}{Eaton Lab}. To reconstruct the 3D models from photos, we use \href{https://www.agisoft.com/downloads/installer/}{Agisoft Metashape}.
 
 \hypertarget{flowers}{%
 \section{Flowers}\label{flowers}}
 
 Collect fresh flowers from the plant, label them and store them in a
-cool place or with the tip of the peduncle in some water to prevent
+cool place or with the tip of the pedicel in some water to prevent
 accelerated wilting. Different flowers will wilt at different paces.
-Flowers are pinned through the floral receptacle or peduncle using
+Flowers are pinned through the floral receptacle or pedicel using
 entomological pins in dense foam at the center of the turntable.
 Alternatively, flowers can be secured in a truncated pipette tip, itself
 fixed on the turntable, or with alligator clips to rapidly fix the
@@ -220,10 +230,10 @@ landmarks positioning.
 \section{Summary of materials and software}\label{summary-of-materials-and-software}}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.33}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.33}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.33}}@{}}
-\toprule
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Materials}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -231,21 +241,21 @@ landmarks positioning.
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Price} (USD)
 \end{minipage} \\
-\midrule
+\midrule()
 \endhead
 \textbf{Photography} & & \\
-Camera & Digital Single-Lens Reflex (DSLR) (e.g.~Canon t2i) & from~ \$500 \\
-Macro lens & A preferably fixed focal-length lens (e.g.~Canon 60mm f/2.8 Macro lens) & from~ \$400 \\
-Tripod & Preferably flexible, such as a Gorillapod & e.g.~ \$80 \\
-Stepping motor and turntable kit & (\href{https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare}{Syrp Genie mini II and turntable}), Shoot smooth rotating video and interactive 360° images of objects. Full iOS and Android App control via Bluetooth. Battery life: 6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs & \$328 \\
-Lightbox & A portable photo studio, e.g.~\href{https://ca.neewer.com/collections/softboxes-diffusers/products/neewer-professional-photo-light-box-kit-66600325}{Neewer} Lightbox 20''/50cm foldable portable photography lighting kit (Neewer Technology Co.~LTD, Shenzhen, China), adjustable brightness with 120 LED lights, CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature, needs to be powered by a portable battery in the field, white, grey, and black backdrops. In the bracket of light intensities possible for this lightbox, we used an intermediate light intensity. {[}maximum;usually used; minimum{]} lux light intensities correspond to {[}3140;2680;1330{]} lux for a white backdrop and {[}330;305;238{]} Lux with a black backdrop. & e.g.~\$89 \\
+Camera & Digital Single-Lens Reflex (DSLR) (e.g., Canon t2i or Canon EOS 90D for taking images without or with focus bracketing, respectively) & from~ \$500 \\
+Macro lens & A preferably fixed focal-length lens (e.g., Canon 60mm f/2.8 Macro lens for the Canon t2i camera, or Canon EF 100mm f/2.8L MACRO IS USM for the Canon EOS 90D camera) & from~ \$400 \\
+Tripod & Preferably flexible (e.g.~Gorillapod), or collapsible & from~ \$30 \\
+Stepping motor and turntable kit & \href{https://www.bhphotovideo.com/c/product/1486043-REG/syrp_sykit_0043_genie_mini_ii_turntable.html/quick-compare}{Syrp Genie mini II and turntable}, used to shoot smooth rotating video and interactive 360° images of objects. Full iOS and Android App control via Bluetooth. Battery life: 6hrs video and 15hrs time-lapse. Panning payload 8.8lbs/4kgs & \$328 \\
+Lightbox & A portable photo studio, e.g.~\href{https://ca.neewer.com/collections/softboxes-diffusers/products/neewer-professional-photo-light-box-kit-66600325}{Neewer} Lightbox 20''/50cm foldable portable photography lighting kit (Neewer Technology Co.~LTD, Shenzhen, China), adjustable brightness with 120 LED lights, CRI (colour Rendering Index) of 85+, 6000-6500K colour temperature, needs to be powered by a portable battery in the field and comes with white, grey, black and orange backdrops. In the bracket of light intensities possible for this lightbox, we used an intermediate light intensity. {[}maximum;usually used; minimum{]} lux light intensities correspond to {[}3140;2680;1330{]} lux for a white backdrop and {[}330;305;238{]} lux with a black backdrop. & e.g.~\$89 \\
 External battery & Powering source for in-field photo capture, essentially for the lightbox or to recharge batteries & optional \\
 \textbf{Flower mounting and identification} & & \\
-Flower & Freshly cut flower with peduncle and floral receptacle & / \\
+Flower & Freshly cut flower with pedicel and floral receptacle & / \\
 Labels and container & Identification and storage of fresh flowers to avoid damage and avoid wilting & / \\
 Turntable labels & To provide information on species, collector, collection number, date, locality, and coordinates, and the chunk number. To use as a separate photo before each run of photos. & / \\
 Razor blade & To remove flower parts (e.g., sepals) & / \\
-Small block of dense foam & To fix flowers in place with a pin at the center of the turntable & / \\
+Small block of dense foam attached to the center of a paper disk & To fix flowers in place with a pin at the center of the turntable. The foam and the paper disk should have the same color as the backdrop used. & / \\
 Entomological pins & To pin through the peduncle or floral receptacle and fix the flower on the turntable. & / \\
 Scale & A 1 cm scale to use as reference & / \\
 \textbf{Colour calibration} & & \\
@@ -253,9 +263,13 @@ Color chart & A color reference to calibrate RAW photos (e.g.~\href{https://www.
 Color calibration software & ColorChecker Camera Calibration, Xrite software for automatic color profile creation & Free \\
 Photo editing software & Adobe Photoshop Lightroom, editing software for image color calibration in batch & Payment plans vary \\
 DNG conversion software & Adobe DNG converter, to convert Camera Raw files from supported cameras to the more widely used DNG raw files & Free \\
+\textbf{Focus stacking (optional)} & & \\
+Image clustering software & \href{https://exiftool.org/}{ExifTool}, to cluster the images taken with focus bracketing from each angle based on time intervals & Free \\
+Focus stacking software & \href{https://www.heliconsoft.com/heliconsoft-products/helicon-focus/}{Helicon Focus Pro} (Mac OS X, Windows) or \href{https://enblend.sourceforge.net/enfuse.doc/enfuse_4.2.xhtml/enfuse.html}{Enfuse} (Linux), to focus stack the clustered images and produce a sharp image with a high depth of field & Payment plans vary \\
+Python scripts & \href{https://github.com/yuemeanshappy/photogram}{Python scripts} developed by the Eaton Lab to use ExifTool and Helicon Focus through the command line for faster processing & Free \\
 \textbf{Model reconstruction} & & \\
 3D reconstruction from photogrammetry software & Agisoft Metashape Pro Software & \$549 Academic price \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 \hypertarget{settings-and-preparation}{%
@@ -264,20 +278,9 @@ DNG conversion software & Adobe DNG converter, to convert Camera Raw files from 
 \hypertarget{camera-and-tripod-settings-and-preparation}{%
 \section{Camera and tripod settings and preparation}\label{camera-and-tripod-settings-and-preparation}}
 
-To obtain the best picture quality for model reconstruction, we need an optimal combination of the light sensibility of the sensor (ISO), the duration of exposure and the focal of the objective (F). As mentioned, it is preferable to use a fixed lens (one that doesn't allow zooming) to facilitate the model reconstruction in the processing step because the software can't take zooming into account in the reconstruction process. Maximizing the light source allows us to use the lowest ISO to get crisper images. Adapted time exposure to allow the right amount of light to go to the sensor, avoids low key nor high key photo (under/over exposed photo). This may be adapted according to the subject (light or dark colored subject or background) or if different lighting conditions are used.
+To obtain the best picture quality for model reconstruction, we need an optimal combination of the light sensibility of the sensor (ISO), the duration of exposure and the focal of the objective (F). As mentioned, it is preferable to use a fixed lens (one that doesn't allow zooming) to facilitate the model reconstruction in the processing step because the software can't take zooming into account in the reconstruction process. Maximizing the light source allows us to use the lowest ISO to get crisper images. Adjust the time exposure to allow the right amount of light to go to the sensor, avoiding low key and high key photos (i.e., under/over exposed photos). This may be adjusted according to the subject (light or dark colored subject or background) or if different lighting conditions are used.
 
-To maximize the depth of field without lowering the image quality, using the manual option on the camera dial, the focal F should be set to F16. Use the manual focus setting on the side of the lens (Figure \ref{fig:camera-arrows}) to avoid camera trigger malfunction when the flowers doesn't land on the detector. If the flower is off centered during rotation, and the automatic focus can't focus (on the background) the camera trigger is prevented with the automatic focus. On manual, the camera will always be triggered by the turn table, even if the focus isn't optimal. Because the subject is moving and may be off centered on the turntable, the focus may need to be adapted while the turn table runs. For this you can pause the turntable, manually adjust the focus, and resume the spin.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.33\linewidth]{Figures/camera_arrows} 
-
-}
-
-\caption{Camera and lens used to take RAW photos. The red arrows (from top to bottom) depict the button to get manual focus, the ISO button and the manual parameter on the camera dial.}\label{fig:camera-arrows}
-\end{figure}
-
-A flexible tripod (Figure \ref{fig:tripod}) is used to adjust several camera heights, high, middle, and low, close to the subject.
+A flexible tripod (Figure \ref{fig:flexible-tripod}) can be used to easily and quickly adjust several camera heights (high, middle, and low) close to the subject. If this option cannot safely support your camera and prevent its movement during the shooting, opt for a rigid collapsible tripod, as it is crucial to avoid camera movement, especially during focus bracketing (Figure \ref{fig:collapsible-tripod}).
 
 \begin{figure}
 
@@ -285,22 +288,37 @@ A flexible tripod (Figure \ref{fig:tripod}) is used to adjust several camera hei
 
 }
 
-\caption{Flexible tripod used to adjust camera positions.}\label{fig:tripod}
+\caption{Flexible tripod.}\label{fig:flexible-tripod}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.33\linewidth]{Figures/Collapsible_tripod} 
+
+}
+
+\caption{Collapsible tripod.}\label{fig:collapsible-tripod}
 \end{figure}
 
 \hypertarget{camera-settings}{%
 \subsection{Camera settings}\label{camera-settings}}
 
-The standard settings have to be adjusted depending on the flower
-(colour mostly and conditions). We often use the following settings :
-exposure time (shutter speed) 1/20s, F/16 focal, ISO 100, standard
-exposition on the light meter, and we save pictures as RAW files (ML
-setting on the camera display) format to be able to post-process them
-for color calibration (Figure \ref{fig:camera-settings}). A RAW photo of the color chart with an
-identical set of lighting conditions and camera settings as the flower
-to be photographed is needed for each flower photos series. If several
-flowers are processed one after the other without variation of light
-conditions, only one chart photo is needed.
+The standard settings have to be adjusted depending on the flower (mostly colour and conditions).
+
+\hypertarget{without-focus-stacking}{%
+\subsubsection{Without focus stacking}\label{without-focus-stacking}}
+
+If not doing focus stacking, we often use the following settings: M (Manual Exposure) mode dial,
+1/20s exposure time (shutter speed), F/16 aperture, ISO 100, and standard
+exposure on the light meter. Using the ``Manual Exposure'' on the camera dial and
+setting the focal F to F16 will maximize the depth of field without lowering the image quality.
+
+Use the manual focus setting on the side of the lens (Figure \ref{fig:camera-arrows-no-FS}) to avoid camera trigger malfunction when the flower doesn't land on the detector. If the focus setting is set to automatic and the flower is off centered during rotation, the camera might not be able to focus (on the background) and thus, prevent the camera trigger. On manual, the camera will always be triggered by the turntable, even if the focus isn't optimal.
+
+Because the subject is moving and may be off centered on the turntable, the focus may need to be adjusted while the turntable runs. For this you can pause the turntable, manually adjust the focus, and resume the spin.
+
+In general, we save pictures as RAW files (ML setting on the camera display) to be able to post-process them
+for color calibration (Figure \ref{fig:camera-settings-no-FS}). A RAW photo of the color chart with an identical set of lighting conditions and camera settings as the flower to be photographed is needed for each flower photos series. If several flowers are processed one after the other without variation of light conditions, only one chart photo is needed.
 
 \begin{quote}
 The nicer and the sharper the photographs, the easier it will be to
@@ -311,18 +329,65 @@ attention to these while taking the pictures.
 
 \begin{figure}
 
+{\centering \includegraphics[width=0.33\linewidth]{Figures/camera_arrows} 
+
+}
+
+\caption{Camera (Canon T2i/550D) and lens (60mm f/2.8 Macro lens) used to take RAW photos. The red arrows (from top to bottom) depict the button to get manual focus, the ISO button and the Manual Exposure mode dial.}\label{fig:camera-arrows-no-FS}
+\end{figure}
+
+\begin{figure}
+
 {\centering \includegraphics[width=0.5\linewidth]{Figures/camera_settings} 
 
 }
 
-\caption{Camera settings interface of the Canon t2i/550D.}\label{fig:camera-settings}
+\caption{Camera settings interface of the Canon t2i/550D (no focus stacking).}\label{fig:camera-settings-no-FS}
+\end{figure}
+
+\hypertarget{with-focus-stacking}{%
+\subsubsection{With focus stacking}\label{with-focus-stacking}}
+
+If you decide to do focus stacking for your project, check the manual of your camera for optimal parameters during focus bracketing as they may slightly differ from what we use. For a Canon EOS 90D camera, we use the following settings: M (Manual Exposure) mode dial, 1/20 exposure time, F/11 aperture, ISO 100, Auto Focus (AF) lens focus mode, RAW image format (Figure \ref{fig:camera-settings-FS}, Figure \ref{fig:camera-arrows-FS}).We usually use the \emph{Zone AF} method and enable \emph{Continuous AF} (Shooting Menu, Tab 6).
+
+Turn off the \emph{Image Review} option (Shooting Menu, Tab 1) to prevent delays after taking each set of pictures. To enable focus bracketing on EOS 90D, press the ``START-STOP'' button to enter the \emph{Live View Shooting Mode}, then enable \emph{Focus Bracketing} (Shooting Menu, Tab 5). If using an EF 100mm f/2.8L MACRO IS USM lens, disable \emph{Exposure Smoothing} (option within \emph{Focus Bracketing}), otherwise it may cause changes in image brightness.
+
+The optimal number of shots and focus increments depend on the size of the flower, as well as its position and distance from the camera. For example, from the highest camera position, 8 images with a focus increment of 4 works good for a \textasciitilde2.5x1x1cm (LxWxH) tubular flower, but from an en-face camera angle (i.e.~the flower opening facing the camera), 10-12 images with a focus increment of 3 may work better. Test what parameters would produce the smallest number of shots with each part of your flower in focus in each case. Generally, the higher the number of shots, the smaller the focus increments can be.
+
+If the camera fails to capture all parts of the flower in focus, the turntable can be paused to make the appropriate adjustments. This may be the number of shots and focus increments, and/or the starting focal point, which should ideally be on the flower part nearest to the lens. Following the adjustment, the spin may be resumed to continue with image capturing. To save time, optimize the number of shots and focus increments from the start to avoid adjustments during image capturing, and help the camera focus by tapping on the part of the flower nearest to the lens after each rotation, before the camera is triggered. This part will be in focus in the first image taken at each rotation point, while the focus will gradually shift to points further from the lens with each subsequent image.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{Figures/Canon_EOS_90D_buttons} 
+
+}
+
+\caption{Camera (Canon EOS 90D) and lens (EF 100m f/2.8L MACRO IS USM) used to take RAW photos for focus stacking. Arrow on the lens: Focus mode button set to Auto Focus (AF). Arrows on the camera body (from top to bottom): ISO button, Manual Exposure mode dial and "START-STOP" button (for *Live View Shooting Mode*).}\label{fig:camera-arrows-FS}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Figures/Canon_EOS_90D_settings} 
+
+}
+
+\caption{Camera settings interface of the Canon EOS 90D, used for projects with focus stacking.}\label{fig:camera-settings-FS}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Figures/Focus_bracketing_settings} 
+
+}
+
+\caption{Focus bracketing settings of the Canon EOS 90D.}\label{fig:focus-stacking-settings}
 \end{figure}
 
 \hypertarget{optional-custom-camera-white-balance}{%
-\subsection{Optional : custom camera white balance}\label{optional-custom-camera-white-balance}}
+\subsection{Optional: custom camera white balance}\label{optional-custom-camera-white-balance}}
 
 Optionally, you can begin by setting a personalized white balance (WB) in
-your camera with the light gray scale on the chart :
+your camera with the light gray scale on the chart:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -340,7 +405,7 @@ section only helps to have a better preview of the photos.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.5\linewidth]{Figures/Custom WB setting} 
+{\centering \includegraphics[width=0.5\linewidth]{Figures/Custom_WB_setting} 
 
 }
 
@@ -349,19 +414,18 @@ section only helps to have a better preview of the photos.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.5\linewidth]{Figures/Custom WB selection} 
+{\centering \includegraphics[width=0.5\linewidth]{Figures/Custom_WB_selection} 
 
 }
 
 \caption{How to select a custom white balance.}\label{fig:WB2}
 \end{figure}
 
-\hypertarget{turn-table-settings-and-preparation}{%
-\section{Turn table settings and preparation}\label{turn-table-settings-and-preparation}}
+\hypertarget{turntable-settings-and-preparation}{%
+\section{Turntable settings and preparation}\label{turntable-settings-and-preparation}}
 
-For each run (one 360 spin of the turn table), we use a wait time of 2s
-to allow the camera time to save the images on the SD card after it is
-triggered, and the flower to stabilize after each rotation.
+If not doing focus stacking, for each run (one 360° spin of the turntable), we use a wait time of 2s
+to allow the camera time to save the images on the SD card after it is triggered, and the flower to stabilize after each rotation. If doing focus stacking, we use a wait time of 6-8s depending on the number of shots and focus increments.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -375,24 +439,24 @@ triggered, and the flower to stabilize after each rotation.
   Connect the Syrp Genie II to your device, and do the updates if
   required (needs an internet connection).
 \item
-  Click on \emph{create content} \textgreater{} \emph{turntable} (Figures
+  Click on \emph{Create Content} \textgreater{} \emph{Turntable} (Figures
   \ref{fig:genie-root}, \ref{fig:genie-content}).
 \item
   Make sure the turntable orientation is inverted in the detailed settings
   (Figure \ref{fig:genie-settings})
 \item
   In parameters (Figure \ref{fig:genie-record}), select 20 photos for
-  each run, and 2s of
-  waiting (move-wait-shoot-wait-move). If it is too quick, some
+  each run, and the appropriate amount of waiting time depending on if you are doing focus stacking (6-8s)
+  or not (2s; move-wait-shoot-wait-move). If it is too quick, some
   pictures won't be able to be saved as the camera needs a delay to
   save them on the memory card. The spinning device will take the
   first picture then proceed to a move-shoot-move run until the last
   photo.
 \item
-  Place the white background circle on the turntable to contrast with
+  Place the white background paper disk with the foam block on the turntable to contrast with
   the flower. If your flower is pale, then use a different background
-  (colored or darker). Ideally, the color of the circle should be the
-  exact same color of the background of the lightbox as this will help
+  (colored or darker). Ideally, the color of the disk and the foam block should be the
+  exact same as the color of the backdrop in the lightbox as this will help
   when applying masks later.
 \end{enumerate}
 
@@ -445,18 +509,18 @@ triggered, and the flower to stabilize after each rotation.
 \section{Summary of settings}\label{summary-of-settings}}
 
 \begin{longtable}[]{@{}ll@{}}
-\toprule
+\toprule()
 \textbf{Parameter} & \textbf{Value} \\
-\midrule
+\midrule()
 \endhead
 \textbf{Camera settings} & \\
-Aperture & F/16 \\
+Aperture & F/16 (no focus stacking) or F11 (focus stacking) \\
 Sensibility & ISO 100 (lowest) \\
 Exposure time & 1/20s (depending on light settings) \\
-\textbf{Turn table settings} & \\
+\textbf{Turntable settings} & \\
 Number of photos & 20 per camera height (high, mid, low) \\
-Wait time & 2s \\
-\bottomrule
+Wait time & 2s (no focus stacking) or 6-8s (focus stacking) \\
+\bottomrule()
 \end{longtable}
 
 \hypertarget{image-capture-step-by-step}{%
@@ -468,10 +532,33 @@ Wait time & 2s \\
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Set the camera settings to F/16, ISO 100, 1/20s, and RAW format.
+  Camera settings:
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    \textbf{Without focus stacking}: Set the camera settings to F/16, ISO 100,
+    1/20s, and RAW format.
+  \item
+    \textbf{With focus stacking}: Set the camera settings to F/11 (depends on
+    the ideal settings of your camera and lens for focus bracketing), ISO
+    100, 1/20s, and RAW format.
+  \end{enumerate}
 \item
-  Verify that you have enough space on your SD card for RAW photos (a
-  minimum of 163 photos, accounting for photos of labels and chart).
+  Verify that you have enough space on your SD card for RAW photos:
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    \textbf{Without focus stacking}: A minimum of 163 photos, accounting for
+    photos of labels and chart.
+  \item
+    \textbf{With focus stacking}: The total number of photos depends on the number of
+    shots at each rotation point and the number of flower positions
+    used (usually around 1,500 photos +-200).
+  \end{enumerate}
 \item
   Verify that the placement of your turntable inside the lightbox will
   allow to capture correctly the flower you are about to photograph
@@ -479,7 +566,7 @@ Wait time & 2s \\
   speed captures enough light from your flower by taking an initial
   photo of your flower.
 \item
-  If satisfactory go to next step. The goal here is to have a definite
+  If satisfactory go to the next step. The goal here is to have a definite
   set of settings that will match both your flower photos and a color
   chart to subsequently calibrate all your photos that have the same
   light conditions and camera settings.
@@ -493,9 +580,9 @@ Wait time & 2s \\
 \item
   Place the camera so that the entire chart is visible.
 \item
-  Take a picture of the color chart (RAW). Make sure to Incorporate
-  each color squares, and the corners of the chart as follows (Figure
-  \ref{fig:chart}).
+  Take a picture of the color chart in RAW format (if you are doing focus stacking
+  for your project, disable the focus bracketing function for this step). Make
+  sure to incorporate all color squares and the corners of the chart as shown below (Figure \ref{fig:chart}).
 \end{enumerate}
 
 \begin{figure}
@@ -508,19 +595,19 @@ Wait time & 2s \\
 \end{figure}
 
 \hypertarget{flower-placement-image-capture}{%
-\section{Flower placement \& Image capture}\label{flower-placement-image-capture}}
+\section{Flower placement \& image capture}\label{flower-placement-image-capture}}
 
 To reconstruct an accurate 3D model, it is very important to have
 pictures of all the parts and details of the flowers and from several
 angles. Also, the photographs need to overlap with each other for proper
 alignment in the first steps of the reconstruction. For this reason,
-several pictures will be taken of each flower: from different
-orientation and all around the flower. We suggest that flowers should be
+several pictures will be taken of each flower, from different
+perspectives and all around the flower. We suggest that flowers are
 photographed from at least two positions (e.g., Figure \ref{fig:flower-two-positions}). For more complex flowers, three positions may be required: horizontal, vertical, and upside down (Figure
 \ref{fig:flower-three-positions}). Note that it is better to take
 more photos than less because if we can drop some pictures during the
 model reconstruction, it is impossible to come back and take more
-pictures if we realize that we should have taken more.
+pictures if we realize that we should have.
 
 \begin{figure}
 
@@ -541,56 +628,60 @@ pictures if we realize that we should have taken more.
 \end{figure}
 
 \begin{quote}
-For Gesneriaceae, we first suggest a standard orientation and an
-upside-down position (Figure \ref{fig:flower-two-positions}) of the flower as this generally gives satisfactory results . For more complex flowers, three positions may be required: horizontal, vertical, and upside down (Figure
+For Gesneriaceae, we first suggest a standard and an
+upside-down position (Figure \ref{fig:flower-two-positions}) of the flower as this generally gives satisfactory results. For more complex flowers, three positions may be required: horizontal, vertical, and upside down (Figure
 \ref{fig:flower-three-positions}).
 \end{quote}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Clip the camera on the flexible tripod (gorillapod) and place the
-  camera at one of the three position required per flower position :
-  high mid, and low position (see Figure \ref{fig:camera-positions}.
-  Make sure to not use different
-  camera orientations (landscape vs.~portrait).
+  Clip the camera on the tripod and place it at one of the three position required per flower position:
+  high, mid, and low position (see Figure \ref{fig:camera-positions}.
+  Make sure to not use different camera orientations (landscape vs.~portrait).
 \item
   If sepals need to be removed, use a razor blade to cut them at the
   base and mark the sepal intersections with a waterproof pen to keep
   track of the morphological structures.
 \item
-  Pin the flower through the peduncle or the floral receptacle and
-  through a block of dense foam or malleable gum. You can use several
-  pins to avoid any sliding of the flower during the image capture
-  process.
+  Pin the flower through the pedicel or the floral receptacle and
+  through a block of dense foam or malleable gum using an entomological pin.
+  You can use several pins to avoid any sliding of the flower during the image
+  capture process.
 \item
-  Make sure to place the flower so that the whole flower will be
+  Make sure to place the flower so that it is wholly
   encompassed in the camera frame as much as possible. It is best to
-  have the subject to take the most place as possible in the camera
+  have the subject take as much space as possible in the camera
   frame to capture every details overall than having it entirely in
   the camera frame but with poor detail quality. What counts the most
-  is to get several overlapping photos for each features. Make sure
+  is getting several overlapping photos of each feature. Make sure
   that the flower is not in contact with anything as this would deform
-  the flower and create problems during the model reconstruction.
+  it and create problems during the model reconstruction.
 \item
   For flowers with very uniform color or with radial symmetry, it may
-  be important to place dots with a waterproof pen on the corolla to
+  be helpful to place dots on the corolla using a waterproof pen to
   facilitate manual marker positioning and/or automated pixel position
   detection in the reconstruction step.
 \item
   Place a scale (e.g., 1 cm) directly below the flower.
 \item
   Take a picture of the flower with the label for each new positioning
-  of the flower. This will help to identify each group of images in
-  the following model construction.
+  of the flower. This will help to identify each group of images during model reconstruction.
 \item
-  Press the \emph{rec} button on your smartphone using the turntable
+  If you are doing focus stacking, enable \emph{Focus Bracketing} function at this point and
+  optimize the number of shots and focus increments so that you get each
+  flower part in focus in at least one image. Tap on the part of the flower that
+  is nearest to the lens before the first picture is taken at each rotation point,
+  if it is not already in focus at that moment.
+\item
+  Press the \emph{REC} button on your smartphone using the turntable
   interface to start the spin of the turntable and automated image
   capture.
 \item
   Verify occasionally the focus on the flower while the flower rotates
   by pressing the square button (stop) and manually adjust the focus
-  if needed, then press rec to resume your spin.
+  if needed, then press \emph{REC} to resume your spin. You can also help the camera
+  focus by tapping on the flower before the camera is triggered at each rotation point.
 \end{enumerate}
 
 \begin{figure}
@@ -613,7 +704,7 @@ Adjust the number of flower positions and number of photos according to each flo
 \section{File names and storage}\label{file-names-and-storage}}
 
 We found that it is critical to have a very organized structure for
-saving files, especially when several persons are working on the same
+saving files, especially when several people are working on the same
 project. We propose here what has been working so far for us.
 
 In a species folder named with the name of the species
@@ -621,17 +712,17 @@ In a species folder named with the name of the species
 photographed, usually with a different collection number. If the same
 individual has been photographed several times, the date of photos
 acquisition should be appended to the folder name to discriminate them.
-We also indicate with the folder name if the individual has been
+We also indicate in the folder name whether the individual has been
 photographed with or without sepals.
 
 For each flower, we have one folder for uncalibrated photos, one for
-calibrated photos, and one for the model. The picture of the color chart
+calibrated photos, and one for the model. The RAW picture of the color chart
 should be placed in the uncalibrated photos.
 
 To distinguish which photo goes in which chunk, a photo of the label is
-taken at the beginning of each chunk (each set of photo per side of
+taken at the beginning of each chunk (each set of photos per side of
 flower). We suggest to place the photos from different chunks in
-different folders, once the photos are calibrated. The date of when the
+different folders once the photos are calibrated. The date of when the
 photos are taken is important because it helps matching the calibration
 to the right DNG file. If more than one set of photos with different
 lighting or camera settings are taken, make sure to distinguish the
@@ -647,10 +738,21 @@ Genus\_species\\
     \emph{model.obj}\\
     \emph{model.ply}\\
     \emph{texture.jpg}\\
-   Photos calibrated\\
-    \emph{Place here all the calibrated photos, that you can organize per chunk}\\
-   Photos to calibrate\\
+   01\_Photos\_to\_calibrate\\
     \emph{Place here all the RAW photos and color chart}\\
+   02\_Photos\_calibrated\\
+    \emph{Place here all the calibrated photos, that you can organize per chunk}\\
+\end{quote}
+
+\hfill\break
+
+If you are doing focus stacking, you can also create the following two folders in addition to the above:
+
+\begin{quote}
+   03\_Photos\_clustered\\
+    \emph{Place here the calibrated photos that have been clustered based on time intervals into separate subfolders containing series of pictures taken using the Focus Bracketing function at each rotation point}\\
+   04\_Photos\_focus\_stacked\\
+    \emph{Place here all the final images after focus stacking}\\
 \end{quote}
 
 \hypertarget{image-color-calibration}{%
@@ -665,7 +767,7 @@ second and third ones are fully automatic (on MacOS and windows
 respectively).
 
 This does not linearize the photos. For further details on color
-calibration read \citep{troscianko2015image}.
+calibration, read \citet{troscianko2015image}.
 
 \textbf{Method 1 : Manual creation of color profiles}
 
@@ -682,10 +784,10 @@ calibration read \citep{troscianko2015image}.
   Copy the RAW file representing your color chart in your DNG folder,
   and rename it accordingly (e.g.~Color\_chart\_DD.MM.YYYY).
 \item
-  Open DNG converter and select the DNG folder we created for the
-  first box. You need to select a folder, and can't select a specific
-  file, the software will convert all the files within this folder.
-  Default parameters are ok for step 2-4. It will export the RAW file
+  Open DNG converter and select the DNG folder you created in the
+  first step. You can't select a specific file, you need to select a folder,
+  and the software will convert all the files within this folder.
+  Default parameters are fine for step 2-4. It will export the RAW file
   in the DNG folder to a DNG file with the same file name (Figure \ref{fig:DNG}).
 \item
   Open the Color Checker Camera Calibration software and drag and drop
@@ -694,7 +796,7 @@ calibration read \citep{troscianko2015image}.
   fits the chart, avoiding edge effects on each square of color
   (Figure \ref{fig:Colorcheckercalibration}.
 \item
-  Click on \emph{create profile} and save it under Color\_Chart\_DD.MM.YYYY
+  Click on \emph{Create Profile} and save it under Color\_Chart\_DD.MM.YYYY
   (Figure \ref{fig:ColorCheckerprofile}.
 \end{enumerate}
 
@@ -704,7 +806,7 @@ calibration read \citep{troscianko2015image}.
 
 }
 
-\caption{Image color calibration workflow}\label{fig:ColorCheckerworkflow}
+\caption{Image color calibration workflow.}\label{fig:ColorCheckerworkflow}
 \end{figure}
 
 \begin{figure}
@@ -713,7 +815,7 @@ calibration read \citep{troscianko2015image}.
 
 }
 
-\caption{Convert RAW chart to DNG in Adobe DNG Converter}\label{fig:DNG}
+\caption{Convert RAW chart to DNG in Adobe DNG Converter.}\label{fig:DNG}
 \end{figure}
 
 \begin{figure}
@@ -722,7 +824,7 @@ calibration read \citep{troscianko2015image}.
 
 }
 
-\caption{Align grid on chart in ColorChecker Camera Calibration}\label{fig:Colorcheckercalibration}
+\caption{Align grid on chart in ColorChecker Camera Calibration.}\label{fig:Colorcheckercalibration}
 \end{figure}
 
 \begin{figure}
@@ -731,11 +833,10 @@ calibration read \citep{troscianko2015image}.
 
 }
 
-\caption{Export the color profile}\label{fig:ColorCheckerprofile}
+\caption{Export the color profile.}\label{fig:ColorCheckerprofile}
 \end{figure}
 
-\textbf{Method 2 : X-Rite Color Checker plug-in installation and automatic
-creation of color profiles on MacOS}
+\textbf{Method 2: X-Rite Color Checker plug-in installation and automatic creation of color profiles on MacOS}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -747,22 +848,22 @@ creation of color profiles on MacOS}
   \begin{enumerate}
   \def\labelenumii{\arabic{enumii}.}
   \item
-    Click on File \textgreater{} Export \textgreater{} \emph{Plug-in Manager} (or \emph{gestionnaire
-    des modules externes} in the left bottom corner)
+    Click on \emph{File} \textgreater{} \emph{Export} \textgreater{} \emph{Plug-in Manager} (or \emph{gestionnaire
+    des modules externes} in the left bottom corner).
   \item
-    Click on \emph{Add}
+    Click on \emph{Add}.
   \item
     Navigate to \emph{Library} \textgreater{} \emph{Application Support} \textgreater{} \emph{Adobe} \textgreater{}
-    \emph{Lightroom} \textgreater{} \emph{Modules}
+    \emph{Lightroom} \textgreater{} \emph{Modules}.
   \item
     Select \emph{XRiteColorCheckerPassport.lrplugin} and then click on
-    \emph{Add Plug-in} and \emph{done}.
+    \emph{Add Plug-in} and \emph{Done}.
   \end{enumerate}
 \item
   Click on the color chart then \emph{File} \textgreater{} \emph{Export} \textgreater{} Choose \emph{Xrite
   presets} from the drop down menu.
 \item
-  Name your profile then \textgreater{} \emph{Export}
+  Name your profile then \textgreater{} \emph{Export}.
 \item
   It will go through ColorCheckerCamera calibration to automatically
   create the profile.
@@ -770,7 +871,7 @@ creation of color profiles on MacOS}
   Restart Lightroom as indicated.
 \end{enumerate}
 
-\textbf{Method 3 : X-Rite Color Checker plug-in installation and automatic
+\textbf{Method 3: X-Rite Color Checker plug-in installation and automatic
 creation of color profiles on Windows}
 
 \begin{enumerate}
@@ -804,7 +905,7 @@ creation of color profiles on Windows}
 
 }
 
-\caption{Color Checker plug-in for Lightroom installation}\label{fig:ColorCheckerplugin}
+\caption{Color Checker plug-in for Lightroom installation.}\label{fig:ColorCheckerplugin}
 \end{figure}
 
 \begin{figure}
@@ -813,11 +914,11 @@ creation of color profiles on Windows}
 
 }
 
-\caption{Color chart profile exportation}\label{fig:xritepreselection}
+\caption{Color chart profile exportation.}\label{fig:xritepreselection}
 \end{figure}
 
-\hypertarget{color-and-illuminance-calibration-from-profiles}{%
-\subsection{Color and illuminance calibration from profiles}\label{color-and-illuminance-calibration-from-profiles}}
+\hypertarget{color-and-exposure-calibration-from-profiles}{%
+\subsection{Color and exposure calibration from profiles}\label{color-and-exposure-calibration-from-profiles}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -825,11 +926,11 @@ creation of color profiles on Windows}
   Import your photos in Lightroom Classic. \emph{File} \textgreater{} \emph{Import} then
   select your folder of RAW photos.
 \item
-  Select the tab \emph{development}.
+  Select the photo of the color chart.
 \item
-  Select the photo of the chart
+  Go to the \emph{Development} module.
 \item
-  Select the color profile corresponding to the color chart you have selected (see Figure \ref{fig:addprofile} and \ref{fig:settingssynchronize}) to manually add a color profile) to calibrate the photo of the chart with its own calibration profile.
+  Select the color profile corresponding to the color chart you have selected (see Figure \ref{fig:addprofile} and \ref{fig:settingssynchronize} to manually add a color profile) to calibrate the photo of the chart with its own calibration profile.
 \end{enumerate}
 
 \begin{figure}
@@ -838,7 +939,7 @@ creation of color profiles on Windows}
 
 }
 
-\caption{Add a new color profile}\label{fig:addprofile}
+\caption{Add a new color profile.}\label{fig:addprofile}
 \end{figure}
 
 \begin{figure}
@@ -854,20 +955,23 @@ creation of color profiles on Windows}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{4}
 \item
-  Use the eyedropper over the 75\% gray scale (the last one before the
-  black chip on the color chart). Do not click on the photo with
-  the eye dropper, only hover over the photo.
+  Use the eyedropper over the 75\% gray scale (the dark gray patch right before the
+  black patch on the color chart). Do not click on the photo with
+  the eye dropper, only hover over it.
 \item
-  Select the exposition setting, and adjust the values the eyedropper
-  indicates of the gray scale using the exposition setting to obtain
-  the RGB values of the closest values to 0.33 0.33 0.33
+  Adjust the RGB values the eyedropper indicates on the 75\% gray scale by changing the
+  exposure setting to make them as close as possible to 0.33 0.33 0.33
   (corresponding to 85/255 for each of the red, blue, and green
-  class). The illuminance is now adjusted in addition to the color
-  calibration, but only on the chart.
+  class). The exposure is now adjusted in addition to the color
+  calibration, but only on the chart image.
 \item
-  To apply the modifications we just did to all the photos, select all the photos (Cmd+A or Ctrl+A), and make sure that the one for which you made changes is highlighted (in white compared to light gray for the other ones selected) (see Figure \ref{fig:synchronize}). Check the profiles and exposure boxes before synchronizing to all the other photos.
+  To apply the modifications we just did to all the photos, go to the \emph{Library}
+  module, select all the photos (\emph{Cmd+A} or \emph{Ctrl+A}), and make sure that the one
+  for which you made changes is highlighted (in white compared to the light gray
+  of the newly selected images).
 \item
-  Click on the button \emph{synchronize}.
+  Go back to the \emph{Development} module and click on the \emph{Synchronize} option, check the profile and exposure boxes in
+  the pop-up window and click on \emph{Synchronize} (see Figure \ref{fig:synchronize}).
 \end{enumerate}
 
 \begin{figure}
@@ -876,27 +980,35 @@ creation of color profiles on Windows}
 
 }
 
-\caption{Synchronize your settings made to the photo of the chart to all the other photos and check the two categories you modified (color profile and exposure}\label{fig:synchronize}
+\caption{Synchronize your settings made to the photo of the chart to all the other photos and check the two categories you modified (color profile and exposure).}\label{fig:synchronize}
 \end{figure}
 
-\hypertarget{export-calibrated-files-to-jpg-format}{%
-\subsection{Export calibrated files to jpg format}\label{export-calibrated-files-to-jpg-format}}
+\hypertarget{export-calibrated-files}{%
+\subsection{Export calibrated files}\label{export-calibrated-files}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Select all the photos you need to export or all of them (cmd+A or
-  windows+A)
+  Select all the photos you need to export or all of them (\emph{Cmd+A} or
+  \emph{Ctrl+A}).
 \item
-  Click on \emph{File} \textgreater{} \emph{Export}
+  Click on \emph{File} \textgreater{} \emph{Export}.
 \item
   You can create presets that you will only need to create once to
-  always export the same way in Adobe Lightroom (example Figure \ref{fig:exportparameters}), and add personalized file names
-  such as \_color\_calibrated at the end of each .jpg file.
+  always export the same way in Adobe Lightroom (example Figure \ref{fig:exportparameters}), and add personalized file names such as "\_color\_calibrated" at the end of each image file.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    Without focus stacking: Save the calibrated images as JPEG.
+  \item
+    With focus stacking: Save the calibrated images as TIFF (300 PPI). Make sure to include all metadata.
+  \end{enumerate}
 \item
-  In their own folder, you can then sort the calibrated photos for
-  color and exposure per chunks (easily distinguishable by the
-  separation created by a photo of the label).
+  The calibrated folders can be saved into their own folder, and further divided
+  into different subfolders representing different chunks (easily distinguishable
+  by the separation created by a photo of the label).
 \end{enumerate}
 
 \begin{figure}
@@ -908,6 +1020,203 @@ creation of color profiles on Windows}
 \caption{You can export using your own personalized parameters and then export in batch your selection in a specific folder within your folder of uncalibrated photos for easy access. This method can thus work for any folder of uncalibrated photos.}\label{fig:exportparameters}
 \end{figure}
 
+\hfill\break
+
+\hypertarget{image-clustering-one-folder-at-a-time}{%
+\section{Image clustering (one folder at a time)}\label{image-clustering-one-folder-at-a-time}}
+
+{\textbf{Note: This step is only necessary if you chose to do \emph{focus stacking} in your project.}}
+
+If you used the \emph{Focus Bracketing} function during image capture and wish to proceed
+with focus stacking, you can make the process easier by first grouping (i.e., \emph{clustering})
+the series of photos taken at each angle and rotation point in separate subfolders. This
+way, each folder will contain images that can be stacked together as they depict
+the same flower angle and rotation point but with different focus distances.
+
+This can be achieved using \href{https://exiftool.org/}{ExifTool}. ExifTool extracts time-stamps from the metadata
+of images and can be used to separate the image clusters from each other based on
+time intervals. The time intervals between photos taken at each
+rotation point (i.e., at the same exact perspective, but with different focus distances)
+is smaller than between photos taken between two rotation points (i.e., after the
+turntable changes the flower angle) when using the \emph{Focus Bracketing} function.
+
+To make image clustering faster, a python script developed by the Eaton Lab can be
+used (\href{https://github.com/yuemeanshappy/photogram/blob/main/python_scripts/cluster_photos_by_time_intervals.py}{cluster\_photos\_by\_time\_intervals.py}).
+
+Command structure:
+
+\begin{verbatim}
+python3 cluster_photos_by_time_intervals.py -i <input folder with calibrated images> -o <output folder with clustered images>
+\end{verbatim}
+
+Example:
+
+\begin{verbatim}
+python3 cluster_photos_by_time_intervals.py -i 02_Photos_calibrated -o 03_Photos_clustered
+\end{verbatim}
+
+After running the command above, you will have a \texttt{03\_Photos\_clustered} folder containing subfolders with the different
+image clusters, distinguished by angle and rotation numbers based on their time-stamps.
+
+\hypertarget{focus-stacking-one-folder-at-a-time}{%
+\section{Focus stacking (one folder at a time)}\label{focus-stacking-one-folder-at-a-time}}
+
+{\textbf{Note: This step is only necessary if you chose to do \emph{focus stacking} in your project.}}
+
+With the image groups taken at each rotation point and angle separated into different folders,
+they can now be easily focus stacked to produce one image per cluster with the whole flower in focus.
+Similarly to image clustering, this can be achieved by running another python script developed by the Eaton Lab
+(\href{https://github.com/yuemeanshappy/photogram/blob/main/python_scripts/helicon_focus.py}{helicon\_focus.py}).
+
+Command structure:
+
+\begin{verbatim}
+python3 helicon_focus.py -i <input folder with clustered images> -o <output folder with focus stacked images>
+\end{verbatim}
+
+Example:
+
+\begin{verbatim}
+python3 cluster_photos_by_time_intervals.py -i 03_Photos_clustered -o 04_Photos_focus_stacked
+\end{verbatim}
+
+Now you should have a \texttt{04\_Photos\_focus\_stacked} folder containing one focus
+stacked image corresponding to each angle and rotation point cluster.
+
+\hypertarget{alternatively-cluster-and-focus-stack-photos-from-multiple-folders-at-once}{%
+\section{Alternatively: Cluster and focus stack photos from multiple folders at once}\label{alternatively-cluster-and-focus-stack-photos-from-multiple-folders-at-once}}
+
+In case you would like to cluster and focus stack images of multiple specimens at
+once, to make the process even faster, you could also use the \href{https://github.com/yuemeanshappy/photogram/wiki/Automated-pipeline-scripts}{Automated Pipeline Scripts}
+developed by the Eaton Lab.
+
+You can use these scripts for all steps (i.e., from image
+calibration to focus stacking) or modify them according to your preferences and needs.
+We normally do the calibration step manually in Adobe Lightroom Classic as it does not take
+significantly more time and allows for calibrating both the colors and exposure of the images.
+
+To make the scripts work, we save the calibrated images in a subfolder directly in
+the corresponding RAW image folder, for example in \texttt{3D\_Modelization/Genus\_species\_A/01\_Photos\_calibrated/},
+with the RAW images being in \texttt{3D\_Modelization/Genus\_species\_A/}, while the directory containing the
+\texttt{3D\_Modelization/} contains other folders that are similarly structured for other species.
+
+\begin{quote}
+3D\_Modelization\\
+ Genus\_species\_A\\
+  \emph{RAW\_photo\_A1.CR3}\\
+  \emph{RAW\_photo\_A2.CR3}\\
+  \emph{RAW\_photo\_A3.CR3}\\
+  \ldots{}\\
+  01\_Photos\_calibrated\\
+   \emph{Calibrated\_photo\_A1.tif}\\
+   \emph{Calibrated\_photo\_A.tif2}\\
+   \emph{Calibrated\_photo\_A3.tif}\\
+   \ldots{}\\
+ Genus\_species\_B\\
+  \emph{RAW\_photo\_B1.CR3}\\
+  \emph{RAW\_photo\_B2.CR3}\\
+  \emph{RAW\_photo\_B3.CR3}\\
+  \ldots{}\\
+  01\_Photos\_calibrated\\
+   \emph{Calibrated\_photo\_B1.tif}\\
+   \emph{Calibrated\_photo\_B2.tif}\\
+   \emph{Calibrated\_photo\_B3,tif}\\
+   \ldots{}\\
+ \ldots{}\\
+\end{quote}
+
+\textbf{For the sake of simplifying the following examples,\texttt{3d\_Modelization/} would represent the path to your working directory that contains all your folders.}
+
+First, you need to create a text file containing a list of folder names in your
+working directory, i.e., the folders names in the directory \texttt{3D\_Modelization/}
+following the example above. \texttt{cd} to this directory and run the following command:
+
+\begin{verbatim}
+ls -b1A >> folder_name.txt
+\end{verbatim}
+
+This command will create a \texttt{folder\_name.txt} file in your working directory with the names of
+all the folders in it. Then you need to create a text file containing the list of
+the RAW photo names within these folders.
+
+Command structure:
+
+\begin{verbatim}
+for i in `cat folder_name.txt`; do cd 3D_Modelization/${i} && ls *.CR3 | sed -e 's!.CR3!!' >> photo_names.txt; done
+\end{verbatim}
+
+Now, aside from the RAW photos and the subfolder with the calibrated .tif photos,
+the \texttt{Genus\_species\_\#/} folders within the \texttt{3D\_Modelization/} directory should contain
+a \texttt{photo\_names.txt} file with a list of the names of all the RAW photos in each folder.
+
+We usually run the following modified automated script for processing multiple folders at once.
+
+\begin{itemize}
+\tightlist
+\item
+  Automated script structure for clustering and focus stacking photos from multiple folders at once:
+\end{itemize}
+
+\begin{verbatim}
+for i in `cat 3D_Modelization/folder_name.txt`
+    do python3 cluster_photos_by_time_intervals.py -i 3D_Modelization/${i}/01_Photos_calibrated -o ~/Desktop/Focus_stacking_test_Mila/Test/${i}/02_Photos_clustered &&
+    python3 helicon_focus.py -i 3D_Modelization/${i}/02_Photos_clustered -o 3D_Modelization/${i}/03_Photos_focus_stacked
+done
+\end{verbatim}
+
+The \texttt{for} loop above should create two new subfolders in each of
+your \texttt{3D\_Modelization/Genus\_species\_\#/} directories:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \texttt{02\_Photos\_clustered}, containing the calibrated photos that have been clustered
+  by angle and rotation points based on time intervals.
+\item
+  \texttt{03\_Photos\_focus\_stacked}, containing the final focus stacked photos.
+\end{enumerate}
+
+Although the original automated pipeline script by the Eaton Lab includes a step
+for resizing the photos after focus stacking, we do not typically include this step
+in the process as the photos' dimensions before and after focus stacking remains the same
+most of the time. Additionally, changing the images' dimensions to a different ratio
+can distort the shape of your 3D Model.
+
+For those few images whose dimensions do change after focus stacking (for us it's
+normally no more that 3 per specimen), during the masking step in Agisoft Metashape
+it will notify you that the background image you are using does not have the same
+size as some of the images. You can find those unmasked photos and create a background
+images using their dimensions for masking them. However, as mentioned, this happens
+rarely.
+
+If you wish to resize all your images after focus stacking following the original script,
+you will need to install \texttt{imagemagick}, which could be done using \emph{homebrew}.
+
+\begin{verbatim}
+brew install imagemagick
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Automated script structure for clustering, focus stacking, and resizing photos from multiple folders at once:
+\end{itemize}
+
+\begin{verbatim}
+for i in `cat 3D_Modelization/folder_name.txt`
+    do python3 cluster_photos_by_time_intervals.py -i 3D_Modelization/${i}/01_Photos_calibrated -o ~/Desktop/Focus_stacking_test_Mila/Test/${i}/02_Photos_clustered &&
+    python3 helicon_focus.py -i 3D_Modelization/${i}/02_Photos_clustered -o 3D_Modelization/${i}/03_Photos_focus_stacked &&
+    cd 3D_Modelization/${i}/03_Photos_focus_stacked && ls -b1A | sed -e 's!.tiff!!' >> stacking_names.txt &&
+    for i in `cat stacking_names.txt`
+        do convert ./${i}.tiff -resize 5300x3500! ./${i}.tiff
+    done
+done
+\end{verbatim}
+
+Remember to add the path to your python script files if they are not located in your
+working directory, as well as modify the final image size if you wish it to be
+different.
+
 \hypertarget{d-model-reconstruction-in-agisoft-metashape}{%
 \chapter{3D model reconstruction in Agisoft Metashape}\label{d-model-reconstruction-in-agisoft-metashape}}
 
@@ -916,10 +1225,9 @@ creation of color profiles on Windows}
 
 Download the Agisoft Metashape professional edition software
 \href{https://www.agisoft.com/downloads/installer/}{here}. Make sure that
-your computer fills the \href{https://www.agisoft.com/downloads/system-requirements/}{minimum system
-requirements}.
-The standard edition doesn't allow the use of the scale option that we
-will need to add a scale on our models.
+your computer fills the \href{https://www.agisoft.com/downloads/system-requirements/}{minimum system requirements}.
+The standard edition doesn't allow the use of the scale option, which we
+will need to add a scale to our models.
 
 \begin{figure}
 
@@ -927,7 +1235,7 @@ will need to add a scale on our models.
 
 }
 
-\caption{Agisoft Metashape}\label{fig:agisoft}
+\caption{Agisoft Metashape Logo.}\label{fig:agisoft}
 \end{figure}
 
 \hypertarget{initial-tweaks}{%
@@ -939,25 +1247,26 @@ enable the use of the graphic hardware (GPU):
 
 \begin{itemize}
 \item
-  Select Preferences command from the Tools menu.
+  Select Preferences command from the \emph{Tools} menu (v. \textless2.0) or \emph{MetashapePro} menu (v. \textgreater2.0).
 \item
-  In Preferences dialog select GPU tab.
+  In \emph{Preferences} dialog select \emph{GPU} tab.
 \item
-  Select available GPU devices in GPU tab of the Preferences window
+  Select available GPU devices in \emph{GPU} tab of the \emph{Preferences} window.
 \end{itemize}
 
 This step has to be done only once.
 
 This protocol has been elaborated using the version 1.7.1 of Agisoft
-Metashape. The latest version of Metashape is now version 1.8.2, but we
+Metashape. The latest version of Metashape is now version 2.0.3, but we
 still made the following changes. In order to obtain accurate thin
 structures, such as petal margin, and avoid holes in your mesh in
-Agisoft Metashape 1.5.x or later (up to our knowlege) you will need to
-activate ONCE the \emph{Visibility consistent mesh} function in \emph{Tools \textgreater{}
-Preferences \textgreater{} Advanced \textgreater Tweaks}, then \emph{Add} and fill in \emph{Parameters}
-with \emph{BuildModel/tvl1\_mesh} and select the value as \emph{False} (figure \ref{fig:metashapetweaks1}). Additionally, to use the anterior
-version of the depth maps generation process, add ONCE the tweak :
+Agisoft Metashape versions older than 2.0 (as far as we know) you will need to
+activate ONCE the \emph{Visibility consistent mesh} function in \emph{Tools \textgreater{} Preferences \textgreater{} Advanced \textgreater Tweaks},
+then \emph{Add} and fill in \emph{Parameters} with \emph{BuildModel/tvl1\_mesh} and select the
+value as \emph{False} (figure \ref{fig:metashapetweaks1}). Additionally, to use the
+anterior version of the depth maps generation process, add ONCE the tweak:
 \emph{BuildDepthMaps/pm\_enable} and set the value to \emph{False} (figure \ref{fig:metashapetweaks2}).
+For Agisoft Metashape 2.0.x (as far as we know) the \emph{Preferences} are located in the \emph{MetashapePro} menu.
 
 \begin{figure}
 
@@ -965,7 +1274,7 @@ version of the depth maps generation process, add ONCE the tweak :
 
 }
 
-\caption{Tweaks settings}\label{fig:metashapetweaks1}
+\caption{Tweaks settings (A).}\label{fig:metashapetweaks1}
 \end{figure}
 
 \begin{figure}
@@ -974,42 +1283,42 @@ version of the depth maps generation process, add ONCE the tweak :
 
 }
 
-\caption{Tweaks settings}\label{fig:metashapetweaks2}
+\caption{Tweaks settings (B).}\label{fig:metashapetweaks2}
 \end{figure}
 
 \hypertarget{overview-of-the-model-building-pipeline}{%
 \section{Overview of the model building pipeline}\label{overview-of-the-model-building-pipeline}}
 
-To build a model, we need to do the following steps: 1) Import the
-calibrated photos, 2) apply masks to remove background on the photos, 3)
-align the cameras, 4) calculate depth maps, 5) build the 3D model
-(mesh), and 6) reconstruct the final texture (model color). There could
-be different approaches for each of the steps and options will be given
-below.
+To build a model, we need to do the following steps: (1) Import the
+calibrated photos, (2) Apply masks to remove the background of the photos, (3)
+Align the photos, (4) Calculate depth maps, (5) Build the 3D model (mesh), and
+(6) Reconstruct the final texture (model color). There could be different approaches
+for each of the steps and options will be given below.
 
-One important note is whether all the pictures (cameras) are aligned
-simultaneously of if it is necessary to proceed by groups of pictures
-that correspond to each flower positions. The first approach is quicker
-and normally results in more accurate models. However, it does not work
-all the times. We recommend to try it first and if it fails to use the
-alternative approach, which is to divide the pictures in different
-"chunks" that will create partial 3D models.
+One important thing to consider is whether to align all the photos simultaneously
+or proceed by groups of photos (i.e., ``chunks'') that correspond to each flower position.
+The first approach is quicker and normally results in more accurate models.
+However, it does not work all the time. We recommend to try the first approach and if it
+fails, to use the alternative approach, which is to divide the pictures in different
+"chunks" that will create partial 3D models that will be subsequently merged.
 
 \hypertarget{photo-importation}{%
 \section{Photo importation}\label{photo-importation}}
 
 Go to \emph{Workflow}, click on \emph{Add Photos}, and click \emph{Open}. Once the
-photos are imported, they are in a single "chunk", which is a group of
-photos.
+photos are imported, they are in a single "chunk".
 
 To try to align all the photos simultaneously (ideal approach), you need
-to arrange them in "camera groups", where each camera group contains
-all pictures taken with the same flower orientation. Once this is done,
+to arrange them in ``Image Groups'' ot ``Camera Groups'' (e.g., select the photos, right click, \emph{Move Images/Cameras} \textgreater{} \emph{New Image/Camera Group})*, where each camera group contains
+all pictures taken with the same flower orientation and camera angle. Once this is done,
 you can add the first photo of each set of photos representing the
-label, and right click on this photo and select \emph{disable cameras}. This
+label, right click on this photo and select \emph{Disable Cameras} or \emph{Disable Images}*. This
 allows you to not take it into account while reconstructing the model,
 but to keep all the information about the flower in your Metashape
 project.
+
+*\textbf{Note}: Depending on the version of Agisoft Metashape, some functions use either the word
+``camera(s)'' (v.\textless2.0) or ``image(s)'' (v.\textgreater2.0) as far as we know.
 
 \hypertarget{mask-application}{%
 \section{Mask application}\label{mask-application}}
@@ -1020,11 +1329,11 @@ keypoints are detected as the same point (matched as projections of the
 same 3D point on different photos), then it is considered as a tie
 point. If masks are applied to tie points, then if a key point is masked
 in at least one image, it will not be considered. You can thus use a
-single or just a few masks with the second method (apply masks to tie
-points). It is however possible to automatically apply masks on each
-photo to better constrain key point detection (apply masks to
-keypoints). Using masks helps in removing points to be detected in the
-background during image alignment procedure. You can see examples
+single or just a few masks with the second method and apply masks to tie
+points. It is however possible to automatically apply masks on each
+photo to better constrain key point detection and then apply masks to
+keypoints. Using masks helps in removing points from being detected in the
+background during the image alignment procedure. You can see examples
 \href{https://agisoft.freshdesk.com/support/solutions/articles/31000158967-aligning-turntable-photos-with-background-suppression-from-single-mask-in-agisoft-metashape}{here}
 on the Agisoft helpdesk portal.
 
@@ -1033,34 +1342,34 @@ on the Agisoft helpdesk portal.
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Duplicate one of your photos, and fill it in black in any image
-  manipulation software, and rename it as \emph{background.jpg}. You can
-  also take a picture of the lightbox without your flower just before
-  starting to shoot and use this image as background. This sometimes
-  work better.
+  Duplicate one of your photos, and fill it in black (or the main color of your
+  background) in any image manipulation software, and rename it to \emph{background.jpg}
+  or \emph{background.tif} depending on the format of your photos.
+  You can also take a picture of the lightbox without your flower just before
+  starting to shoot and use this image as background. This sometimes work better.
 \item
   Right click on a photo in one of your chunk in your Metashape
   project.
 \item
-  Click on \emph{Masks}, \emph{Import Masks} (Figure \ref{fig:Metashapemasksrightclick}) and in the box that appears select method "From Background", operation \emph{Replacement}.
+  Click on \emph{Masks}, \emph{Import Masks} (Figure \ref{fig:Metashapemasksrightclick}) and in the box that appears select the method \emph{From Background} and operation \emph{Replacement}.
 \item
-  Enter the same name as the name of your background you just saved.
+  Enter the same name as the name of the background image you created in step 1.
 \item
-  Depending on the flower, the value for \emph{Tolerance} can vary between
-  approximately 40 and 60 (Figure \ref{fig:Metashapemaskstolerance}). For some pale flowers you may need a lower tolerance value (e.g.~30).
+  Depending on the flower and how contrasting its color is relatively to the background,
+  the value for \emph{Tolerance} can vary between approximately 40 and 60 (Figure \ref{fig:Metashapemaskstolerance}).
+  For some pale flowers you may need a lower tolerance value (e.g.~30 or lower).
 \item
-  Test different values of tolerance on a single photo first, but when
-  you have a value that is satisfactory (that create a masks with the
-  border of the flower well defined) you can select \emph{Apply to entire
-  workspace}
+  Test different values of tolerance on a single photo first and when
+  you have a value that is satisfactory (i.e., that creates a mask with the
+  border of the flower well defined), you can select \emph{Apply to \textgreater{} Entire workspace}.
 \item
-  Click OK
+  Click \emph{OK}.
 \item
   This will automatically produce masks around the flowers for all the
-  photos in all your chunks. This is why we need a contrasting white
-  background behind the flower.
+  photos in all your chunks. This is why we need a contrasting background color
+  behind the flower.
 \item
-  Check for masks that need touch ups (next section).
+  Check for masks that need touch ups (see next section).
 \end{enumerate}
 
 \begin{figure}
@@ -1081,7 +1390,7 @@ on the Agisoft helpdesk portal.
 \caption{Import mask from a black image *background.jpg*, and select a tolerance value, to test on the selected camera (the image you right-clicked on). If the automatic mask is automatically well adjusted around the flower shape (darker gray around the flower), then apply to entire workspace (all the images).}\label{fig:Metashapemaskstolerance}
 \end{figure}
 
-\textbf{Alternative masking method using Adobe Photoshop} It is also possible
+\textbf{Alternative masking method using Adobe Photoshop}. It is also possible
 to use Adobe Photoshop to apply masks. We did not find particular
 improvements compared to the Agisoft Metashape approach.
 
@@ -1106,7 +1415,7 @@ improvements compared to the Agisoft Metashape approach.
 
 }
 
-\caption{Record a new action called *Automatic Mask - 3D reconstruction*}\label{fig:mask1}
+\caption{Record a new action called *Automatic Mask - 3D reconstruction*.}\label{fig:mask1}
 \end{figure}
 
 \begin{figure}
@@ -1156,14 +1465,11 @@ improvements compared to the Agisoft Metashape approach.
 \section{Masks touch ups}\label{masks-touch-ups}}
 
 The automatic application of masks at the previous steps is sometimes
-not entirely satisfactory for all photos. It is possible to add or
-remove parts of masks using the selection tool and the add/remove/invert
-buttons (Figure \ref{fig:toolsmasks}). You can then use the selection tools to
-select areas that are not the flower and add the selection to the mask
-(Figure \ref{fig:toolsmasks}). You also remove the scale and the
-entomological pin at this step. Additionally, you can invert the
-selection, or remove the selected areas from the mask with the icons on
-the right hand side of the add to mask icon.
+not entirely satisfactory for all photos. To add parts to the mask (i.e., remove
+them from the model) such as the foam block and the entomological pin, it is possible
+to select them using the selection tools and then add them using the respective
+\emph{Add Selection} button (Figure \ref{fig:toolsmasks}). Similarly, you can remove or
+invert the selection with the buttons to the right of the \emph{Add Selection} button.
 
 \begin{figure}
 
@@ -1174,29 +1480,28 @@ the right hand side of the add to mask icon.
 \caption{Selection tools and add selection to mask tool.}\label{fig:toolsmasks}
 \end{figure}
 
-\hypertarget{camera-alignment}{%
-\section{Camera alignment}\label{camera-alignment}}
+\hypertarget{image-alignment}{%
+\section{Image alignment}\label{image-alignment}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
   Click on the chunk you want to align, which could comprise several
-  camera groups.
+  image/camera groups.
 \item
-  Make sure to disable photos you don't want (the label photo, and
+  Make sure to disable photos you don't want (e.g., the label photo, and
   blurry photos) and that the masks are clean.
 \item
-  Go to \emph{Workflow}, \emph{Align Photos} and put the accuracy on \emph{High} or
-  \emph{Very high}. In the section \emph{Advanced}, check \emph{Generic
-  pre-selection}, and select \emph{Apply masks} to \emph{key points}, and click
-  \emph{OK}. Note that if you have applied the masks to only some photos,
-  select \emph{Apply masks} to \emph{tie points}.
+  Go to \emph{Workflow} \textgreater{} \emph{Align Photos} and put the accuracy on \emph{High} or
+  \emph{Very high} (do not select the latter if you did focus stacking). To save some time,
+  you can check \emph{Generic preselection} in the section \emph{Advanced}.
+  Select \emph{Apply masks} to \emph{Key points} and click \emph{OK}. Note that if you
+  have applied the masks to only some photos, select \emph{Apply masks} to \emph{tie points}.
 \item
   If you are aligning several chunks of photos, it is possible to run
-  this job in batch for each chunk in \emph{workflow} \textgreater{} \emph{batch process} \textgreater{}
-  \emph{Add} button \textgreater{} select the \emph{job type} as \emph{Align photos} to apply to
-  \emph{all chunks} or select specific ones \textgreater{} add parameters listed above
-  (Figure \ref{fig:batchalign}).
+  this job in batch for each chunk in \emph{Workflow} \textgreater{} \emph{Batch Process} \textgreater{}
+  \emph{Add} and select the \emph{Job type} as \emph{Align Photos} to apply to
+  \emph{All Chunks} or select specific ones (Figure \ref{fig:batchalign}).
 \end{enumerate}
 
 \begin{figure}
@@ -1212,46 +1517,53 @@ the right hand side of the add to mask icon.
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{4}
 \item
-  \textbf{Optional: align using markers} If the different camera cannot
-  align properly, it is possible to place homologous markers on the
-  flower, defined as remarkable points on the flower (distinguishable
-  pattern such as color dots on the corolla, for example), or by
-  little pen marks at the surface of the flower when homologous
-  markers lacks. These points need to be clearly identifiable on all
-  camera groups. You will need at least 5 markers per flower, ideally
-  positioned in different regions of the flower (e.g., near the
-  peduncle, sepals tips, petals). Do not use points from the
-  background to align chunks as it is independent from the flower (the
-  flower changes position relative to the background).
+  \textbf{Optional: Align using markers.} If the images cannot
+  align properly, it is possible to place homologous markers on the flower,
+  defined as remarkable points (e.g., distinguishable pattern such as color dots
+  on the corolla), or little pen marks at the surface of the
+  flower when homologous markers lack. These points need to be
+  clearly identifiable on all chunks. You will need at least 5 markers, ideally
+  located at different areas of the flower
+  (e.g., near the pedicel, sepal tips, petals). Do not use points
+  from the background to align chunks as they are independent from the
+  flower (the flower changes position relative to the background).
 
   \begin{enumerate}
   \def\labelenumii{\arabic{enumii}.}
   \item
-    Right click on the picture
+    With the \emph{Navigation} button selected (i.e., the ``cursor'' tool at the
+    top), right click on the point you want to add a marker on.
   \item
-    Then click on \emph{Place Marker} \textgreater{} \emph{New Marker}.
+    Click on \emph{Place Marker} \textgreater{} \emph{New Marker}.
   \item
-    In the left panel, rename them accordingly. Make sure to use the
+    In the left panel, rename the marker accordingly. Make sure to use the
     same nomenclature on each chunk to be able to merge them
     according to their names.
   \end{enumerate}
 \item
-  To help the software recognize the markers, spread the manual
-  markers on photos throughout the chunk (It is normally sufficient to
-  place it on 2-3 photos and the software normally places them
-  properly on the others, but make sure the markers are all properly
-  placed).
+  To help the software recognize the markers, spread them on photos throughout
+  the chunk (it is normally sufficient to manually place them on 2-3 photos and the software
+  normally places them properly on the others, but make sure the markers are all
+  properly placed).
 \item
-  Repeat the step for each marker and each chunk.
+  If a marker is not visible in some photos, the flag of this marker should be
+  white or the marker should be blocked on those specific photos. You can do
+  that by right-clicking on the marker on these photos and select \emph{Remove Projection}
+  or \emph{Block Marker}.
 \item
-  Select one chunk. Go to \emph{Workflow \textgreater{} Align Chunks}, select the
-  chunks you want to align, set the method as \emph{Markers based} and then
-  click \emph{OK}. Repeat for all chunks to align.
+  Repeat these step for each marker.
 \item
-  \textbf{Optional} If the camera alignment is not satisfactory, it is
-  possible to clean the tie point obtained and try to realign the
-  cameras. For instance, on the tie point generated by the alignment,
-  you can delete outlier and imprecise points (Figure \ref{fig:removepoints1} and \ref{fig:removepoints2}):
+  Go to \emph{Workflow} \textgreater{} \emph{Align Photos} and put the accuracy on \emph{High} or
+  \emph{Very high} (the latter only for project without focus stacking). To save some time,
+  you can check \emph{Generic preselection} in the section \emph{Advanced}.
+  Select \emph{Apply masks} to \emph{Key points} and click \emph{OK}. Note that if you
+  have applied the masks to only some photos, select \emph{Apply masks} to \emph{Tie points}.
+\item
+  \textbf{Optional: Alignment optimization using gradual selection and camera positions.}
+  If the camera alignment is not satisfactory, it is possible to clean the tie
+  points obtained and try to re-align the cameras. For instance, in the tie points
+  generated by the alignment, you can delete outlier and imprecise points
+  (Figure \ref{fig:removepoints1} and \ref{fig:removepoints2}):
 
   \begin{enumerate}
   \def\labelenumii{\arabic{enumii}.}
@@ -1260,24 +1572,28 @@ the right hand side of the add to mask icon.
     Select \emph{Reconstruction uncertainty} on \emph{Criterion} and play with
     the \emph{Level} value to remove the uncertain points. The higher the
     value, the worst is the point placed. Values between 30 and 10
-    generally give good results. Then \emph{OK}. Press \emph{Delete} on your
-    keyboard to delete the selected points in red. You don't need
+    generally give good results. Then \emph{OK}. Press \emph{Delete} (or \emph{fn + Backspace}
+    in Mac) on your keyboard to delete the selected points in red. You don't need
     much more than 10,000 points for good photo alignments.
   \item
-    After removing uncertain points, go to the \emph{Reference} panel and
-    click on \emph{Optimize Camera} to optimize camera position. Select
-    all of the cameras.
+    After removing uncertain points, go to \emph{View} and click on \emph{Reference} to
+    make the reference panel visible if it is not already.
+  \item
+    Click on the \emph{Optimize Cameras} button (star icon) in the reference panel
+    and in the \emph{Optimize Camera Alignment} window, check all of the cameras in
+    the \emph{General} box and then click \emph{OK} to optimize the camera posistions.
   \item
     In \emph{Model \textgreater{} Gradual Selection}, ensure that \emph{Reprojection
     error} parameter is below 1. If it is not, check if the
-    alignment runs well (camera needs to form a full circle above
-    the object). If the alignment fails, try to re-align photos by
-    following step 3 (don't forget to check the box "reset current
-    alignment"). If the alignment didn't fail, go to \emph{Model \textgreater{}
+    alignment runs well by clicking on the \emph{Show Cameras} button (camera icon)
+    on the top (the cameras needs to form a full circle around the flower).
+    If the alignment fails, try to re-align photos by
+    following step 3 (don't forget to check the box \emph{Reset Current
+    Alignment}). If the alignment didn't fail, go to \emph{Model \textgreater{}
     Gradual Selection \textgreater{} Reproduction error}, and set the level to 1
-    and click OK. Then press \emph{Delete}.
+    and click OK. Then press \emph{Delete} (or \emph{fn + Backspace} in Mac).
   \item
-    Manually remove remaining outliers using the selection tool.
+    Manually remove remaining outlier points using the selection tools.
   \end{enumerate}
 \item
   Repeat these steps for each chunk.
@@ -1298,87 +1614,95 @@ the right hand side of the add to mask icon.
 
 }
 
-\caption{Use the gradual selection tool to remove additional mis-calculated points}\label{fig:removepoints2}
+\caption{Use the gradual selection tool to remove additional mis-calculated points.}\label{fig:removepoints2}
 \end{figure}
 
-\begin{quote}
-If the alignment fails using only one chunk and two or more
-camera groups, then it will be necessary to divide your job in several
+*\textbf{Note}: If the alignment fails using only one chunk and two or more
+camera groups, then it will be necessary to divide your job into several
 chunks. Each chunk should then contain photos from one flower position.
 Once the chunks are ready, you can proceed with the alignment following
-the previous steps.**
-\end{quote}
+the previous steps.
 
 \hypertarget{align-chunks-together}{%
 \section{Align chunks together}\label{align-chunks-together}}
 
-\textbf{Note: This step is only necessary if your project is divided in
-several chunks.}
+{\textbf{Note: This step is only necessary if your project is divided into several chunks.}}
 
 At this step, it is important to align the different chunks with each
 other before they can be combined in a complete model. There are two
-ways to do this. The approach using tie points is quick but does not
-work all the time. If it fails, you will have to use the approach using
-markers.
+ways to do this: using tie points (does not work every time) or using markers.
 
-To align using tie points :
+\begin{itemize}
+\tightlist
+\item
+  To align using tie points:
+\end{itemize}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Select the chunks to align together.
+  Select one of the chunks that you would like to align.
 \item
-  Go to \emph{Workflow} \textgreater{} \emph{Align Chunks}, select the chunks you want to
-  align together, set the method as \emph{Point based} (Figure \ref{fig:alignchunks}).
+  Go to \emph{Workflow} \textgreater{} \emph{Align Chunks}, select all the chunks you want to
+  align together and set the method as \emph{Point based} (Figure \ref{fig:alignchunks}).
 \item
   Restrict the key points with masks.
 \item
   Click on \emph{OK}.
 \end{enumerate}
 
-To align using markers :
+\begin{itemize}
+\tightlist
+\item
+  To align using markers:
+\end{itemize}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
   Place homologous markers on the flower, defined as remarkable points
-  on the flower (distinguishable pattern such as color dots on the
-  corolla, for example), or by little pen marks at the surface of the
-  flower when homologous markers lacks. These points need to be
-  clearly identifiable on all chunks. You will need at least 5 markers
-  per flower, ideally positioned in different regions of the flower
-  (e.g., near the peduncle, sepals tips, petals). Do not use points
-  from the background to align chunks as it is independent from the
+  (e.g., distinguishable pattern such as color dots on the
+  corolla), or little pen marks at the surface of the
+  flower when homologous markers lack. These points need to be
+  clearly identifiable on all chunks. You will need at least 5 markers, ideally
+  located at different areas of the flower
+  (e.g., near the pedicel, sepal tips, petals). Do not use points
+  from the background to align chunks as they are independent from the
   flower (the flower changes position relative to the background).
 
   \begin{enumerate}
   \def\labelenumii{\arabic{enumii}.}
   \item
-    Right click on the picture
+    With the \emph{Navigation} button selected (i.e., the cursor icon tool),
+    right click on the point you want to add a marker on.
   \item
-    Then click on \emph{Place Marker} \textgreater{} \emph{New Marker}.
+    Click on \emph{Place Marker} \textgreater{} \emph{New Marker}.
   \item
-    In the left panel, rename them accordingly. Make sure to use the
+    In the left panel, rename the marker accordingly. Make sure to use the
     same nomenclature on each chunk to be able to merge them
     according to their names.
   \end{enumerate}
 \item
-  To help the software recognize the markers, spread the manual
-  markers on photos throughout the chunk (It is normally sufficient to
-  place it on 2-3 photos and the software normally places them
-  properly on the others, but make sure the markers are all properly
-  placed).
+  To help the software recognize the markers, spread them on photos throughout
+  the chunk (it is normally sufficient to manually place them on 2-3 photos and the software
+  normally places them properly on the others, but make sure the markers are all
+  properly placed).
 \item
-  Repeat the step for each marker and each chunk.
+  If a marker is not visible in some photos, the flag of this marker should be
+  white or the marker should be blocked on those specific photos. You can do
+  that by right-clicking on the marker on these photos and select \emph{Remove Projection}
+  or \emph{Block Marker}.
+\item
+  Repeat these step for each marker and each chunk.
 \item
   Select one chunk. Go to \emph{Workflow \textgreater{} Align Chunks}, select the
-  chunks you want to align, set the method as \emph{Markers based} and then
-  click \emph{OK}. Repeat for all chunks to align.
+  chunks you want to align, set the method as \emph{Marker based} and then
+  click \emph{OK}.
 \end{enumerate}
 
 When the chunks are aligned, a {[}T{]} is put at the end of your chunk
 name to notify that it is transformed. You can check the alignment using
-the icon to show aligned chunks (icon of layers on top of each others,
+the icon to show aligned chunks (i.e., the icon of layers on top of each others,
 Figure \ref{fig:showalignedchunks}). The different chunks should be well
 aligned over the whole flower. If the alignment of your chunks is
 unsatisfactory, try to place more markers on recognizable features and
@@ -1406,12 +1730,11 @@ highly not recommended.
 \hypertarget{merge-chunks}{%
 \section{Merge chunks}\label{merge-chunks}}
 
-\textbf{Note: This step is only necessary if your project is divided in
-several chunks.}
+{\textbf{Note: This step is only necessary if your project is divided into several chunks.}}
 
 The next step is to merge chunks together when they are well aligned.
 Click on \emph{Workflow \textgreater{} Merge chunks}, and merge using either the tie
-point method or the markers method depending on the option selected
+point method or the marker method depending on the option selected
 above.
 
 \hypertarget{build-3d-mesh}{%
@@ -1432,13 +1755,13 @@ above.
   provide better results for objects with a high number of minor
   details.
 \item
-  Then go to \emph{Advanced}, check \emph{Calculate vertex colors}. Click OK.
+  Then go to \emph{Advanced}, check \emph{Calculate vertex colors} and click \emph{OK}.
 \item
   Once the mesh is produced, you should remove the pin and extra
   floating background parts using the selection tool. This will
   highlight the selection in red.
 \item
-  Verify your selection and press delete to remove them.
+  Verify your selection and press \emph{Delete} (or \emph{fn + Backspace}) to remove them.
 \end{enumerate}
 
 \begin{figure}
@@ -1463,30 +1786,29 @@ chunk separately and then merge these models to obtain a full model.
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  You can smooth the mesh by clicking on \emph{Tools}, \emph{Mesh}, \emph{Smooth
-  Mesh}. You can also duplicate a 3D model to save one intact, and
-  right click on it, and un-check \emph{Use as default} to keep it as an
-  archived model. If you smooth a mesh, you can't undo it.
+  You can smooth the mesh by clicking on \emph{Tools}, \emph{Mesh}, \emph{Smooth Mesh}.
+  You can also duplicate a 3D model to save one intact
+  (right click on it and un-check \emph{Use as default} to keep it as an
+  archived model). If you smooth a mesh, you can't undo it.
 \item
-  You can fill holes in your mesh by clicking on \emph{Tools \textgreater{} Mesh \textgreater{}
-  Close Holes}. Note that if your holes are too big, the closing
-  function can create unwanted structures. Similarly as the smoothing,
-  you can't undo closing holes in the mesh. \textbf{HOWEVER}, this will
-  remove the vertex colors in version 1.7.2, which we will need to
+  You can fill holes in your mesh by clicking on \emph{Tools \textgreater{} Mesh \textgreater{} Close Holes}.
+  Note that if your holes are too big, the closing function can create unwanted
+  structures. Similarly to smoothing, you cannot undo closing holes in the mesh.
+  \textbf{HOWEVER}, this will remove the vertex colors in version 1.7.2, which we will need to
   place landmarks when doing the morphometrics.
 \end{enumerate}
 
 \hypertarget{build-texture}{%
 \section{Build texture}\label{build-texture}}
 
-To build the texture : \emph{Workflow \textgreater{} Build Texture}, use the preset
-values and click OK.
+To build the texture go to \emph{Workflow \textgreater{} Build Texture}, use the preset
+values and click \emph{OK}.
 
 \hypertarget{scaling}{%
 \section{Scaling}\label{scaling}}
 
 To scale the model, go to the pictures of your merged chunk and follow
-these steps :
+these steps:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1494,27 +1816,29 @@ these steps :
   On a picture displaying the scale bar, add new markers at each end
   of the scale bar and on a couple of additional photos.
 \item
-  In the left panel, select both markers and click on the icon \emph{Add
-  scale} (Figure \ref{fig:addscale}).
+  In the left panel, select both markers, right click on them and select
+  \emph{Create Scale Bar}.
 \item
-  Go to the \emph{Reference} panel, select the scale and add 0.01 as
-  reference.
+  If the reference panel is not already visible on the left, go to \emph{View} and click on
+  \emph{Reference}. Go to the reference panel, select the scale under \emph{Scale Bars} and write
+  0.01 in the \emph{Distance (m)} column (except if your scale bar has a different length,
+  in which case, add the respective value of its length in meters).
 \item
-  Click on the \emph{Update transform} button (rotating arrows). This is an
-  important step, because otherwise the scale will not be incorporated
-  to your model.
+  Click on the \emph{Update Transform} button in the reference panel (icon of two
+  rotating arrows). This is an important step, because otherwise the scale will
+  not be incorporated to your model.
 \item
   To verify if the scale is taken into account, you can use the
-  measuring tape tool.
+  \emph{Ruler} tool and select two points on your mesh to measure the distance between them.
 \end{enumerate}
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{Figures/metashape_add_scale_2} 
+{\centering \includegraphics[width=0.75\linewidth]{Figures/Add_scale} 
 
 }
 
-\caption{Add a scale using landmarks}\label{fig:addscale}
+\caption{Scaling. Top arrow: Markers added at each end of the scale bar (i.e., at the 0 cm and 1 cm points). Middle Arrow: *Update Transform* button. Bottom arrow: Input of scale bar length in meters. Small red box (top): Ruler tool. Large red box (bottom): Reference panel.}\label{fig:adds-cale}
 \end{figure}
 
 \hypertarget{model-orientation}{%
@@ -1523,28 +1847,39 @@ these steps :
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  In Metashape, be sure that \emph{Show info} in \emph{Model \textgreater{} Show/Hide Items}
-  is checked. You should see at the bottom right of the model panel
+  In Metashape, be sure that \emph{Show Info} and \emph{Show Grid} in \emph{Model \textgreater{} Show/Hide Items}
+  are checked. You should see at the bottom right of the model panel
   the 3D axes.
 \item
-  Show grid
+  Make sure that the scale is correct because changing it will affect
+  the coordinates of the 3D model and you will need to re-orient it. You can
+  verify the scale using the \emph{Ruler} tool.
 \item
-  Make sure that the scale is the right one, changing it will affect
-  the coordinates of the 3D model. You can verify the scale using the
-  measuring tool.
-\item
-  Use the navigation tool to orient these 3D axes.
+  Use the \emph{Navigation} tool to orient these 3D axes (x should be at 0° and y should be at 90°; Figure \ref{fig:orientation-tools}).
 \item
   Once you orient the 3D axes in the wanted direction, you can then
-  use the tool \emph{Rotate Object} to put the object in the wanted
-  direction, and at the center of the grid, facing the right side of
-  the grid.
+  use the tool \emph{Move Object} to put the flower in the
+  center of the grid (the cross in the center point of the grid should be hidden
+  in the central point of the 3D model; Figure \ref{fig:orientation-tools} and Figure \ref{fig:model-orientation}).
 \item
-  Orient the binding box as well with the cross on the ventral side,
-  and the two dash facing the opening of the flower. Note that
-  depending on the software you use to open the model, the first view
-  orientation may change when you open the final object file.
+  To orient the model, use the \emph{Rotate Object}. The model should be facing the right side of the grid (the direction
+  of the x axis; Figure \ref{fig:orientation-tools} and Figure \ref{fig:model-orientation}).
+\item
+  Orient the binding box as well, using the \emph{Move Region}, \emph{Resize Region} and \emph{Rotate Region}
+  tools. The side with the cross on the box should be on the ventral side of the
+  flower, and the side with the two dashes should be facing the opening of the flower.
+  Note that depending on the software you use to open the model, the first view
+  orientation may change when you open the final object file (Figure \ref{fig:binding-box-tools}).
 \end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/Object_orientation_tools} 
+
+}
+
+\caption{Object (model) orientation tools. Left box: *Navigation* tool. Left box group: Object orientation tools. Arrow: Desired 3D axes orientation.}\label{fig:orientation-tools}
+\end{figure}
 
 \begin{figure}
 
@@ -1552,7 +1887,16 @@ these steps :
 
 }
 
-\caption{Add a scale using landmarks}\label{fig:orientation}
+\caption{Desired model orientation on the grid.}\label{fig:model-orientation}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Figures/Binding_box_tools} 
+
+}
+
+\caption{Binding box orientation tools. Box group: Binding box orientation tools. Arrows: The cross and the two dashes on two different sides of the binding box.}\label{fig:binding-box-tools}
 \end{figure}
 
 \hypertarget{export-model-and-texture}{%
@@ -1564,9 +1908,9 @@ these steps :
   You can export your 3D model by clicking on \emph{File} \textgreater{} \emph{Export} \textgreater{}
   \emph{Export Model}.
 \item
-  Name your model
+  Name your model.
 \item
-  Choose .ply as the extension.
+  Choose \emph{.ply} as the extension.
 \item
   In the dialog box, tick the \emph{Vertex colors}. This option will allow
   you to get color on the actual 3D model.
@@ -1574,8 +1918,9 @@ these steps :
   Select \emph{Export texture} as PNG.
 \item
   Make sure to export the texture with transparency, by ticking the
-  \emph{Write alpha channel} option. The texture is a separate file, with
-  detail color information that is wrapped on the model.
+  \emph{Write alpha channel} or \emph{Save alpha channel} option (depending on the Agisoft
+  Metashape version). The texture is a separate file with detailed color
+  information that is wrapped on the model.
 \item
   Click on \emph{OK}.
 \end{enumerate}

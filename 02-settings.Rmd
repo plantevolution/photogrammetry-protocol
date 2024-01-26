@@ -86,11 +86,11 @@ post-processing the color calibration of each photo. This optional
 section only helps to have a better preview of the photos.
 
 ```{r WB, echo=FALSE, message=FALSE, fig.cap="Custom whhite balance parameter.", out.width = '50%', fig.align='center', fig.show = 'hold'}
-knitr::include_graphics("Figures/Custom WB setting.png")
+knitr::include_graphics("Figures/Custom_WB_setting.png")
 ```
 
 ```{r WB2, echo=FALSE, message=FALSE, fig.cap="How to select a custom white balance.", out.width = '50%', fig.align='center', fig.show = 'hold'}
-knitr::include_graphics("Figures/Custom WB selection.png")
+knitr::include_graphics("Figures/Custom_WB_selection.png")
 ```
 
 

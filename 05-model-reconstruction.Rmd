@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # 3D model reconstruction in Agisoft Metashape
 
 ## Download Agisoft Metashape

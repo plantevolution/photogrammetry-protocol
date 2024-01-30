@@ -360,7 +360,7 @@ We usually run the following modified automated script for processing multiple f
 - Automated script structure for clustering and focus stacking photos from multiple folders at once:
 ```
 for i in `cat 3D_Modelization/folder_name.txt`
-    do python3 cluster_photos_by_time_intervals.py -i 3D_Modelization/${i}/01_Photos_calibrated -o ~/Desktop/Focus_stacking_test_Mila/Test/${i}/02_Photos_clustered &&
+    do python3 cluster_photos_by_time_intervals.py -i 3D_Modelization/${i}/01_Photos_calibrated -o 3D_Modelization/${i}/02_Photos_clustered &&
     python3 helicon_focus.py -i 3D_Modelization/${i}/02_Photos_clustered -o 3D_Modelization/${i}/03_Photos_focus_stacked
 done
 ```
@@ -396,7 +396,7 @@ brew install imagemagick
 - Automated script structure for clustering, focus stacking, and resizing photos from multiple folders at once:
 ```
 for i in `cat 3D_Modelization/folder_name.txt`
-    do python3 cluster_photos_by_time_intervals.py -i 3D_Modelization/${i}/01_Photos_calibrated -o ~/Desktop/Focus_stacking_test_Mila/Test/${i}/02_Photos_clustered &&
+    do python3 cluster_photos_by_time_intervals.py -i 3D_Modelization/${i}/01_Photos_calibrated -o 3D_Modelization/${i}/02_Photos_clustered &&
     python3 helicon_focus.py -i 3D_Modelization/${i}/02_Photos_clustered -o 3D_Modelization/${i}/03_Photos_focus_stacked &&
     cd 3D_Modelization/${i}/03_Photos_focus_stacked && ls -b1A | sed -e 's!.tiff!!' >> stacking_names.txt &&
     for i in `cat stacking_names.txt`
